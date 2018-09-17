@@ -3,6 +3,8 @@
 
 Este es un texto bla bla bla. Esto es *cursiva* y esto es **negrita**.
 
+> NOTA: Esto es un ejemplo de Markdown
+
 ## Título mediano
 
 Este es un texto bla bla bla. Este es un texto bla bla bla. Este es un texto bla bla bla.
@@ -15,4 +17,10 @@ Este es un texto bla bla bla. Este es un texto bla bla bla. Este es un texto bla
 
 Este es un texto bla bla bla.Este es un texto bla bla bla.
 
+Tenemos las siguientes opciones:
 
+* Opción 1
+* Otra
+* última
+
+[]()
