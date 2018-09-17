@@ -1,7 +1,7 @@
 
 # Título grande
 
-Este es un texto bla bla bla.
+Este es un texto bla bla bla. Esto es *cursiva* y esto es **negrita**.
 
 ## Título mediano
 
