@@ -1,4 +1,7 @@
 
+![Imagen](logotipo_ies.png)
+
+
 # Título grande
 
 Este es un texto bla bla bla. Esto es *cursiva* y esto es **negrita**.
