@@ -23,4 +23,4 @@ Tenemos las siguientes opciones:
 * Otra
 * última
 
-[]()
+Esto es un enlace al [IES Puerto de la Cruz](https://blog.iespuertodelacruz.es/)
