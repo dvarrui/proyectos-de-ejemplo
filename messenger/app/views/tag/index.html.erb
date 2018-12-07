@@ -1,2 +1,8 @@
 
-<p>tags#index</p>
+<h1>Listing Tags</h1>
+
+<ol>
+<% @tags.each do |i| %>
+  <li><%= i.name %></li>
+<% end %>
+</ol>
