@@ -8,20 +8,6 @@ class TagController < ApplicationController
     @tag = Tag.find(params[:id])
   end
 
-  def new
-    @tag = Tag.new
-  end
-
-  def create
-    @tag = Tag.new(tag_params)
-    if @tag.save
-      flash[:success] = "Tag #{@tag.name} created!"
-      redirect_to @tag
-    else
-      render 'new'
-    end
-  end
-
   def edit
     @tag = Tag.find(params[:id])
   end
@@ -34,6 +20,20 @@ class TagController < ApplicationController
       redirect_to @tag
     else
       render 'edit'
+    end
+  end
+
+  def new
+    @tag = Tag.new
+  end
+
+  def create
+    @tag = Tag.new(tag_params)
+    if @tag.save
+      flash[:success] = "Tag #{@tag.name} created!"
+      redirect_to @tag
+    else
+      render 'new'
     end
   end
 

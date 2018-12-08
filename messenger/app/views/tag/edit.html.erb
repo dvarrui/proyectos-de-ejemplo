@@ -1,3 +1,10 @@
 <h1>Edit Tag</h1>
 
-<%= render 'form' %>
+<%= form_for(@tag, url: tag_path) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.submit "Save changes" %>
+<% end %>
+
+<%= render 'footer' %>
