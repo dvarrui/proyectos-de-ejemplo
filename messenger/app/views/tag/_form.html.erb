@@ -1,0 +1,7 @@
+
+<%= form_for(@tag, url: tag_path) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.submit "Save changes" %>
+<% end %>

@@ -1,8 +1,13 @@
 
 <h1>Listing Tags</h1>
 
-<ol>
+<table>
+
 <% @tags.each do |i| %>
-  <li><%= i.name %></li>
+  <tr>
+    <td><%= i.name %></td>
+    <td><%= link_to "Show", tag_path(i) %></td>
+    <td><%= link_to "Edit", edit_tag_path(i) %></td>
+  </tr>
 <% end %>
-</ol>
+</table>
