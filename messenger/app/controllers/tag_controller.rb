@@ -37,6 +37,12 @@ class TagController < ApplicationController
     end
   end
 
+  def destroy
+    @tag = Tag.find(params[:id])
+    @tag.destroy
+    redirect_to '/tag'
+  end
+
   private
 
   def tag_params

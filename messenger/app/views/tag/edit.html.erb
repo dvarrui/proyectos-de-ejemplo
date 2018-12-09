@@ -9,6 +9,9 @@
   <%= f.submit "Save changes" %>
 <% end %>
 
-<p><%= link_to "Show", tag_path(@tag) %></p>
+<p>
+  <%= link_to "Show", tag_path(@tag) %> |
+  <%= link_to 'Destroy', @tag, method: :delete, data: { confirm: 'Are you sure?' } %>
+</p>
 
 <%= render 'footer' %>

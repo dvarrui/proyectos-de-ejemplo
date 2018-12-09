@@ -8,6 +8,9 @@
   <li>name: <%= @tag.name %></li>
 </ul>
 
-<p><%= link_to "Edit", edit_tag_path(@tag) %></p>
+<p>
+  <%= link_to "Edit", edit_tag_path(@tag) %> |
+  <%= link_to 'Destroy', @tag, method: :delete, data: { confirm: 'Are you sure?' } %>
+</p>
 
 <%= render 'footer' %>

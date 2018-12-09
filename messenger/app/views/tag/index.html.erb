@@ -8,8 +8,11 @@
 <% @tags.each do |i| %>
   <tr>
     <td><%= i.name %></td>
-    <td><%= link_to "Show", tag_path(i) %></td>
-    <td><%= link_to "Edit", edit_tag_path(i) %></td>
+    <td>
+      <%= link_to "Show", tag_path(i) %> |
+      <%= link_to "Edit", edit_tag_path(i) %> |
+      <%= link_to 'Destroy', i,  method: :delete, data: { confirm: 'Are you sure?' } %>
+    </td>
   </tr>
 <% end %>
 </table>
