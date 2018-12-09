@@ -2,11 +2,18 @@
 
 <h3>Show Message</h3>
 
-<ul>
-  <li>id: <%= @message.id %></li>
-  <li>title: <%= @message.title %></li>
-  <li>body: <%= @message.body %></li>
-</ul>
+<table>
+  <tr><td>id:</td><td><%= @message.id %></td></tr>
+  <tr><td>title:</td><td><%= @message.title %></td></tr>
+  <tr><td>body:</td><td><%= @message.body %></td></tr>
+  <tr><td>tags(<%= @message.tags.count%>):</td>
+      <td>
+      <% @message.tags.each do |tag| %>
+        <%= tag.name %>,
+      <% end %>
+      </td>
+  </tr>
+</table>
 
 <p>
   <%= link_to "List", '/message' %> |
