@@ -8,6 +8,7 @@
 <% @tags.each do |i| %>
   <tr>
     <td><%= i.name %></td>
+    <td>(Messages <%= i.messages.count %>) |</td>
     <td>
       <%= link_to "Show", tag_path(i) %> |
       <%= link_to "Edit", edit_tag_path(i) %> |
