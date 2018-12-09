@@ -49,14 +49,3 @@ class TagController < ApplicationController
     params.require(:tag).permit(:name)
   end
 end
-
-=begin
-  def create
-    @tag = Tag.new(params[:tag])
-     if @tag.save
-         redirect_to @tag, alert: "User created successfully."
-     else
-         redirect_to new_tag_path, alert: "Error creating user."
-     end
-  end
-=end

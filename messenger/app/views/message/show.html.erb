@@ -1,0 +1,15 @@
+<%= render 'header' %>
+
+<h3>Show Message</h3>
+
+<ul>
+  <li>id: <%= @message.id %></li>
+  <li>title: <%= @message.title %></li>
+  <li>body: <%= @message.body %></li>
+</ul>
+
+<p>
+  <%= link_to "List", '/message' %> |
+  <%= link_to "Edit", edit_message_path(@message) %> |
+  <%= link_to 'Destroy', @message, method: :delete, data: { confirm: 'Are you sure?' } %>
+</p>

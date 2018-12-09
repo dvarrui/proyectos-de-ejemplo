@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # For details see http://guides.rubyonrails.org/routing.html
+  root to: 'tag#index'
   get '/hello', to: 'welcome#greet'
   resources :tag
-  root to: 'tag#index'
+  resources :message
 end

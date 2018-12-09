@@ -10,8 +10,12 @@
   </head>
 
   <body>
-    <h1>Messenger with RAILSINGER-Z</h1>
-    <%= Time.now %>
+    <h1>Messanger with RAILSINGER-Z</h1>
+    <p>
+      <%= link_to "Tags", '/tag' %> |
+      <%= link_to "Messages", '/message' %> |
+      <%= Time.now %>
+    </p>
     <hr>
 
     <%= yield %>
