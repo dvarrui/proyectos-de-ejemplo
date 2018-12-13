@@ -1,12 +1,11 @@
 require "sinatra/base"
 
-class SinatraFrontEnd < Sinatra::Base
+class HelloWorld < Sinatra::Base
 
   get '/' do
-    "Hola Mundo!"
-    #render 'hola'
+    "HelloWorld!"
   end
 
 end
 
-SinatraFrontEnd.run!
+HelloWorld.run!
