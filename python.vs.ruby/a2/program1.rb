@@ -12,14 +12,14 @@ puts "Término independiente (c) -----> #{c}"
 puts "Ecuación: #{a} x^2 + #{b} x + #{c}"
 
 puts('Pulse ENTER para ver la solución')
-#p = gets
+p = gets.to_i
 
-if a == 0
-  x = -c / b
-  puts 'Los valores introducidos no se corresponden con una ecuación de segundo grado'
-  puts "La solución es: x = #{x}"
-elsif discriminante < 0
+if discriminante < 0
   puts 'La ecuación no tiene solución real'
+elsif a == 0 and b != 0
+    x = -c / b
+    puts 'Los valores introducidos no se corresponden con una ecuación de segundo grado'
+    puts "La solución es: x = #{x}"
 else
   x1 = (-b + Math.sqrt(discriminante.to_f)) / (2 * a)
   x2 = (-b - Math.sqrt(discriminante.to_f)) / (2 * a)
