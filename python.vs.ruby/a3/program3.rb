@@ -1,5 +1,5 @@
 #!/usr/bin/ruby
-
+# Calcular el máximo común divisor
 class Range
   def reverse_each(&param)
     self.to_a.reverse.each { |i| yield(i) }
