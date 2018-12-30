@@ -13,7 +13,7 @@ def count_words(sentence):
     return summary
 
 if __name__ == '__main__':
-    text = sys.argv[1]
+    text = sys.argv[1] # Error?
     palabras = count_words(sentence)
 
 for palabra, cantidad in palabras.items():
