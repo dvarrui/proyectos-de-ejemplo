@@ -23,6 +23,6 @@ for i in sequence:
 print(f'Adenine: {a}')
 print(f'Guanine: {g}')
 print(f'Cytosine: {c}')
-print(f'Thymine: {c}')
+print(f'Thymine: {c}') #Error
 
 #
