@@ -1,6 +1,8 @@
 #!/usr/bin/ruby
+require 'pry-byebug'
 
 class VirtualMachine
+  attr_reader :ram, :cpu, :hdd
   def initialize(name, ram=1, cpu=1.3, hdd=100, os="debian")
     @name = name
     @ram = ram.to_f
@@ -41,7 +43,7 @@ class VirtualMachine
   end
 
   def method_missing(m, *args, &block)
-    params = (m.to_s.split('_')[0]).to_sym
+    params = (m.to_s.split('_'))
     return if params[1]!='usage'
     key = params[0].to_sym
 
@@ -53,10 +55,10 @@ class VirtualMachine
   end
 
   def to_s
-    out = "Nombre: #{@name} | SO: #{@os} | #{@status} | \n"
-    out += " * RAM: #{@ram} | #{ram_usage} % used |\n"
-    out += " * CPU: #{@cpu} | #{cpu_usage} % used |\n"
-    out += " * HDD: #{@hdd} | #{hdd_usage} % used"
+    out =  "  Nombre: #{@name} | SO: #{@os} | #{@status} | \n"
+    out += "    * RAM: #{@ram} | #{ram_usage} % used |\n"
+    out += "    * CPU: #{@cpu} | #{cpu_usage} % used |\n"
+    out += "    * HDD: #{@hdd} | #{hdd_usage} % used"
     return out
   end
 
