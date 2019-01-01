@@ -7,9 +7,9 @@ class MyArrayCount < MyArrayBase
     @count = 0
   end
 
-  def add_all(others)
-    super others
-    @count += others.size
+  def add(other)
+    super other
+    @count += 1
   end
 
   def to_s
