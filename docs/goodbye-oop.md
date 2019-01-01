@@ -170,7 +170,7 @@ public class ArrayCount extends Array
 > * La clase derivada debe saber cómo está implementada la clase base para no tener sorpresas. Con lo cual de alguna manera hay que saltarse la encapsulación o
 > * La clase base debe no reusar código para que la clase derivada no tenga que saber nada de la base. Pero claro, entonces fuera reusabilidad de componentes.
 >
-> ¿Cómo enfrentamos esta paradoja?
+> ¿Cómo enfrentamos esta paradoja? "Contain and delegate". OK lo que pasa es que la herencia... no es tan buena idea.
 
 ---
 
