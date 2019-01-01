@@ -6,13 +6,13 @@ require_relative 'power-device'
 
 module Scanner
   def read_input
-    puts "Scanning..."
+    puts " * Scanning..."
   end
 end
 
 module Printer
   def write_output
-    puts "Writting..."
+    puts " * Writting..."
   end
 end
 

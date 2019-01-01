@@ -10,7 +10,7 @@ class Scanner < PowerDevice
   end
 
   def read_input
-    puts "Scanning..."
+    puts " * Scanning..."
   end
 end
 
@@ -20,7 +20,7 @@ class Printer < PowerDevice
   end
 
   def write_ouput
-    puts "Writting..."
+    puts " * Writting..."
   end
 end
 
