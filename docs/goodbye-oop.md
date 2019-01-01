@@ -73,7 +73,10 @@ Ruby: El problema viene que Java debe hacer un "invento" para crear
       ésta a su vez invoca al método de la clase derivada y NO a la
       suya misma... porque la suya es "a.add"!!!
 
-      Ruby NO tiene ese problema porque tiene tipado dinámico y además "Duck typing". Una clase se declara y... "da igual el tipo de los objetos dentro del array".
+      Ruby NO tiene ese problema porque tiene tipado dinámico
+      y además "Duck typing".
+      Una clase se declara y...
+      "da igual el tipo de los objetos dentro del array".
 
 Ruby: Duck typing... si se habla como un pato, nada como un pato y
       camina como un pato... yo lo trato como un pato.  
