@@ -105,7 +105,8 @@ que se quiera guardar en el ArrayList de Java. Para esto se usa esa "a": `privat
 
 > **Conclusiones:**
 > * El problema que menciona el autor es una sorpresa o factor inesperado al programar genéricos en Java pero NO tiene que ver con el paradigma de POO.
-> * E problema del autor es pensar que la forma de resolver de Java es un problema extensible al paradigma POO.
+> * Además, tiene todo el sentido del mundo que un error en la programación de la clase base afectará inevitablemente a las clases derivadas. ¡Sí o sí!
+> * El problema del autor es pensar que la forma de resolver de Java es extensible al paradigma POO.
 > * while(true) { "I love ruby" }
 
 ---
@@ -168,4 +169,6 @@ public class ArrayCount extends Array
 >
 > Pero es que si me "tocas" la POO, me "tocas" a Ruby... y eso... ¡no lo puedo dejar pasar así como así! ¡Ojito!
 >
-> ;-)
+> ¡Thanks Steve! Estoy disfrutando con esto
+>
+> Fran ¡lo siento! Java no mola. ;-)
