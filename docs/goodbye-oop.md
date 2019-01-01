@@ -66,7 +66,7 @@ PowerDevice: Starting...
 
 ---
 
-# 3. La herencia: _The Fragile Base Class Problem_
+# 3. Los Genéricos
 
 * Creamos la clase base ([MyArrayBase](./files/my-array-base.rb)) y la probamos ([base01.rb](./files/base01.rb)):
 ```
@@ -106,12 +106,12 @@ que se quiera guardar en el ArrayList de Java. Para esto se usa esa "a": `privat
 > **Conclusiones:**
 > * El problema que menciona el autor es una sorpresa o factor inesperado al programar genéricos en Java pero NO tiene que ver con el paradigma de POO.
 > * Además, tiene todo el sentido del mundo que un error en la programación de la clase base afectará inevitablemente a las clases derivadas. ¡Sí o sí!
-> * El problema del autor es pensar que la forma de resolver de Java es extensible al paradigma POO.
 > * while(true) { "I love ruby" }
 
 ---
 
-# 3(bis)
+
+# 4. La herencia: _The Fragile Base Class Problem_
 
 > Además tengo que decir que el ejemplo del artículo tiene un error de programación. Que (también hay que decir) NO afecta a las conclusiones del artículo, pero bueno...¡ya que estamos! ¡Lo comento!
 
@@ -164,6 +164,15 @@ public class ArrayCount extends Array
 * Se supone que la clase derivada incluye una nueva funcionalidad que no tiene la clase base. Esto es, la capacidad de contar el número de elementos que se van añadiendo al ArrayList.
 * El contador se incrementa en el método "add" y en "addAll", por tanto cada vez que se invoca al método "addAll" los items que se añaden al ArrayList... se cuentan dos veces. Pero cuando se añaden, de uno en uno por el modo "add" se cuentan de forma correcta.
 * Hay que quitar el contador del método "addAll", y dejar que "add" sea el único que cuente.
+
+> **Conclusiones:**
+> * El problema que menciona el autor es una sorpresa o factor inesperado al programar usando herencias.
+> * La clase derivada debe saber cómo está implementada la clase base para no tener sorpresas. Con lo cual de alguna manera hay que saltarse la encapsulación o
+> * La clase base debe no reusar código para que la clase derivada no tenga que saber nada de la base. Pero claro, entonces fuera reusabilidad de componentes.
+>
+> ¿Cómo enfrentamos esta paradoja?
+
+---
 
 > ¡Jajajaja! Soy un friki de los lenguajes de la programación ¡Es verdad!
 >
