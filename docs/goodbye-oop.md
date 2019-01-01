@@ -54,17 +54,17 @@ PowerDevice: Starting...
  * Writting...
 ```
 
-* Hay otras formas de resolver este problema (_problema del diamante_) como  _"contain and delegate"_. Pero los Mixins son muy fáciles de usar.
+* Hay otras formas de resolver este problema (_problema del diamante_) como  _"contain and delegate"_. Pero requieren trabajo manual para ajustarla... los Mixins son mucho más fáciles de usar.
 
 > **Conclusiones:**
-> * Teniendo _Mixins_ tenemos el efecto de herencia múltiple.
+> * Teniendo _Mixins_ tenemos el efecto de herencia múltiple. Siendo más felices.
 > * _¡Me encanta la forma de pensar de Ruby!_
 
 ---
 
-# La herencia: El problema de la clase base resuelto.
+# La herencia: _The Fragile Base Class Problem_
 
-* Creando la clase [MyArrayBase](./files/my-array-base.rb) y [probándola](./files/base01.rb):
+* Creamos la clase base ([MyArrayBase](./files/my-array-base.rb)) y la probamos ([base01.rb](./files/base01.rb)):
 ```
 files> ./base01.rb
 [ DO ] MyArrayBase => add 1, add 2, add 3
