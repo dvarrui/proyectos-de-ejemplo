@@ -2,11 +2,7 @@
 # En Ruby NO se permite la herencia múltiple
 # Para resolver este problema tiene los MIXINS
 
-class PowerDevice
-  def start
-    puts "PowerDevice: Starting..."
-  end
-end
+require_relative 'power-device'
 
 module Scanner
   def read_input

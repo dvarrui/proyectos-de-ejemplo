@@ -13,14 +13,14 @@ Enlace de interés:
 * En Ruby NO se permite la herencia múltiple. Para resolver este problema tiene los MIXINS.
 * [Ejemplo1: herencia01.rb](./files/herencia01.rb): No hay herencia múltiple. Ejemplo de la salida:
 ```
-iloveruby> ./herencia01.rb
+files> ./herencia01.rb
 Scanner: Starting...
 Scanning...
 ```
 
 * [Ejemplo2: herencia02.rb](./files/herencia02.rb): Resolver el problema de la herencia múltiple usando Mixins.
 ```
-iloveruby> ./herencia02.rb
+files> ./herencia02.rb
 PowerDevice: Starting...
 Scanning...
 Writting...
@@ -33,3 +33,15 @@ Writting...
 ---
 
 # La herencia: El problema de la clase base resuelto.
+
+* Creando la clase [base](./files/base01.rb):
+```
+files> ./base01.rb
+[ DO ] MyArrayBase => add 1, add 2, add 3
+[INFO] [1, 2, 3]
+[ DO ] MyArrayBase => add_all [4,5,6]
+[INFO] [1, 2, 3, 4, 5, 6]
+```
+* Creando la clase [counter](./files/base02.rb):
+```
+```
