@@ -34,7 +34,7 @@ Writting...
 
 # La herencia: El problema de la clase base resuelto.
 
-* Creando la clase [base](./files/base01.rb):
+* Creando la clase [MyArrayBase](./files/my-array-base.rb) y [probándola](./files/base01.rb):
 ```
 files> ./base01.rb
 [ DO ] MyArrayBase => add 1, add 2, add 3
@@ -42,6 +42,6 @@ files> ./base01.rb
 [ DO ] MyArrayBase => add_all [4,5,6]
 [INFO] [1, 2, 3, 4, 5, 6]
 ```
-* Creando la clase [counter](./files/base02.rb):
+* Creando la clase [MyArrayCount](./files/my-array-count.rb) y [probándola](./files/base02.rb):
 ```
 ```
