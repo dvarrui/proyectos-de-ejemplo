@@ -1,16 +1,6 @@
 #!/usr/bin/ruby
 
-class MyArrayBase < Array
-  def add(other)
-    push other
-  end
-
-  def add_all(others)
-    others.each do |i|
-      add i
-    end
-  end
-end
+require_relative 'my-array-base'
 
 a = MyArrayBase.new
 puts "[ DO ] #{a.class.to_s} => add 1, add 2, add 3"
