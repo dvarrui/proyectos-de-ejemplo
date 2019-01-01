@@ -1,22 +1,4 @@
 
-# Good Bye OOP
-
-> Steve me pasó el siguiente enlace (["Good Bye OOP"](https://medium.com/@cscalfani/goodbye-object-oriented-programming-a59cda4c0e53)) el 1 de enero de 2019, y no pude resistir la tentación de empezar a leerlo. El título era demasiado atrevido para dejarlo pasar.
->
-> ¿Cómo era posible que alguien hiciera una artículo analizando la POO para intentar descartarla?
->
-> El paradigma POO era un pilar fundamental en mis construcciones mentales. ¿Había llegado el momento de cambiar? ¿Acaso se había descubierto algo mejor? ¡Uff!
->
-> Decidí portarme como un valiente. Empecé a leer el artículo ["Good Bye OOP"](https://medium.com/@cscalfani/goodbye-object-oriented-programming-a59cda4c0e53) y me puse a escribir mis pensamientos...
-
----
-
-# Antecendentes
-
-El autor comenta que tiene mucha experiencia en POO, usando los lenguajes C++, Smalltalk, .NET y Java.
-
----
-
 # 1. La herencia: el primer pilar en caer.
 
 Pienso igual que el autor en que **la herencia NO es un pilar importante** de la POO. Apesar de que sea lo primero que se enseña y se pone mucho énfasis. Pero es por una cuestión de que es fácil de ver y es educativo.
@@ -110,7 +92,6 @@ que se quiera guardar en el ArrayList de Java. Para esto se usa esa "a": `privat
 
 ---
 
-
 # 4. La herencia: _The Fragile Base Class Problem_
 
 > Además tengo que decir que el ejemplo del artículo tiene un error de programación. Que (también hay que decir) NO afecta a las conclusiones del artículo, pero bueno...¡ya que estamos! ¡Lo comento!
@@ -166,11 +147,19 @@ public class ArrayCount extends Array
 * Hay que quitar el contador del método "addAll", y dejar que "add" sea el único que cuente.
 
 > **Conclusiones:**
-> * El problema que menciona el autor es una sorpresa o factor inesperado al programar usando herencias.
+> * El problema que menciona el autor es una sorpresa o factor inesperado al programar usando la herencia.
 > * La clase derivada debe saber cómo está implementada la clase base para no tener sorpresas. Con lo cual de alguna manera hay que saltarse la encapsulación o
 > * La clase base debe no reusar código para que la clase derivada no tenga que saber nada de la base. Pero claro, entonces fuera reusabilidad de componentes.
 >
-> ¿Cómo enfrentamos esta paradoja? "Contain and delegate". OK lo que pasa es que la herencia... no es tan buena idea.
+> **Alternativas** ¿Cómo enfrentamos esta paradoja?
+> * Propuesta del autor del artículo:
+>     * La herencia como está ahora no es tan buena idea.
+>     * Podríamos solucionarlo usando "Contain and delegate" y evitar o prohibir la herencia.
+>     * ¡Ummm! ¡Qué feo!
+> * Alternativa que propongo yo:
+>     * ¡Gracias al autor del artículo tenemos una idea o propuesta de mejora para los compiladores y/o intérpretes!...
+>     * Los compiladores o intérpretes podrían mejorar su "inteligencia" para ayudar a detectar los casos en los que la clase derivada sobreescribe métodos que en la clase base están acoplados....
+>     * ¡Me gusta esta solución!
 
 ---
 
