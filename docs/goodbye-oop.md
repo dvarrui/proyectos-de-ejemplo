@@ -27,7 +27,7 @@ Pero es verdad que a la hora de la verdad la herencia NO es tan importante como 
 
 ---
 
-# La herencia múltiple
+# La herencia múltiple: _The diamond problem_
 
 > Estoy de acuerdo con lo que dice el autor acerca de que la teoría de la herencia múltiple es muy bonita, pero a la hora de implementarla la cosa no está tan clara.
 >
