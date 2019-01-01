@@ -53,7 +53,8 @@ files> ./base02.rb
 
 > Todo ¡OK! por ahora...
 
-* ¡Rompamos la clase base como indica el enlace! ¡Ohps! ¡No se puede romper en Ruby.
+* ¡Rompamos la clase base como indica el enlace! ¡Ohps! ¡No se puede romper en Ruby. En Ruby no está la "a" (del ejemplo del enunciado) para poderla quitar.
+
 ```
 Java: ¡Vale, si! ¿Pero por qué en Ruby funciona?...
 Ruby: Porque Ruby usa "Duck typing" en lugar de tipado estático.
@@ -66,6 +67,11 @@ Ruby: El problema viene que Java debe hacer un "invento" para crear
 
       que se irá cambiando según el tipo de datos
       que se quieran guardar en el Array de Java.
+
+      Al quitar la "a" del metodo de la clase base...
+      la clase derivada invoca al método add de la clase base, pero
+      ésta a su vez invoca al método de la clase derivada y NO a la
+      suya misma... porque la suya es "a.add"!!!
 
       Ruby NO tiene ese problema porque tiene tipado dinámico y además "Duck typing". Una clase se declara y... "da igual el tipo de los objetos dentro del array".
 
