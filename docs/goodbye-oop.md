@@ -15,7 +15,9 @@
 
 El autor comenta que tiene mucha experiencia en POO, usando los lenguajes C++, Smalltalk, .NET y Java.
 
-# La herencia: el primer pilar en caer.
+---
+
+# 1. La herencia: el primer pilar en caer.
 
 Pienso igual que el autor en que **la herencia NO es un pilar importante** de la POO. Apesar de que sea lo primero que se enseña y se pone mucho énfasis. Pero es por una cuestión de que es fácil de ver y es educativo.
 
@@ -24,10 +26,11 @@ Pero es verdad que a la hora de la verdad la herencia NO es tan importante como 
 > **Conclusiones:**
 > * Cuando nos enseñaron las clases pusieron demasiado énfasis en la herencia.
 > * Hay que tener un poco de sentido común y no hay que creerse lo que diga la documentación hasta que no lo experimentemos por nosotros mismos.
+> * Empate!
 
 ---
 
-# La herencia múltiple: _The diamond problem_
+# 2. La herencia múltiple: _The diamond problem_
 
 > Estoy de acuerdo con lo que dice el autor acerca de que la teoría de la herencia múltiple es muy bonita, pero a la hora de implementarla la cosa no está tan clara.
 >
@@ -58,6 +61,7 @@ PowerDevice: Starting...
 
 > **Conclusiones:**
 > * Teniendo _Mixins_ tenemos el efecto de herencia múltiple. Siendo más felices.
+> * E problema del autor es pensar que la forma de resolver la herencia múltiple de Java es un problema extensible al paradigma POO.
 > * _¡Me encanta la forma de pensar de Ruby!_
 
 ---
@@ -76,40 +80,30 @@ files> ./base01.rb
 ```
 files> ./base02.rb
 [ DO ] MyArrayCount => add 1, add 2, add 3
-[INFO] count = 0 with [1, 2, 3]
+[INFO] count = 3 with [1, 2, 3]
 [ DO ] MyArrayCount => add_all [4,5,6]
-[INFO] count = 3 with [1, 2, 3, 4, 5, 6]
+[INFO] count = 6 with [1, 2, 3, 4, 5, 6]
 ```
 
 > Todo ¡OK! por ahora...
 
-* ¡Rompamos la clase base como indica el enlace! ¡Ohps! ¡No se puede romper en Ruby. En Ruby no está la "a" (del ejemplo del enunciado) para poderla quitar.
+* ¡Rompamos la clase base como indica el enlace! ¡Ohps! ¡No se puede romper!. En Ruby hay definiciones de "genéricos" (no está la "a" del ejemplo para poderla quitar).
 
 ```
-Java: ¡Vale, si! ¿Pero por qué en Ruby funciona?...
-Ruby: Porque Ruby usa "Duck typing" en lugar de tipado estático.
+Java: ¡Vale, si! ¿Pero cómo funciona Ruby?
+      ¿Por qué no tiene genéricos como Java?
 
-Ruby: El problema viene que Java debe hacer un "invento" para crear
-      una clase que al mismo tiempo sirva para cualquier tipo de dato.
-      Por esto Java tiene esa "a"
-
-         private ArrayList<Object> a = new ArrayList<Object>();
-
-      que se irá cambiando según el tipo de datos
-      que se quieran guardar en el Array de Java.
-
-      Al quitar la "a" del metodo de la clase base...
-      la clase derivada invoca al método add de la clase base, pero
-      ésta a su vez invoca al método de la clase derivada y NO a la
-      suya misma... porque la suya es "a.add"!!!
-
-      Ruby NO tiene ese problema porque tiene tipado dinámico
-      y además "Duck typing".
-      Una clase se declara y...
-      "da igual el tipo de los objetos dentro del array".
-
-Ruby: Duck typing... si se habla como un pato, nada como un pato y
-      camina como un pato... yo lo trato como un pato.  
+Ruby: Porque Ruby usa "Duck typing" y tipado dinámico.
 ```
 
-> while(true) { "I love ruby" }
+El problema viene que en Java "inventaron" los genéricos para poder crear 1 clase que pudiera servir para muchos tipos de datos diferentes.
+* El programador irá cambiando el valor <Object> según el tipo de datos
+que se quiera guardar en el ArrayList de Java. Para esto se usa esa "a": `private ArrayList<Object> a = new ArrayList<Object>();`
+* Al quitar la "a" del método de la clase base, cuando la clase derivada invoca al método "add" de la clase base, ésta a su vez invoca al método de la clase derivada (creando un ciclo), y NO a la suya misma... porque la suya es "a.add"!!!
+* **Ruby NO tiene ese problema porque tiene tipado dinámico y además "Duck typing"**. Esto es, una clase se declara y "da igual el tipo de los objetos dentro del contenedor".
+* **Duck typing** dice: "si se habla como un pato, nada como un pato y camina como un pato... lo tratamos como un pato". No se verifica el tipo de datos (Clase) sino que tenga los métodos públicos que se van a usar desde fuera.
+
+> **Conclusiones:**
+> * El problema que menciona el autor es una sorpresa o factor inesperado al programar genéricos en Java pero NO tiene que ver con el paradigma de POO.
+> * E problema del autor es pensar que la forma de resolver de Java es un problema extensible al paradigma POO.
+> * while(true) { "I love ruby" }
