@@ -1,34 +1,64 @@
 
 # Good Bye OOP
 
-Enlace de interés:
-* [Good Bye OOP](https://medium.com/@cscalfani/goodbye-object-oriented-programming-a59cda4c0e53)
+> Steve me pasó el siguiente enlace (["Good Bye OOP"](https://medium.com/@cscalfani/goodbye-object-oriented-programming-a59cda4c0e53)) el 1 de enero de 2019, y no pude resistir la tentación de empezar a leerlo. El título era demasiado atrevido para dejarlo pasar.
+>
+> ¿Cómo era posible que alguien hiciera una artículo analizando la POO para intentar descartarla?
+>
+> El paradigma POO era un pilar fundamental en mis construcciones mentales. ¿Había llegado el momento de cambiar? ¿Acaso se había descubierto algo mejor? ¡Uff!
+>
+> Decidí portarme como un valiente. Empecé a leer el artículo ["Good Bye OOP"](https://medium.com/@cscalfani/goodbye-object-oriented-programming-a59cda4c0e53) y me puse a escribir mis pensamientos...
 
 ---
 
-# La herencia: "El problema del diamante" resuelto
+# Antecendentes
 
-**La herencia NO es un pilar importante**: Es mejor la composición que la herencia.
+El autor comenta que tiene mucha experiencia en POO, usando los lenguajes C++, Smalltalk, .NET y Java.
+
+# La herencia: el primer pilar en caer.
+
+Pienso igual que el autor en que **la herencia NO es un pilar importante** de la POO. Apesar de que sea lo primero que se enseña y se pone mucho énfasis. Pero es por una cuestión de que es fácil de ver y es educativo.
+
+Pero es verdad que a la hora de la verdad la herencia NO es tan importante como nos la han "vendido". Es mejor la composición que la herencia. En el sentido de que la composición es lo que nos permitirá resolver la mayoría de los problemas reales que nos vamos a encontrar.
+
+> **Conclusiones:**
+> * Cuando nos enseñaron las clases pusieron demasiado énfasis en la herencia.
+> * Hay que tener un poco de sentido común y no hay que creerse lo que diga la documentación hasta que no lo experimentemos por nosotros mismos.
+
+---
+
+# La herencia múltiple
+
+> Estoy de acuerdo con lo que dice el autor acerca de que la teoría de la herencia múltiple es muy bonita, pero a la hora de implementarla la cosa no está tan clara.
+>
+> De hecho C++ si tiene herencia múltiple, pero C#, Java y Ruby NO tienen herencia múltiple. ¡Problema resuelto!
+>
+> Pero ¿hay alguna forma "razonable" de tener la función de "herencia múltiple"? Porque incluso C++ tiene "problemillas" con ella.
 
 * En Ruby NO se permite la herencia múltiple. Para resolver este problema tiene los MIXINS.
-* [Ejemplo1: herencia01.rb](./files/herencia01.rb): No hay herencia múltiple. Ejemplo de la salida:
+* [Ejemplo1 (herencia01.rb)](./files/herencia01.rb): No hay herencia múltiple. Ejemplo de la salida:
 ```
 files> ./herencia01.rb
 Scanner: Starting...
-Scanning...
+ * Scanning...
 ```
 
-* [Ejemplo2: herencia02.rb](./files/herencia02.rb): Resolver el problema de la herencia múltiple usando Mixins.
+* [Ejemplo2: (herencia02.rb)](./files/herencia02.rb): Resolver el problema de la herencia múltiple usando Mixins.
+    * El código que queremos reusar se escribe en módulos (clases no instanciables).
+    * Cada clase puede reutilizar el códido de dichos módulos usando `include` (_Parecido al include de PHP_).
+    * En el ejemplo tenemos un nuevo dispositivo que tiene código de Scanner y de Printer.
 ```
 files> ./herencia02.rb
 PowerDevice: Starting...
-Scanning...
-Writting...
+ * Scanning...
+ * Writting...
 ```
 
-* El problema del diamante resuelto SIN usar _"contain and delegate"_.
+* Hay otras formas de resolver este problema (_problema del diamante_) como  _"contain and delegate"_. Pero los Mixins son muy fáciles de usar.
 
-> ¡Me encanta la forma de pensar de Ruby!
+> **Conclusiones:**
+> * Teniendo _Mixins_ tenemos el efecto de herencia múltiple.
+> * _¡Me encanta la forma de pensar de Ruby!_
 
 ---
 
