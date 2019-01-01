@@ -66,7 +66,7 @@ PowerDevice: Starting...
 
 ---
 
-# La herencia: _The Fragile Base Class Problem_
+# 3. La herencia: _The Fragile Base Class Problem_
 
 * Creamos la clase base ([MyArrayBase](./files/my-array-base.rb)) y la probamos ([base01.rb](./files/base01.rb)):
 ```
@@ -107,3 +107,65 @@ que se quiera guardar en el ArrayList de Java. Para esto se usa esa "a": `privat
 > * El problema que menciona el autor es una sorpresa o factor inesperado al programar genéricos en Java pero NO tiene que ver con el paradigma de POO.
 > * E problema del autor es pensar que la forma de resolver de Java es un problema extensible al paradigma POO.
 > * while(true) { "I love ruby" }
+
+---
+
+# 3(bis)
+
+> Además tengo que decir que el ejemplo del artículo tiene un error de programación. Que (también hay que decir) NO afecta a las conclusiones del artículo, pero bueno...¡ya que estamos! ¡Lo comento!
+
+* Veamos la clase base del artículo:
+
+```
+import java.util.ArrayList;
+
+public class Array
+{
+  private ArrayList<Object> a = new ArrayList<Object>();
+
+  public void add(Object element)
+  {
+    a.add(element);
+  }
+
+  public void addAll(Object elements[])
+  {
+    for (int i = 0; i < elements.length; ++i)
+      a.add(elements[i]); // this line is going to be changed
+  }
+}
+```
+
+* Y ahora echemos un vistazo a la clase derivada.
+
+```
+public class ArrayCount extends Array
+{
+  private int count = 0;
+
+  @Override
+  public void add(Object element)
+  {
+    super.add(element);
+    ++count;
+  }
+
+  @Override
+  public void addAll(Object elements[])
+  {
+    super.addAll(elements);
+    count += elements.length;
+  }
+}
+```
+
+* ¿Ya lo viste? ¡Fallo en la clase derivada!
+* Se supone que la clase derivada incluye una nueva funcionalidad que no tiene la clase base. Esto es, la capacidad de contar el número de elementos que se van añadiendo al ArrayList.
+* El contador se incrementa en el método "add" y en "addAll", por tanto cada vez que se invoca al método "addAll" los items que se añaden al ArrayList... se cuentan dos veces. Pero cuando se añaden, de uno en uno por el modo "add" se cuentan de forma correcta.
+* Hay que quitar el contador del método "addAll", y dejar que "add" sea el único que cuente.
+
+> ¡Jajajaja! Soy un friki de los lenguajes de la programación ¡Es verdad!
+>
+> Pero es que si me "tocas" la POO, me "tocas" a Ruby... y eso... ¡no lo puedo dejar pasar así como así! ¡Ojito!
+>
+> ;-)
