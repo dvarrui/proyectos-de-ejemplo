@@ -68,7 +68,7 @@ puts "Found chicago?: #{found}"
 
 Ahora ejemplo2 utilizando el estilo declarativo:
 ```
-puts "Found chicago?: #{ cities.contains?("Chicago") }"
+puts "Found chicago?: #{ cities.include?("Chicago") }"
 ```
 
 > No quiero imponer mi forma de pensar a nadie. Sólo opinar...¡Guau! ¡Qué forma tan elegante de resolver el problema! #iloveruby
