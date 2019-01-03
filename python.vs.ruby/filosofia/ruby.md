@@ -42,7 +42,7 @@ Matz trató de distanciar Ruby de la mencionada filosofía, explicando que cualq
 
 ---
 
-# Bloques de código y la programación funcional y lo
+# Bloques de código y la programación funcional
 
 En este [blog](http://www.clubdetecnologia.net/blog/2014/programacion-funcional-ejemplos/) se comenta cómo los lenguajes tradicionales han ido inporporando elementos de la programación funcional. Por ejemplo Java 8 al incluir las expresiones lambda. No todos los lenguajes imperativos han hecho este acercamiento a la programación funcional, otros sí.
 
@@ -81,6 +81,27 @@ Como pone el artículo las mejoras son:
 * Código más cerca a las intenciones del algoritmo
 * Menos errores
 * Fácil de entender y mantener
+
+---
+
+# Closures en Ruby: Bloques, Procs y Lambdas
+
+Enlace de interés:
+* [Closures in Ruby: Blocks, Procs and Lambdas](https://blog.appsignal.com/2018/09/04/ruby-magic-closures-in-ruby-blocks-procs-and-lambdas.html)
+
+Ruby tiene closures en forma de bloques, procs y lambdas. Así se consigue gran parte de la "magia" de Ruby.
+* Bloques
+    * Se usa para pasar bloques de código a los métodos.
+    * Se usan contínuamente en Ruby.
+    * El método `yield` se usa para invocar la ejecución del bloque.
+    * Los bloques se comportan como Procs pero no se pueden almacenar en variables.
+* Procs
+    * Permite almacenar bloques de código en variables.
+* Lambda:
+    * Permite almacenar bloques de código en variables.
+    * Son Procs que se comportan como métodos.
+    * Fuerza que el número de argumentos pasados cuando se invoca.
+    * Devuelve métodos con el entorno de ejecución del padre.
 
 ---
 
