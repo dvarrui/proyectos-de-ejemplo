@@ -42,6 +42,48 @@ Matz trató de distanciar Ruby de la mencionada filosofía, explicando que cualq
 
 ---
 
+# Bloques de código y la programación funcional y lo
+
+En este [blog](http://www.clubdetecnologia.net/blog/2014/programacion-funcional-ejemplos/) se comenta cómo los lenguajes tradicionales han ido inporporando elementos de la programación funcional. Por ejemplo Java 8 al incluir las expresiones lambda. No todos los lenguajes imperativos han hecho este acercamiento a la programación funcional, otros sí.
+
+> Por ejemplo Ruby tiene:
+> * lambdas (bloques de código anónimo), y
+> * procedimientos (objetos POO que son bloques de código)
+> Estas partes de Ruby lo son todo en Ruby. En Ruby se potencia el uso de los bloques de código para resolverlo todo. Esto provoca confusión a los que vienen de lenguajes más imperativos porque no han percibido la presencia de la programación funcional en esas líneas de código. A veces he oído decir que "Ruby tiene magia" en sentido de código ofuscado que no se sabe lo que hace. A mi me gusta pensar que "Ruby tiene magia" porque es maravilloso, bonito y espectacular la forma de resolver problemas usando los paradigmas funcional y POO.
+
+Veamos lso ejemplos del artículo, pero esta vez usando Ruby.
+
+Ejemplo 1: Forma tradicional.
+```
+found = false
+for city in cities
+  if city == "Chicago"
+    found = true
+    break
+  end
+end
+
+puts "Found chicago?: #{found}"
+```
+
+Ahora ejemplo2 utilizando el estilo declarativo:
+```
+puts "Found chicago?: #{ cities.contains?("Chicago") }"
+```
+
+> No quiero imponer mi forma de pensar a nadie. Sólo opinar...¡Guau! ¡Qué forma tan elegante de resolver el problema! #iloveruby
+
+Como pone el artículo las mejoras son:
+* Disminuir el uso de variables
+* Iteración como parte de la función
+* Menos código
+* Mejora claridad, mantiene el foco
+* Código más cerca a las intenciones del algoritmo
+* Menos errores
+* Fácil de entender y mantener
+
+---
+
 # Ruby: Resumen
 
 |   | Resumen |
