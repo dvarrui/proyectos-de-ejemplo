@@ -10,7 +10,7 @@ class MyParser
   end
 
   def get_lines_from_file(filepath)
-    unless File.exist?(filepath)
+    if filepath.nil? or not File.exist?(filepath)
       puts "[ERROR] Sorry!, But <#{filepath}> dosn't exist!"
       exit
     end
