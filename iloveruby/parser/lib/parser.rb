@@ -1,7 +1,9 @@
 
-class MyParser
-  def initialize(language)
-    @language = language
+require_relative 'language'
+
+class Parser
+  def initialize(language=:default)
+    @language = Language.new
   end
 
   def parse(filepath)
@@ -29,7 +31,7 @@ class MyParser
   end
 
   def show(ast)
-    puts " Order | Tokens | Line"s
+    puts " Order | Tokens | Lines"
     puts "-------+--------+-----------"
     ast.each do |item|
       print " %3d   |" % item[:linenumber].to_i

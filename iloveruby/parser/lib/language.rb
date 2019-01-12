@@ -1,5 +1,5 @@
 
-class MyLanguage
+class Language
 
   def initialize
     @keywords = [ 'else', 'end', 'if', 'print', 'puts']

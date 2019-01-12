@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative 'lib/my-parser'
+require_relative 'lib/parser'
 
-mp = MyParser.new
+mp = Parser.new
 mp.parse(ARGV[0])
