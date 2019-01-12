@@ -25,18 +25,28 @@ class Parser
     ast =[]
     lines.each_with_index do |line, index|
       tokens = line.split(" ")
-      ast << { :linenumber => index, :tokens => tokens}
+      types = types_of_these tokens
+      ast << { :linenumber => index, :tokens => tokens, :types => types}
     end
     return ast
   end
 
   def show(ast)
     puts " Order | Tokens | Lines"
-    puts "-------+--------+-----------"
+    puts "-------+--------+------------------"
     ast.each do |item|
       print " %3d   |" % item[:linenumber].to_i
       print " %3d    |" %item[:tokens].size
-      print " #{item[:tokens].join(' ')}\n"
+      print " #{item[:tokens].join(' ')}"
+      print " (#{item[:types].join(' ')})\n"
     end
+  end
+
+  def types_of_these(tokens)
+    types = []
+    tokens.each do |token|
+      types << @language.type_of(token)
+    end
+    types
   end
 end
