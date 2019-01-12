@@ -1,7 +1,7 @@
 
 class MyParser
-  def initialize
-
+  def initialize(language)
+    @language = language
   end
 
   def parse(filepath)
@@ -22,14 +22,19 @@ class MyParser
     lines = content.split("\n")
     ast =[]
     lines.each_with_index do |line, index|
-      ast << { linenumber: index, linestring: line}
+      tokens = line.split(" ")
+      ast << { :linenumber => index, :tokens => tokens}
     end
     return ast
   end
 
   def show(ast)
+    puts " Order | Tokens | Line"s
+    puts "-------+--------+-----------"
     ast.each do |item|
-      puts"#{item[:linenumber]} : #{item[:linestring]}"
+      print " %3d   |" % item[:linenumber].to_i
+      print " %3d    |" %item[:tokens].size
+      print " #{item[:tokens].join(' ')}\n"
     end
   end
 end
