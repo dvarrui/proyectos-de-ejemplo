@@ -29,8 +29,11 @@ class Ast
     @data.each do |item|
       print " %3d   |" % item[:linenumber].to_i
       print " %3d    |" %item[:tokens].size
-      print " #{item[:tokens].join(' ')}"
-      print " (#{item[:types].join(' ')})\n"
+      if item[:tokens].size >0
+        print " #{item[:tokens].join(' ')}"
+        print " (#{item[:types].join(' ')})"
+      end
+      print "\n"
     end
   end
 

@@ -24,10 +24,24 @@ class Language
     false
   end
 
+  def integer?(value)
+    i = value.to_i
+    return true if value == i.to_s
+    false
+  end
+
+  def identifier?(value)
+    c = value[0]
+    return true if @letters.include? c
+    false
+  end
+
   def type_of(value)
     return :keyword if keyword? value
     return :operator if operator? value
     return :assignment if assignment? value
-    return :other
+    return :identifier if identifier? value
+    return :integer if integer? value
+    return :UNKNOWN
   end
 end
