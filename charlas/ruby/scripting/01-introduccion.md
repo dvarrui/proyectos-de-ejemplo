@@ -40,6 +40,18 @@ Dominios de aplicación:
 
 ---
 
+# Scripting: características
+
+* Lenguaje interpretado.
+* Programa claro, sencillo y limpio.
+* Documentar sólo si es necesario (no debería serlo)
+* Cada fichero... un cometido (una misión u objetivo concreto)
+* Sólo mostrar mensajes cuando hay problemas.
+* Códigos de salida: `0 = OK`, `1 = Error`
+* Programas NO interactivos. Nuestro objetivo es automatizar.
+
+---
+
 # ANEXO
 
 **Enlaces de interés:**
