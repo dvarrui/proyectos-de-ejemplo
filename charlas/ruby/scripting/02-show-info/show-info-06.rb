@@ -11,6 +11,7 @@
 #
 # Objetivo:
 # * Mostrar información del sistema en pantalla
+# * Código limpio y ordenado
 # * Más bonito con colores
 # * Resaltar las partes diferentes
 
@@ -23,8 +24,7 @@ la_fecha   = Rainbow(%x(date).chomp).blink
 el_arbol   = Rainbow(%x(which tree).chomp).underline
 
 # Muestro la información
-puts "* ¡Hola! Me llamo #{mi_nombre}"
-puts "* Y resulta que me encuentro en #{mi_sitio}"
-
-puts "* Miro el reloj y es #{la_fecha}"
-puts "* Creo que hay un árbol en #{el_arbol}"
+puts "* Me llamo   : #{mi_nombre}"
+puts "* Estoy en   : #{mi_sitio}"
+puts "* Fecha/hora : #{la_fecha}"
+puts "* Comando    : #{el_arbol}"

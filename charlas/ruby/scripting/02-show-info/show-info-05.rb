@@ -19,8 +19,7 @@ la_fecha   = %x(date).chomp       # ¿Qué días es?
 el_arbol   = %x(which tree).chomp # ¿Dónde encuentro árboles?
 
 # Muestro la información
-puts("* ¡Hola! Me llamo <#{mi_nombre}>")
-puts "* Y resulta que me encuentro en <#{mi_sitio}>"
-
-puts('* Miro el reloj y es <' + la_fecha + '>')
-puts '* Creo que hay un árbol en <' + el_arbol + '>'
+puts("* Me llamo   <#{mi_nombre}>")
+puts "* Estoy en   <#{mi_sitio}>"
+puts('* Fecha/hora <' + la_fecha + '>')
+puts '* Comando    <' + el_arbol + '>'
