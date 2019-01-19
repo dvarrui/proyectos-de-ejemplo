@@ -22,5 +22,5 @@ el_arbol   = %x(which tree) # ¿Dónde encuentro árboles?
 puts("* ¡Hola! Me llamo <#{mi_nombre.chomp}>")
 puts "* Y resulta que me encuentro en <#{mi_sitio.chomp}>"
 
-puts('* Además ahora son las <' + la_fecha.chomp + '>')
+puts('* Miro el reloj y es <' + la_fecha.chomp + '>')
 puts '* Creo que hay un árbol en <' + el_arbol.chomp + '>'
