@@ -18,9 +18,9 @@ require 'rainbow'
 
 # Recopilo información...
 mi_nombre  = Rainbow(`whoami`.chomp).inverse
-mi_sitio   = Rainbow(`pwd`.chomp).inverse
-la_fecha   = Rainbow(%x(date).chomp).inverse
-el_arbol   = Rainbow(%x(whereis tree).chomp).inverse
+mi_sitio   = Rainbow(`pwd`.chomp).underline
+la_fecha   = Rainbow(%x(date).chomp).blink
+el_arbol   = Rainbow(%x(which tree).chomp).underline
 
 # Muestro la información
 puts "* ¡Hola! Me llamo #{mi_nombre}"
