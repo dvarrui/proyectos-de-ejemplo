@@ -10,7 +10,9 @@ def show_use
 end
 
 show_title
-dirnames = ['private11', 'group11', 'public11']
+
+content = `cat 12-dirnames.txt`
+dirnames = content.split("\n")
 
 if ARGV.empty?
   show_use
