@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative '12-doundo-lib'
+require_relative '13-doundo-lib'
 
 def show_use
   puts "Usage:"
@@ -10,18 +10,16 @@ def show_use
 end
 
 show_title
-
-content = `cat 12-dirnames.txt`
-dirnames = content.split("\n")
+dirlist = read_data_from('13-dirlist.txt')
 
 if ARGV.empty?
   show_use
 elsif ARGV[0]=='-c'
-  create_dirs dirnames
+  create_dirs dirlist
 elsif ARGV[0]=='-d'
-  delete_dirs dirnames
+  delete_dirs dirlist
 elsif ARGV[0]=='-s'
-  show_dir_status dirnames
+  show_dir_status dirlist
 else
   show_use
 end
