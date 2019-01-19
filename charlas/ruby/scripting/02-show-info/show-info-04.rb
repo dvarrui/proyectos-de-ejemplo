@@ -4,6 +4,8 @@
 # * `` o %x()
 # * puts
 # * Usar variables para guardar datos
+# * Usar método chmop para quitar "\n"
+# * Más información en :https://ruby-doc.org/core-2.6/String.html
 #
 # Objetivo:
 # * Mostrar información del sistema en pantalla
@@ -17,16 +19,8 @@ la_fecha   = %x(date)         # ¿Dónde encuentro árboles?
 el_arbol   = %x(whereis tree) # ¿Dónde encuentro árboles?
 
 # Muestro la información
-puts("¡Hola! Me llamo <#{mi_nombre}>")
-puts "Y resulta que me encuentro en <#{mi_sitio}>"
+puts("* ¡Hola! Me llamo <#{mi_nombre.chomp}>")
+puts "* Y resulta que me encuentro en <#{mi_sitio.chomp}>"
 
-puts('Además ahora son las <' + la_fecha + '>')
-puts 'Creo que hay un árbol en ' + el_arbol + '>'
-
-# Problemilla: Olvidamos el "\n" del final (chomp)
-#
-# % irb                                                                              19-01-19 - 13:32:45
-# irb(main):001:0> a = `whoami`
-# => "david\n"
-# irb(main):002:0> quit
-# %
+puts('* Además ahora son las <' + la_fecha.chomp + '>')
+puts '* Creo que hay un árbol en <' + el_arbol.chomp + '>'
