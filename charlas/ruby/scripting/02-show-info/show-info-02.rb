@@ -10,10 +10,10 @@
 # * Pero además de forma bonita (más humana)
 
 # Recopilo información...
-mi_nombre  = `whoami`         # ¿Quién soy?
-mi_sitio   = `pwd`            # ¿Dónde estoy?
-la_fecha   = %x(date)         # ¿Dónde encuentro árboles?
-el_arbol   = %x(whereis tree) # ¿Dónde encuentro árboles?
+mi_nombre  = `whoami`       # ¿Quién soy?
+mi_sitio   = `pwd`          # ¿Dónde estoy?
+la_fecha   = %x(date)       # ¿Qué día es?
+el_arbol   = %x(which tree) # ¿Dónde encuentro árboles?
 
 # Muestro la información
 puts("¡Hola! Me llamo #{mi_nombre}")
