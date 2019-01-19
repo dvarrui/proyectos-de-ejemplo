@@ -5,7 +5,7 @@
 require 'rainbow'
 
 def show_title
-  puts "Ejecutando el programa #{Rainbow($0).inverse}..."
+  puts "Ejecutando el programa #{Rainbow($0).bg(:blue)}..."
 end
 
 def create_dirs
