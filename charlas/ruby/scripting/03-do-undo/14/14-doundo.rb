@@ -16,7 +16,7 @@ if ARGV.empty? or ARGV.size!=2
   show_use
   exit
 elsif not File.exist? ARGV[1]
-  puts "[ERROR] File <#{ARGV[1]} dosn't exists!"
+  puts "[ERROR] File <#{ARGV[1]}> dosn't exists!"
   exit
 end
 
