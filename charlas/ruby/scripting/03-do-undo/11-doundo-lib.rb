@@ -8,9 +8,7 @@ def show_title
   puts "Ejecutando el programa #{Rainbow($0).bg(:blue)}..."
 end
 
-def create_dirs
-  dirnames = ['private', 'group', 'public']
-
+def create_dirs(dirnames)
   dirnames.each do |dirname|
     if File.exist? dirname
       puts "[W] Directorio #{Rainbow(dirname).bright} ya existe!"
@@ -20,9 +18,7 @@ def create_dirs
   end
 end
 
-def delete_dirs
-  dirnames = ['private', 'group', 'public']
-
+def delete_dirs(dirnames)
   dirnames.each do |dirname|
     if File.exist? dirname
       system "rmdir #{dirname}"
@@ -32,9 +28,7 @@ def delete_dirs
   end
 end
 
-def show_dir_status
-  dirnames = ['private', 'group', 'public']
-
+def show_dir_status(dirnames)
   dirnames.each do |dirname|
     if File.exist? dirname
       puts "* Directorio #{Rainbow(dirname).green.bright} existe!"
