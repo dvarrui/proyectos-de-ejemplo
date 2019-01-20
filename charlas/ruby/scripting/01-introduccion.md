@@ -61,6 +61,7 @@ poco a poco
 * [show-info](./02-show-info): Hacer un que muestre alguna información del sistema en pantalla.
 * [do-undo](./03-du-undo): Hacer uns script que cree directorios con determinados permisos.
 * [radar](./04-radar): Hacer un script para "monitorizar" ciertos hosts.
+* [software](./05-software): Configurar nuestra máquina con determinado software.
 
 ---
 
