@@ -20,3 +20,10 @@ def show_results(results)
     puts "#{index} : #{line}"
   end
 end
+
+def show_ips(ips)
+  system('clear')
+  ips.each_with_index do |ip, index|
+    puts "#{index} : Scanning #{ip}..."
+  end
+end
