@@ -52,6 +52,18 @@ Dominios de aplicación:
 
 ---
 
+# Ejemplos
+
+Vamos a seguir aprendiendo con ejemplos reales.
+Viendo código desde los más sencillo y que iremos complicando
+poco a poco
+
+* [show-info](./02-show-info): Hacer un que muestre alguna información del sistema en pantalla.
+* [do-undo](./03-du-undo): Hacer uns script que cree directorios con determinados permisos.
+* [radar](./04-radar): Hacer un script para "monitorizar" ciertos hosts.
+
+---
+
 # ANEXO
 
 **Enlaces de interés:**
