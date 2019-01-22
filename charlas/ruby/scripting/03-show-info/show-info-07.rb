@@ -19,7 +19,6 @@ require 'rainbow'
 
 def show_info
   puts "\nMOSTRANDO INFORMACION DEL SISTEMA\n\n"
-
   # Recopilo información...
   mi_nombre  = Rainbow(`whoami`.chomp).inverse
   mi_sitio   = Rainbow(`pwd`.chomp).underline

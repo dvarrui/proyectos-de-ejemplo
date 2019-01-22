@@ -7,7 +7,7 @@
 
 if not File.exist? 'private'
   system('mkdir private')
-  system('chmod 755 private')
+  system('chmod 700 private')
 end
 
 if !File.exist?('group')
