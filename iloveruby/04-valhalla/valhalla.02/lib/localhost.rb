@@ -2,7 +2,7 @@
 
 require 'net/ssh'
 
-class Host
+class LocalHost
   attr_reader :ip
   attr_accessor :command
   attr_reader :exit_code
