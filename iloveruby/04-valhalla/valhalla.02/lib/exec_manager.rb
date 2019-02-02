@@ -1,10 +1,11 @@
 
 require_relative 'localhost'
+require_relative 'host'
 
 class ExecManager
 
   def run
-    h = LocalHost.new('127.0.0.1')
+    h = LocalHost.new()
     h.run('pwd')
     h.run('whoami')
   end

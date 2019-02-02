@@ -7,8 +7,8 @@ class LocalHost
   attr_accessor :command
   attr_reader :exit_code
 
-  def initialize(ip)
-    @ip = ip
+  def initialize()
+    @ip = '127.0.0.1'
     @exit_code = 0
     @success = false
   end
