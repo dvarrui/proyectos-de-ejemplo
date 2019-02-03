@@ -3,7 +3,7 @@ require_relative 'host/local_host'
 require_relative 'host/remote_host'
 
 class ExecManager
-
+  
   def run
     puts "[EXEC] LocalHost:"
     h1 = LocalHost.new
