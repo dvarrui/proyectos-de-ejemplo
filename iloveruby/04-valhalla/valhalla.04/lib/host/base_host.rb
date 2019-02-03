@@ -17,11 +17,4 @@ class BaseHost
   def run(command=:none)
     raise 'Build method!'
   end
-
-  def debug(command=:none)
-    run command
-    puts "[MACHINE #{@ip}]"
-    puts "* Running... #{@command}"
-    puts "* Result = #{@success}"
-  end
 end

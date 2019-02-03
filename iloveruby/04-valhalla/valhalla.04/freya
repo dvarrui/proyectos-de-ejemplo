@@ -18,7 +18,7 @@ class Freya < Thor
 
   LONGDESC
   def show(command, from=:from, hosts)
-    ExecManager.new.run
+    ExecManager.new(command, hosts).run
   end
 
   map ['v', '-v', '--version'] => 'version'

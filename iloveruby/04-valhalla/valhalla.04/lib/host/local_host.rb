@@ -8,6 +8,10 @@ class LocalHost < BaseHost
   end
 
   def run(command=:none)
+    title = "[EXEC] LocalHost  : #{@ip}"
+    puts ("=" * title.size)
+    puts title
+
     @command = command unless command == :none
     @success = system("#{@command}")
   end

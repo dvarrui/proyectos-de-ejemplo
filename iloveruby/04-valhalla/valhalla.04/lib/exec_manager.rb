@@ -4,17 +4,18 @@ require_relative 'host/remote_host'
 
 class ExecManager
 
+  def initialize(command, hosts)
+    @command = command
+    @hosts = hosts
+  end
+
   def run
-    puts "[EXEC] LocalHost:"
+    print "[MANAGER] run #{Rainbow(@command).yellow.bright}"
+    puts  " into #{Rainbow(@hosts).yellow.bright}"
     h1 = LocalHost.new
-    h1.run('hostname')
-    h1.run('pwd')
-    h1.run('whoami')
-    puts "[EXEC] RemoteHost:"
+    h1.run(@command)
     h2 = RemoteHost.new('192.168.1.111')
-    h2.run('hostname')
-    h2.run('pwd')
-    h2.run('whoami')
+    h2.run(@command)
   end
 
 end
