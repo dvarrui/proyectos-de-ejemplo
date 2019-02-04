@@ -12,7 +12,8 @@ class RemoteHost < BaseHost
 
   def run(command=:none)
     @command = command unless command == :none
-    @success = system("ssh root@#{ip} #{@command}")
+    screen = `ssh root@#{ip} #{@command}`
+    @output << { :command => @command, :result => screen.split("\n") }
   end
 
 end

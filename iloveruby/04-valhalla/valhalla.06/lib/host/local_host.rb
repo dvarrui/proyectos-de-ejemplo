@@ -15,6 +15,7 @@ class LocalHost < BaseHost
 
   def run(command=:none)
     @command = command unless command == :none
-    @success = system("#{@command}")
+    screen = `#{@command}`
+    @output << { :command => @command, :result => screen.split("\n") }
   end
 end

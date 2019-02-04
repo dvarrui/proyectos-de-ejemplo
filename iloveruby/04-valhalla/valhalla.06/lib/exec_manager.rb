@@ -9,12 +9,13 @@ class ExecManager
 
   def run
     puts "=" * 50
-    print "[MANAGER] run #{Rainbow(@data.commands_file).yellow.bright}"
+    print "[MANAGER] running #{Rainbow(@data.commands_file).yellow.bright}"
     puts  " => #{Rainbow(@data.hosts_file).yellow.bright}"
 
     @data.hosts.each do |host|
       host.info
       host.run_several(@data.commands)
+      host.show_output
     end
   end
 

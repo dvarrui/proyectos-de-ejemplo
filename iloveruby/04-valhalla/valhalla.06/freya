@@ -14,9 +14,12 @@ class Freya < Thor
   map ['s', '-s', '--say'] => 'say'
     desc 'say COMMAND from HOSTS', 'Run COMMAND into HOSTS'
     long_desc <<-LONGDESC
-* COMMAND , Commands file from ./command directory
 
-* HOST    , Host file from ./host directory
+COMMAND is one of files into ./command directory.
+This file contains one or more commands to be executed.
+
+HOST is one file into ./host directory.
+This file contains IP's of diferents hosts.
 
   LONGDESC
   def say(command, from=:from, hosts)
