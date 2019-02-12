@@ -1,7 +1,7 @@
 
 # I Love Ruby
 
-![](../images/iloveruby.png)
+![](../language/images/iloveruby.png)
 
 ---
 

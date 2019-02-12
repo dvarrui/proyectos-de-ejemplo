@@ -1,7 +1,7 @@
 
 # Ruby: scripting
 
-![](../images/iloveruby.png)
+![](../language/images/iloveruby.png)
 
 ---
 

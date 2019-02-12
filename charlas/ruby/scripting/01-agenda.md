@@ -1,7 +1,7 @@
 
 # I Love Ruby
 
-![](../images/caminar.png)
+![](../language/images/caminar.png)
 
 ---
 
