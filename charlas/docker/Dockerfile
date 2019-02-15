@@ -15,3 +15,5 @@ RUN gem install rails
 RUN ln -s /usr/lib64/ruby/gems/2.6.0/gems/railties-5.2.2/exe/rails /usr/local/bin/rails
 
 EXPOSE 4567
+
+CMD ["/bin/bash"]
