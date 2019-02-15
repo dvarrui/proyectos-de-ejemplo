@@ -12,7 +12,8 @@ systemctl status docker
 systemctl start docker
 docker version
 
-sudo sysctl net.ipv4.ip_forward                                           net.ipv4.ip_forward = 1
+sudo sysctl net.ipv4.ip_forward
+net.ipv4.ip_forward = 1
 ```
 
 ---
