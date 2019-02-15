@@ -39,9 +39,16 @@ cd proyecto
 
 Crear nuestra imagen a partir de nuestro Dockerfile:
 ```
-docker images
-docker build -t rubyrails .
-docker images
+% docker images
+REPOSITORY           TAG     IMAGE ID      CREATED        SIZE
+opensuse/tumbleweed  latest  c794a5976b99  21 hours ago   115MB```
+
+% docker build -t rubyrails .
+
+% docker images
+REPOSITORY           TAG     IMAGE ID      CREATED        SIZE
+rubyrails            latest  e0d18f95927e  2 minutes ago  764MB
+opensuse/tumbleweed  latest  c794a5976b99  21 hours ago   115MB
 ```
 
 ---
