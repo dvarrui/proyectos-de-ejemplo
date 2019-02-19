@@ -12,9 +12,9 @@ class Character
     words = method.to_s.split('_')
     if words[0] == 'show'
       [ 'show', 'my', 'and'].each { |w| words.delete(w) }
-      words.each do |component|
-        c = self.send component.to_sym
-        c.send :show
+      words.each do |c|
+        component = self.send c.to_sym
+        component.send :show
       end
     end
   end
