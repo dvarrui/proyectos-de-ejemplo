@@ -27,6 +27,12 @@ module CharacterFunction
     t = value[:type] if value.class == Hash
     "I'm a #{t}"
   end
+
+  def song(value=nil)
+    s = value if value.class == String
+    s = name(value) if value.class == Hash
+    "La la lalaaaaaa oh #{s}!!!!"
+  end
 end
 
 include CharacterFunction

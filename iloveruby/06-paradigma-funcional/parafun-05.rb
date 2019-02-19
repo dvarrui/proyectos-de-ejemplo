@@ -6,3 +6,4 @@ maul   = { name: 'Maul',   type: 'sith' }
 
 show name of obiwan
 and_then show type of obiwan
+show song of type maul
