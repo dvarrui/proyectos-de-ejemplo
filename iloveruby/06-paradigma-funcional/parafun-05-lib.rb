@@ -17,7 +17,7 @@ module CharacterFunction
     value
   end
 
-  def and_of_course(value)
+  def and_then(value)
     value
   end
 
