@@ -9,17 +9,18 @@ puts('3 - Calcular el área del círculo')
 puts('4 - Salir')
 
 print 'Elige una opción del menú (1-4) '
-opcion = gets.to_i
+STDOUT.flush
+opcion = STDIN.gets.to_i
 
 case opcion
 when 1 then
   diametro = 2 * radio
   puts("El diámetro de la circunferencia es de #{diametro}")
 when 2 then
-  perimetro = 2 * pi * radio
-  puts("El perímetro de la circunferencia es de #{perimetros}")
+  perimetro = 2 * Math::PI * radio
+  puts("El perímetro de la circunferencia es de #{perimetro}")
 when 3 then
-  area = pi * radio ** 2
+  area = Math::PI * radio ** 2
   puts("El área del círculo es de #{area}")
 when 4 then
   puts('Has elegido salir de la aplicación')
