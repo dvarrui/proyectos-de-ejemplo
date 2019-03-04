@@ -1,32 +1,35 @@
 #!/usr/bin/env ruby
 
-def process(id, value)
+def process(id, delay)
   begintime=Time.now
-  delay = rand(10)
-  puts "[#{id}] BEGIN | input : #{value}"
+  puts "[#{id}] BEGIN | expected delay : #{delay}"
   sleep(delay)
   endtime=Time.now
   duration = endtime-begintime
-  puts "[#{id}] END   | delay : #{ duration.to_i}"
-  result = delay
-  return { duration: duration, result: result}
+  puts "[#{id}] END   |     real delay : #{ duration.to_i}"
+  return { pid: id, duration: duration, delay: delay}
 end
 
 def show_begin_title(values)
   puts "="*40
-  puts "BEGIN : #{values.to_s}"
+  puts "   Script : #{$0} "
+  puts "   Inputs : #{values.to_s}"
   puts "="*40
 end
 
 def show_end_title(outputs)
+  duration = 0.0
+  outputs.each { |output| duration += output[:duration] }
   puts "="*40
-  puts "END   : #{outpus.to_s}"
+  puts "            Total duration = #{duration.to_i}"
   puts "="*40
 end
 
-items = [ 1, 3, 5, 7]
+inputs = [ 1, 3, 5, 7].shuffle
 
-show_begin_title items
-items.each_with_index do |item, index|
-  output = process(index, item)
+show_begin_title inputs
+outputs = []
+inputs.each_with_index do |input, index|
+  outputs << process(index, input)
 end
+show_end_title outputs
