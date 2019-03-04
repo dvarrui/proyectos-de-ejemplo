@@ -1,25 +1,21 @@
 
-def process(id, delay)
-  begintime=Time.now
-  puts "[#{id}] BEGIN | expected delay : #{delay}"
+def do_something(id, delay)
+  puts "[#{id}] BEGIN  : delay = #{ delay.to_i}"
   sleep(delay)
-  endtime=Time.now
-  duration = endtime-begintime
-  puts "[#{id}] END   |     real delay : #{ duration.to_i}"
-  return { pid: id, duration: duration, delay: delay}
+  puts "[#{id}] END   "
 end
 
-def show_begin_title(values)
+def begin_work(values)
   puts "="*40
-  puts "   Script : #{$0} "
-  puts "   Inputs : #{values.to_s}"
+  puts "    Script : #{$0} "
+  puts "    Inputs : #{values.to_s}"
   puts "="*40
+  @begintime = Time.now
 end
 
-def show_end_title(outputs)
-  duration = 0.0
-  outputs.each { |output| duration += output[:duration] }
+def end_work
+  duration = Time.now-@begintime
   puts "="*40
-  puts "            Total duration = #{duration.to_i}"
+  puts "    Total duration = #{duration.to_i}"
   puts "="*40
 end

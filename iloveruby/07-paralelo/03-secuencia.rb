@@ -2,11 +2,9 @@
 
 require_relative '03-secuencia-lib'
 
-numbers = [ 1, 3, 5, 7].shuffle
-show_begin_title numbers
+inputs = [ 1, 3, 5, 7].shuffle
+tasks = get_tasks_from inputs
 
-tasks = []
-numbers.each { |n| tasks << SequentialProcess.new(n) }
-tasks.each { |t| t.process }
-
-show_end_title tasks
+begin_work inputs
+tasks.each { |t| t.do_something }
+end_work
