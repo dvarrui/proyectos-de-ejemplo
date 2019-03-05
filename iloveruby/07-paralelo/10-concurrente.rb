@@ -2,7 +2,7 @@
 
 require_relative '10-concurrente-lib'
 
-inputs = [ 2, 4, 6, 8].shuffle
+inputs = [ 1, 3, 5, 7].shuffle
 action = lambda { |id,delay,mutex| do_something(id,delay,mutex)}
 @counter = 0
 
