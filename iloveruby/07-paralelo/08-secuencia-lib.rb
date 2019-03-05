@@ -9,18 +9,19 @@ def do_something(id, delay)
 end
 
 def begin_work(values)
-  puts "="*40
+  puts "="*60
   puts "    Script : #{$0} "
   puts "    Inputs : #{values.to_s}"
   puts "    Counter: #{@counter}"
-  puts "="*40
+  puts "    Result : This program works fine without using mutex."
+  puts "="*60
   @begintime = Time.now
 end
 
 def end_work
   duration = Time.now-@begintime
-  puts "="*40
+  puts "="*60
   puts "    Total duration = #{duration.to_i}"
   puts "           Counter = #{@counter}"
-  puts "="*40
+  puts "="*60
 end
