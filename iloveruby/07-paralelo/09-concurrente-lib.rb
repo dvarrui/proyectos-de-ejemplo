@@ -2,8 +2,10 @@
 def do_something(id, delay)
   puts "[#{id}] BEGIN  :   delay = #{ delay.to_i}"
   delay.to_i.times do
-    @counter+=1
+    c = @counter
+    c +=1
     sleep(1)
+    @counter = c
   end
   puts "[#{id}] END    : counter = #{@counter}"
 end

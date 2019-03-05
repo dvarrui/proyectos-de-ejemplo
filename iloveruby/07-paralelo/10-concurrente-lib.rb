@@ -1,10 +1,14 @@
 
 def do_something(id, delay, mutex)
   puts "[#{id}] BEGIN  :   delay = #{ delay.to_i}"
-  delay.to_i.times {
-    mutex.synchronize { @counter+=1 }
-    sleep(1)
-  }
+  delay.to_i.times do
+    mutex.synchronize do
+      c = @counter
+      c +=1
+      sleep(1)
+      @counter = c 
+    end
+  end
   puts "[#{id}] END    : counter = #{@counter}"
 end
 
