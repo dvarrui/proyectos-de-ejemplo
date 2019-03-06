@@ -1,12 +1,17 @@
 
 # Proyectos de Ejemplo
 
+Este repositorio contiene diverso material, tutoriales y ejemplos de código... principalmente basados en el lenguaje de programación **Ruby**.
+
+El contenido se organiza del siguiente modo:
+
+| Carpeta              | Contenido |
+| -------------------- | --------- |
+| [iloveruby](./iloveruby) | Ejemplos y miniproyectos realizados con Ruby |
+| [charlas](./charlas) | Charlas sobre Ruby |
+| [comparativa](./comparativa) | Análisis comparativo de Ruby con otros lenguajes de programación |
+
+# Otros proyectos relacionados
+
 Django:
 * [MVP - Minimum Viable Product](https://github.com/sdelquin/mvp): proyecto hecho con Django por `sdelquin`.
-
-Rails 5:
-* [Flipante](./rails5.flipante): proyecto hecho con Scaffold de Rails 5. Esto es... con apenas 2 órdenes.
-* [Messenger](./rails5.messenger): proyecto hecho con Rails 5.
-
-Sinatra:
-* [Hello](./sinatra2.hello): Un "Hello World!" con Sinatra.
