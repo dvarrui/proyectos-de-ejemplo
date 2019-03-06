@@ -11,7 +11,15 @@ El contenido se organiza del siguiente modo:
 | [charlas](./charlas) | Charlas sobre Ruby |
 | [comparativa](./comparativa) | Análisis comparativo de Ruby con otros lenguajes de programación |
 
+---
+
 # Otros proyectos relacionados
 
 Django:
 * [MVP - Minimum Viable Product](https://github.com/sdelquin/mvp): proyecto hecho con Django por `sdelquin`.
+
+---
+
+# Contacto
+
+Email: iloveruby@protonmail.com
