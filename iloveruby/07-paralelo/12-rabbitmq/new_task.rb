@@ -12,7 +12,8 @@ message = ARGV.empty? ? 'Hello World!' : ARGV.join(' ')
 messages = message.split(" ")
 messages.each do |m|
   queue.publish(m, persistent: true)
+  puts " [ INFO ] Sent '#{m}'"
   sleep m.size
-  puts " [x] Sent #{m}"
 end
 connection.close
+puts " [ INFO ] Exit program!"
