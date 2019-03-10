@@ -1,10 +1,4 @@
 
-# TEUTON
-
-![](./images/13-teuton-color-256x279.png)
-
----
-
 # Presentación
 
 ```
