@@ -12,18 +12,22 @@ Ejemplo 1:
 ```
 edad = gets
 if (edad > “18”)
-  puts “Eres mayor”
+  puts “Eres mayor de edad”
 end
 ```
+
+---
 
 Ejemplo 2:
 
 ```
 edad = gets.to_i
 if edad > 18
-  puts “Eres mayor”
+  puts “Eres mayor de edad”
 end
 ```
+
+---
 
 Ejemplo 3:
 
