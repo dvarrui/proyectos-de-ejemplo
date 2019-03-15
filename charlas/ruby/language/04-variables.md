@@ -50,10 +50,7 @@ me    = { :name => 'david', :age => 42 } # Hash
 
 ---
 
-# Variables globales
-
-Variables de instancia:
-
-Variables de clase:
-
-Constantes:
+* Variables globales
+* Variables de instancia:
+* Variables de clase
+* Constantes
