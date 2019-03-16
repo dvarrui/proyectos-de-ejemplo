@@ -30,7 +30,7 @@ chmod +x program
 
 ---
 
-# Reflexividad
+# Reflexión
 
 ```
 $ irb
@@ -41,11 +41,112 @@ irb(main):001:0> a=[1,2,3]
 irb(main):002:0> a.class
 => Array
 
-irb(main):003:0> a.public_methods.sort
-=> [:!, :!=, :!~, :&, :*, :+, :-, :<<, :<=>, :==, :===, :=~, :[], :[]=, :__id__, :__send__, :all?, :any?, :append, :assoc, :at, :bsearch, :bsearch_index, :chunk, :chunk_while, :class, :clear, :clone, :collect, :collect!, :collect_concat, :combination, :compact, :compact!, :concat, :count, :cycle, :define_singleton_method, :delete, :delete_at, :delete_if, :detect, :dig, :display, :drop, :drop_while, :dup, :each, :each_cons, :each_entry, :each_index, :each_slice, :each_with_index, :each_with_object, :empty?, :entries, :enum_for, :eql?, :equal?, :extend, :fetch, :fill, :find, :find_all, :find_index, :first, :flat_map, :flatten, :flatten!, :freeze,
-...
+irb(main):003:0> a.methods
 ```
 
 ---
 
-## Metaprogramar de forma dinámica
+## METAGROGRAMACIÓN con mayúsculas
+
+Ejemplo 1:
+```
+#!/usr/bin/env ruby
+
+class Person
+  def initialize(name)
+    @name = name
+  end
+end
+
+quigon = Person.new("Qui-gon Jinn")
+
+puts '='*60
+puts "Object             : #{quigon}"
+puts "Instance variables : #{quigon.instance_variables}"
+puts "Method with name   : #{quigon.public_methods.grep(/name/)}"
+puts "Object#name        : undefined method 'name'"
+puts '='*60
+```
+
+Salida1:
+```
+============================================================
+Object             : #<Person:0x000055a3351d8070>
+Instance variables : [:@name]
+Method with name   : []
+Object#name        : undefined method 'name'
+============================================================
+```
+
+---
+
+Ejemplo2:
+```
+#!/usr/bin/env ruby
+
+class Person
+  def getter(var)
+    define_singleton_method(var) do
+      instance_variable_get("@#{var}")
+    end
+  end
+
+  def initialize(name)
+    @name = name
+    getter('name')
+  end
+end
+
+quigon = Person.new("Qui-gon Jinn")
+
+puts '='*60
+puts "Object             : #{quigon}"
+puts "Instance variables : #{quigon.instance_variables}"
+puts "Method with name   : #{quigon.public_methods.grep(/name/)}"
+puts "Object#name        : #{quigon.name}"
+puts '='*60
+```
+
+Salida2:
+```
+============================================================
+Object             : #<Person:0x00005557563ee308>
+Instance variables : [:@name]
+Method with name   : [:name]
+Object#name        : Qui-gon Jinn
+============================================================
+```
+
+---
+
+Ejemplo3:
+```
+#!/usr/bin/env ruby
+
+class Person
+  attr_accessor :name
+
+  def initialize(name)
+    @name = name
+  end
+end
+
+quigon = Person.new("Qui-gon Jinn")
+
+puts '='*60
+puts "Object             : #{quigon}"
+puts "Instance variables : #{quigon.instance_variables}"
+puts "Method with name   : #{quigon.public_methods.grep(/name/)}"
+puts "Object#name        : #{quigon.name}"
+puts '='*60
+```
+
+Salida3:
+```
+============================================================
+Object             : #<Person:0x0000563e5acb9370>
+Instance variables : [:@name]
+Method with name   : [:name, :name=]
+Object#name        : Qui-gon Jinn
+============================================================
+```
