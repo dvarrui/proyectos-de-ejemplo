@@ -14,6 +14,8 @@ price = 9.99          # Float
 42.to_s               # "42"
 ```
 
+---
+
 String:
 
 ```
@@ -29,6 +31,28 @@ name.chars            # ["D", "a", "v", "i", "d"]
 puts "My name is #{name}. I'm #{age} years old."
 ```
 
+---
+
+Symbol:
+
+```
+a = "hola"    #=> "hola"
+b = "hola"    #=> "hola"
+b.class       #=> String
+a==b          #=> true
+
+a.object_id == b.object_id  #=> false
+a.object_id   #=> 47008196880100
+b.object_id   #=> 47008196911520
+
+c = :hello    #=> :hello
+d = :hello    #=> :hello
+d.class       #=> Symbol
+c == d        #=> true
+c.object_id == d.object_id  #=> true
+```
+---
+
 Array:
 ```
 jedis = [ 'obiwan', 'yoda', 'quigon'] # Array
@@ -42,6 +66,8 @@ numbers << 70      # [16, 11, 70]
 
 ```
 
+---
+
 Hash:
 ```
 me    = { name: 'david', age: 42 }       # Hash
@@ -50,7 +76,7 @@ me    = { :name => 'david', :age => 42 } # Hash
 
 ---
 
-* Variables globales
-* Variables de instancia:
-* Variables de clase
-* Constantes
+* Variables globales: `$PROGRAMNAME`
+* Variables de instancia: `@name`
+* Variables de clase: `@@id`
+* Constantes: `VERSION=3`

@@ -24,6 +24,8 @@ yoda
 quigon
 ```
 
+---
+
 Iterador de un Hash:
 
 ```
