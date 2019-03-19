@@ -1,8 +1,6 @@
 
 # I Love Ruby
 
-![](./images/iloveruby.png)
-
 ---
 
 # Bucles
@@ -37,6 +35,7 @@ end
 ```
 
 Salida:
+
 ```
 Param <name> with <David> value.
 Param <age> with <42> value.

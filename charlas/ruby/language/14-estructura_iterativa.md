@@ -1,8 +1,6 @@
 
 # I Love Ruby
 
-![](./images/caminar.png)
-
 ---
 
 # Estructura iterativa (II): iterar
@@ -12,6 +10,11 @@ Ejemplo 1:
 ```
 # Estilo Ruby
 # Iterar usando bloques con métodos POO
+10.times { |i| puts i }
+```
+
+```
+# Modo multilínea
 10.times do |i|
   puts i
 end
@@ -19,6 +22,7 @@ end
 
 * <times> es un método del objeto <10>
 * <each> es un método
+* { ... } es un bloque
 * do ... end es un bloque.
 
 ---
@@ -43,21 +47,6 @@ El uso de los bloques permite aplicar el paradigma funcional (al menos en parte)
 # Estructura iterativa (III): los arrays
 
 Ejemplo 1:
-
-```
-a = Array.new
-a << 4
-a << 5
-a << 6
-
-puts a
-```
-* <a> es [3,14,27]
-* <a> es un objeto Array
-
----
-
-Ejemplo 2:
 
 ```
 # Iterar usando bloques con métodos POO

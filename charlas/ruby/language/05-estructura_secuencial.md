@@ -9,6 +9,7 @@
 # Estructura secuencial (I)
 
 Ejemplo 1
+
 ```
 # Sumar enteros
 a = 3
@@ -18,7 +19,10 @@ puts a + b
 # 7
 ```
 
+---
+
 Ejemplo 2
+
 ```
 # Unir Strings
 a = “Hello”
@@ -30,7 +34,10 @@ puts a + b
 
 **Rule1:** _Declaración de variables dinámica._
 
+---
+
 Ejemplo 3
+
 ```
 # Sumar enteros con Strings
 a = “1”

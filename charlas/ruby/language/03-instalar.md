@@ -5,6 +5,9 @@
 
 # Instalar Ruby
 
+Enlace de interés:
+* [Ruby en 20 minutos](https://www.ruby-lang.org/es/documentation/quickstart/)
+
 | Sistema Operativo | Instalación            |
 | ----------------- | ---------------------- |
 | **OpenSUSE**      | **Ya viene preinstalado** |

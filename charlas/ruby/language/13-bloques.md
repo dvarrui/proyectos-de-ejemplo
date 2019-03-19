@@ -1,8 +1,6 @@
 
 # I Love Ruby
 
-![](./images/caminar.png)
-
 ---
 
 # Bloques?
@@ -10,7 +8,7 @@
 Enlace de interés:
 * https://www.tutorialspoint.com/ruby/ruby_blocks.htm
 
-¿Qué son los bloques?
+¿Qué son los bloques? ... son objetos y además "trozos" de código.
 
 ```
 #!/usr/bin/ruby
@@ -24,9 +22,9 @@ test { puts "Hello World!"}
 
 ---
 
-```
-#!/usr/bin/env ruby
+## Mostrar 2 veces "I love Ruby!"
 
+```
 class MyIterator
   def initialize(times)
     @times = times

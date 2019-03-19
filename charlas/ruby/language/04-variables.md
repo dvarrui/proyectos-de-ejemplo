@@ -7,7 +7,7 @@
 
 # Variables locales
 
-Integer y Float:
+## Integer y Float
 ```
 age   = 42            # Integer
 price = 9.99          # Float
@@ -16,7 +16,9 @@ price = 9.99          # Float
 
 ---
 
-String:
+## String
+
+String es un tipo de datos... pero es una clase. Y todos los Strings son objetos, con sus propios métodos ("TODO es un objeto en Ruby").
 
 ```
 name = "David"        # String
@@ -33,7 +35,9 @@ puts "My name is #{name}. I'm #{age} years old."
 
 ---
 
-Symbol:
+## Symbol
+
+Los símbolos son como Strings inmutables, o como campos Enum de C con valores constantes. Pero también son objetos.
 
 ```
 a = "hola"    #=> "hola"
@@ -53,7 +57,8 @@ c.object_id == d.object_id  #=> true
 ```
 ---
 
-Array:
+## Array
+
 ```
 jedis = [ 'obiwan', 'yoda', 'quigon'] # Array
 jedis.size                            # 3
@@ -68,13 +73,16 @@ numbers << 70      # [16, 11, 70]
 
 ---
 
-Hash:
+## Hash
+
 ```
 me    = { name: 'david', age: 42 }       # Hash
 me    = { :name => 'david', :age => 42 } # Hash
 ```
 
 ---
+
+## Otros
 
 * Variables globales: `$PROGRAMNAME`
 * Variables de instancia: `@name`
