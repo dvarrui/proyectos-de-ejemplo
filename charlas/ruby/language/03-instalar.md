@@ -1,16 +1,15 @@
 
 # I love ruby
 
-![](images/iloveruby.png)
-
 ---
 
 # Instalar Ruby
 
-* OpenSUSE: Ya viene preinstalado.
-* Debian: `apt install ruby irb ri`
-* Windows:
-    * Descargar el instalador de https://rubyinstaller.org/downloads/. Por ejemplo Ruby+Devkit 2.4.4-2 (x64).
+| Sistema Operativo | Instalación            |
+| ----------------- | ---------------------- |
+| **OpenSUSE**      | **Ya viene preinstalado** |
+| Debian            | `apt install ruby irb` |
+| Windows           | Descargar el instalador desde https://rubyinstaller.org/downloads/. Por ejemplo Ruby+Devkit 2.4.4-2 (x64) |
 
 ## Comprobación
 
@@ -22,7 +21,7 @@ ruby 2.5.2p104 (2018-10-18 revision 65133) [x86_64-linux]
 >
 ```
 
-Probemos el intérprete interactivo:
+Probar el intérprete interactivo:
 
 ```
 > irb

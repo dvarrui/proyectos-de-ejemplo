@@ -41,8 +41,7 @@ diferentes.
 Mis requisitos:
 * Licencia Libre
 * Multiplataforma
-* Multiparadigma
-* POO
+* Multiparadigma (Mucho POO, algo de funcional)
 * Sencillo _... y con “magia”_.
 
 > ¿Superpoder? Lenguaje muy expresivo. Escribir poco y fácil de leer.
