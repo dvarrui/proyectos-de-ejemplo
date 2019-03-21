@@ -8,10 +8,10 @@
 Enlace de interés:
 * [Ruby en 20 minutos](https://www.ruby-lang.org/es/documentation/quickstart/)
 
-| Sistema Operativo | Instalación            |
-| ----------------- | ---------------------- |
+| Sistema Operativo | Instalación               |
+| ----------------- | ------------------------- |
 | **OpenSUSE**      | **Ya viene preinstalado** |
-| Debian            | `apt install ruby irb` |
+| Debian            | `apt install ruby irb`    |
 | Windows           | Descargar el instalador desde https://rubyinstaller.org/downloads/. Por ejemplo Ruby+Devkit 2.4.4-2 (x64) |
 
 ## Comprobación

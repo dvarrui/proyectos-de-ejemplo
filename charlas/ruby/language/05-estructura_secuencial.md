@@ -2,8 +2,6 @@
 
 # I Love Ruby
 
-![](./images/silueta-mujer.png)
-
 ---
 
 # Estructura secuencial (I)

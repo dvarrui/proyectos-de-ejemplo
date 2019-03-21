@@ -88,3 +88,37 @@ me    = { :name => 'david', :age => 42 } # Hash
 * Variables de instancia: `@name`
 * Variables de clase: `@@id`
 * Constantes: `VERSION=3`
+
+---
+
+## Rational
+
+```
+irb(main):001:0> a = Rational(1,3)
+=> (1/3)
+irb(main):002:0> b = Rational(3,6)
+=> (1/2)
+irb(main):003:0> c = a + b
+=> (5/6)
+irb(main):004:0> c.class
+=> Rational
+```
+
+---
+
+## Complex
+
+```
+irb(main):008:0> a = Complex(0,1)
+=> (0+1i)
+irb(main):009:0> b = Complex(0,1)
+=> (0+1i)
+irb(main):010:0> c = a*b
+=> (-1+0i)
+irb(main):011:0> c
+=> (-1+0i)
+irb(main):012:0> c.to_i
+=> -1
+irb(main):013:0> c.to_f
+=> -1.0
+```

@@ -1,13 +1,12 @@
 
 # I Love Ruby
 
-![](./images/caminar.png)
-
 ---
 
 # Estructura iterativa (I): los bucles
 
 Ejemplo 1:
+
 ```
 # Bucle clásico
 i = 0

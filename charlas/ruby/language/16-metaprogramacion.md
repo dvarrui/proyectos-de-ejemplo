@@ -42,6 +42,7 @@ irb(main):002:0> a.class
 => Array
 
 irb(main):003:0> a.methods
+...
 ```
 
 ---

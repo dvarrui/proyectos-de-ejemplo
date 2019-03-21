@@ -21,6 +21,8 @@ Hablaremos de:
 
 ---
 
+![](images/allyouneedislove.png)
+
 # Why?
 
 ¿Por qué?
@@ -31,5 +33,3 @@ Hablaremos de:
 * Debatir y aprender.
 
 > _“El amor es lo que nos mueve...”_
->
-> ¡Ah! ¡Y que la música mola también!

@@ -2,8 +2,6 @@
 
 # I Love Ruby
 
-![](images/allyouneedislove.png)
-
 ---
 
 # whereis ruby
