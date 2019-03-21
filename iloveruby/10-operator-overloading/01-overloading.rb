@@ -1,18 +1,18 @@
 #!/usr/bin/env ruby
 
 class Group
-  attr_accessor :members
+  attr_accessor :names
 
   def initialize
-    @members = []
+    @names = []
   end
 
   def to_s
-    "My members are #{@members.to_s}"
+    "Group : names => #{@names.to_s}"
   end
 
   def +(other)
-    @members << other.name
+    @names << other.name
   end
 end
 
@@ -24,13 +24,13 @@ class Person
   end
 
   def to_s
-    "My name is #{name}"
+    "Person: name  => #{name}"
   end
 
   def +(other)
     g = Group.new
-    g.members << name
-    g.members << other.name
+    g.names << name
+    g.names << other.name
     g
   end
 end
