@@ -11,16 +11,20 @@ task :default do
   system("rake -T")
 end
 
-desc 'Compile 01'
-task :compile01 do
-  id="01"
-  system("gcc -c -fPIC #{id}-ffi.c -o #{id}-ffi.o")
-  system("gcc -shared -o #{id}-ffi.so #{id}-ffi.o")
+namespace :compile do
+  desc 'Compile Example 01'
+  task :e01 do
+    id="01"
+    system("gcc -c -fPIC #{id}-ffi.c -o #{id}-ffi.o")
+    system("gcc -shared -o #{id}-ffi.so #{id}-ffi.o")
+  end
 end
 
-desc 'Clean 01'
-task :clean01 do
-  id="01"
-  system("rm #{id}-ffi.o")
-  system("rm #{id}-ffi.so")
+namespace :clean do
+  desc 'Clean temp files from example 01'
+  task :e01 do
+    id="01"
+    system("rm #{id}-ffi.o")
+    system("rm #{id}-ffi.so")
+  end
 end
