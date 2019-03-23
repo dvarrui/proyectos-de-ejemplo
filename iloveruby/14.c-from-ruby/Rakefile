@@ -23,7 +23,7 @@ namespace :compile do
   task :e02 do
     name="Test"
     system("javac #{name}.java")
-    system("jar -cvf #{name}.jar #{name}.class")
+    system("jar -cvf #{name.downcase}.jar #{name}.class")
   end
 end
 
@@ -39,6 +39,6 @@ namespace :clean do
   task :e02 do
     name = 'Test'
     system("rm #{name}.class")
-    system("rm #{name}.jar")
+    system("rm #{name.downcase}.jar")
   end
 end
