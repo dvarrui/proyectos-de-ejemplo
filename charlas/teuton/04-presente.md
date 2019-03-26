@@ -32,9 +32,6 @@ Creamos la máquina S-NODE
 
 ---
 
-
----
-
 # Creamos el reto
 
 * Confirmar IP, y acceso SSH de S-NODE.
@@ -84,6 +81,7 @@ Enunciado para los alumnos:
 * Base de datos Mysql.
     * Crear tabla `aficiones` con campo `nombre`.
     * Añadir varios registros.
+* [Consultar los ficheros](./examples)
 
 ## PASO 4: Ejecutar
 
