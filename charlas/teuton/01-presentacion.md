@@ -3,9 +3,9 @@
 
 ```
 me = {
-  :name    => “David Vargas Ruiz”,
-  :studies => “Ing. Informático ULPGC”,
-  :job     = > “Profesor FP Informática”,
+  :name    => "David Vargas Ruiz",
+  :studies => "Ing. Informático ULPGC",
+  :job     => "Profesor FP Informática",
   :twitter => @dvarrui,
   :github  => dvarrui,
   :email   => dvarrui@protonmail.com

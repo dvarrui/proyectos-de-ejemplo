@@ -1,6 +1,8 @@
 
 # Fantasma del PASADO
 
+---
+
 ## CORREGIR vs FEEDBACK
 
 * Corregir vs tiempo.
@@ -31,9 +33,9 @@ Para eso hemos creado TEUTON (https://github.com/dvarrui/teuton).
 **Sysadmingame**
 * Presentación de 2016: http://chapi.org/downloads/
 * Vídeos https://github.com/dvarrui/teuton/blob/master/docs/es/videos.md
+**TEUTON**
+* https://github.com/dvarrui/teuton
 
-Nosotros estamos usando la herramienta de manera continuada en nuestras clases desde hace 2 años, pero tengo interés en mostrar/explicar la herramienta, recibir feedback y consejos.
-
-Y si hubiera interés hacer una charla al respecto.
+Nosotros estamos usando la herramienta de manera continuada en nuestras clases desde hace años, pero tengo interés en mostrar/explicar la herramienta, recibir feedback y consejos.
 
 ¡Muchas gracias por su atención!
