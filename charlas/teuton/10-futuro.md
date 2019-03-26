@@ -7,7 +7,7 @@
 
 * Añadir más retos.
 * Crear videotutoriales.
-* Interfaz gráfico.
+* Interfaz gráfico (teuton-panel).
 * Obtener feedback de uso.
 * Proyecto: Servidor de retos.
 * Difusión.
