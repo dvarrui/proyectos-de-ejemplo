@@ -32,7 +32,7 @@ Hay varias formas de instalar el software.
 
 * Cuatro pasos:
     1. Crear el esqueleto
-    1. Configuar las máquinas
+    1. Configurar las máquinas
     1. Definir los retos
     1. Ejecutar
 * [Ver ejemplos](./examples)
