@@ -9,7 +9,7 @@ Vagrant es una herramienta (devops) para ayudarnos con las máquinas virtuales.
 
 Creamos la máquina T-NODE
 * Hay varias formas de instalar el software. Vamos a usar Vagrant.
-* Tener instalado en local: VirtualBiox y Vagrant.
+* Tener instalado en local: VirtualBox y Vagrant.
 * Descargar fichero [Vagrantfile para T-NODE](./vagrant/t-node/Vagrantfile)
 * `vagrant up`
 
