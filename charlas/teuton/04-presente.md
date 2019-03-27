@@ -30,12 +30,16 @@ Hay varias formas de instalar el software.
 
 # Crear el reto
 
-* Cuatro pasos:
-    1. Crear el esqueleto
-    1. Configurar las máquinas
-    1. Definir los retos
-    1. Ejecutar
+| Paso | Descripción |
+| ---- | ----------- |
+| 01   | Crear el esqueleto |
+| 02   | Configurar las máquinas |
+| 03   | Definir el reto (objetivos) |
+| 04   | Ejecutar |
+
 * [Ver ejemplos](./examples)
+
+---
 
 ## PASO 1: Crear el esqueleto**
 
@@ -53,6 +57,8 @@ vagrant@t-node:~> teuton create chapi
 * Create file       => chapi/assets/README.md
 ```
 
+---
+
 ## PASO 2: Configurar las máquinas
 
 * Definir las máquinas que voy a evaluar (acceso remoto):
@@ -68,6 +74,8 @@ vagrant@t-node:~> more chapi/config.yaml
   :host1_ip: 192.168.1.118
 ```
 
+---
+
 ## PASO 3: Definir el reto
 
 Enunciado para los alumnos:
@@ -79,6 +87,8 @@ Enunciado para los alumnos:
     * Crear tabla `aficiones` con campo `nombre`.
     * Añadir 3 registrosa  al tabla.
 * [Consultar los ficheros](./examples)
+
+---
 
 ## PASO 4: Ejecutar
 
