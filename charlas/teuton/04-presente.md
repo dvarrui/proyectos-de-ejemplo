@@ -41,7 +41,7 @@ Hay varias formas de instalar el software.
 
 ---
 
-## PASO 1: Crear el esqueleto**
+## PASO 1: Crear el esqueleto
 
 * Entrar en T-NODE.
 * Crear un esqueleto para nuestro reto(test):
