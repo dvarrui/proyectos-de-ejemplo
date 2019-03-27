@@ -19,27 +19,23 @@
 
 # Preparar las máquinas
 
-Creamos la máquina T-NODE
-* Hay varias formas de instalar el software. Vamos a usar Vagrant.
-* Tener instalado en local: VirtualBiox y Vagrant.
-* Descargar fichero Vagrantfile para T-NODE.
-* `vagrant up`
+Hay varias formas de instalar el software.
+* Lanzar el script de instalación.
+* Hacerlo manualmente siguiendo la documentación.
+* [Usar Vagrant](05-vagrant.md).
 
-Creamos la máquina S-NODE
-* Hay varias formas de instalar el software. Vamos a usar Vagrant.
-* Descargar fichero Vagrantfile para S-NODE.
-* `vagrant up`
+> NOTA: para cada S-NODE, nos apuntamos IP, y confirmamos que funciona el acceso remoto desde T-NODE.
 
 ---
 
-# Creamos el reto
+# Crear el reto
 
-* Confirmar IP, y acceso SSH de S-NODE.
 * Cuatro pasos:
     1. Crear el esqueleto
     1. Configuar las máquinas
     1. Definir los retos
     1. Ejecutar
+* [Ver ejemplos](./examples)
 
 ## PASO 1: Crear el esqueleto**
 
@@ -59,7 +55,8 @@ vagrant@t-node:~> teuton create chapi
 
 ## PASO 2: Configurar las máquinas
 
-* Definir las máquinas que voy a evaluar:
+* Definir las máquinas que voy a evaluar (acceso remoto):
+
 ```
 vagrant@t-node:~> more chapi/config.yaml
 ---
@@ -69,7 +66,6 @@ vagrant@t-node:~> more chapi/config.yaml
   :host1_username: root
   :host1_password: vagrant
   :host1_ip: 192.168.1.118
-vagrant@t-node:~>
 ```
 
 ## PASO 3: Definir el reto
@@ -77,13 +73,14 @@ vagrant@t-node:~>
 Enunciado para los alumnos:
 * Servidor web
     * Servidor Web Apache2.
-    * `index.html` con el nombre del alumno.
+    * `index.html` con el texto "Hola TEUTON!".
 * Base de datos Mysql.
+    * Crear la base de datos `chapi`.
     * Crear tabla `aficiones` con campo `nombre`.
-    * Añadir varios registros.
+    * Añadir 3 registrosa  al tabla.
 * [Consultar los ficheros](./examples)
 
 ## PASO 4: Ejecutar
 
-* Ejecutar el reto `teuton chapi`.
+* `teuton chapi`, para ejecutar el reto.
 * Consultar los resultados en `var/chapi/out`.
