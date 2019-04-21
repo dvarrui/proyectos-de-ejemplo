@@ -4,14 +4,21 @@
 # * Usamos métodos/funciones
 # * No se requieren los paréntesis
 # * Ocultamos las variables
-# * Flexibilidad en los argumentos. Aceptar Hahses y Arrays
+# * Metaprogramación:
+#     - missing_method
+#     - https://www.leighhalliday.com/ruby-metaprogramming-method-missing
 
-require_relative '04-contar-lib'
+require_relative '05-contar-lib'
 
 puts "Empezamos a contar..."
 
+contar 'Manzanas', 3
+contar  3, 'peras'
+contar 'plátano'
 contar manzanas: 3, plátanos: 1
-contar 'peras', 'peras', 'piña', 'piña', 'peras'
-contar 5, 'naranjas'
+contar 'pera', 'pera', 'pera', 'piña', 'piña'
+
+contar_3_manzanas
+contar_platano
 
 puts "En total he contado #{total} frutas."
