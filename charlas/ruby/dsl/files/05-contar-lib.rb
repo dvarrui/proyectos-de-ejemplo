@@ -41,7 +41,6 @@ end
 
 def contar_string_integer(fruta, hasta=1)
   f = String.new(fruta)
-  h = hasta
 
   f[-1]='' if f[-1]=='s' # Limpiar plural
   (1..hasta).each do |i|
