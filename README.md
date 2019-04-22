@@ -8,7 +8,7 @@ El contenido se organiza del siguiente modo:
 | Carpeta              | Contenido |
 | -------------------- | --------- |
 | [iloveruby](./iloveruby) | Ejemplos y miniproyectos realizados con Ruby |
-| [charlas](./charlas) | Charlas sobre Ruby |
+| [charlas](./charlas) | Charlas sobre diversos temas |
 | [comparativa](./comparativa) | Análisis comparativo de Ruby con otros lenguajes de programación |
 
 ---
