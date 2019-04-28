@@ -1,7 +1,8 @@
 
 # Entorno
 
-Preparar el entorno de trabajo.
+Vamos a preparar nuestro entorno de trabajo.
+Esta actividad se compone de los siguientes apartados:
 1. Crear curso de prueba
 2. Añadir Alumnos
 3. Configurar el curso
@@ -29,3 +30,14 @@ Desde la consola de servicios del CAUCE:
 * Ya tenemos 2 alumnos en nuestro curso de prueba.
 
 > Es conveniente que informemos a los alumnos elegidos de que están en un curso de pruebas,que no hace falta que hagan nada, y que no les afecta a su nota.
+
+---
+
+# 3. Configurar el curso
+
+* Ir al `menú izquierdo -> Administrar el curso -> Ajustes`.
+
+Pondremos la siguiente configuración:
+* Formato del curso: `temas`
+* Número de secciones:  `4`
+ 
