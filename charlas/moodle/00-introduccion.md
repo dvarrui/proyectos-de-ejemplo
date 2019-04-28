@@ -49,10 +49,8 @@
     * Vídeo con explicación del profesor.
     * Actividad/es a realizar.
 * Durante las sesiones no presenciales, el alumno deberá leer la guía al comienzo de cada unidad y luego consultar el vídeo asociado. Las dudas se comunicarán por foro específico de la unidad. Para finalizar, se realizará una actividad donde se pondrán en práctica los nuevos contenidos.
-
-El alumno creará un curso Moodle dentro de la plataforma del Campus Virtual, donde irá realizando las actividades propuestas durante todo el proceso de formación.
-
-Las sesiones presenciales se dedicarán principalmente a resolver dudas, terminar las actividades y mostrar los avances al profesor.  
+* El alumno creará un curso Moodle dentro de la plataforma del Campus Virtual, donde irá realizando las actividades propuestas durante todo el proceso de formación.
+* Las sesiones presenciales se dedicarán principalmente a resolver dudas, terminar las actividades y mostrar los avances al profesor.  
 
 ---
 
