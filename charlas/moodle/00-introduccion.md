@@ -2,12 +2,18 @@
 # ACTIVIDAD DE FORMACIÓN
 # Moodle: Calificación, preguntas y cuestionarios
 
+## Ficha de la actividad
+
 | Ficha                 | Descripción |
 | --------------------- | ------------------------------------ |
 | Destinatarios         | Profesorado de Formación Profesional |
 | Horas presenciales    | 9 |
 | Horas no presenciales | 6 |
 | N.º total de horas    | 15 |
+
+---
+
+## Calendario de las sesiones
 
 | Sesiones            | Calendario                  | Lugar propuesto |
 | ------------------- | --------------------------- | -------- |
