@@ -36,8 +36,11 @@ Desde la consola de servicios del CAUCE:
 # 3. Configurar el curso
 
 * Ir al `menú izquierdo -> Administrar el curso -> Ajustes`.
+* Pondremos la siguiente configuración:
+    * Formato del curso: `temas`
+    * Número de secciones:  `4`
+    * Guardar cambios.
 
-Pondremos la siguiente configuración:
-* Formato del curso: `temas`
-* Número de secciones:  `4`
- 
+Vemos que se han creado 4 cajas (temas o unidades didácticas).
+* Ir al `menú izquierdo -> Administrar el curso -> Activar edición`.
+* En la caja 1, ir a  `Editar -> Destacar`
