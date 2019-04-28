@@ -67,3 +67,14 @@ En cada una de las cajas:
 * Agregar etiqueta `Documentos:` en negrita.
 * Agregar etiqueta `Actividades:` en negrita.
 * Agregar etiqueta `Cuestionarios:` en negrita.
+
+> Las etiquetas son un tipo de recurso de Moodle que nos sirve para mostrar textos cortos o imágenes en la ventana principal del curso.
+>
+
+---
+
+# Recuerda
+
+Hay dos tipos de elementos que podemos agregar en Moodle:
+* **Recursos**: sirven para contener texto, imágenes, etc. En general para guardar material para leer, estudiar, consultar, etc. Es para guardar los contenidos.
+* **Actividades**: Sirven para contener el trabajo realizado por los alumnos. Para las entregas de las actividades. Sólo se pueden evaluar elementos de este tipo.
