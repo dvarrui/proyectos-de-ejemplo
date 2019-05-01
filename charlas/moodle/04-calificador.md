@@ -84,6 +84,12 @@ curso
     * Poner peso 40 a: pru_intro, pru_rojo, pru_verde y pru_azul.
 * Grabar
 
+> Fijarse en que los pesos que se ponen a las categorías son relativos. Esto quiere decir que para hacer una distribución de pesos equitativa entre varias categorías (Media artimética) podemos poner los pesos 1, 1 y 1 a todas o  2, 2 y 2... Todas con el mismo peso. Moodle sabe hacer el cálculo.
+>
+> Si queremos hacer una distribución 60% y 40% podemos poner como pesos 60 y 40, o 6 y 4, o 3 y 2, etc. Otra vez, Moodle sabrá hacer los cálculos.
+>
+> Es importante que tengamos puesta la fórmula "Pesos ponderados". Esa es la nuestra. NO USAR la fórmula "Pesos ponderados simples"... ¡Esa fórmula no la usamos!.
+
 ---
 
 # 3. Mover cada tarea a su categoría
@@ -122,3 +128,11 @@ Seguimos.
 * Ahora vamos a `Administración -> Calificaciones`. Se tiene que mostrar una especie de hoja de cálculo con una fila por alumno y columnas por cada tareas/actividad.
 * Comprobar que las categorías están siendo correctamente calculadas.
 * Comprobar que aparecen en verde las notas aprobadas y en rojo las suspendidas.
+
+---
+
+# Notas "vacías"
+
+Vemos que la categorías de cuestionario está vacía. Por tanto, no es posible calcular la nota de algo "vacío". No es cero, porque no se ha hecho nada.
+
+En el próximo tema, crearemos actividades de tipo cuestionario y completaremos esa sección.
