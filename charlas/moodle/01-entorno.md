@@ -8,7 +8,7 @@ Esta actividad se compone de los siguientes apartados:
 1. Elegir un tema
 1. Configurar el curso
 
-* [Vídeo 1 - Preparando el entorno](https://youtu.be/oqzUDIozlbs)
+> [Vídeo 1 - Preparando el entorno](https://youtu.be/oqzUDIozlbs)
 
 ---
 
