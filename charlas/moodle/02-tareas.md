@@ -11,6 +11,8 @@ En Moodle las actividades en las que el alumno debe entregar un trabajo (product
 >
 > No ponemos el enunciado en la tarea porque el campo que tiene es demasiado corto.
 
+> [Vídeo 2 - Tareas](https://youtu.be/XWpmWQCMHTs)
+
 ---
 
 ## Ejercicio A1: Subir fichero
