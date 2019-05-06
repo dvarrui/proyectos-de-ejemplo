@@ -70,6 +70,8 @@ Configurar la tarea con:
 * Calificación
     * Puntuación máxima: `20`
 
+> ![](./files/tarea2-puntuacion.png)
+
 > En este caso calificaremos de 0 a 20. De entrada puede parecer extraño, pero en algunos casos es útil.
 >
 > ¿Pero cómo unificamos puntuaciones de 0-10 con puntuaciones de 0-20?
