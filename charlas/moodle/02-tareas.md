@@ -16,7 +16,6 @@ En Moodle las actividades en las que el alumno debe entregar un trabajo (product
 ## Ejercicio A1: Subir fichero
 
 Vamos a crear un ejercicio para los alumnos, donde tienen que entregarnos un archivo digital.
-
 * Ir a `Administración -> Activar edición`.
 * Ir a la caja 1.
 * Agregar recurso `Página`.
@@ -26,6 +25,7 @@ Vamos a crear un ejercicio para los alumnos, donde tienen que entregarnos un arc
     * Nombre: `A1: nombre de la actividad`
     * Contenido: Escribir un enunciado para la actividad A1. Incluir imágenes si es posible.
 
+Ahora creamos una Tarea:
 * Agregar actividad `Tarea`.
 * Mover el recurso debajo del enunciado.
 * Sangrado derecha de 2.
@@ -44,7 +44,6 @@ Configurar la tarea con:
 ## Ejercicio A2: Texto en línea
 
 Vamos a crear un ejercicio para los alumnos, donde tienen que escribir un texto directamente en el Moodle.
-
 * Ir a `Administración -> Activar edición`.
 * Ir a la caja 1.
 * Agregar recurso `Página`.
@@ -53,6 +52,8 @@ Vamos a crear un ejercicio para los alumnos, donde tienen que escribir un texto 
 * Configurar con:
     * Nombre: `A2: nombre de la actividad`
     * Contenido: Escribir un enunciado para la actividad A2. Incluir imágenes si es posible.
+
+Creamos una tarea:
 * Agregar actividad `Tarea`.
 * Mover el recurso debajo del enunciado.
 * Sangrado derecha de 2.
@@ -70,3 +71,5 @@ Configurar la tarea con:
 > No te preocupes. Veremos cómo Moodle nos normaliza todas las puntuaciones para que mantengan un sistema equivalente. ;-)
 
 ---
+
+![](./files/tema1-tareas.png)
