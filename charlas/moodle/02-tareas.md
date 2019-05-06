@@ -74,4 +74,4 @@ Configurar la tarea con:
 
 ---
 
-![](./files/tema1-tareas.png)
+> ![](./files/tema1-tareas.png)
