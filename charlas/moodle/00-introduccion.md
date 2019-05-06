@@ -1,5 +1,6 @@
 
 # ACTIVIDAD DE FORMACIÓN
+
 # Moodle: Calificación, preguntas y cuestionarios
 
 ## Ficha de la actividad
