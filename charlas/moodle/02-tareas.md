@@ -64,6 +64,9 @@ Configurar la tarea con:
 * Nombre: `Entregar A2`
 * Descripción: Indicar que se debe escribir la respuesta que se busca.
 * Tipo de entrega: Marcar solamente `Texto en línea`
+
+> ![](./files/tarea2-texto-en-linea.png)
+
 * Calificación
     * Puntuación máxima: `20`
 
@@ -73,5 +76,7 @@ Configurar la tarea con:
 > No te preocupes. Veremos cómo Moodle nos normaliza todas las puntuaciones para que mantengan un sistema equivalente. ;-)
 
 ---
+
+Debemos tener algo como lo siguiente:
 
 > ![](./files/tema1-tareas.png)
