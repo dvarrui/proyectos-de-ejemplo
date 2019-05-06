@@ -7,24 +7,30 @@ Los cursos que hacemos en Moodle (Como Campus Virtual o EVAGD) tienen un sistema
 
 Vamos a crear una configuración del calificador para resolver el siguiente supuesto. Queremos tener notas/calificaciones en lo siguiente:
 * Trim1 y trim2.
-* Para dos temas o unidades dentro de trim1.
-* Para dos temas o unidades dentro de trim2.
-* Para la parte de actividades y pruebas de cada una de las unidades.
+* Tema 1 y 2 dentro de trim1.
+* Tema 3 y 4 dentro de trim2.
+* Cada una de las partes de actividades y cuestionarios de cada uno de los temas.
 
 Además suponemos los siguiente pesos:
 * Todos los trimestres tienen el mismo peso.
 * Todas las unidades didácticas tienen el mismo peso.
 * Dentro de cada unidad:
     * Las actividades tendrán un peso de 60%
-    * Los cuestionarios tendrán un peso de 40%.
+    * Las cuestionarios tendrán un peso de 40%.
 
 ## Pasos
 
 Los pasos que vamos a seguir son:
 1. Crear las categorías
 2. Configurar las categorías
-3. Mover cada tarea a su categoría
+3. Mover cada tarea dentro de su categoría
 4. Comprobar los resultados
+
+Si entramos ahora en `Menú izquierdo -> Administración -> Configuración de calificacion` veremos todas las tareas (actividades) que habíamos creado como si fuera una lista. Esto lo vamos a cambiar.
+
+> Ver ejemplo:
+>
+> ![](./files/calificador-sin-categorias.png)
 
 ---
 
@@ -39,6 +45,11 @@ Los pasos que vamos a seguir son:
 | Nombre | `curso` ||
 |Cálculo total | `Media ponderada de calificaciones` | **Esta parte es MUY IMPORTANTE!!!**. Establece el sistema de pesos que vamos a usar |
 | Total categoría -> Calificación para aprobar | `50` | Estamos definiendo que todo lo que sea superior a 50% lo pinte en verde y y es inferior lo ponga en rojo |
+| Mostrar calificación | Poercentaje ||
+
+> Ver ejemplo:
+>
+> ![](./files/categoria-calculo-total.png)
 
 * `Añadir categoría` con:
 
@@ -47,7 +58,16 @@ Los pasos que vamos a seguir son:
 | Nombre | `trim1` ||
 |Cálculo total | `Media ponderada de calificaciones` | **Esta parte es MUY IMPORTANTE!!!**. Establece el sistema de pesos que vamos a usar |
 | Total categoría -> Calificación para aprobar | `50` | Estamos definiendo que todo lo que sea superior a 50% lo pinte en verde y y es inferior lo ponga en rojo |
+| Mostrar calificación | Poercentaje ||
 | Categoría padre | `curso` | Nombre de la categoría de nivel superior |
+
+> Veamos imagen de ejemplo:
+>
+> ![](./files/calificador-categorias.png)
+
+---
+
+## Seguimos creando categorías
 
 * Seguimos así, hasta obtener la siguiente estructura:
 
@@ -56,21 +76,21 @@ curso
   ├───trim1
   │   ├───ud_intro
   │   │   ├───act_intro
-  │   │   └───pru_intro
+  │   │   └───cue_intro
   │   └───ud_rojo
   │       ├───act_rojo
-  │       └───pru_rojo
+  │       └───cue_rojo
   └───trim2
       ├───ud_verde
       │   ├───act_verde
-      │   └───pru_verde
+      │   └───cue_verde
       └───ud_azul
           ├───act_azul
-          └───pru_azul
+          └───cue_azul
 ```
 
-> Las categorías las hemos creado con nombres "extraños" en principio. Por ejemplo, la unidad didáctica azul, tiene una categoría `ud_azul` y las actividades de la unidad didáctica verde se llama `act_verde`, mientras que los cuestionarios de la unidad didáctica roja tienen el nombre `pru_roja`.
->
+Las categorías las hemos creado con nombres "extraños" en principio. Por ejemplo, la unidad didáctica azul, tiene una categoría `ud_azul` y las actividades de la unidad didáctica verde se llama `act_verde`, mientras que los cuestionarios de la unidad didáctica roja tienen el nombre `cua_roja`.
+
 > ¿Tiene algún sentido?... Sí. Espera que lo veremos más adelante.
 
 ---
@@ -84,20 +104,27 @@ curso
     * Poner peso 40 a: pru_intro, pru_rojo, pru_verde y pru_azul.
 * Grabar
 
-> Fijarse en que los pesos que se ponen a las categorías son relativos. Esto quiere decir que para hacer una distribución de pesos equitativa entre varias categorías (Media artimética) podemos poner los pesos 1, 1 y 1 a todas o  2, 2 y 2... Todas con el mismo peso. Moodle sabe hacer el cálculo.
+> Ver ejemplo:
 >
-> Si queremos hacer una distribución 60% y 40% podemos poner como pesos 60 y 40, o 6 y 4, o 3 y 2, etc. Otra vez, Moodle sabrá hacer los cálculos.
->
+> ![](./files/calificador-categorias-pesos.png)
+
+Los pesos que se ponen a las categorías son relativos. Esto quiere decir que para hacer una distribución de pesos equitativa entre varias categorías (Media artimética) podemos poner los pesos 1, 1 y 1 a todas o  2, 2 y 2... Todas con el mismo peso. Moodle sabe hacer el cálculo.
+
+Si queremos hacer una distribución 60% y 40% podemos poner como pesos 60 y 40, o 6 y 4, o 3 y 2, etc. Otra vez, Moodle sabrá hacer los cálculos.
+
 > Es importante que tengamos puesta la fórmula "Pesos ponderados". Esa es la nuestra. NO USAR la fórmula "Pesos ponderados simples"... ¡Esa fórmula no la usamos!.
 
 ---
 
 # 3. Mover cada tarea a su categoría
 
-> Se puede comprobar que las tareas aparecen en esta pantalla, pero están fuera de las categorías que acabamos de crear.
-
+Se puede comprobar que las tareas aparecen en esta pantalla, pero están fuera de las categorías que acabamos de crear.
 * Mover cada tarea (actividad) a su categoría correspondiente. Deben estar 2 tareas en `act_intro` y 2 tareas en `act_rojo`. Esto es, organizar las actividades/tareas de los temas 1 y 2 en sus categorías correspondientes.
 
+> Ver ejemplo:
+>
+> ![](./files/calificador-tareas-en-categoria.png)
+>
 > Podemos comprobar que el resto de categorías están vacías... por el momento.
 
 Otra forma de configurar cada tarea dentro de su categoría es:
@@ -105,7 +132,13 @@ Otra forma de configurar cada tarea dentro de su categoría es:
 * Activar edición.
 * Configurar `ajustes de la tarea/actividad -> Configurar categoría`. Ahí nos aparece un desplegable con las etiquetas o los nombres de las categorías de calificación que hemos creado.
 
+> Ver ejemplo:
+>
+> ![](./files/tarea1-configurar-categoria.png)
+>
 > La forma de nombrar las categorías, es para facilitar la localización de las categorías que necesitamos en cada momento.
+
+* Aprovecharemos para configurar en cada tarea, el parámetro `Calificación para aprobar`. Pondremos en cada caso el valor numérico mínimo que suponga que se puede considerar la actividad aprobada. Configurar esta opción implica que mas tarde veremos coloreado en rojo/verde las notas de los alumnos si se considera que están suspedidos/aprobados. ¡Esto ayuda mucho!
 
 ---
 
@@ -135,4 +168,5 @@ Seguimos.
 
 Vemos que la categorías de cuestionario está vacía. Por tanto, no es posible calcular la nota de algo "vacío". No es cero, porque no se ha hecho nada.
 
-En el próximo tema, crearemos actividades de tipo cuestionario y completaremos esa sección.
+Para cambiar este comportamiento podemos configurar las categorías para que se consideren las notas "vacías" o nula como si fuera un cero. ¡Hagámoslo!
+
