@@ -135,4 +135,5 @@ Seguimos.
 
 Vemos que la categorías de cuestionario está vacía. Por tanto, no es posible calcular la nota de algo "vacío". No es cero, porque no se ha hecho nada.
 
-En el próximo tema, crearemos actividades de tipo cuestionario y completaremos esa sección.
+Para cambiar este comportamiento podemos configurar las categorías para que se consideren las notas "vacías" o nula como si fuera un cero. ¡Hagámoslo!
+
