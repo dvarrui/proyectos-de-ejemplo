@@ -118,10 +118,13 @@ Si queremos hacer una distribución 60% y 40% podemos poner como pesos 60 y 40, 
 
 # 3. Mover cada tarea a su categoría
 
-> Se puede comprobar que las tareas aparecen en esta pantalla, pero están fuera de las categorías que acabamos de crear.
-
+Se puede comprobar que las tareas aparecen en esta pantalla, pero están fuera de las categorías que acabamos de crear.
 * Mover cada tarea (actividad) a su categoría correspondiente. Deben estar 2 tareas en `act_intro` y 2 tareas en `act_rojo`. Esto es, organizar las actividades/tareas de los temas 1 y 2 en sus categorías correspondientes.
 
+> Ver ejemplo:
+>
+> ![](./files/calificador-tareas-en-categoria.png)
+>
 > Podemos comprobar que el resto de categorías están vacías... por el momento.
 
 Otra forma de configurar cada tarea dentro de su categoría es:
@@ -129,6 +132,10 @@ Otra forma de configurar cada tarea dentro de su categoría es:
 * Activar edición.
 * Configurar `ajustes de la tarea/actividad -> Configurar categoría`. Ahí nos aparece un desplegable con las etiquetas o los nombres de las categorías de calificación que hemos creado.
 
+> Ver ejemplo:
+>
+> ![](./files/tarea1-configurar-categoria.png)
+>
 > La forma de nombrar las categorías, es para facilitar la localización de las categorías que necesitamos en cada momento.
 
 ---
