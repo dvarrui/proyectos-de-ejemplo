@@ -25,6 +25,8 @@ Vamos a crear un ejercicio para los alumnos, donde tienen que entregarnos un arc
     * Nombre: `A1: nombre de la actividad`
     * Contenido: Escribir un enunciado para la actividad A1. Incluir imágenes si es posible.
 
+![](./files/pagina1-enunciado.png)
+
 Ahora creamos una Tarea:
 * Agregar actividad `Tarea`.
 * Mover el recurso debajo del enunciado.
