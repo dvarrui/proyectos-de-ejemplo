@@ -61,6 +61,14 @@ Si entramos ahora en `Menú izquierdo -> Administración -> Configuración de ca
 | Mostrar calificación | Poercentaje ||
 | Categoría padre | `curso` | Nombre de la categoría de nivel superior |
 
+> Veamos imagen de ejemplo:
+>
+> ![](./files/calificador-categorias.png)
+
+---
+
+## Seguimos creando categorías
+
 * Seguimos así, hasta obtener la siguiente estructura:
 
 ```
@@ -68,21 +76,21 @@ curso
   ├───trim1
   │   ├───ud_intro
   │   │   ├───act_intro
-  │   │   └───pru_intro
+  │   │   └───cue_intro
   │   └───ud_rojo
   │       ├───act_rojo
-  │       └───pru_rojo
+  │       └───cue_rojo
   └───trim2
       ├───ud_verde
       │   ├───act_verde
-      │   └───pru_verde
+      │   └───cue_verde
       └───ud_azul
           ├───act_azul
-          └───pru_azul
+          └───cue_azul
 ```
 
-> Las categorías las hemos creado con nombres "extraños" en principio. Por ejemplo, la unidad didáctica azul, tiene una categoría `ud_azul` y las actividades de la unidad didáctica verde se llama `act_verde`, mientras que los cuestionarios de la unidad didáctica roja tienen el nombre `pru_roja`.
->
+Las categorías las hemos creado con nombres "extraños" en principio. Por ejemplo, la unidad didáctica azul, tiene una categoría `ud_azul` y las actividades de la unidad didáctica verde se llama `act_verde`, mientras que los cuestionarios de la unidad didáctica roja tienen el nombre `cua_roja`.
+
 > ¿Tiene algún sentido?... Sí. Espera que lo veremos más adelante.
 
 ---
@@ -95,6 +103,10 @@ curso
     * Poner peso 60 a: act_intro, act_rojo, act_verde y act_azul.
     * Poner peso 40 a: pru_intro, pru_rojo, pru_verde y pru_azul.
 * Grabar
+
+> Ver ejemplo:
+>
+> ![](./files/calificador-categorias-pesos.png)
 
 > Fijarse en que los pesos que se ponen a las categorías son relativos. Esto quiere decir que para hacer una distribución de pesos equitativa entre varias categorías (Media artimética) podemos poner los pesos 1, 1 y 1 a todas o  2, 2 y 2... Todas con el mismo peso. Moodle sabe hacer el cálculo.
 >
