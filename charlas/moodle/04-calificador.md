@@ -45,6 +45,7 @@ Si entramos ahora en `Menú izquierdo -> Administración -> Configuración de ca
 | Nombre | `curso` ||
 |Cálculo total | `Media ponderada de calificaciones` | **Esta parte es MUY IMPORTANTE!!!**. Establece el sistema de pesos que vamos a usar |
 | Total categoría -> Calificación para aprobar | `50` | Estamos definiendo que todo lo que sea superior a 50% lo pinte en verde y y es inferior lo ponga en rojo |
+| Mostrar calificación | Poercentaje ||
 
 > Ver ejemplo:
 >
@@ -57,6 +58,7 @@ Si entramos ahora en `Menú izquierdo -> Administración -> Configuración de ca
 | Nombre | `trim1` ||
 |Cálculo total | `Media ponderada de calificaciones` | **Esta parte es MUY IMPORTANTE!!!**. Establece el sistema de pesos que vamos a usar |
 | Total categoría -> Calificación para aprobar | `50` | Estamos definiendo que todo lo que sea superior a 50% lo pinte en verde y y es inferior lo ponga en rojo |
+| Mostrar calificación | Poercentaje ||
 | Categoría padre | `curso` | Nombre de la categoría de nivel superior |
 
 * Seguimos así, hasta obtener la siguiente estructura:
