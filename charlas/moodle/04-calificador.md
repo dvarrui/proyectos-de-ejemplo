@@ -29,6 +29,7 @@ Los pasos que vamos a seguir son:
 Si entramos ahora en `Menú izquierdo -> Administración -> Configuración de calificacion` veremos todas las tareas (actividades) que habíamos creado como si fuera una lista. Esto lo vamos a cambiar.
 
 > Ver ejemplo:
+>
 > ![](./files/calificador-sin-categorias.png)
 
 ---
@@ -46,6 +47,7 @@ Si entramos ahora en `Menú izquierdo -> Administración -> Configuración de ca
 | Total categoría -> Calificación para aprobar | `50` | Estamos definiendo que todo lo que sea superior a 50% lo pinte en verde y y es inferior lo ponga en rojo |
 
 > Ver ejemplo:
+>
 > ![](./files/categoria-calculo-total.png)
 
 * `Añadir categoría` con:
