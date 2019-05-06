@@ -7,24 +7,28 @@ Los cursos que hacemos en Moodle (Como Campus Virtual o EVAGD) tienen un sistema
 
 Vamos a crear una configuración del calificador para resolver el siguiente supuesto. Queremos tener notas/calificaciones en lo siguiente:
 * Trim1 y trim2.
-* Para dos temas o unidades dentro de trim1.
-* Para dos temas o unidades dentro de trim2.
-* Para la parte de actividades y pruebas de cada una de las unidades.
+* Tema 1 y 2 dentro de trim1.
+* Tema 3 y 4 dentro de trim2.
+* Cada una de las partes de actividades y cuestionarios de cada uno de los temas.
 
 Además suponemos los siguiente pesos:
 * Todos los trimestres tienen el mismo peso.
 * Todas las unidades didácticas tienen el mismo peso.
 * Dentro de cada unidad:
     * Las actividades tendrán un peso de 60%
-    * Los cuestionarios tendrán un peso de 40%.
+    * Las cuestionarios tendrán un peso de 40%.
 
 ## Pasos
 
 Los pasos que vamos a seguir son:
 1. Crear las categorías
 2. Configurar las categorías
-3. Mover cada tarea a su categoría
+3. Mover cada tarea dentro de su categoría
 4. Comprobar los resultados
+
+Si entramos ahora en `Menú izquierdo -> Administración -> Configuración de calificacion` veremos todas las tareas (actividades) que habíamos creado como si fuera una lista. Esto lo vamos a cambiar.
+
+> ![](./files/calificador-sin-categorias.png)
 
 ---
 
