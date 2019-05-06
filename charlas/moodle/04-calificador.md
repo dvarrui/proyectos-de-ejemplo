@@ -138,6 +138,8 @@ Otra forma de configurar cada tarea dentro de su categoría es:
 >
 > La forma de nombrar las categorías, es para facilitar la localización de las categorías que necesitamos en cada momento.
 
+* Aprovecharemos para configurar en cada tarea, el parámetro `Calificación para aprobar`. Pondremos en cada caso el valor numérico mínimo que suponga que se puede considerar la actividad aprobada. Configurar esta opción implica que mas tarde veremos coloreado en rojo/verde las notas de los alumnos si se considera que están suspedidos/aprobados. ¡Esto ayuda mucho!
+
 ---
 
 # 4. Comprobar los resultados
