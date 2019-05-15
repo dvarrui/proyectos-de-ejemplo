@@ -14,6 +14,9 @@ words.each { |w| filter+=" |grep #{w} " }
 rbfiles = File.join(rootbase, "**", "*.rb")
 files = Dir.glob(rbfiles)
 files.sort.each do |f|
-  r = `cat #{f} #{filter} |wc -l`
-  puts "* #{f}"  if r.to_i>=words.size
+  t = "cat #{f} #{filter} |wc -l"
+  r = `#{t}`
+  if r.to_i>0 
+    puts "* <#{f}> (#{r.to_i},#{words.size})"  
+  end
 end
