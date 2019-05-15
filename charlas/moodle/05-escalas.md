@@ -36,3 +36,13 @@ Ahora vamos a crearnos nuestra propia escala
 * Crear nueva tarea (A1) y usar la escala que acabamos de crear.
 
 > Si piensas que se pueden implementar rúbricas de esta forma... ¡Espera! Más adelante haremos rúbricas de verdad. ;-)
+
+---
+
+# Exportar calificaciones
+
+Para que vayas viendo cómo nos están quedando las calificaciones en una hoja de cálculo, podemos hacer lo siguiente:
+* Ir a `Administración -> Calificaciones`
+* `Exportar hoja de cálculo`
+* `Descargar`
+* Consultar el fichero descargado.
