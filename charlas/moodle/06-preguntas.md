@@ -32,8 +32,7 @@ En mis ejemplos voy a a suponer que tengo que crear preguntas sobre el cuento de
 * Ir `Administración -> Banco de preguntas -> Categorías`
 * Crear las categorías, poniendo un nombre adecuado (Que no sea muy largo). No es obligatorio poner la descripción.
 
-Con las flechas podemos ordenar las categorías. O mover una dentro de otra.
-El orden de las categorías no tiene ningún efecto, salvo el de tener el banco de preguntas ordenado.
+Con las flechas podemos ordenar las categorías. O mover una dentro de otra. El orden de las categorías no tiene ningún efecto, salvo el de tener el banco de preguntas ordenado.
 
 > ![](./files/preguntas-categorias.png)
 >
@@ -41,7 +40,96 @@ El orden de las categorías no tiene ningún efecto, salvo el de tener el banco 
 
 ---
 
-## Preguntas: verdadero/falso
+## Preguntas: verdadero
 
 * Ir `Administración -> Banco de preguntas -> Preguntas`
-* Elijan la categoría donde irá la pregunta.
+* Eligir la categoría (donde se guardará la pregunta que vamos a crear).
+* `Crear nueva pregunta`
+* Elegir tipo `verdadero/falso`
+
+Rellenar con lo siguiente:
+
+| Campo     | Valor                      | Descripción |
+| --------- | -------------------------- | ----------- |
+| Nombre    | caperucita-color-rojo      | El nombre debe ser un texto que nos ayude a identificar la pregunta. NO es la pregunta |
+| Enunciado | Caperucita es una niña que tiene la ropa de color rojo | Ésta si es la pregunta. En este caso es una afirmación, porque el de tipo verdadero/falso |
+| Respuesta correcta | verdadero | Es el valor que hay que responder para acertar |
+
+* `Guardar cambios`
+* Las primeras veces conviene pinchar en la lupa para abrir una demo y ver qué tal ha quedado nuestra pregunta.
+
+> ![](./files/preguntas-verdadero-falso.png)
+
+---
+
+## Preguntas: falso
+
+* Ahora crearemos una pregunta V/F donde la respuesta sea falso.
+
+---
+
+## Preguntas de opción múltiple (1 correcta)
+
+En este tipo de preguntas le ofrecemos al alumno varias opciones y tiene que elegir la correcta. Normalmente la correcta es una, pero pueden ser varias. Veremos ambos ejemplos.
+
+* Ir a `Administración -> Banco de preguntas -> Preguntas`
+* Elegir la misma categoría.
+* `Crear nueva pregunta`
+* Elegir el tipo `Opción múltiple`
+
+Rellenar con lo siguiente:
+
+| Campo     | Valor                      | Descripción |
+| --------- | -------------------------- | ----------- |
+| Nombre    | caperucita-elegir-color    | El nombre debe ser un texto que nos ayude a identificar la pregunta. NO es la pregunta |
+| Enunciado | ¿De qué color es la ropa de la niña del cuento? | Ésta si es la pregunta. |
+| ¿Una o varias respuestas | Sólo una | Sólo hay una respuesta correcta |
+| ¿Barajar respuestas? | Sí | Las opciones saldrán en diferente orden cada vez que se muestre la pregunta a diferentes alumnos |
+| Elección 1 | Rojo ||
+| Calificación 1 | 100% ||
+| Elección 2 | Azul ||
+| Calificación 2 | -25% ||
+| Elección 3 | Rosa ||
+| Calificación 3 | -25% ||
+| Elección 4 | Ninguna es correcta ||
+| Calificación 4 | -25% |.|
+
+> ![](./files/preguntas-eleccion1.png)
+>
+> Las preguntas de elección múltiple, la creamos con 4 opciones (es lo más frecuente). La correcta tiene 100% y las incorrectas valoración negativa. De esta forma, las respuestas equivocadas restan puntos. Esto es para prevenir que no escojan respuestas al azar.
+
+---
+
+## Preguntas de opción múltiple (2 correctas)
+
+En este tipo de preguntas le ofrecemos al alumno varias opciones y tiene que elegir todas las correctas.
+
+* Ir a `Administración -> Banco de preguntas -> Preguntas`
+* Elegir la misma categoría.
+* `Crear nueva pregunta`
+* Elegir el tipo `Opción múltiple`
+
+Rellenar con lo siguiente:
+
+| Campo     | Valor                      | Descripción |
+| --------- | -------------------------- | ----------- |
+| Nombre    | personajes-familia        | El nombre debe ser un texto que nos ayude a identificar la pregunta. NO es la pregunta |
+| Enunciado | Elije los personajes que tienen una relación de parentesco entre sí. (Incluir una imagen de familia en el enunciado)| |
+| ¿Una o varias respuestas | Se permiten varias | Elegir todas las respuestas correctas|
+| ¿Barajar respuestas? | Sí | Las opciones saldrán en diferente orden cada vez que se muestre la pregunta a diferentes alumnos |
+| Elección 1 | Caperucita ||
+| Calificación 1 | 50% ||
+| Elección 2 | Abuelita ||
+| Calificación 2 | 50% ||
+| Elección 3 | Leñador ||
+| Calificación 3 | -50% ||
+| Elección 4 | Lobo ||
+| Calificación 4 | -50% |.|
+
+> ![](./files/preguntas-eleccion2.png)
+>
+> Las puntuaciones negativas deben anular a las positivas.
+
+---
+
+* Crear varias preguntas de cada tipo para tu propio tema.
