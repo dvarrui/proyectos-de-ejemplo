@@ -17,9 +17,7 @@ para poner la nota de la recuperación de esa unidad.
 
 > Una forma es usar las categorías del calificador con la fórmula escoger la mayor. Veamos:
 
-**Paso 1:** Creamos las dos tareas:
-* La actividad y
-* La recuperación
+**Paso 1:** Creamos las dos tareas: (a) La actividad y (b) la recuperación.
 
 > ![](./files/ejemplo1-crear-tareas.png)
 
