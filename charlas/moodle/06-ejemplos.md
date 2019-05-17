@@ -30,8 +30,14 @@ Respuesta:
 **Paso 3:** Dentro del calificador, colocamos las tareas en la categoría `ejemplo1`.
 
 >![](./files/ejemplo1-calificador.png)
->
-> Fijarse que la fórmula de cálculo es `Calificación más alta`
+
+Fijarse que la fórmula de cálculo es `Calificación más alta`
+
+Si vamos al informa del calificador, después de haber puesto algunas notas, veremos algo como lo siguiente:
+* El alumno1, no necesita recuperar.
+* El alumno2, recupera y se queda con la nota de la recuperación.
+
+> ![](./files/ejemplo1-notas.png)
 
 ---
 
