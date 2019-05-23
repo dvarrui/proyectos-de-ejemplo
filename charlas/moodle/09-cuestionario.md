@@ -45,6 +45,13 @@ Ahora necesitamos añadir "preguntas" al cuestionario.
 >
 > El valor 5 se puede cambiar, pero la experiencia determina que es un número muy adecuado.
 
+---
+
+# Comprobar el cuestionario
+
+* Ir a la página principal del curso de pruebas.
+* Mover "cuestionario" a la sección con la etiqueta "Cuestionarios". Aplicar un sangrado a la derecha.
+* Entrar en el cuestionario y probarlo.
 
 ---
 
