@@ -132,4 +132,6 @@ Rellenar con lo siguiente:
 
 ---
 
+# ¿Qué hay que hacer?
+
 * Crear varias preguntas de los tipos anterior en tu propio curso Moodle.
