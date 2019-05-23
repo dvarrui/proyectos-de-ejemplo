@@ -24,7 +24,7 @@ Rellenar con lo siguiente:
 | Calificación -> Intentos | 1 | Veces que se puede repetir la actividad
 | Opciones de revisión | Marcar SOLO "Después de cerrar el cuestionario" | Momento en el cual se harán visibles los resultados |
 
-![](./files/cuestionario-revision.png)
+> ![](./files/cuestionario-revision.png)
 
 * `Guardar cambios y mostrar`
 
@@ -38,11 +38,13 @@ Ahora necesitamos añadir "preguntas" al cuestionario.
 * Seleccionar preguntas
 * `Añadir preguntas seleccionadas al cuestionario`
 
-![](./files/cuestionario-seleccionar-preguntas.png)
+> ![](./files/cuestionario-seleccionar-preguntas.png)
 
 * `Paginar`
 * `Repaginar con 5 preguntas por página -> Ir`.
 
+> ![](./files/cuestionario-repaginar.png)
+>
 > Esto establece el número de preguntas que se mostrarán en cada página. El el alumno deberá ir saltando de página a página para completar todas las preguntas.
 >
 > El valor 5 se puede cambiar, pero la experiencia determina que es un número muy adecuado.
@@ -100,3 +102,15 @@ Ahora, ya las podemos usar en nuestros cuestionarios.
 # 3. Crear cuestionario: preguntas aleatorias
 
 * Crear otro cuestionario de forma similar al anterior, pero en este caso a la hora de agregar las preguntas al cuestionario elegiremos la opción `preguntas al azar`.
+
+* `Agregar -> pregunta aleatoria`
+* Elegir Categoría
+* Número de preguntas aletorias: 10
+* `Agregar pregunta aletoria`
+
+> ![](./files/cuestionario-aleatorio.png)
+
+* `Paginar`
+* `Repaginar con 5 preguntas por página -> Ir`.
+* Ir a la página principal del curso.
+* Colocar cuestionario en su sitio y probarlo.
