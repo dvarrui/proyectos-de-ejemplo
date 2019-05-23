@@ -3,7 +3,11 @@
 
 Las preguntas las hemos creado dentro del banco de preguntas, pero ahora necesitamos un cuestionario para usar las preguntas dentro de una actividad. Vamos allá.
 
-## Crear cuestionario
+---
+
+# 1. Crear cuestionario: preguntas fijas
+
+## 1.1 Cuestionario
 
 * Ir a la página principal de nuestro curso de pruebas.
 * Ir a la caja 1 (tema1).
@@ -24,9 +28,7 @@ Rellenar con lo siguiente:
 
 * `Guardar cambios y mostrar`
 
----
-
-## Incluir las preguntas
+## 1.2 Incluir las preguntas
 
 Ahora necesitamos añadir "preguntas" al cuestionario.
 
@@ -45,9 +47,7 @@ Ahora necesitamos añadir "preguntas" al cuestionario.
 >
 > El valor 5 se puede cambiar, pero la experiencia determina que es un número muy adecuado.
 
----
-
-# Comprobar el cuestionario
+## 1.3 Comprobar el cuestionario
 
 * Ir a la página principal del curso de pruebas.
 * Mover "cuestionario" a la sección con la etiqueta "Cuestionarios". Aplicar un sangrado a la derecha.
@@ -55,7 +55,9 @@ Ahora necesitamos añadir "preguntas" al cuestionario.
 
 ---
 
-# Exportar
+# 2. Compartir las pregutnas  
+
+## 2.1 Exportar
 
 Vamos a grabar nuestras preguntas a un fichero externo para pasarlas a un compañero.
 
@@ -71,9 +73,7 @@ Elegir lo siguiente:
 
 * Exportar
 
----
-
-# Importar
+## 2.2 Importar
 
 Con el fichero que nos ha pasado el compañero, vamos a hacer el proceso de cargar sus preguntas en nuestro curso.
 
@@ -86,9 +86,17 @@ Elegir lo siguiente:
 | Campo              | Valor     |
 | ------------------ | --------- |
 | Formato de archivo | Formato Gift |
-| Categoría para importar | Elegi categoría |
-| |Elegir el fichero de nuestro PC. |
+| General -> Categoría para importar | Elegir categoría |
+| Seleccionar un archivo |Buscar en nuestro PC y elegir el fichero de preguntas |
 
-* Aceptar
+* Importar
+* Continuar
 
 Comprobar que tenemos las preguntas cargadas en nuestro banco de preguntas.
+Ahora, ya las podemos usar en nuestros cuestionarios.
+
+---
+
+# 3. Crear cuestionario: preguntas aleatorias
+
+* Crear otro cuestionario de forma similar al anterior, pero en este caso a la hora de agregar las preguntas al cuestionario elegiremos la opción `preguntas al azar`.
