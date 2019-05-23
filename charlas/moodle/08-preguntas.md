@@ -58,6 +58,8 @@ Rellenar con lo siguiente:
 
 * `Guardar cambios`
 
+> ![](./files/pregunta-emparejar.png)
+
 ---
 
 # ¿Qué hay que hacer?
