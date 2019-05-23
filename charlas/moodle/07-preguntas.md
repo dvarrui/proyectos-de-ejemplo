@@ -132,4 +132,4 @@ Rellenar con lo siguiente:
 
 ---
 
-* Crear varias preguntas de cada tipo para tu propio tema.
+* Crear varias preguntas de los tipos anterior en tu propio curso Moodle.
