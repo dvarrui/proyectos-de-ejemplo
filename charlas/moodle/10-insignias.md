@@ -21,7 +21,7 @@ Es importante tener en cuenta el tamaño y los colores de la imagen escogida com
 >
 > Las propiedades de tamaño y color de una imagen se pueden modificar con programas como "paint" de Windows y/o el editor GIMP de software libre.
 
-Una vez tenemos nuestras imágenes, las guardamos en uns carpeta para estar organizados.
+* Descargar/obtener imágenes, y guardarlas en una carpeta para estar organizados.
 
 ---
 
