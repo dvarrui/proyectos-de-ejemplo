@@ -7,7 +7,9 @@ Las encuestas son baterías de preguntas que nos sirven para recopilar informaci
 
 ---
 
-# Crear cuestionario de valoración
+# Ejemplo: Cómo crear una encuesta
+
+Vamos a ver un ejemplo, en el que crearemos un "cuestionario de valoración" usando las encuestas de Moodle.
 
 * Ir a nuestro curso de pruebas.
 * `Activar edición`
@@ -55,4 +57,11 @@ Las encuestas son baterías de preguntas que nos sirven para recopilar informaci
 >
 > ![](./files/encuesta-preguntas.png)
 
-* Seguimos hasta terminar todas las preguntas.
+Seguiríamos así, hasta terminar todas las preguntas.
+
+---
+
+# Tarea: Encuesta
+
+* Crea una encuesta con el nombre `Conocimientos previos` en la caja 0 de tu curso de pruebas Moodle.
+* Añade 5 preguntas a la encuesta, que te sirvan para averiguar los conocimientos previos del alumnado en relación a tu asignatura.
