@@ -37,6 +37,8 @@ def sumar(*args)
   args.each { |i| s+= i }
   s
 end
+```
 
+```
 c = sumar 3, 2, 1, 1
 ```
