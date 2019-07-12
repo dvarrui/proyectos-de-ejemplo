@@ -1,7 +1,8 @@
 
-# I Love Ruby: "Creando un DSL con Ruby"
+# "Creando un DSL con Ruby"
+**#iloveruby**
 
-![](./images/iloveruby.png)
+![](../language/images/iloveruby.png)
 
 ---
 
@@ -10,11 +11,8 @@
 ```
 $ history
 
-Hablaremos de:
-* ¿Por qué?
-* ¿Cómo empezó todo?
-* Características
-* Ejemplos
+* Definir DSL
+* Características de Ruby
+* Ejemplo: DSL de mates
+* Preguntas
 ```
-
-> No esperes al final para preguntar. ;-)
