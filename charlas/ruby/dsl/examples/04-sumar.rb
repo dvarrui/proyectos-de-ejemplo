@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+puts "Ejemplo   : #{$0}"
 
 $acc = 0
 
@@ -18,5 +19,4 @@ sumar 1
 sumar 1
 c = acc
 
-puts "Ejemplo   : #{$0}"
 puts "Resultado : #{c}"

@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+puts "Ejemplo   : #{$0}"
 
 def sumar(*args)
   s = 0
@@ -8,5 +9,4 @@ end
 
 c = sumar 3, 2, 1, 1
 
-puts "Ejemplo   : #{$0}"
 puts "Resultado : #{c}"
