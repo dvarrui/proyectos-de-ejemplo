@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+# Se añade un alias a acc llamado resultado
+
 require_relative '09-sumar-lib'
 puts "Ejemplo   : #{$0}"
 

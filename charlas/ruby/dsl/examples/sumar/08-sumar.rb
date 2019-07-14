@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# Se oculta la creación del objeto
 require_relative '08-sumar-lib'
 puts "Ejemplo   : #{$0}"
 

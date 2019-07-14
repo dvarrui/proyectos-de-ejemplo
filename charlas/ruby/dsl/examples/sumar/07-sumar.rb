@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# Se usan los bloques de código dentro del objeto
 require_relative '07-sumar-lib'
 puts "Ejemplo   : #{$0}"
 

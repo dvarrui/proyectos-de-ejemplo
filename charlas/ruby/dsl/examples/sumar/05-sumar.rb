@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# Se oculta la implementación en la librería 
 require_relative '05-sumar-lib'
 puts "Ejemplo   : #{$0}"
 

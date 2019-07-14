@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# Se convierte a POO
 require_relative '06-sumar-lib'
 puts "Ejemplo   : #{$0}"
 

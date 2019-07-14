@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# Los paréntesis son opcionales
 puts "Ejemplo   : #{$0}"
 
 

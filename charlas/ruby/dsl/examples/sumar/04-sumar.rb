@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# Se añade un acumuador por defecto
 puts "Ejemplo   : #{$0}"
 
 $acc = 0
