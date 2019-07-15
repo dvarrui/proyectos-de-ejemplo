@@ -5,3 +5,4 @@ Vamos a plantearnos un problema, e intentar resolverlo u optimizarlo haciendo us
 
 * Sumar
 * Manipular un CSV
+* SQL y BBDD de canciones
