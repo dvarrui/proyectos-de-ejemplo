@@ -1,14 +1,16 @@
+#!/usr/bin/env ruby
 # URL: https://dzone.com/articles/simple-ruby-activerecord
+# URL: https://sqlite2.blogspot.com/2015/08/active-record-with-ruby-not-rails.html
 # Using Ruby ActiveRecord with an in-memory SQLite database.
 # A nice simple example of this wonderful library.
 
-require 'activerecord'
+require 'active_record'
 
 ActiveRecord::Base.logger = Logger.new(STDERR)
-ActiveRecord::Base.colorize_logging = false
 ActiveRecord::Base.establish_connection(
-  :adapter => "sqlite3",
-  :dbfile  => ":memory:"
+     :adapter => 'sqlite3',
+     :host => "localhost",
+     :database => 'music.db'
 )
 
 ActiveRecord::Schema.define do
@@ -53,8 +55,3 @@ album.tracks.create(:track_number => 7, :title => 'I Got The Blues')
 album.tracks.create(:track_number => 8, :title => 'Sister Morphine')
 album.tracks.create(:track_number => 9, :title => 'Dead Flowers')
 album.tracks.create(:track_number => 10, :title => 'Moonlight Mile')
-
-puts Album.find(1).tracks.length
-puts Album.find(2).tracks.length
-puts Album.find_by_title('Sticky Fingers').title
-puts Track.find_by_title('Fool To Cry').album_id
