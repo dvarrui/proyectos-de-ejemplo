@@ -38,3 +38,5 @@ end
 ```
 c = sumar 3, 2, 1, 1
 ```
+
+> Seguimos viendo los [ejemplos de sumar](examples/sumar)
