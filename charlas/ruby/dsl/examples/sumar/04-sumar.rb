@@ -18,6 +18,5 @@ end
 sumar 3, 2
 sumar 1
 sumar 1
-c = acc
 
-puts "Resultado : #{c}"
+puts "Resultado : #{acc}"
