@@ -3,8 +3,8 @@
 import sys
 
 def mayor_de_edad(edad):
-    if edad >= 18:
+    if int(edad) >= 18:
         return "Eres MAYOR de edad"
     return "Eres MENOR"
 
-print mayor_de_edad(int(sys.argv[1]))
+print mayor_de_edad(sys.argv[1])
