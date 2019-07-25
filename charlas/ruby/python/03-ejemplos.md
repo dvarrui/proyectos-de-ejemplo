@@ -76,8 +76,12 @@ while i<10:
 
 for i in range(0,10):
 	print "Iterador",i
+
+for i in [1,3,5,7]:
+  	print "Array",i
 ```
 
+Ruby:
 ```
 i=0
 while i<10
@@ -88,4 +92,9 @@ end
 (0..9).each do |i|
   puts "Iterador #{i}"
 end
+
+[1,3,5,7].each do |i|
+  puts "Array #{i}"
+end
+
 ```
