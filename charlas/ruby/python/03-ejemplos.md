@@ -4,12 +4,12 @@
 ## Hola mundo!
 
 Python:
-```python
+```
 print "Hola mundo!"
 ```
 
 Ruby:
-```ruby
+```
 print "Hola mundo!"
 ```
 
@@ -18,7 +18,7 @@ print "Hola mundo!"
 ## Condicionales
 
 Python:
-```python
+```
 import sys
 edad = int(sys.argv[1])
 
@@ -29,7 +29,7 @@ else:
 ```
 
 Ruby:
-```ruby
+```
 edad = ARGV[0].to_i
 
 if edad >= 18
@@ -43,7 +43,7 @@ end
 
 ## Funciones
 
-```python
+```
 import sys
 
 def mayor_de_edad(edad):
@@ -54,11 +54,38 @@ def mayor_de_edad(edad):
 print mayor_de_edad(sys.argv[1]))
 ```
 
-```ruby
+```
 def mayor_de_edad(edad)
   return "Eres MAYOR de edad" if edad.to_i >= 18
   "Eres MENOR"
 end
 
 puts mayor_de_edad ARGV[0]
+```
+
+---
+
+## Bucles/iteradores
+
+Python:
+```
+i=0
+while i<10:
+	print "Bucle",i
+	i+=1
+
+for i in range(0,10):
+	print "Iterador",i
+```
+
+```
+i=0
+while i<10
+  puts "Bucle #{i}"
+  i+=1
+end
+
+(0..9).each do |i|
+  puts "Iterador #{i}"
+end
 ```
