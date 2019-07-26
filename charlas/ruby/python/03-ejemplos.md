@@ -91,8 +91,8 @@ while i<10
   i+=1
 end
 
-(0..9).each do |i|
-  puts "Iterador #{i}"
+for i in 0..9
+  puts i
 end
 
 [1,3,5,7].each do |i|
