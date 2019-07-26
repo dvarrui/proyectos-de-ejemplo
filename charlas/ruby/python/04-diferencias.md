@@ -3,21 +3,21 @@
 
 ---
 
-## Comparativa
+## Característica/principio
 
-| Característica/principio   | Python     | Ruby |
-| -------------------------- | ---------- | ---- |
-| **Divertido:** Alegre, festivo y de buen humor | ? | OK | ? |
-| Pattern Desing | ? | Integrados en el lenguaje | ? |
-| Sintaxis de los bloques  | Uso de los tabuladores | {} o cerrar con "end" | Diferente |
-| Paradigma de programación | **Multiparadigma** (Menor medida funcional) | **Orientado a Objetos**. Diseñado para el interfaz humano. Sintaxis que permite otros paradigmas y DSL. | Diferencias en los paradigmas preferentes |
-| Closure y bloques de código | No se potencia | Se usa constantemente. Potenciando el estilo de programación funcional. | Diferente |
+| Python      | Ruby                  |
+| ----------- | --------------------- |
+| Tabuladores | {} o cerrar con "end" |
+| ? | **Divertido:** Alegre, festivo y de buen humor |
+| ? | Pattern Desing integrados en el lenguaje |
+| **Multiparadigma** (Menor medida funcional) | **Orientado a Objetos**. Diseñado para el interfaz humano. Sintaxis que permite otros paradigmas y DSL. |
+| NO se potencian Closure y bloques de código | Se usa constantemente. Potenciando el estilo de programación funcional. |
 
 ---
 
 ## Filosofía
 
-| Zen de Python              | Ruby |
+| Python                     | Ruby |
 | -------------------------- | ---- |
 | Plano es mejor que anidado | Depende |
 | Explícito es mejor que implícito | Convención frente a configuración |
