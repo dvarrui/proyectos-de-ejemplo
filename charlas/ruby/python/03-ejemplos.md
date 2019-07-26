@@ -43,6 +43,7 @@ end
 
 ## Funciones
 
+Python:
 ```
 import sys
 
@@ -54,6 +55,7 @@ def mayor_de_edad(edad):
 print mayor_de_edad(sys.argv[1]))
 ```
 
+Ruby:
 ```
 def mayor_de_edad(edad)
   return "Eres MAYOR de edad" if edad.to_i >= 18
