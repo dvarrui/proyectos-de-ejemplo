@@ -3,7 +3,17 @@
 
 ---
 
-## Características/principios
+## Características
+
+* Lenguaje de programación interpretado.
+* Tipado dinámico y fuerte.
+* Multiplataforma y licencia libre.
+* Se pueden escribir módulos fácilmente en C o C++.
+* Preogamación Web, scripting de systemas, aplicaciones de escritorio, etc.
+
+---
+
+## Principios
 
 | Python                         | Ruby       |
 | ------------------------------ | ---------- |

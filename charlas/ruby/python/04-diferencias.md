@@ -3,7 +3,7 @@
 
 ---
 
-## Característica/principio
+## Principios
 
 | Python      | Ruby                  |
 | ----------- | --------------------- |
@@ -12,6 +12,13 @@
 | ? | Pattern Desing integrados en el lenguaje |
 | **Multiparadigma** (Menor medida funcional) | **Orientado a Objetos**. Diseñado para el interfaz humano. Sintaxis que permite otros paradigmas y DSL. |
 | NO se potencian Closure y bloques de código | Se usa constantemente. Potenciando el estilo de programación funcional. |
+
+---
+
+## Características
+
+Ruby
+* Metaprogramación
 
 ---
 
