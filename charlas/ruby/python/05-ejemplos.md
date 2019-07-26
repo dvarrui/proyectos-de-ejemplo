@@ -57,3 +57,26 @@ a.size        => 4
 a.length      => 4
 a.count       => 4
 ```
+
+---
+
+## Bloques de código
+
+Varias formas de crear los bloques de código
+```
+c = Proc.new { |x| puts x }
+c = proc { |x| puts x }
+c = lambda { |x| puts x }
+
+c.call "Hello world!"
+```
+
+Los interadores están integrados en cada clase usando los bloques de código:
+```
+[1,3,5,7].each do |i|
+  puts i
+end
+
+c = Proc.new { |i| puts i}
+[1,3,5,7].each(&c)
+```
