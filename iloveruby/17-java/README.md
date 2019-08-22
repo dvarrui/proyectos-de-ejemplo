@@ -9,14 +9,14 @@ As most people reading this will be aware, it is naive to assume that core conce
 # Comparativa
 
 Los métodos sobrecargados de Customer.DisplayInfo en Java:
-* 13 líneas.
+* 14 líneas.
 * Acepta sólo 3 combinaciones:
     * firstname
     * firstname-lastname
     * firstname-lastname-email
 
 El método customer.display_info de Ruby:
-* 8 líneas de código.
+* 10 líneas de código.
 * Acepta siguientes combinaciones
     * firstname, lastname, email, vacío
     * firstname-lastname, lastname-firstname, firstname-email, lastname-email, etc....
