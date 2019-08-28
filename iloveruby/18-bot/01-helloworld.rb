@@ -12,6 +12,8 @@ Telegram::Bot::Client.run(token) do |bot|
     case message.text
     when "/hello#{bot_username}"
       bot.api.send_message(chat_id: message.chat.id, text: "Hello Word!")
+    when "/hello"
+      bot.api.send_message(chat_id: message.chat.id, text: "Hello Word!")
     when "/byebye#{bot_username}"
       exit
     end
