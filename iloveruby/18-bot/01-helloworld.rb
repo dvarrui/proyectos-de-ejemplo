@@ -2,7 +2,7 @@
 
 require 'telegram/bot'
 # Write your TOKEN value into token var
-token = `cat hide.token`.strip`
+token = `cat hide.token`.strip
 bot_username = '@dvarrui_bot'
 
 puts "[INFO] Running bot #{$0}..."
