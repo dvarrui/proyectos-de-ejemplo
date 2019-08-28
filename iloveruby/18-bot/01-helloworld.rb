@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
 
 require 'telegram/bot'
-token = ''
+# Write your TOKEN value into token var
+token = `cat hide.token`.strip`
 bot_username = '@dvarrui_bot'
 
 puts "[INFO] Running bot #{$0}..."
