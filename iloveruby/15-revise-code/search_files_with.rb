@@ -6,6 +6,11 @@ require_relative 'lib/revise_input'
 # rootbase = File.basename(ARGV[0])
 # rootdir = File.dirname(ARGV[0])
 
+if ARGV.size < 2 
+  puts "Usage: #{$0} DIR WORD,WORD,WORD"
+  exit 1
+end
+
 rootbase = ARGV[0]
 words = ARGV[1].split(",")
 filter = ""
