@@ -35,3 +35,4 @@ TOKEN (HTTP API): ...
 
 * `gem install telegram-bot-ruby`, install ruby gem.
 * Run this program [01-hello-world.rb](01-hello-world)
+d
