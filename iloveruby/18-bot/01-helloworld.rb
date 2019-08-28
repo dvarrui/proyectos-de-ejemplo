@@ -1,7 +1,10 @@
 #!/usr/bin/env ruby
 
 require 'telegram/bot'
-# Write your TOKEN value into token var
+
+# token:
+# 1. Write your TOKEN value into "token" variable or
+# 2. Create a local file "hiden.token" with your TOKEN value inside
 token = `cat hide.token`.strip
 bot_username = '@dvarrui_bot'
 
