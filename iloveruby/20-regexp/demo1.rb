@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby 
 
-a = "IDP\\Administrador\nIDP\\Alumno"
+a = "IDP\\Administrador\nIDP\\Alumno\nIDPe\\Alumno\nIDP\\Alumnito"
 b = a.split("\n")
 
 filter = /^IDP\\Alumno$/
