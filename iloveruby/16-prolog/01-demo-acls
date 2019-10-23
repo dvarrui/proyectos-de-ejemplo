@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 #
 # By Preston Lee
-#
+# 
 
 $LOAD_PATH.unshift File.join(File.dirname(__FILE__), '..', 'lib')
 require 'ruby-prolog'
