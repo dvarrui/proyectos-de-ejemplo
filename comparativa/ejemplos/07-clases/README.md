@@ -3,8 +3,7 @@
 
 Ejemplo de clases y POO.
 
-| Fichero | Descripción |
-| ------- | ----------- |
-| person1 | Crear clase con atributos y métodos |
-| person2 | Atributos públicos vs privados |
-| person3 | Métodos de clase o estáticos |
+* 01: Crear clase con atributos y métodos
+* 02: Atributos públicos vs privados
+* 03: Métodos de clase o estáticos
+* 04: Redefinir métodos de instancia
