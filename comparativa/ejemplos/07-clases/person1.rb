@@ -15,4 +15,4 @@ end
 
 p = Person.new('Tomas', 44)
 p.greet
-puts p
+puts p # Call method to_s to convert object to String
