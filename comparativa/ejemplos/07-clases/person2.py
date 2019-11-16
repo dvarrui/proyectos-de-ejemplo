@@ -13,3 +13,4 @@ class Person:
 
 p = Person('Tomas', 44)
 print p.name # Attributes are public by default
+print p.age  # Attributes are public by default
