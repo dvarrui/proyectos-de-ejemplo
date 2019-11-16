@@ -6,6 +6,7 @@ end
 
 foo = Dog.new()
 foo.bark() # "Woof"
+# foo.singleton_methods => []
 
 # replace bark instance method
 class << foo
@@ -15,3 +16,4 @@ class << foo
 end
 
 foo.bark() # "Woof Woof"
+# foo.singleton_methods => [:bark]
