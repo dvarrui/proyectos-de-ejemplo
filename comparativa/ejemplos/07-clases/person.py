@@ -12,5 +12,5 @@ class Person:
         return "Name: " + self.name + ", Age: " + str(self.age)
 
 p = Person('Tomas', 44)
-p.greet
+p.greet()
 print p
