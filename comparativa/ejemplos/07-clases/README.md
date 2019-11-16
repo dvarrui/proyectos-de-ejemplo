@@ -7,3 +7,4 @@ Ejemplo de clases y POO.
 * 02: Atributos públicos vs privados
 * 03: Métodos de clase o estáticos
 * 04: Redefinir métodos de instancia
+* 05: Métodos privados
