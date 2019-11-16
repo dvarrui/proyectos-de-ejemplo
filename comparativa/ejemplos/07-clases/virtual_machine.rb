@@ -1,5 +1,4 @@
 #!/usr/bin/ruby
-require 'pry-byebug'
 
 class VirtualMachine
   attr_reader :ram, :cpu, :hdd
