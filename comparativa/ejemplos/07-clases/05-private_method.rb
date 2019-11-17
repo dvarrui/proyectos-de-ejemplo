@@ -5,6 +5,7 @@ class Person
   end
 
   private
+
   def hidden
     puts('bla, bla, bla')
   end
