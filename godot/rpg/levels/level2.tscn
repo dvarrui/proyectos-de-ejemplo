@@ -2,9 +2,13 @@
 
 [ext_resource path="res://levels/level2.gd" type="Script" id=1]
 [ext_resource path="res://tileset/castle_tileset.res" type="TileSet" id=2]
-[ext_resource path="res://player/player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://items/ball.tscn" type="PackedScene" id=4]
-[ext_resource path="res://objects/tree.tscn" type="PackedScene" id=5]
+[ext_resource path="res://actors/player/player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://objects/ball/ball.tscn" type="PackedScene" id=4]
+[ext_resource path="res://objects/tree/tree.tscn" type="PackedScene" id=5]
+
+
+
+
 
 [node name="level2" type="Node2D"]
 script = ExtResource( 1 )

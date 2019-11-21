@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="rpg"
-run/main_scene="res://levels/level3.tscn"
+run/main_scene="res://levels/hornos.tscn"
 config/icon="res://icon.png"
 
 [input]
