@@ -3,12 +3,11 @@
 [ext_resource path="res://levels/hornos.gd" type="Script" id=1]
 [ext_resource path="res://tileset/floor_tileset.res" type="TileSet" id=2]
 [ext_resource path="res://tileset/wall_tileset.res" type="TileSet" id=3]
-[ext_resource path="res://objects/grid.tscn" type="PackedScene" id=4]
-[ext_resource path="res://objects/grid_door.tscn" type="PackedScene" id=5]
-[ext_resource path="res://actors/player/player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://actors/grid.tscn" type="PackedScene" id=4]
+[ext_resource path="res://actors/grid_door.tscn" type="PackedScene" id=5]
+[ext_resource path="res://characters/player/player.tscn" type="PackedScene" id=6]
 
 [node name="hornos" type="Node2D"]
-editor/display_folded = true
 script = ExtResource( 1 )
 
 [node name="floor_map" type="TileMap" parent="."]

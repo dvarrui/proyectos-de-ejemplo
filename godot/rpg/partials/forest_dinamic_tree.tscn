@@ -7,7 +7,6 @@ extents = Vector2( 103.972, 94.9238 )
 
 [node name="forest_dinamic_tree" type="Area2D"]
 script = ExtResource( 1 )
-items_count = 5
 
 [node name="shape" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
