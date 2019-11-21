@@ -47,4 +47,4 @@ func _physics_process(delta):
 	z_index = position.y
 	update_motion(delta)
 	refresh_anim()
- 
+	$info.set_info(z_index)

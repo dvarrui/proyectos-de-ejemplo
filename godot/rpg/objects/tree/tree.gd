@@ -4,3 +4,4 @@ extends StaticBody2D
 
 func _ready():
 	z_index = position.y
+	$info.set_info(z_index)

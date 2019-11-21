@@ -1,45 +1,39 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://actors/player/player.gd" type="Script" id=1]
 [ext_resource path="res://actors/player/sprites/idle-down.png" type="Texture" id=2]
-[ext_resource path="res://actors/player/sprites/walk-up-01.png" type="Texture" id=3]
-[ext_resource path="res://actors/player/sprites/walk-up-02.png" type="Texture" id=4]
-[ext_resource path="res://actors/player/sprites/walk-up-03.png" type="Texture" id=5]
-[ext_resource path="res://actors/player/sprites/walk-right-01.png" type="Texture" id=6]
-[ext_resource path="res://actors/player/sprites/walk-right-02.png" type="Texture" id=7]
-[ext_resource path="res://actors/player/sprites/walk-right-03.png" type="Texture" id=8]
-[ext_resource path="res://actors/player/sprites/idle-up.png" type="Texture" id=9]
-[ext_resource path="res://actors/player/sprites/walk-left-01.png" type="Texture" id=10]
-[ext_resource path="res://actors/player/sprites/walk-left-02.png" type="Texture" id=11]
-[ext_resource path="res://actors/player/sprites/walk-left-03.png" type="Texture" id=12]
-[ext_resource path="res://actors/player/sprites/walk-down-01.png" type="Texture" id=13]
-[ext_resource path="res://actors/player/sprites/walk-down-02.png" type="Texture" id=14]
-[ext_resource path="res://actors/player/sprites/walk-down-03.png" type="Texture" id=15]
-[ext_resource path="res://actors/player/sprites/idle-left.png" type="Texture" id=16]
-[ext_resource path="res://actors/player/sprites/idle-right.png" type="Texture" id=17]
-
-
+[ext_resource path="res://actors/player/sprites/idle-left.png" type="Texture" id=3]
+[ext_resource path="res://actors/player/sprites/walk-right-01.png" type="Texture" id=4]
+[ext_resource path="res://actors/player/sprites/walk-right-02.png" type="Texture" id=5]
+[ext_resource path="res://actors/player/sprites/walk-right-03.png" type="Texture" id=6]
+[ext_resource path="res://actors/player/sprites/idle-right.png" type="Texture" id=7]
+[ext_resource path="res://actors/player/sprites/walk-down-01.png" type="Texture" id=8]
+[ext_resource path="res://actors/player/sprites/walk-down-02.png" type="Texture" id=9]
+[ext_resource path="res://actors/player/sprites/walk-down-03.png" type="Texture" id=10]
+[ext_resource path="res://actors/player/sprites/walk-up-01.png" type="Texture" id=11]
+[ext_resource path="res://actors/player/sprites/walk-up-02.png" type="Texture" id=12]
+[ext_resource path="res://actors/player/sprites/walk-up-03.png" type="Texture" id=13]
+[ext_resource path="res://actors/player/sprites/walk-left-01.png" type="Texture" id=14]
+[ext_resource path="res://actors/player/sprites/walk-left-02.png" type="Texture" id=15]
+[ext_resource path="res://actors/player/sprites/walk-left-03.png" type="Texture" id=16]
+[ext_resource path="res://actors/player/sprites/idle-up.png" type="Texture" id=17]
+[ext_resource path="res://actors/player/info.tscn" type="PackedScene" id=18]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "walk_up",
+"name": "idle_left",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "walk_right",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ) ],
+"frames": [ ExtResource( 7 ) ],
 "loop": true,
-"name": "idle_up",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
-"loop": true,
-"name": "walk_left",
+"name": "idle_right",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 2 ) ],
@@ -47,19 +41,24 @@ animations = [ {
 "name": "idle_down",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "walk_down",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 16 ) ],
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
 "loop": true,
-"name": "idle_left",
+"name": "walk_up",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "walk_left",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 17 ) ],
 "loop": true,
-"name": "idle_right",
+"name": "idle_up",
 "speed": 5.0
 } ]
 
@@ -86,4 +85,7 @@ shape = SubResource( 2 )
 
 [node name="camera" type="Camera2D" parent="."]
 current = true
+
+[node name="info" parent="." instance=ExtResource( 18 )]
+position = Vector2( 0, 50 )
 

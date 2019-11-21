@@ -1,6 +1,6 @@
 extends Area2D
 
-var tree_class = load("res://objects/tree.tscn")
+var tree_class = load("res://objects/tree/tree.tscn")
 var size = Vector2(100,100)
 export var items_count = 3 
 

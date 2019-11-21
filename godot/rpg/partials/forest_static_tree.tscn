@@ -2,20 +2,20 @@
 
 [ext_resource path="res://objects/tree/tree.tscn" type="PackedScene" id=1]
 
-
-[node name="forest2" type="Node2D"]
+[node name="forest_static_tree" type="Node2D"]
 
 [node name="tree" parent="." instance=ExtResource( 1 )]
+position = Vector2( -12.6934, 72.987 )
 
 [node name="tree2" parent="." instance=ExtResource( 1 )]
 position = Vector2( 71.0795, 69.7871 )
 
 [node name="tree3" parent="." instance=ExtResource( 1 )]
-position = Vector2( -47.817, 109.85 )
+position = Vector2( -101.764, 162.21 )
 
 [node name="tree4" parent="." instance=ExtResource( 1 )]
-position = Vector2( -152.498, 45.2324 )
+position = Vector2( -95.3777, 72.2058 )
 
 [node name="tree5" parent="." instance=ExtResource( 1 )]
-position = Vector2( -99.5112, 179.637 )
+position = Vector2( 70.263, 152.664 )
 
