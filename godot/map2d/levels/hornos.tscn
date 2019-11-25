@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://levels/hornos.gd" type="Script" id=1]
 [ext_resource path="res://tileset/floor_tileset.res" type="TileSet" id=2]
@@ -8,7 +8,8 @@
 [ext_resource path="res://partials/horno3.png" type="Texture" id=6]
 [ext_resource path="res://partials/horno2.png" type="Texture" id=7]
 [ext_resource path="res://partials/horno1.png" type="Texture" id=8]
-[ext_resource path="res://characters/player/player.tscn" type="PackedScene" id=9]
+[ext_resource path="res://partials/forest_dinamic_tree.tscn" type="PackedScene" id=9]
+[ext_resource path="res://characters/player/player.tscn" type="PackedScene" id=10]
 
 [node name="hornos" type="Node2D"]
 script = ExtResource( 1 )
@@ -63,6 +64,25 @@ position = Vector2( 45.5344, 139.153 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 8 )
 
-[node name="player" parent="." instance=ExtResource( 9 )]
+[node name="garden" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="forest_dinamic_tree" parent="garden" instance=ExtResource( 9 )]
+position = Vector2( 904.291, -4.1011 )
+ext_items_count = 6
+
+[node name="forest_dinamic_tree2" parent="garden" instance=ExtResource( 9 )]
+position = Vector2( 220.851, -20.4487 )
+ext_items_count = 10
+
+[node name="forest_dinamic_tree3" parent="garden" instance=ExtResource( 9 )]
+position = Vector2( 294.993, 180.45 )
+ext_items_count = 5
+
+[node name="forest_dinamic_tree4" parent="garden" instance=ExtResource( 9 )]
+position = Vector2( -338.735, -20.6729 )
+ext_items_count = 13
+
+[node name="player" parent="." instance=ExtResource( 10 )]
 position = Vector2( 524.849, 320.362 )
 
