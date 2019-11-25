@@ -5,14 +5,11 @@ Enlace de interés:
 * http://mruby.org/
 * [GitHub de mruby](https://github.com/mruby/mruby)
 
-
+# Ejemplo
 
 * `rbenv install mruby-2.0.1`, instalación por rbenv.
 * `mrbc demo.rb`, compilar demo.rb.
 * `ruby -b demo.mrb`, ejecutar demo.mrb.
-
-
-
 
 ---
 # ANEXO: Instalación directa
