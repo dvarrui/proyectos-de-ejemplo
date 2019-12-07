@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+# Install packages on OpenSUSE
+
+require_relative 'lib/installapps/input_options'
+require_relative 'lib/installapps/package'
+
+InputOptions.parse(ARGV)
+
+NAMES = <<-EOF
+tree nmap git geany
+EOF
+
+Package.install(NAMES)
