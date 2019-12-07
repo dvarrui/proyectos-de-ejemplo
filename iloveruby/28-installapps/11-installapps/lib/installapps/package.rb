@@ -9,8 +9,9 @@ class Package
   # Install packages
   def self.install(input)
     execute('zypper refresh')
-    input.split(' ').each { |package| execute("zypper in -y #{package}",
-                                              "Installing #{package}") }
+    input.split(' ').each do |package|
+      execute("zypper in -y #{package}", "Installing #{package}")
+    end
   end
 
   private
@@ -22,7 +23,7 @@ class Package
       puts "[DEBUG] #{command}"
     else
       ok = system(command)
-      puts Rainbow("[ERROR] \'#{title}\'").bright.red unless ok
+      puts Rainbow("[ERROR] \'#{command}\'").bright.red unless ok
     end
   end
 end
