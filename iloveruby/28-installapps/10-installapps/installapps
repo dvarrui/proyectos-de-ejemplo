@@ -1,12 +1,13 @@
 #!/usr/bin/env ruby
 # Install packages on OpenSUSE
 
+require_relative 'lib/installapps/config' # Load library
 require_relative 'lib/installapps/package' # Load library
 
 if ARGV.first == '-s'
-  debug = true
+  Config.debug = true
 elsif ARGV.first == '-r'
-  debug = false
+  Config.debug = false
 else
   puts "Usage:"
   puts "        #{$0} OPTIONS"
@@ -20,4 +21,4 @@ NAMES = <<-EOF
 tree nmap git geany
 EOF
 
-Package.install(NAMES, debug)
+Package.install(NAMES)

@@ -1,12 +1,13 @@
-# Install packages on OpenSUSE
 
 require 'rainbow'
+require_relative 'config'
 
+##
+# Package manager
 class Package
-  @@debug = false
-
-  def self.install(input, debug=false)
-    @@debug = debug
+  ##
+  # Install packages
+  def self.install(input)
     execute('zypper refresh')
     input.split(' ').each { |package| execute("zypper in -y #{package}",
                                               "Installing #{package}") }
@@ -17,7 +18,7 @@ class Package
   def self.execute(command, title=nil)
     title ||= command
     puts Rainbow("=======#{title}=======").bright
-    if @@debug
+    if Config.debug?
       puts "[DEBUG] #{command}"
     else
       ok = system(command)
