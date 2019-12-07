@@ -1,8 +1,6 @@
 #!/usr/bin/env ruby
-# Install packages on OpenSUSE
 
-require_relative 'lib/installapps/input_options'
-require_relative 'lib/installapps/package'
+require_relative 'lib/installapps'
 
 InputOptions.parse(ARGV)
 
