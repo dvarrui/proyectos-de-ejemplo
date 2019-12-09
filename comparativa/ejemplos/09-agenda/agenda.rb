@@ -10,17 +10,17 @@ end
 def add_contact(phone_book, name, phone)
   if phone_book[name]
     puts Rainbow('Ya existe el nombre en la agenda!').red
-  else
-    phone_book[name] = phone
+    return
   end
+  phone_book[name] = phone
 end
 
 def remove_contact(phone_book, name)
   if phone_book[name]
     phone_book.delete(name)
-  else
-    puts Rainbow('No existe el nombre en la agenda!').red
+    return
   end
+  puts Rainbow('No existe el nombre en la agenda!').red
 end
 
 def menu
