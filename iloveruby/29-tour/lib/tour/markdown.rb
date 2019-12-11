@@ -21,14 +21,14 @@ class Markdown
       line = @lines[i]
       if line.start_with?('# ')
         @data[:title] = line.gsub('# ', '')
-        i += 1
       elsif line.start_with?('## ')
         @data[:slides] << current if current
-        current = { title: line.gsub('## ', '') }
-        i += 1
+        current = { title: line.gsub('## ', ''),
+                    lines: [] }
       else
-        i += 1
+        current[:lines] << line
       end
+      i += 1
     end
     @data[:slides] << current if current
     return @data
