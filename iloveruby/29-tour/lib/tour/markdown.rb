@@ -22,6 +22,7 @@ class Markdown
       elsif line.start_with?('## ')
         @data[:slides] << current if current
         current = { title: line.gsub('## ', ''),
+                    index: @data[:slides].size + 1,
                     lines: [] }
       else
         current[:lines] << line

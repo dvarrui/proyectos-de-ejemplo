@@ -4,7 +4,7 @@ module Debug
     puts "[DEBUG] Showing data content..."
     puts "  Title: #{data[:title]}"
     data[:slides].each do |slide|
-      puts "  * Slide: #{slide[:title]}"
+      puts "  (#{slide[:index]}) #{slide[:title]}"
       slide[:lines].each do |line|
         puts "    - #{line}"
       end
