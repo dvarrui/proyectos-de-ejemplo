@@ -1,6 +1,4 @@
 
-require 'pry-byebug'
-
 class Markdown
   attr_reader :data
 
