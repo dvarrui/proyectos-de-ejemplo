@@ -19,7 +19,7 @@ def draw_slide(current, data)
     @paint << line
   end
 
-  time = Text.new(data[:time],
+  time = Text.new( (0.5 +(data[:time]-Time.now)/60.0).to_i,
           x: 10, y: Window.height - 40, z: 30,
           size: 20, color: 'white' )
   @paint << time

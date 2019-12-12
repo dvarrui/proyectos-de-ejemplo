@@ -21,7 +21,7 @@ on :key_down do |event|
     when 'i' # show index
       @state = (@state == :slide ? :index : :slide )
       draw_index(data)
-    when 'e' # exit
+    when 'q' # quit
       exit 0
   end
   draw_slide(current, data) if @state == :slide
