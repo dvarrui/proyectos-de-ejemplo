@@ -9,7 +9,7 @@ def draw_slide(current, data)
   remove_drawing(@paint)
   title = Text.new(slide[:title],
           x: 40, y: 20, z: 20,
-          size: 60, color: 'white' )
+          size: 60, color: 'silver' )
   @paint << title
 
   slide[:lines].each_with_index do |line, index|
@@ -21,12 +21,12 @@ def draw_slide(current, data)
 
   time = Text.new( (0.5 +(data[:time]-Time.now)/60.0).to_i,
           x: 10, y: Window.height - 40, z: 30,
-          size: 20, color: 'white' )
+          size: 20, color: 'gray' )
   @paint << time
 
   index = Text.new("#{slide[:index]}/#{data[:slides].size}",
           x: Window.width - 40, y: Window.height - 40, z: 30,
-          size: 20, color: 'white' )
+          size: 20, color: 'gray' )
   @paint << index
 end
 

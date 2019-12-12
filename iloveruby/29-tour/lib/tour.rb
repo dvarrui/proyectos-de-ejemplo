@@ -27,5 +27,8 @@ on :key_down do |event|
   draw_slide(current, data) if @state == :slide
 end
 
-set title: data[:title], borderless: false #, fullscreen: true
+set title: data[:title],
+    background: 'navy',
+    borderless: false
+    #, fullscreen: true
 show
