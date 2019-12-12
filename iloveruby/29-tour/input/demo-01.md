@@ -1,17 +1,17 @@
 
 # Título de la charla
 
-## Introducción
+## INTRODUCCION
 
 Esto va de esto y de lo otro.
 
-## Presentación
+## PRESENTACION
 
 * Nombre
 * Trabajo
 * etc
 
-## Agenda
+## AGENDA
 
 * Rojo
 * Verde

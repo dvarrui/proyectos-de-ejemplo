@@ -8,7 +8,7 @@ current = 0
 max = data[:slides].size - 1
 @paint = []
 @state = :slide
-draw_slide(current, data[:slides])
+draw_slide(current, data)
 
 on :key_down do |event|
   case event.key
@@ -16,7 +16,7 @@ on :key_down do |event|
       current -= 1 if current > 0
     when 'right' # next slide
       current += 1 if current < max
-    when 'r' # reset
+    when '0' # move to slide 0
       current = 0
     when 'i' # show index
       @state = (@state == :slide ? :index : :slide )
@@ -24,8 +24,8 @@ on :key_down do |event|
     when 'e' # exit
       exit 0
   end
-  draw_slide(current, data[:slides]) if @state == :slide
+  draw_slide(current, data) if @state == :slide
 end
 
-set title: data[:title]
+set title: data[:title], borderless: false #, fullscreen: true
 show
