@@ -143,3 +143,5 @@ irb(main):006:0>
 ---
 
 Ir a [comandos](99-commands.md) para ver el resumen de órdenes de rails.
+
+[next >>](16-crud.md)

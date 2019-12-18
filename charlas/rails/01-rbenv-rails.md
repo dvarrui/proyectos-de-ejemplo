@@ -59,6 +59,4 @@ Con nuestro usuario:
 * `rails server --binding=127.0.0.1`
 * `http://127.0.0.1:3000`
 
----
-
-# ANEXO
+[next >>](02-problema.md)

@@ -16,3 +16,5 @@ Hace falta un programa/utilidad para enviar mensajes de forma selectiva o filtra
 * Cada usuario podrá leer/consultar sólo los mensajes que tengan alguna coincidencia de `tags` con su perfil.
 
 Llamaremos a la aplicación Messenger (Mejor hubiera sido "tuyter").
+
+[next >>](03-esqueleto.md)

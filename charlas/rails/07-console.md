@@ -112,3 +112,5 @@ Más métodos de los modelos que crea ActiveRecord usando la metaprogramación q
 ---
 
 Ir a [comandos](99-commands.md) para ver el resumen de órdenes de rails.
+
+[next >>](08-index.md)

@@ -52,3 +52,5 @@ class TagController < ApplicationController
 ---
 
 Ir a [comandos](99-commands.md) para ver el resumen de órdenes de rails.
+
+[next >>](11-links.md)

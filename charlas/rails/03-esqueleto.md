@@ -87,3 +87,5 @@ _¡Ya está! Nuestro proyecto en ejecución._
 * `rails db:create`, crear la base de datos.    
 * `rails s`, iniciar el servidor de la aplicación.
 * Abrir navegador con URL `http://localhost:3000`
+
+[next >>](04-rutas.md)

@@ -24,3 +24,5 @@ Ruby on Rails, también conocido como RoR o Rails, es un **framework de aplicaci
 Trata de combinar la simplicidad con la posibilidad de desarrollar aplicaciones del mundo real escribiendo menos código que con otros frameworks y con un mínimo de configuración.
 
 El lenguaje de programación Ruby permite la metaprogramación, de la cual Rails hace uso, lo que **resulta en una sintaxis que muchos de sus usuarios encuentran muy legible**. Rails se distribuye a través de RubyGems, que es el formato oficial de paquete y canal de distribución de bibliotecas y aplicaciones Ruby.
+
+[next >>](00-presentacion.md)

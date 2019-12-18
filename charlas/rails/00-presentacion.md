@@ -41,3 +41,5 @@ Rock and Roll
 ## Learn by doing
 
 **¡Vamos a hacer un miniproyecto RoR!**
+
+[next >>](01-instalar.md)

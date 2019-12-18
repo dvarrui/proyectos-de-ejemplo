@@ -174,3 +174,5 @@ h2>CRUD: Messages</h2>
 ---
 
 Ir a [comandos](99-commands.md) para ver el resumen de órdenes de rails.
+
+[next >>](17-asociaciones.md)

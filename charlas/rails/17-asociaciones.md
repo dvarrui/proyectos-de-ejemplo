@@ -190,3 +190,5 @@ _¡Increible! ¡Me encanta ActiveRecord!_
 ---
 
 Ir a [comandos](99-commands.md) para ver el resumen de órdenes de rails.
+
+[next >>](20-scaffold.md)
