@@ -1,2 +1,0 @@
-
-# Luces y sombras 
