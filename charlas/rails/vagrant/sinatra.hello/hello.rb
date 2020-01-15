@@ -1,6 +1,8 @@
 require "sinatra/base"
 
 class HelloWorld < Sinatra::Base
+  #set :bind, '172.31.99.172'
+  #set :port, 9494
 
   get '/' do
     erb :index
