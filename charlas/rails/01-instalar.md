@@ -71,14 +71,16 @@ Successfully installed rails-5.2.2
 david@camaleon:~/> rails -v
 Rails 5.2.2
 ```
----
 
+> Si no se encuentra el comando `rails`, entonces localizar el ejecutable. En algunos sistemas operativos hay que hacer el enlace al ejecutable: `ln -s /usr/lib64/ruby/gems/2.5.0/gems/railties-6.0.2.1/exe/rails /usr/local/bin/rails`.
+
+---
 # Bases de datos
 
 **Instalar la BBDD** en OpenSUSE.
 * `zypper in sqlite3 sqlite3-devel`
 * `zypper install gcc gcc-devel gcc8-c++ `
-* `cd /usr/bin; ln -s gcc g++`
+* `cd /usr/bin; ln -s gcc-8 g++`
 * `gem install mini_racer`
 
 ---
