@@ -15,6 +15,9 @@
 * `ruby -v`, consultar la versión de ruby.
     * Instalar ruby (`apt install ruby`).
 * Se recomienda usar entornos virtuales (rbenv, rvm, etc.)
+
+> Dependiendo del sistema operativo habrá que instalr o no las siguientes dependencias: gcc, make kernel-devel, ruby-devel
+
 * `gem install rails`, para instalar rails (o consultar installrails.com).
 
 ```
