@@ -13,5 +13,5 @@ end
 
 Example03.hello
 
-puts "* Hello  public? #{Example03.respond_to? :hello}"
-puts "* Secret public? #{Example03.respond_to? :secret}"
+puts "* Example03.hello  public? #{Example03.public_methods.include? :hello}"
+puts "* Example03.secret public? #{Example03.public_methods.include? :secret}"
