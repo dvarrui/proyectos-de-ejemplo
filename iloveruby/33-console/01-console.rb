@@ -3,6 +3,7 @@
 
 require 'io/console'
 
+puts "[INFO] Accept password and print return"
 # The prompt is optional
 password = IO::console.getpass "Enter Password: "
 sleep 5

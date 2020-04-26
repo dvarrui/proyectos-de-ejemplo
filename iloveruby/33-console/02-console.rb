@@ -6,9 +6,10 @@
 
 require 'io/console'
 
+puts "[INFO] Accept password without print return"
 # Another option using $stdin.noecho()
 $stdout.print "Enter password: "
 password = $stdin.noecho(&:gets)
 password.strip!
 sleep 5
-puts "\nYour password was #{password.length} characters long."
+print "Your password was #{password.length} characters long."
