@@ -3,4 +3,4 @@
 require_relative 'lib/adventure'
 require_relative ARGV[0]
 
-Adventure.instance.start(ARGV)
+Adventure.instance.start
