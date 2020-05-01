@@ -8,12 +8,10 @@ class Actor
     @room = args[:room] if args[:room]
   end
 
-require 'pry-byebug'
   def go(param, rooms)
-#    binding.pry
     target = rooms[@room].doors[param]
     if target.nil?
-      puts "¡No entiendo la orden!"
+      puts "¡No entiendo la orden!\n"
       return false
     end
     if rooms[target].nil?

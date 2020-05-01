@@ -35,7 +35,6 @@ private
 
   def show_game
     @player = @actors['player']
-    puts "\nEstás en #{@player.room}\n"
     @rooms[@player.room].show
   end
 

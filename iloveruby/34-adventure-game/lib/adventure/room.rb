@@ -13,6 +13,7 @@ class Room
   end
 
   def show
+    puts "\n"
     puts @desc
     return if @doors.nil?
     puts "Puedes ir a:"
