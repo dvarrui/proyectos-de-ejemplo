@@ -14,12 +14,13 @@ require 'pry-byebug'
     target = rooms[@room].doors[param]
     if target.nil?
       puts "¡No entiendo la orden!"
-      return
+      return false
     end
     if rooms[target].nil?
       puts "[ERROR] Revisa la definición de la habitación #{@room}!"
-      return
+      return false
     end
     @room = target
+    true
   end
 end

@@ -51,10 +51,6 @@ private
     get_input
     if @action.nil?
       show_game
-    elsif @action == 'go'
-      @player.go(@param, @rooms)
-      show_game
-      puts "\n"    
     elsif @action == 'help'
       puts "\nAcciones disponibles: "
       puts "  - quit      # Salir del programa"
@@ -66,8 +62,12 @@ private
     elsif @action == 'quit'
       puts "\n¡Adios!"
       exit
-    else
-      puts "¡No entiendo!\n\n"
+    end
+    param = @action
+    param = @param if @action == 'go'
+    if @player.go(param, @rooms)
+      show_game
+      puts "\n"
     end
   end
 
