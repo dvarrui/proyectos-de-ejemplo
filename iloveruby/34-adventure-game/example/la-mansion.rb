@@ -25,14 +25,34 @@ class Adventure
   def create
     add_room 'Dormitorio', { id: '1',
       desc: 'Estás es una pequeña habitación pintada de blanco.
-Junto a tí puedes ver una cama y una mesita de noche.' }
+Junto a tí puedes ver una cama y una mesita de noche.',
+      doors: {'sur' => 'Pasillo1'} }
     add_actor 'player', { room: 'Dormitorio' }
-    add_room 'Habitacion', { id: '2',
-      desc: 'Estás es una habitación pintada de verde.
-Junto a tí puedes ver una cama y una mesita de noche' }
+    add_room 'Cocina', { id: '2',
+      desc: 'Estás es una cocina.
+Puedes ver un fregadero con platos, una mesa pequeña.
+Una nevera al fondo hace ruido.',
+      doors: { 'sur' => 'Pasillo2' } }
     add_room 'Salón', { id: '3',
       desc: 'Estás es el salón de la casa.
-Puedes ver una gran mesa rodeada de sillas.' }
+Puedes ver una gran mesa rodeada de sillas.',
+      doors: { 'sur' => 'Pasillo3' } }
+    add_room 'Pasillo1', { id: '4',
+      desc: 'Estás es el pasillo.
+Puede ver una ventana con rejas en una de las paredes.',
+      doors: { 'norte' => 'Dormitorio', 'sur' => 'Almacén', 'este' => 'Pasillo2'} }
+    add_room 'Pasillo2', { id: '5',
+     desc: 'Estás es el pasillo.
+Puedes ver una puerta que parece ser la entrada principal de la casa.',
+     doors: { 'norte' => 'Cocina', 'oeste' => 'Pasillo1', 'este' => 'Pasillo3'} }
+   add_room 'Pasillo3', { id: '6',
+     desc: 'Estás es el pasillo.
+Hay una ventana cerrada en una de las paredes.',
+     doors: { 'norte' => 'Salón', 'oeste' => 'Pasillo2' }
+   add_room 'Almacén', { id: '7',
+      desc: 'Estás es un almacén pintado de verde.
+Puedes ver un motón de cajas repartidas por la habitación.',
+      doors: { 'norte' => 'Pasillo1' } }
 
 #
 #Listado de los objetos
