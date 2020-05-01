@@ -53,7 +53,8 @@ private
       show_game
     elsif @action == 'go'
       @player.go(@param, @rooms)
-      show_game    
+      show_game
+      puts "\n"    
     elsif @action == 'help'
       puts "\nAcciones disponibles: "
       puts "  - quit      # Salir del programa"

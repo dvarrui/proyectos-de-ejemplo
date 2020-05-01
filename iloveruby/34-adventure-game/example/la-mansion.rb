@@ -48,7 +48,7 @@ Puedes ver una puerta que parece ser la entrada principal de la casa.',
    add_room 'Pasillo3', { id: '6',
      desc: 'Estás es el pasillo.
 Hay una ventana cerrada en una de las paredes.',
-     doors: { 'norte' => 'Salón', 'oeste' => 'Pasillo2' }
+     doors: { 'norte' => 'Salón', 'oeste' => 'Pasillo2' } }
    add_room 'Almacén', { id: '7',
       desc: 'Estás es un almacén pintado de verde.
 Puedes ver un motón de cajas repartidas por la habitación.',
