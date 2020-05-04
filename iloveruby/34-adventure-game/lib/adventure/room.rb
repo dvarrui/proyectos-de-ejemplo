@@ -1,4 +1,6 @@
 
+require_relative '../adventure'
+
 class Room
   attr_accessor :id
   attr_accessor :name
@@ -15,6 +17,10 @@ class Room
   def show
     puts "\n"
     puts @desc
+
+    items = Adventure.instance.items_per_site[Adventure.instance.get_actor('player').room]
+    items.each { |i| Adventure.instance.get_item(i).show }
+
     return if @doors.nil?
     puts "Puedes ir a:"
     @doors.each_key { |key| puts " - #{key}"}

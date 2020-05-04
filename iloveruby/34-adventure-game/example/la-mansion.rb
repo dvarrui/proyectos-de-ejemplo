@@ -23,36 +23,66 @@ class Adventure
   end
 
   def create
-    add_room 'dormitorio', { id: '1',
+    add_room 'dormitorio', {
       desc: 'Estás en un pequeña habitación pintada de blanco.
 Junto a tí puedes ver una cama y una mesita de noche.',
       doors: {'sur' => 'pasillo1'} }
-    add_actor 'player', { room: 'dormitorio' }
-    add_room 'cocina', { id: '2',
+
+    add_room 'cocina', {
       desc: 'Estás en una cocina.
-Puedes ver un fregadero con platos, una mesa pequeña.
+Puedes ver un fregadero y una mesa con platos.
 Una nevera al fondo hace ruido.',
       doors: { 'sur' => 'pasillo2' } }
-    add_room 'salon', { id: '3',
+
+    add_room 'salon', {
       desc: 'Estás en el salón de la casa.
 Puedes ver una gran mesa rodeada de sillas.',
       doors: { 'sur' => 'pasillo3' } }
-    add_room 'pasillo1', { id: '4',
+
+    add_room 'pasillo1', {
       desc: 'Estás en el pasillo.
 Puede ver una ventana con rejas en una de las paredes.',
-      doors: { 'norte' => 'dormitorio', 'sur' => 'almacen', 'este' => 'pasillo2'} }
-    add_room 'pasillo2', { id: '5',
-     desc: 'Estás en el pasillo.
+      doors: { 'norte' => 'dormitorio',
+               'sur' => 'almacen',
+               'este' => 'pasillo2'} }
+
+    add_room 'pasillo2', {
+      desc: 'Estás en el pasillo.
 Puedes ver una puerta que parece ser la entrada principal de la casa.',
-     doors: { 'norte' => 'cocina', 'oeste' => 'pasillo1', 'este' => 'pasillo3'} }
-   add_room 'pasillo3', { id: '6',
-     desc: 'Estás en el pasillo.
+      doors: { 'norte' => 'cocina',
+              'oeste' => 'pasillo1',
+              'este' => 'pasillo3'}
+    }
+    add_room 'pasillo3', {
+      desc: 'Estás en el pasillo.
 Hay una ventana cerrada en una de las paredes.',
-     doors: { 'norte' => 'salon', 'oeste' => 'pasillo2' } }
-   add_room 'almacen', { id: '7',
-      desc: 'Estás es un almacén oscuro,
-donde puedes ver un motón de cajas repartidas por el suelo.',
-      doors: { 'norte' => 'pasillo1' } }
+      doors: { 'norte' => 'salon',
+              'oeste' => 'pasillo2' }
+    }
+    add_room 'almacen', {
+      desc: 'Estás es un almacén oscuro.
+Hay de cajas repartidas por toda la habitación y objetos tirados por el suelo.',
+      doors: { 'norte' => 'pasillo1' }
+    }
+
+    add_actor 'player', { room: 'dormitorio' }
+
+    #Objeto:hueso:1:Un hueso::2:0
+    add_item 'hueso', {
+      site: 'almacen',
+      states: [ 'Hay un hueso en el suelo.' ]
+    }
+
+    #Objeto:escalera:1:Una escalera::9:0
+    add_item 'escalera', {
+      site: 'cocina',
+      states: [ 'Hay una escalera detrás de la nevera.' ]
+    }
+    #Objeto:llave:1:Una llave sobre la lámpara::3:0
+    add_item 'llave', {
+      site: 'salon',
+      states: [ 'Hay una llave sobre la lámpara.' ]
+    }
 
 #
 #Listado de los objetos
@@ -60,9 +90,6 @@ donde puedes ver un motón de cajas repartidas por el suelo.',
 #Estado actual:Descripción1:Descripción2
 #Habitación:Lo tiene
 #
-#Objeto:hueso:1:Un hueso::2:0
-#Objeto:llave:1:Una llave sobre la lámpara::3:0
-#Objeto:escalera:1:Una escalera::9:0
 #Objeto:perro:1:Un perro rabioso:Un perro comiéndose un hueso:9:0
   end
 
