@@ -2,7 +2,7 @@
 
 while(true)
   print "prompt> "
-  a = gets.chop
+  a = STDIN.gets.chop
   puts "=> " + a
   exit if a == 'quit'
 end
