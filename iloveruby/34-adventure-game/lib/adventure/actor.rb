@@ -1,24 +1,28 @@
 
 class Actor
   attr_accessor :name
-  attr_accessor :room
 
-  def initialize(args = {})
-    @name = args[:name] if args[:name]
-    @room = args[:room] if args[:room]
+  def initialize(id, args = {}, rooms)
+    @name = id
+    @current_room_id = args[:room] if args[:room]
+    @rooms = rooms
   end
 
-  def go(param, rooms)
-    target = rooms[@room].doors[param]
-    if target.nil?
+  def room
+    @rooms[@current_room_id]
+  end
+  
+  def go(param)
+    target_room_id = @rooms[@current_room_id].doors[param]
+    if target_room_id.nil?
       puts "¡No entiendo la orden!\n"
       return false
     end
-    if rooms[target].nil?
-      puts "[ERROR] Revisa la definición de la habitación #{@room}!"
+    if @rooms[target_room_id].nil?
+      puts "[ERROR] Revisa la definición de la habitación #{@current_room_id}!"
       return false
     end
-    @room = target
+    @current_room_id = target_room_id
     true
   end
 end

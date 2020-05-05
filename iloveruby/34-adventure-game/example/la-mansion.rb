@@ -65,35 +65,37 @@ Hay de cajas repartidas por toda la habitación y objetos tirados por el suelo.'
       doors: { 'norte' => 'pasillo1' }
     }
 
-    add_actor 'player', { room: 'dormitorio' }
+    add_player( room: 'dormitorio' )
 
     #Objeto:hueso:1:Un hueso::2:0
     add_item 'hueso', {
-      site: 'almacen',
+      room: 'almacen',
       states: [ 'Hay un hueso en el suelo.' ]
+    }
+
+    #Objeto:perro:1:Un perro rabioso:Un perro comiéndose un hueso:9:0
+    add_item 'perro', {
+      room: 'cocina',
+      states: [ 'Un perro rabioso que no te deja acercarte a la escalera.',
+                'Un perro entretenido, comiéndose un hueso.' ]
     }
 
     #Objeto:escalera:1:Una escalera::9:0
     add_item 'escalera', {
-      site: 'cocina',
+      room: 'cocina',
       states: [ 'Hay una escalera detrás de la nevera.' ]
     }
     #Objeto:llave:1:Una llave sobre la lámpara::3:0
     add_item 'llave', {
-      site: 'salon',
+      room: 'salon',
       states: [ 'Hay una llave sobre la lámpara.' ]
     }
 
-#
-#Listado de los objetos
-#Tipo de la fila:Identificador:
-#Estado actual:Descripción1:Descripción2
-#Habitación:Lo tiene
-#
-#Objeto:perro:1:Un perro rabioso:Un perro comiéndose un hueso:9:0
   end
 
   def logic
+    if is_action('take','hueso')
+    end
     # puts "[INFO] Apply logic..."
   end
 

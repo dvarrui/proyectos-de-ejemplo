@@ -2,14 +2,14 @@
 class Item
   attr_accessor :name
   attr_accessor :states
-  attr_accessor :site
+  attr_accessor :room
   attr_accessor :actions
 
-  def initialize(args = {})
-    @name = args[:name] if args[:name]
+  def initialize(id, args = {})
+    @name = id
     @states = args[:states] if args[:states]
     @current_state = 0
-    @site = args[:site] if args[:site]
+    @room = args[:room] if args[:room]
     @actions = []
   end
 

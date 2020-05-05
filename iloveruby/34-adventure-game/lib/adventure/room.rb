@@ -7,19 +7,23 @@ class Room
   attr_accessor :desc
   attr_accessor :doors
 
-  def initialize(args = {})
-    @id = args[:id] if args[:id]
-    @name = args[:name] if args[:name]
+  def initialize(id, args = {})
+    @id = id
     @desc = args[:desc] if args[:desc]
     @doors = args[:doors] if args[:doors]
+  end
+
+  def items
+    a = []
+    Adventure.instance.items.each_value { |i| a << i if i.room == @id }
+    a
   end
 
   def show
     puts "\n"
     puts @desc
 
-    items = Adventure.instance.items_per_site[Adventure.instance.get_actor('player').room]
-    items.each { |i| Adventure.instance.get_item(i).show }
+    items.each { |i| i.show }
 
     return if @doors.nil?
     puts "Puedes ir a:"

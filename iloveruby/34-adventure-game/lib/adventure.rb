@@ -7,7 +7,7 @@ require_relative 'adventure/item'
 
 class Adventure
   include Singleton
-  attr_accessor :items_per_site
+  attr_accessor :rooms, :player, :items
 
   def initialize
     @rooms = {}
@@ -17,34 +17,36 @@ class Adventure
 
   def start
     create
-    @items_per_site = { 'player' => [] }
-    @rooms.each_key { |key| @items_per_site[key] = [] }
-    @items.each_pair { |key, value| @items_per_site[value.site] << key }
     play
   end
 
-  def add_room(name, args)
-    @rooms[name] = Room.new(args)
+  def add_room(id, args)
+    @rooms[id] = Room.new(id, args)
   end
 
-  def add_actor(name, args)
-    @actors[name] = Actor.new(args)
+  def add_player(args)
+    @player = Actor.new('player', args, @rooms)
   end
 
-  def add_item(name, args)
-    @items[name] = Item.new(args)
+  def add_item(id, args)
+    @items[id] = Item.new(id, args)
   end
 
-  def get_room(key)
-    @rooms[key]
+  def get_room(id)
+    @rooms[id]
   end
 
-  def get_actor(key)
-    @actors[key]
+  def get_actor(id)
+    @actors[id]
   end
 
-  def get_item(key)
-    @items[key]
+  def get_item(id)
+    @items[id]
+  end
+
+  def is_action(action, param)
+    return true if @action == action && @param == param
+    false
   end
 
 private
@@ -62,8 +64,7 @@ private
   end
 
   def show_game
-    player = get_actor('player')
-    get_room(player.room).show
+    @player.room.show
     puts "\n"
   end
 
@@ -97,7 +98,7 @@ private
     end
     param = @action
     param = @param if @action == 'go'
-    if get_actor('player').go(param, @rooms)
+    if @player.go(param)
       show_game
     end
   end
