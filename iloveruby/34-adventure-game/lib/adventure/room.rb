@@ -20,10 +20,9 @@ class Room
   def show
     puts "\n"
     puts @desc
-
     items.each { |i| i.show }
-
     return if @doors.nil?
+    
     puts "Puedes ir a:"
     @doors.each_key { |key| puts " - #{key}"}
   end

@@ -25,7 +25,7 @@ class Adventure
   end
 
   def add_player(args)
-    @player = Actor.new('player', args, @rooms)
+    @player = Actor.new('player', args)
   end
 
   def add_item(id, args)
@@ -94,7 +94,9 @@ private
       puts "\n¡Adios!"
       exit
     elsif @action == 'take'
-      return
+      return get_item(@param).taken_by(@player)
+    elsif @action == 'drop'
+      return @player.drop(@param)
     end
     param = @action
     param = @param if @action == 'go'
