@@ -14,9 +14,7 @@ class Room
   end
 
   def items
-    a = []
-    Adventure.instance.items.each_value { |i| a << i if i.room == @id }
-    a
+    Adventure.instance.items.values.select { |i| i.room == @id }
   end
 
   def show
