@@ -65,6 +65,7 @@ private
 
   def show_game
     @player.room.show
+    @player.items
     puts "\n"
   end
 
