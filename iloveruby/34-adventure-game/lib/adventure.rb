@@ -97,6 +97,8 @@ private
       return @player.take(@param)
     elsif @action == 'drop'
       return @player.drop(@param)
+    elsif @action == 'items'
+      return @player.items
     end
     param = @action
     param = @param if @action == 'go'

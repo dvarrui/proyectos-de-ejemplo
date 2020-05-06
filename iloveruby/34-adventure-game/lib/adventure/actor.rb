@@ -52,4 +52,11 @@ class Actor
     item.collected = false
     item.room = @current_room_id
   end
+
+  def items
+    list = Adventure.instance.items.values.select { |i| i.collected? }
+    return if list.size.zero?
+    print "Inventario: "
+    puts list.map(&:name).join(', ')
+  end
 end
