@@ -27,16 +27,29 @@ class Actor
     true
   end
 
+  def take(id)
+    item = Adventure.instance.items[id]
+    if item.nil?
+      puts "El objeto #{id} no existe!"
+      return
+    elsif not item.room == @current_room_id
+      puts "No puedes hacer eso!"
+      return
+    end
+    item.collected = true
+    item.room = ''
+  end
+
   def drop(id)
     item = Adventure.instance.items[id]
     if item.nil?
       puts "El objeto #{id} no existe!"
       return
-    elsif not item.taken?
+    elsif not item.collected?
       puts "No puedes hacer eso!"
       return
     end
-    item.taken = false
+    item.collected = false
     item.room = @current_room_id
   end
 end

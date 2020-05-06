@@ -6,6 +6,7 @@ class Item
   attr_accessor :states
   attr_accessor :room
   attr_accessor :actions
+  attr_accessor :collected
 
   def initialize(id, args = {})
     @name = id
@@ -20,22 +21,7 @@ class Item
     puts @states[@current_state]
   end
 
-  def taken_by(player)
-    if player.room.id == @room
-      @room = ''
-      @taken = true
-      return
-    else
-      puts "No puedes coger ese objeto!"
-    end
-  end
-
-  def drop(room_id)
-    @room = room_id
-    @taken = false
-  end
-
-  def taken?
-    @taken
+  def collected?
+    @collected
   end
 end

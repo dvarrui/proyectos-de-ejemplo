@@ -94,7 +94,7 @@ private
       puts "\n¡Adios!"
       exit
     elsif @action == 'take'
-      return get_item(@param).taken_by(@player)
+      return @player.take(@param)
     elsif @action == 'drop'
       return @player.drop(@param)
     end
