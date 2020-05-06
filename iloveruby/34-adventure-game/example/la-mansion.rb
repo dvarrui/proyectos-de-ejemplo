@@ -83,7 +83,8 @@ Hay de cajas repartidas por toda la habitación y objetos tirados por el suelo.'
     #Objeto:escalera:1:Una escalera::9:0
     add_item 'escalera', {
       room: 'cocina',
-      states: [ 'Hay una escalera detrás de la nevera.' ]
+      states: [ 'Hay una escalera detrás de la nevera.',
+                'La escalera está apoyada y preparada para poder subir por ella' ]
     }
     #Objeto:llave:1:Una llave sobre la lámpara::3:0
     add_item 'llave', {
@@ -102,6 +103,20 @@ Hay de cajas repartidas por toda la habitación y objetos tirados por el suelo.'
     if get_item('escalera').collected? and get_item('perro').state_id == 0
       player.drop('escalera')
       puts "El perro no te deja acercarte a coger la escalera"
+    end
+    if get_item('hueso').room == get_item('perro').room
+      get_item('perro').state_id = 1
+    end
+    if get_item('llave').collected? and get_item('escalera').state_id == 0
+      player.drop('llave')
+      puts "No llegas a coger la llave."
+    end
+    if get_item('escalera').room == get_item('llave').room
+      get_item('escalera').state_id = 1
+    end
+    if get_item('llave').collected? and get_item('llave').room == 'pasillo2'
+      puts "Enhorabuena! Has escapado de la mansión!"
+      exit 0
     end
   end
 
