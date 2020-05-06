@@ -7,7 +7,9 @@ require_relative 'adventure/item'
 
 class Adventure
   include Singleton
-  attr_accessor :rooms, :player, :items
+  attr_accessor :rooms
+  attr_accessor :player
+  attr_accessor :items
 
   def initialize
     @rooms = {}

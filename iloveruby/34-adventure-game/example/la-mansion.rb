@@ -94,9 +94,15 @@ Hay de cajas repartidas por toda la habitación y objetos tirados por el suelo.'
   end
 
   def logic
-    if is_action('take','hueso')
+    if get_item('perro').collected?
+      puts "El perro te ha mordido, y mueres desangrado!"
+      puts "GAME OVER"
+      exit 1
     end
-    # puts "[INFO] Apply logic..."
+    if get_item('escalera').collected? and get_item('perro').state_id == 0
+      player.drop('escalera')
+      puts "El perro no te deja acercarte a coger la escalera"
+    end
   end
 
 end
