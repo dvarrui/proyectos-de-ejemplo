@@ -114,7 +114,8 @@ Hay de cajas repartidas por toda la habitación y objetos tirados por el suelo.'
     if get_item('escalera').room == get_item('llave').room
       get_item('escalera').state_id = 1
     end
-    if get_item('llave').collected? and get_item('llave').room == 'pasillo2'
+    if get_item('llave').collected? and player.room.id == 'pasillo2' and
+       is_action('use', 'llave')
       puts "Enhorabuena! Has escapado de la mansión!"
       exit 0
     end
