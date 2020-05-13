@@ -4,6 +4,7 @@
 Enlace de interés:
 * http://mruby.org/
 * [GitHub de mruby](https://github.com/mruby/mruby)
+* [RubyConf 2019 - mruby/c](https://youtu.be/1VFPSHs3WvI): Running on Less Than 64KB RAM Microcontroller by HAMUSI Hitoshi I will show you an actual IoT product which uses one-chip-microcontr...
 
 # Ejemplo
 
