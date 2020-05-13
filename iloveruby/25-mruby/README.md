@@ -1,5 +1,5 @@
 
-# mruby
+# mruby howto
 
 Enlace de interés:
 * http://mruby.org/
@@ -7,14 +7,13 @@ Enlace de interés:
 
 # Ejemplo
 
-* `rbenv install mruby-2.0.1`, instalación por rbenv.
-* `mrbc demo.rb`, compilar demo.rb.
-* `ruby -b demo.mrb`, ejecutar demo.mrb.
+* `rbenv install mruby-2.1.0`, instalar **mruby** usando **rbenv**.
+* `mrbc demo.rb`, compilar el ejemplo **demo.rb**.
+* `ruby -b demo.mrb`, ejecutar **demo.mrb**.
 
----
-# ANEXO: Instalación directa
+# ANEXO: Instalación directa de mruby
 
-* Descargar el zip estable (Por ejemplo 2.0.1).
+* Descargar el zip estable.
 * Descomprimir.
 * cd FOLDER
 * `./minirake`, compile inside of the mruby source root.
