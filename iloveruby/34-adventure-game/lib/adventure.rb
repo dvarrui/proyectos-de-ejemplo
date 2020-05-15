@@ -55,8 +55,8 @@ private
 
   def play
     # show_intro
-    puts intro
-    print "(Pulsa enter para continuar)"
+    puts Rainbow(intro).silver
+    print Rainbow("(Pulsa enter para continuar)").aqua
     $stdin.gets.strip
     show_game
     while(true)
@@ -72,7 +72,7 @@ private
   end
 
   def get_input
-    print "=> "
+    print Rainbow("=> ").aqua
     @input = $stdin.gets.strip
     @inputs = @input.split(' ')
     @action = @inputs[0]

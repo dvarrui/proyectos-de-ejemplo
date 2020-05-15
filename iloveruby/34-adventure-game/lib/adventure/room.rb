@@ -1,4 +1,5 @@
 
+require 'rainbow'
 require_relative '../adventure'
 
 class Room
@@ -19,10 +20,10 @@ class Room
 
   def show
     puts "\n"
-    puts @desc
+    puts Rainbow(@desc).silver
     items.each { |i| i.show }
     return if @doors.nil?
-    
+
     puts "Puedes ir a:"
     @doors.each_key { |key| puts " - #{key}"}
   end
