@@ -7,11 +7,13 @@ Supongamos que queremos obtener otros valores diseñando nuestras propias fórmu
 
 ---
 
-# Teoría: resultado de aprendizaje
+# 1. Teoría: resultado de aprendizaje
+
+_(Explicación sobre resultados de aprendizaje)_
 
 ---
 
-# Moodle: crear nuestro ejemplo
+# 2. Moodle: crear nuestro ejemplo
 
 Vamos a crear un ejemplo como el siguiente:
 
@@ -21,7 +23,7 @@ Vamos a crear un ejemplo como el siguiente:
 | ra2 |  50 |     |  50 |     |
 | ra3 |     |  33 |  33 |  34 |
 
-## Poner los ID a cada elemento de la fórmula
+## 2.1 Poner los ID a cada elemento de la fórmula
 
 Debemos hacer lo siguiente:
 * Ir a la categoría ud1 y ponerle ID ud1.
@@ -36,7 +38,7 @@ Debemos hacer lo siguiente:
 
 Los ID's son necesarios para identificar los elementos que vamos a usar dentro de nuestra fórmula. Sigamos.
 
-## Crear categorías en el calificador
+## 2.2 Crear categorías en el calificador
 
 * Ir al `Configuración del calificador`
 * Crear categoría `resultados_aprendizaje`, al mismo nivel que la categoría `curso`.
@@ -47,7 +49,7 @@ Los ID's son necesarios para identificar los elementos que vamos a usar dentro d
 >
 > ![](./files/formula-02.png)
 
-## Poner la fórmula
+## 2.3 Poner la fórmula
 
 * Ir al `calificador`.
 * Picar en la calculadora de `ra1`.
@@ -61,15 +63,13 @@ Los ID's son necesarios para identificar los elementos que vamos a usar dentro d
 Seguimos poniendo fórmulas.
 * Ir al `calificador`.
 * Picar en la calculadora de `ra2`.
-* En cálculo ponemos la siguiente fórmula: =([[ud1]x50]+[[ud3]x50])/100
+* En cálculo ponemos la siguiente fórmula: =([[ud1]]x50+[[ud3]]x50)/100
 * Ir al `calificador`.
 * Picar en la calculadora de `ra3`.
 * En cálculo ponemos la siguiente fórmula: =([[ud2]]x33+[[ud3]]x33+[[ud4]]x34)/100
 
 Comprobar los resultados obtenidos en al calificador de los valores de RA para cada alumno.
 
----
-
-Enlaces de interés:
-* https://docs.moodle.org/all/es/C%C3%A1lculos_de_calificaci%C3%B3n
-* https://si.ua.es/es/moodle/calificaciones/calculos-de-calificaciones.html
+> Enlaces de interés:
+> * https://docs.moodle.org/all/es/C%C3%A1lculos_de_calificaci%C3%B3n
+> * https://si.ua.es/es/moodle/calificaciones/calculos-de-calificaciones.html
