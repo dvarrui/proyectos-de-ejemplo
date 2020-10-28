@@ -28,4 +28,17 @@ class Nubex
       end
     end
   end
+
+  def factorize(n)
+    factors = []
+    f = n
+    (2..n).each do |i|
+      while f%i == 0
+        factors << i
+        f = f / i
+      end
+    end
+    factors
+  end
+
 end
