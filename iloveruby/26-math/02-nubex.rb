@@ -2,8 +2,8 @@
 
 require_relative '02-nubex-lib'
 
-a = Nubex.new(2,3)
-b = Nubex.new(3,2)
+a = Nubex.new(2, 3)
+b = Nubex.new(3)
 
 puts "#{a} = #{a.to_i}"
 puts "#{b} = #{b.to_i}"

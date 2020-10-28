@@ -2,19 +2,25 @@
 class Nubex
   attr_reader :data
 
-  def initialize(base, exp)
-    @data = { base => exp}
+  def initialize(base, exp = 1)
+    @data = { base => exp }
   end
 
   def to_i
-    acc = 0
-    @data.each { |key, value| acc += key ** value }
+    acc = 1
+    @data.each { |key, value| acc *= key ** value }
     acc
   end
 
   def to_s
     out = ''
-    @data.sort.each { |item| out += "#{item[0]}^#{item[1]} "}
+    @data.sort.each do |item|
+      if item[1] == 1
+        out += "#{item[0]} " if item[0] != 1
+      else
+        out += "#{item[0]}^#{item[1]} "
+      end
+    end
     out
   end
 
@@ -29,7 +35,7 @@ class Nubex
     end
   end
 
-  def factorize(n)
+  def self.factorize(n)
     factors = []
     f = n
     (2..n).each do |i|
@@ -38,7 +44,11 @@ class Nubex
         f = f / i
       end
     end
-    factors
+    #@data = { 1 => 1 }
+    factors.to_s
+    a = Nubex.new(1)
+    factors.each { |i| a.mul(Nubex.new(i)) }
+    a
   end
 
 end
