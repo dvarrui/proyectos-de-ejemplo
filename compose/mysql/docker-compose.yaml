@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  database:
+    image: "mysql"
+    ports:
+    - "3306:3306"
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+    volumes:
+      - ./data:/var/lib/mysql
