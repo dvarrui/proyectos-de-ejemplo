@@ -16,7 +16,7 @@
     * Instalar ruby (`apt install ruby`).
 * Se recomienda usar entornos virtuales (rbenv, rvm, etc.)
 
-> Dependiendo del sistema operativo habrá que instalr o no las siguientes dependencias: gcc, make kernel-devel, ruby-devel
+> Dependiendo del sistema operativo habrá que instalar o no las siguientes dependencias: gcc, make kernel-devel, ruby-devel
 
 * `gem install rails`, para instalar rails (o consultar installrails.com).
 
@@ -72,9 +72,10 @@ david@camaleon:~/> rails -v
 Rails 5.2.2
 ```
 
-> Si no se encuentra el comando `rails`, entonces localizar el ejecutable. En algunos sistemas operativos hay que hacer el enlace al ejecutable: `ln -s /usr/lib64/ruby/gems/2.5.0/gems/railties-6.0.2.1/exe/rails /usr/local/bin/rails`.
+> Si no se encuentra el comando `rails`, entonces localizar el ejecutable.
+> * En algunos sistemas operativos hay que hacer el enlace al ejecutable: `ln -s /usr/lib64/ruby/gems/2.5.0/gems/railties-6.0.2.1/exe/rails /usr/local/bin/rails`.
+> * También podemos hacer `alias rails='rails.ruby2.5'`.
 
----
 # Bases de datos
 
 **Instalar la BBDD** en OpenSUSE.

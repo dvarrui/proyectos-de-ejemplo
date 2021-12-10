@@ -47,7 +47,7 @@ messenger> rails db:create
 Created database 'db/development.sqlite3'
 Created database 'db/test.sqlite3'
 ```
-> NOTA: Tendremos dos entornos de trabajo: develoment y test.
+> NOTA: Tendremos dos entornos de trabajo: development y test.
 
 _¡Que buena idea!_
 
