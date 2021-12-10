@@ -11,21 +11,7 @@ Vagrant.configure("2") do |config|
     ]
 
     i.vm.synced_folder "./", "/vagrant"
-    i.vm.provision "shell", inline: <<-SHELL
-      echo "[INFO] Installing tools..."
-      zypper --non-interactive in vim tree nmap git
-
-      echo "[INFO] Installing rails..."
-      #zypper --non-interactive --quiet in gcc make kernel-devel ruby-devel
-      zypper --non-interactive in ruby2.5-rubygem-rails-5.2
-
-      echo "[INFO] Installing sqlite3..."
-      zypper --non-interactive in sqlite3 sqlite3-devel
-      #zypper --non-interactive --quiet in gcc gcc10-c++
-      #ln -s /usr/bin/gcc-10 /usr/bin/g++
-      #gem install mini_racer -v 0.4.0
-      echo "alias rails='rails.ruby2.5'" >> /home/vagrant/.alias
-    SHELL
+    i.vm.provision :shell, :path => "install-rails-v2.sh"
     i.vm.provider "virtualbox" do |v|
       v.name = 'iloveruby'
       v.memory = 2048
