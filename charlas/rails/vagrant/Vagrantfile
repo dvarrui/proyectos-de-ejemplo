@@ -4,11 +4,10 @@
 Vagrant.configure("2") do |config|
   config.vm.define "iloveruby" do |i|
     i.vm.box = "generic/opensuse15"
-    i.vm.hostname = "iloveruby.curso1920"
+    i.vm.hostname = "iloveruby.iespto"
     i.vm.network "public_network", bridge: [
-      "enp0s20u2",
-      "enp2s0",
-      "wlp1s0",
+      "wlan0",
+      "eth0",
     ]
 
     i.vm.synced_folder "./", "/vagrant"
