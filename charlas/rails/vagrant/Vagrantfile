@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
     ]
 
     i.vm.synced_folder "./", "/vagrant"
-    i.vm.provision :shell, :path => "install-rails-v2.sh"
+    i.vm.provision :shell, :path => "install-rails.sh"
     i.vm.provider "virtualbox" do |v|
       v.name = 'iloveruby'
       v.memory = 2048
