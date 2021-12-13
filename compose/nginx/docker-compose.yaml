@@ -6,4 +6,5 @@ services:
     - "8081:80"
     volumes:
     - ./html:/usr/share/nginx/html
-
+# volumes:
+#  html:
