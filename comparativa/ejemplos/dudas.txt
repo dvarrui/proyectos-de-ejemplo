@@ -1,0 +1,35 @@
+
+
+Diferencia entre tupla y lista.
+
+El operador // es confuso.
+
+¿Qué utilidad tiene tratar los booleanos como enteros?
+Realmente no son números.
+
+La conversión implícita no me parece buena idea.
+Los conversores no son métodos de los objetos.
+
+
+Python
+values = [i**2 for i in range(1,11)]
+
+Ruby
+values = (1..10).map {|i| i**2}
+
+
+for pos,value in enumerate(values):
+    print os, value
+
+values.each_with_index { |val,index| puts "#{val} en posición #{index}" }
+
+Ruby y Python tienen tipado fuerte y dinámico.
+
+En python para dividir una cadena se hace s.split()
+pero para calcular su longitud len(s)
+
+En ruby s.split y s.lenght o s.size
+Me parece más homogéneo
+
+La sustitución de variables f'' es muy específico
+#{} se parece a otros lenguajes (bash $())
