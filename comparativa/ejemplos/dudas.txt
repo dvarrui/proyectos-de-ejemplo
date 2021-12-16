@@ -29,7 +29,26 @@ En python para dividir una cadena se hace s.split()
 pero para calcular su longitud len(s)
 
 En ruby s.split y s.lenght o s.size
-Me parece más homogéneo
+Me parecen más homogéneo
 
 La sustitución de variables f'' es muy específico
 #{} se parece a otros lenguajes (bash $())
+
+>>> a = 42
+>>> a.__
+a.__abs__(           a.__format__(        a.__mul__(           a.__reduce__(        a.__rtruediv__(
+a.__add__(           a.__getattribute__(  a.__neg__(           a.__reduce_ex__(     a.__rxor__(
+a.__and__(           a.__getnewargs__(    a.__new__(           a.__repr__(          a.__setattr__(
+a.__class__(         a.__hash__(          a.__nonzero__(       a.__rfloordiv__(     a.__sizeof__(
+a.__cmp__(           a.__hex__(           a.__oct__(           a.__rlshift__(       a.__str__(
+a.__coerce__(        a.__index__(         a.__or__(            a.__rmod__(          a.__sub__(
+a.__delattr__(       a.__init__(          a.__pos__(           a.__rmul__(          a.__subclasshook__(
+a.__div__(           a.__int__(           a.__pow__(           a.__ror__(           a.__truediv__(
+a.__divmod__(        a.__invert__(        a.__radd__(          a.__rpow__(          a.__trunc__(
+a.__doc__            a.__long__(          a.__rand__(          a.__rrshift__(       a.__xor__(
+a.__float__(         a.__lshift__(        a.__rdiv__(          a.__rshift__(
+a.__floordiv__(      a.__mod__(           a.__rdivmod__(       a.__rsub__(
+>>> a.__str__()
+'42'
+>>> a.__int__()
+42
