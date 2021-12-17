@@ -1,9 +1,18 @@
+#!/usr/bin/env ruby
 
-require_relative 'animal'
-require_relative 'perro'
+class Prueba
+  puts "01"
 
-a = Animal.new('Tom')
-p = Perro.new('Jerry', 'Bulldog')
+  def initialize
+    puts "02"
+  end
 
-a.show
-p.show
+  def verb
+    puts "03"
+  end
+end
+
+puts "04"
+
+a = Prueba.new
+a.verb
