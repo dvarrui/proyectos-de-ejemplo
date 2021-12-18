@@ -5,14 +5,13 @@ spanish_grade = 7
 maths_grade = 3
 # Your code
 
-if num_fails < 2
-  promote = True
-elsif num_fails > 2
-  promote = False
+if num_fails > 2
+  promote = false
+elsif num_fails < 2
+  promote = true
 else
-  if spanish_grade > 5 or maths_grade > 5
-    promote = True
-  end
+  promote = false
+  promote = true if spanish_grade >= 5 and maths_grade >= 5
 end
 
 puts promote
