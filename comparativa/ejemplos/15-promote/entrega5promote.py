@@ -10,7 +10,8 @@ if num_fails < 2:
 elif num_fails > 2:
     promote = False
 else:
-    if spanish_grade > 5 or maths_grade > 5:
+    promote = False
+    if spanish_grade >= 5 and maths_grade >= 5:
         promote = True
 
 print(promote)
