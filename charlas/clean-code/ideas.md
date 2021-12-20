@@ -178,3 +178,6 @@ Recuerde el principio de Ward: «Sabemos que
 trabajamos con código limpio cuando cada rutina es más o menos lo que esperábamos».
 Para alcanzar este principio, gran parte del esfuerzo se basa en seleccionar nombres
 adecuados para pequeñas funciones que hacen una cosa.
+
+Cuanto más reducida y concreta
+sea una función, más sencillo será elegir un nombre descriptivo.
