@@ -1,11 +1,13 @@
 
 # ASKER
 
-Es una herramienta (ruby) de software libre para crear muchas preguntas a
-partir de unos contenidos de entrada (input).
+Es una herramienta (ruby) de software libre para **crear muchas preguntas a
+partir de unos contenidos de entrada (input)**.
+
+Estas preguntas se pueden cargar fácilmente en el **banco de preguntas de Moodle**.
 
 Actualmente los "inputs" se crean con un editor de texto, pero la próxima
-versión de Asker incluirá una herramienta gráfica para ayudar a elaborar
+versión de Asker incluirá una **herramienta gráfica** para ayudar a elaborar
 los "inputs" (contenidos de conocimiento).
 
 ## Documentación
