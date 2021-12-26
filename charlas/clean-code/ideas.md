@@ -113,6 +113,12 @@ si quieres  OOP lo mismo
 si quieres funcional ... casi, no es tan potente como un lenguaje funcional puro, pero se va acercando
 
 
+print('¿Y la familia?', end='')
+print(' -Bien, gracias.')
+
+print('¿Y la familia?', end='')
+puts(' -Bien, gracias.')
+
 =============================
 Herramienta de testeo automático
 https://github.com/sdelquin/pyceu
