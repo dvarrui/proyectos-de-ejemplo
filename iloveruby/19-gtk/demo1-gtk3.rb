@@ -1,4 +1,8 @@
-
+# install glade 
+# install gtk3 libgtk-3-...
+# install gobject-introspection-devel
+# install gtk3-devel
+#
 require "gtk3"
 
 window = Gtk::Window.new("First example")

@@ -9,6 +9,8 @@
 # website: www.zetcode.com
 # last modified: June 2009
 
+# sudo zypper install gtk2-devel
+# gem install gtk2
 require 'gtk2'
 
 class RubyApp < Gtk::Window

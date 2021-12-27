@@ -13,5 +13,9 @@ Enlace de interés:
 Enlace de interés:
 * https://github.com/cedlemo/ruby-gtk3-tutorial
 
+# Instalar GTK3 en OpenSUSE
 
-
+* install glade 
+* install gtk3 libgtk-3-...
+* install gobject-introspection-devel
+* install gtk3-devel
