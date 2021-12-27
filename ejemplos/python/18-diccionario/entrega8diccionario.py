@@ -12,4 +12,4 @@ for word in word_list:
     counter = word.count(letter)
     letter_counter[word] = counter
 
-print letter_counter
+print(letter_counter)
