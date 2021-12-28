@@ -8,18 +8,18 @@ room(:main) do
               'p' => 'Salir por la puerta',
               'c' => 'Coger la linterna'
             }
-  option = wait_for(actions)
+  option = wait_user(actions)
   next_state(option)
 end
 
 room('p') do
-  puts "Estás abriendo la puerta..."
-  sleep 2
-  puts "..."
+  print "Estás abriendo la puerta"
+  wait_seg(4)
   next_state(:exit)
 end
 
 room('c') do
-  puts "Cogiste el objeto pero estaba roto"
+  print "Cogiste el objeto pero estaba roto"
+  wait_seg(4)
   next_state(:main)
 end

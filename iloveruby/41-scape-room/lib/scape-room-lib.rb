@@ -30,7 +30,7 @@ class Game
     @next = state
   end
 
-  def wait_for(inputs = {})
+  def wait_user(inputs = {})
     option = ''
     actions = inputs.keys
     while not actions.include? option do
@@ -43,6 +43,13 @@ class Game
     option
   end
 
+  def wait_seg(number)
+    number.to_i.times do
+      print '.'
+      sleep 1
+      print "\n"
+    end
+  end
 end
 
 @game = Game.new
