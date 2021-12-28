@@ -1,20 +1,17 @@
 
-room :main, do
+room(:main) do
   puts "Estás en una habitación a oscuras."
   puts "Ves una puerta sucia al fondo."
   puts "A tus pies hay un objeto que parece una linterna."
-  puts ""
-  puts "(p) Salir poe la puerta"
-  puts "(c) Coger la linterna"
 
   actions = ['p', 'c']
-  election = ""
-  while not actions.contains? election do
+  option = ""
+  while not actions.include? option do
+    puts ""
+    puts "(p) Salir poe la puerta"
+    puts "(c) Coger la linterna"
     print "¿Qué eliges? "
-    election = gets.chomp
+    option = gets.chomp
   end
-
-  return :puerta if 'p'
-  return :linterna
+  next_state(option)
 end
-
