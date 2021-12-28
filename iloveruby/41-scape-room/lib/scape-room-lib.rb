@@ -11,7 +11,7 @@ class Game
   end
 
   def start
-    puts "Iniciando el juego (exit = salir)"
+    puts "Iniciando el juego"
     while @next != :exit
       puts ''
       current = @next
@@ -47,8 +47,8 @@ class Game
     number.to_i.times do
       print '.'
       sleep 1
-      print "\n"
     end
+    print "\n"
   end
 end
 
