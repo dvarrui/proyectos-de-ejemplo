@@ -4,14 +4,22 @@ room(:main) do
   puts "Ves una puerta sucia al fondo."
   puts "A tus pies hay un objeto que parece una linterna."
 
-  actions = ['p', 'c']
-  option = ""
-  while not actions.include? option do
-    puts ""
-    puts "(p) Salir poe la puerta"
-    puts "(c) Coger la linterna"
-    print "¿Qué eliges? "
-    option = gets.chomp
-  end
+  actions = {
+              'p' => 'Salir por la puerta',
+              'c' => 'Coger la linterna'
+            }
+  option = wait_for(actions)
   next_state(option)
+end
+
+room('p') do
+  puts "Estás abriendo la puerta..."
+  sleep 2
+  puts "..."
+  next_state(:exit)
+end
+
+room('c') do
+  puts "Cogiste el objeto pero estaba roto"
+  next_state(:main)
 end
