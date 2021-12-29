@@ -6,12 +6,12 @@ filename = 'points.txt'
 distances = []
 
 File.foreach(filename) do |line|
-  items = line.split()
+  items = line.split
   x = items[0].to_i
   y = items[1].to_i
-  distance = (x**2 + y**2) ** 0.5
+  distance = (x**2 + y**2)**0.5
   distances.append distance
-end 
+end
 
 puts distances.min
 
