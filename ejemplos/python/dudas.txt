@@ -1,15 +1,17 @@
 
 
-Diferencia entre tupla y lista.
+DUDAS
 
-El operador // es confuso.
+* Diferencia entre tupla y lista. Tupla es inmutable. 
+  Pero esto es una utilidad de implementación pero no implica cambios en los algoritmos.
 
-¿Qué utilidad tiene tratar los booleanos como enteros?
-Realmente no son números.
+* El operador // es confuso.
 
-La conversión implícita no me parece buena idea.
-Los conversores no son métodos de los objetos.
+* ¿Qué utilidad tiene tratar los booleanos como enteros?
+  Realmente no son números.
 
+* La conversión implícita no me parece buena idea.
+  Los conversores no son métodos de los objetos.
 
 Python
 values = [i**2 for i in range(1,11)]
@@ -23,13 +25,13 @@ for pos,value in enumerate(values):
 
 values.each_with_index { |val,index| puts "#{val} en posición #{index}" }
 
-Ruby y Python tienen tipado fuerte y dinámico.
 
-En python para dividir una cadena se hace s.split()
-pero para calcular su longitud len(s)
+* Ruby y Python tienen tipado fuerte y dinámico.
 
-En ruby s.split y s.lenght o s.size
-Me parecen más homogéneo
+* En python para dividir una cadena se hace s.split()
+  pero para calcular su longitud len(s)
+  En ruby s.split y s.lenght o s.size
+  Parece más homogéneo
 
 La sustitución de variables f'' es muy específico
 #{} se parece a otros lenguajes (bash $())
@@ -52,3 +54,33 @@ a.__floordiv__(      a.__mod__(           a.__rdivmod__(       a.__rsub__(
 '42'
 >>> a.__int__()
 42
+
+
+Para crear un conjunto basta con separar sus valores por comas y rodearlos de llaves
+{}:
+La excepción la tenemos a la hora de crear un conjunto vacío, ya que, siguiendo la
+lógica de apartados anteriores, deberíamos hacerlo a través de llaves:
+Advertencia: Si hacemos esto, lo que obtenemos es un diccionario vacío .
+-> Excepciones a las reglas empeora la legibilidad. Hay que recordar las restricciones.
+Es mejor tener pocas reglas homogéneas y evitar excepciones.
+empty_set = set()
+
+>>> set(3)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'int' object is not iterable
+>>> set([3])
+{3}
+>>> int([3])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+>>> 
+
+Prefiero el modo métodos de objetos. Así no se equivoca uno al invocar el método adecuado.
+
+Para añadir un elemento al conjunto se usa un método pero porqué no usar una función?
+add(set_var, item_var)
+
+Para evaluar el tamaño de un conjunto si se usa una función len(set_var) pero porque
+no usar un método set_var.len() >> __len__() Método mágico se llam en python.
