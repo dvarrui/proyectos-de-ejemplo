@@ -12,7 +12,10 @@ for line in f:
     distance = (x**2 + y**2) ** 0.5
     distances.append(distance)
 
-print(min(distances))
 f.close()
 
 # min_distance = 4.123105625617661
+min_distance = min(distances)
+
+print(min_distance)
+

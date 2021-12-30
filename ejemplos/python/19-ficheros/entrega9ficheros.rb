@@ -13,6 +13,6 @@ File.foreach(filename) do |line|
   distances.append distance
 end
 
-puts distances.min
-
 # min_distance = 4.123105625617661
+min_distance = distances.min
+puts min_distance
