@@ -8,7 +8,10 @@ num_primes = 10
 def is_prime(n):
     # Devuelve True si "n" es primo y False en otro caso
     # código de la función
-    pass
+    for i in range(2, n):
+        if (n % i == 0):
+            return False
+    return True
 
 
 def get_primes(how_many):
@@ -18,8 +21,10 @@ def get_primes(how_many):
     while len(primes) < how_many:
         if is_prime(i):
             primes.append(i)
-            i += 1
+        i += 1
     return primes
 
 
 primes = get_primes(num_primes)  # no borrar esta línea
+print(primes)
+# primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
