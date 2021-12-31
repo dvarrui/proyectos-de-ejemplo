@@ -5,11 +5,11 @@ num_primes = 10
 # code here
 
 
-def is_prime(n):
+def is_prime(number):
     # Devuelve True si "n" es primo y False en otro caso
     # código de la función
-    for i in range(2, n):
-        if (n % i == 0):
+    for i in range(2, number):
+        if (number % i == 0):
             return False
     return True
 
