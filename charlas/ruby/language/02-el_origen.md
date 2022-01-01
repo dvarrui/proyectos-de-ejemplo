@@ -45,3 +45,5 @@ Mis requisitos:
 > ¿Superpoder? Lenguaje muy expresivo. Escribir poco y fácil de leer.
 
 **Objetivo de Ruby:** _busca la felicidad del programador_
+
+> https://learn.co/lessons/matz-readme
