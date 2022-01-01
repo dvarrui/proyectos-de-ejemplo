@@ -1,4 +1,6 @@
 
+[<< back](02-el_origen.md)|[next>>](04-variables.md)
+
 # I love ruby
 
 ---
@@ -33,3 +35,5 @@ irb(main):001:0>  3 + 4
 irb(main):002:0> quit
 >
 ```
+
+[<< back](02-el_origen.md)|[next>>](04-variables.md)

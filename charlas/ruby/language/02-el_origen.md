@@ -1,4 +1,5 @@
 
+[<< back](01-agenda.md)|[next>>](03-instalar.md)
 
 # I Love Ruby
 
@@ -47,3 +48,5 @@ Mis requisitos:
 **Objetivo de Ruby:** _busca la felicidad del programador_
 
 > https://learn.co/lessons/matz-readme
+
+[<< back](01-agenda.md)|[next>>](03-instalar.md)

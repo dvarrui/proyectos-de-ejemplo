@@ -1,4 +1,6 @@
 
+[<< back](04-variables.md)|[next>>](06-features.md)
+
 
 # I Love Ruby
 
@@ -49,3 +51,5 @@ puts a + b
 ```
 
 **Rule2:** _Tipado fuerte._
+
+[<< back](04-variables.md)|[next>>](06-features.md)

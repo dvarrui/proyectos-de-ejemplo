@@ -1,4 +1,6 @@
 
+[<< back](15-iteradores.md)|[next>>](20-estrategia-poo.md)
+
 # I Love Ruby
 
 ![](./images/iloveruby.png)
@@ -151,3 +153,5 @@ Method with name   : [:name, :name=]
 Object#name        : Qui-gon Jinn
 ============================================================
 ```
+
+[<< back](14-bloques.md)|[next>>](16-metaprogramacion.md)

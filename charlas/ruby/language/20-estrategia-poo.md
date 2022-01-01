@@ -1,4 +1,6 @@
 
+[<< back](16-metaprogramacion.md)|[next>>](49-preguntas.md)
+
 # I Love Ruby
 
 ![](./images/iloveruby.png)
@@ -69,3 +71,5 @@ jedi.saludar # => Hola, me llamo Obiwan
 * GUI, CLI, Web (Cliente y Server), Scripting, Etc
 
 > Veamos más ejemplos...
+
+[<< back](16-metaprogramacion.md)|[next>>](49-preguntas.md)

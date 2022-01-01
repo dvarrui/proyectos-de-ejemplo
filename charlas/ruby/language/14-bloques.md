@@ -1,4 +1,6 @@
 
+[<< back](13-estructura_iterativa.md)|[next>>](15-iteradores.md)
+
 # I Love Ruby
 
 ---
@@ -96,3 +98,5 @@ i.each { puts "I love Ruby!"  }
 ```
 3.times { puts "I love Ruby!" }
 ```
+
+[<< back](13-estructura_iterativa.md)|[next>>](15-iteradores.md)

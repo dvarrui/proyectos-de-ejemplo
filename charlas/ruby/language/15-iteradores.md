@@ -1,4 +1,6 @@
 
+[<< back](14-bloques.md)|[next>>](16-metaprogramacion.md)
+
 # I Love Ruby
 
 ---
@@ -40,3 +42,5 @@ Salida:
 Param <name> with <David> value.
 Param <age> with <42> value.
 ```
+
+[<< back](14-bloques.md)|[next>>](16-metaprogramacion.md)

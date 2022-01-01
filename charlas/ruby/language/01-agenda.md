@@ -1,4 +1,6 @@
 
+[<< back](00-presentacion.md)|[next>>](02-el_origen.md)
+
 # I Love Ruby
 
 ![](./images/caminar.png)
@@ -33,3 +35,5 @@ Hablaremos de:
 * Debatir y aprender.
 
 > _“El amor es lo que nos mueve...”_
+
+[<< back](00-presentacion.md)|[next>>](02-el_origen.md)

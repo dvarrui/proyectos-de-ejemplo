@@ -1,4 +1,6 @@
 
+[<< back](06-features.md)|[next>>](12-estructura_iterativa.md)
+
 # I Love Ruby
 
 ![](./images/caminar.png)
@@ -37,3 +39,5 @@ puts “Eres mayor” if (edad > 18)
 ```
 
 > No hay un camino único...
+
+[<< back](06-features.md)|[next>>](12-estructura_iterativa.md)

@@ -1,4 +1,6 @@
 
+[<< back](03-instalar.md)|[next>>](05-estructura_secuencial.md)
+
 # I love ruby
 
 ![](images/iloveruby.png)
@@ -122,3 +124,5 @@ irb(main):012:0> c.to_i
 irb(main):013:0> c.to_f
 => -1.0
 ```
+
+[<< back](03-instalar.md)|[next>>](05-estructura_secuencial.md)

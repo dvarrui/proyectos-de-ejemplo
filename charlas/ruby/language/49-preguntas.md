@@ -1,4 +1,6 @@
 
+[<< back](20-estrategia-poo.md)|[next>>](50-fin.md)
+
 # I Love Ruby: Preguntas?
 
 * ¿Qué es lo que menos te gusta de Ruby?

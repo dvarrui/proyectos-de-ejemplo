@@ -1,4 +1,6 @@
 
+[>> next](01-agenda.md)
+
 # I Love Ruby
 
 ---
@@ -27,3 +29,5 @@ Software Libre
 Starwars and
 Rock and Roll
 ```
+
+[>> next](01-agenda.md)

@@ -1,4 +1,6 @@
 
+[<< back](12-estructura_iterativa.md)|[next>>](14-bloques.md)
+
 # I Love Ruby
 
 ---
@@ -66,3 +68,5 @@ end
 # Iterar usando bloques con métodos POO
 [3, 14, 27].each { |i| puts i }
 ```
+
+[<< back](12-estructura_iterativa.md)|[next>>](14-bloques.md)
