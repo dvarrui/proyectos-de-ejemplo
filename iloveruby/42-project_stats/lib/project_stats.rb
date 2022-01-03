@@ -1,3 +1,4 @@
+# encoding: UTF-8
 
 module ProjectStats
   def self.get_files_from_directory(dirpath)
@@ -15,7 +16,13 @@ module ProjectStats
     metadata[:blksize]   = stat.blksize
     metadata[:size]      = stat.size
 
-    lines = File.new(filepath).read.split("\n")
+    begin
+      lines = File.new(filepath).read.split("\n")
+    rescue => e
+      puts "[ERROR] #{filepath}"
+      puts e
+      exit 1
+    end
     metadata[:lines]     = lines.size
     metadata
   end
