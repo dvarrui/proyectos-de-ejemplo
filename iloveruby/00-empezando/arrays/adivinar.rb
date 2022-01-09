@@ -2,7 +2,7 @@
 # Salvar como guess.rb
 words = ['ruby', 'java', 'c++']
 secret = words[rand(3)]
-print "adivina? "
+print "adivina un lenguaje de programación? "
 
 while guess = STDIN.gets
   guess.chop!
