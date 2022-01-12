@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  database:
+    image: "mariadb:8"
+    ports:
+    - "3306:3306"
+    restart: always
+    environment:
+    - MARIADB_ROOT_PASSWORD="secret"
+    volumes:
+      - ./data:/var/lib/mysql
