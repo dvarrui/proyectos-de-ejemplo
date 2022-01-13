@@ -11,7 +11,7 @@ begin
   else
     start_color
 
-    addstr "This Terminal supports #{colors} colors.\n"
+    addstr "This Terminal supports #{Curses.colors} colors.\n"
 
     Curses.colors.times { |i|
       Curses.init_pair(i, i, 0)
