@@ -1,9 +1,9 @@
 ---
-- :es: Hola
-  :en: Hello
+- :es: hola
+  :en: hello
   :info: Saludar
-- :es: Adiós
-  :en: Bye
+- :es: adiós
+  :en: bye
   :info: Despedirse
 - :es: ordenador
   :en: computer
@@ -34,4 +34,4 @@
 - :es: padre
   :en: father
 - :es: madre
-  :en: mather
+  :en: mother
