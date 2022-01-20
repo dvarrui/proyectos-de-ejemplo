@@ -4,7 +4,7 @@ Autor: David Vargas <dvargas.canarias.org>
 Versión: 0.1.2 20080112
 =end
 
-require 'clases/simbolo'
+require_relative 'simbolo'
 
 class Alfabeto
   attr_reader :alfabeto

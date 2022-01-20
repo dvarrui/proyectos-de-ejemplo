@@ -1,11 +1,11 @@
 
-require 'modulos/to_from_cadena'
+require_relative 'to_from_cadena'
 
 class Simbolo
   include ToFromCadena
   attr_reader :simbolo, :codigo
-  
-  def initialize    
+
+  def initialize
     tofromcadena_setup :simbolo, :codigo
     tofromcadena_modo :simple
   end

@@ -1,9 +1,9 @@
 #!/usr/bin/ruby
 
-require 'app/Datos.rb'
+require_relative 'app/datos'
 
 puts "Cargando configuración..."
-d=Datos.new
+d = Datos.new
 d.load
 
 puts "Cargando resultados temporales o crear fichero aleatorio..."
