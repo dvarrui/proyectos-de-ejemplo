@@ -7,7 +7,8 @@ El contenido se organiza del siguiente modo:
 
 | Carpeta              | Contenido |
 | -------------------- | --------- |
-| [iloveruby](./iloveruby) | Ejemplos y miniproyectos realizados con Ruby |
+| [ruby.ejemplos](./ruby.ejemplos) | Ejemplos y miniproyectos realizados con Ruby |
+| [other.ejemplos](./other.ejemplos) | Ejemplos y miniproyectos realizados con otros lenguajes |
 | [charlas](./charlas) | Charlas sobre diversos temas |
 | [comparativa](./comparativa) | Análisis comparativo de Ruby con otros lenguajes de programación |
 
@@ -18,8 +19,5 @@ El contenido se organiza del siguiente modo:
 Django:
 * [MVP - Minimum Viable Product](https://github.com/sdelquin/mvp): proyecto hecho con Django por `sdelquin`.
 
----
 
-# Contacto
 
-Email: iloveruby@protonmail.com
