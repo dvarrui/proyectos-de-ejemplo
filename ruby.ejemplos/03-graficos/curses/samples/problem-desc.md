@@ -1,5 +1,5 @@
 
-# Installation
+# Curses problem (Jan 2022)
 
 
 **shugo:** Which version of underlying curses library do you use?
