@@ -60,3 +60,7 @@ Cada lenguaje de programación obtendrá una valor en cada dimensión que ayudar
 | 01  | Inst. goto     | Ocultación débil     | Sin tipos           | Metaprogramación debil/laxa |
 
 Veamos un ejemplo [calculando el valor SOFA de Ruby](ruby.md):
+
+Por ejemplo, **Ruby** es **0E-EQ-50-FM** Sofa. Este valor puede servir para ayudar a medir la cercanía y/o lejanía de los diferentes lenguajes de programación entre sí.
+
+¿Me ayudas creando la [plantilla](plantilla.md) de tu lenguaje de programación favorito para añadirla a esta "frikada"?

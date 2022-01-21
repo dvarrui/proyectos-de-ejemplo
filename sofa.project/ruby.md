@@ -20,23 +20,19 @@ Partimos de la plantilla y vamos poniendo:
 
 Ahora unimos todos los bits de S,O,F y A para calcular su valor binario y lo ponemos en la siguiente tabla:
 
-| Dimensión | Binario    | Hexa. | Base-32 |
-| --------- | ---------- | ----- | ------- |
-| S         | 0000001110 | 00E   | 0E      |
-| O         | 0111011010 | 1DA   | EQ      |
-| F         | 0010100000 | 0A0   | 50      |
-| A         | 0111110110 | 1F6   | FM      |
+| Dimensión | Binario    | Hexa. | Base32 |
+| --------- | ---------- | ----- | ------ |
+| S         | 0000001110 | 00E   | 0E     |
+| O         | 0111011010 | 1DA   | EQ     |
+| F         | 0010100000 | 0A0   | 50     |
+| A         | 0111110110 | 1F6   | FM     |
 
-Tenemos entonces los valores de las 4 dimensiones SOFA:
-* S => 0E
-* O => EQ
-* F => 50
-* A => FM
-
-Lo unimos todo y tenemos el calificador SOFA de Ruby 3.0.3.
+A continuación unimos los valores de las 4 dimensiones:
+* Valor hexadecimal 00E-1DA-0A0-1F6
+* Valor base32 : 0E-EQ-50-FM
 
 **Ruby** es **0E-EQ-50-FM** Sofa.
 
-Este valor puede servir para ayudar a medir la cercanía y/o lejanía de los diferentes lenguajes de programación entre sí.
+Si nos fijamos Ruby tiene un alto valor O y A. Y valor bajo en F. El valor S debe ser el mismo en todos los lenguajes modernos pero puede hacer lenguajes antiguos con S diferente. Este valor puede servir para ayudar a medir la cercanía y/o lejanía de los diferentes lenguajes de programación entre sí.
 
 ¿Me ayudas creando la plantilla de tu lenguaje de programación favorito para añadirla a esta "frikada"?
