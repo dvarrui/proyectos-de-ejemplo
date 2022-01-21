@@ -20,7 +20,7 @@ Partimos de la plantilla y vamos poniendo:
 
 Ahora unimos todos los bits de S,O,F y A para calcular su valor binario y lo ponemos en la siguiente tabla:
 
-> [Convertir Hexadecimal a Base-32](https://www.unitconverters.net/numbers/hexadecimal-to-base-32.htm)
+> [Convertir Hexadecimal a Base-32](https://www.translatorscafe.com/unit-converter/es-ES/numbers/4-35/hexadecimal-base-32/)
 
 | Dimensión | Binario    | Hexa. | Base-32 |
 | --------- | ---------- | ----- | ------- |
