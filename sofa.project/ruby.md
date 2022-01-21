@@ -18,6 +18,8 @@ Partimos de la plantilla y vamos poniendo:
 | 02  | E. iterativa   | 1 | Ocultación fuerte    | 1 | Inferencia de tipos | 0 | Metaprogramación | 1 |
 | 01  | Inst. goto     | 0 | Ocultación débil     | 0 | Sin tipos           | 0 | Meta. debil/laxa | 0 |
 
+Ahora unimos todos los bits de S,O,F y A para calcular su valor binario y lo ponemos en la siguiente tabla:
+
 | Dimensión | Binario    | Hexa. | Base-32 |
 | --------- | ---------- | ----- | ------- |
 | S         | 0000001110 | 00E   | 0E      |
@@ -33,6 +35,4 @@ Tenemos entonces los valores de las 4 dimensiones SOFA:
 
 Lo unimos todo y tenemos el calificador SOFA de Ruby 3.0.3.
 
-```
-SOFA = 0E-EQ-50-FM
-```
+**Ruby es 0E-EQ-50-FM Sofa**
