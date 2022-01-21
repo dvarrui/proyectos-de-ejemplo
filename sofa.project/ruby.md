@@ -36,3 +36,7 @@ Tenemos entonces los valores de las 4 dimensiones SOFA:
 Lo unimos todo y tenemos el calificador SOFA de Ruby 3.0.3.
 
 **Ruby** es **0E-EQ-50-FM** Sofa.
+
+Este valor puede servir para ayudar a medir la cercanía y/o lejanía de los diferentes lenguajes de programación entre sí.
+
+¿Me ayudas creando la plantilla de tu lenguaje de programación favorito para añadirla a esta "frikada"?

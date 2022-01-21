@@ -5,11 +5,31 @@
 
 ## Antecedentes
 
-## Propuesta
+Para evitar charlas agotadoras de si este lenguaje de programación POO o no lo es, si tiene ocultación o no la tiene y por tanto si es pero no es....
+
+Todo derivado de que cada uno interpreta POO de manera un poco o mucho diferente.
+Esto vamos a tratar de objetivizarlo un poco más para evitar discusiones de bucle.
+
+# Propuesta
+
+Vamos a buscar una forma de medir que nos sea Si o NO, que sea gradual como de 0 a 9.
+
+Pero como hay muchos elementos diferentes en cada lenguaje que pueden tener diferentes grados (0-9) de
+implantación... entonces vamos a tratar de medir eso valores y unirlos para tener un número qie identifique a cada lenguaje.
+
+Ya no discutimos más, vemos el valor del lenguaje y ya sabemos lo que tiene y cómo lo implementa.
 
 # Implementación
 
-## Unidad de medida
+Además este número va a tener 4 dimensiones, según el grado que estemos midiendo:
+* **S**tructured programming paradigm
+* **O**bject oriented programming paradigm |
+* **F**unctional programming paradigm |
+* **A**nother features
+
+## Unidad de medida SOFA
+
+Concretando... propongo a vuestra revisión y consideración la siguiente implementación de la propuesta de solución anterior que llamaremos unidades SOFA.
 
 Ahora vamos a explicar SOFA (versión 1.0). SOFA es una implementación de un calificador para definir lenguajes de programación.
 
