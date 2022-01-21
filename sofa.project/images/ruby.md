@@ -15,8 +15,8 @@ Partimos de la plantilla y vamos poniendo:
 | 05  |                |   | Herencia mixins      | 1 | Eval. estricta      | 0 |Tipado fuerte | 1 |
 | 04  | E. secuencial  | 1 | Polimorfismo clásico | 1 | Eval. no estricta   | 0 | Tipado débil | 0 |
 | 03  | E. condicional | 1 | Polimorfismo débil   | 0 | Tipos dependientes  | 0 | Reflexivo | 1 |
-| 02  | E. iterativa   | 1 | Ocultación fuerte    | 1 | Inferencia de tipos | 0 | Metaprogramación clásica | 1 |
-| 01  | Inst. goto     | 0 | Ocultación débil     | 0 | Sin tipos           | 0 | Metaprogramación debil/laxa | 0 |
+| 02  | E. iterativa   | 1 | Ocultación fuerte    | 1 | Inferencia de tipos | 0 | Metaprogramación | 1 |
+| 01  | Inst. goto     | 0 | Ocultación débil     | 0 | Sin tipos           | 0 | Meta. debil/laxa | 0 |
 
 | Dimensión | Binario    | Hexa. | Base-32 |
 | --------- | ---------- | ----- | ------- |
