@@ -10,12 +10,12 @@ class Person
     "Name: #{@name}, Age: #{@age}"
   end
 
-  # Python use class method when need access to Class state
+  # Use class method when need access to Class state
   def self.imfrom
     puts("I'm from " + @@country)
   end
 
-  # Python use static method when dosn't need access to Class state
+  # Use static method when dosn't need access to Class state
   def self.talk
     puts 'bla, bla, bla'
   end
