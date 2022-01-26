@@ -12,3 +12,6 @@ print("Hola mundo")
 # (a := 1 + 2)  => 3 
 # Desaconsejado Python pero usual en Ruby
 # hace la asignacion y la devuelve
+
+# Ejemplo con Walrus elimina líneas pero es menos legible para python
+# Ruby lo tiene integrado +++
