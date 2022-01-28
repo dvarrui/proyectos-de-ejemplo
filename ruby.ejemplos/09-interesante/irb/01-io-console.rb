@@ -4,5 +4,9 @@
 #require 'io-console'
 require 'io/console'
 
-IO.console             # =>  #<File:/dev/tty>
-#IO.console(sym, *args)
+c = IO.console # =>  #<File:/dev/tty>
+# IO.console(sym, *args)
+c.clear_screen
+c.beep
+system('vdir /home/david')
+c.cursor_up 4
