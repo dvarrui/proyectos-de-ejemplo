@@ -16,5 +16,4 @@ def mostrar_factorial_de(number)
 end
 
 numbers = [0, 1, 3, -1, 4]
-
 numbers.each { |number| mostrar_factorial_de number }
