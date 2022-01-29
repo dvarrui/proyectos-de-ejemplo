@@ -22,6 +22,11 @@ class Saludar
     puts decir.downcase.white
   end
 
+  def self.coloquial(_nombre)
+    decir = "¡Chacho puntaaal!"
+    puts decir
+  end
+
   private
 
   def self.frase_para_saludar_a(nombre)
