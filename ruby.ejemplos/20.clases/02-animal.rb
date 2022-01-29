@@ -13,3 +13,4 @@ a = Animal.new
 a.nombre = "Perro"
 a.info
 
+pp a

@@ -1,4 +1,4 @@
-require_relative 'animal'
+require_relative 'animal-05'
 
 class Perro < Animal
   def initialize(raza, nombre)
