@@ -1,5 +1,5 @@
 #!/usr/bin/ruby
 
-#Comentario de una línea
-print "Hola Mundo 2!\n"
-
+# Comentario
+print "Hola mundo 1!\n"
+puts  "Hola mundo 2!\n"
