@@ -27,13 +27,11 @@ class Saludar
     puts decir
   end
 
-  private
-
-  def self.frase_para_saludar_a(nombre)
+  private_class_method def self.frase_para_saludar_a(nombre)
     "¡Hola #{nombre.capitalize}!"
   end
 
-  def self.phrase_to_greet(name)
+  private_class_method def self.phrase_to_greet(name)
     "Hello #{name.capitalize}!"
   end
 end

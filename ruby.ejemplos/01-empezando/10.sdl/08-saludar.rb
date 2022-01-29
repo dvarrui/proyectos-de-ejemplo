@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# Refactorizar librería
+# private class method
 
 require_relative 'lib/saludar07'
 
