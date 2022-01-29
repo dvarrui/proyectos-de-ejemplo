@@ -1,4 +1,4 @@
-#!/usr/bin/ruby
+#!/usr/bin/env ruby
 
 def hola_a(nombre, linea = nil)
   frase = "¡Hola #{nombre.capitalize}!"
