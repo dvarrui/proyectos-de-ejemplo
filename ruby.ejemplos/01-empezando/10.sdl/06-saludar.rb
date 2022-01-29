@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# Librería a color
 
 require_relative 'lib/saludar06'
 

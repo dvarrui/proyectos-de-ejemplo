@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# Librería
 
 require_relative 'lib/saludar05'
 

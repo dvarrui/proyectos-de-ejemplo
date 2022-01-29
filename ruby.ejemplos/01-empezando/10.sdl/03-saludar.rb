@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# Módulo
 
 module Saludar
   def self.a(nombre = 'Mundo')

@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# Clase
 
 class Saludar
   def self.a(nombre = 'Mundo')
