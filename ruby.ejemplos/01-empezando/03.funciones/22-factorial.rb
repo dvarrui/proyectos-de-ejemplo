@@ -6,7 +6,7 @@ def factorial(n)
   n * factorial(n-1)
 end
 
-numbers = [1, 3, 0, -1, 4]
+numbers = [0, 1, 3, -1, 4]
 
 numbers.each do |number|
   puts "factorial(#{number}) = #{factorial(number)}"
