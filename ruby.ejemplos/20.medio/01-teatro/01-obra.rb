@@ -1,7 +1,7 @@
 #!/usr/bin/ruby
 # enconding: utf-8
 
-require_relative 'actor'
+require_relative '01-actor'
 
 puts "="*50
 puts "Obra: La venganza de Don Mendo"

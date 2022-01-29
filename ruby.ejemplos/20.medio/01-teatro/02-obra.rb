@@ -1,11 +1,9 @@
 #!/usr/bin/ruby
 # enconding: utf-8
 
-require_relative 'actor'
+require_relative '02-actor'
 
-puts "="*50
-puts "Obra: La venganza de Don Mendo"
-puts "="*50
+titulo_de_la_obra 'Obra: La venganza de Don Mendo'
 
 amigo = Actor.new '    Amigo'
 mendo = Actor.new 'Don Mendo'

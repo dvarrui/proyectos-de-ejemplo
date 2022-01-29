@@ -36,3 +36,12 @@ class Actor
     @num_palabras += texto.split(' ').count
   end
 end
+
+
+def titulo_de_la_obra(titulo)
+  size = titulo.size
+  puts '=' * size
+  puts titulo
+  puts '=' * size
+end
+

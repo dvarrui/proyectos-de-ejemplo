@@ -1,10 +1,10 @@
 #!/usr/bin/ruby
 # enconding: utf-8
 
-require_relative 'actor'
+require_relative '03-actor'
 
 puts "="*50
-puts "Obra: La venganza de Don Mendo"
+puts "Obra: Elimperio contraataca"
 puts "="*50
 
 luke  = Actor.new 'Luke Skywalker', :blue
