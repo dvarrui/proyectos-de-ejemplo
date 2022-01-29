@@ -1,0 +1,5 @@
+
+client side
+
+https://dev.to/taybenlor/how-i-got-ruby-snippets-to-run-client-side-in-less-than-a-day-4pbk?s=09
+
