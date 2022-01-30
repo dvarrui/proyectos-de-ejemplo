@@ -30,15 +30,20 @@ class Actor
   def info
     puts
     puts name
-    puts tab + Rainbow("├─ He tenido #{@num_frases} frases.").color(@color).bright
-    puts tab + Rainbow("└─ He dicho  #{@num_palabras} palabras.").color(@color).bright
+    stat_frases = Rainbow("├── He tenido #{@num_frases} frases.").color(@color).bright
+    puts "#{tab_minus(1)}#{stat_frases}"
+    stat_palabras = Rainbow("└── He dicho  #{@num_palabras} palabras.").color(@color).bright
+    puts "#{tab_minus(1)}#{stat_palabras}"
   end
 
   private
 
   def tab
-    #' ' * name.size
-    ' ' * (@name.size - 1)
+    ' ' * @name.size
+  end
+
+  def tab_minus(number)
+    ' ' * (@name.size - number)
   end
 
   def decir_la_primera_frase(texto)
