@@ -8,11 +8,12 @@ class Actor
     info = @name
     frases = texto.split('.')
     # Decir la primera frase
-    puts info + ' : ' + frases[0].strip + '.'
+    puts "#{info} : #{frases[0].strip}."
     frases.delete_at 0
-    info = ' '* @name.size
+    # Decir el resto de frases
+    info = ' ' * @name.size
     frases.each do |frase|
-      puts info + ' : ' + frase.strip + '.'
+      puts "#{info} : #{frase.strip}."
     end
   end
 

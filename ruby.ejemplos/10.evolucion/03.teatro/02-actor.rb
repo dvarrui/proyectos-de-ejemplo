@@ -7,15 +7,8 @@ class Actor
   end
 
   def dice(texto)
-    info = @name
-    frases = texto.split('.')
-    # Decir la primera frase
-    puts info + ' : ' + frases[0].strip + '.'
-    frases.delete_at 0
-    info = ' '* @name.size
-    frases.each do |frase|
-      puts info + ' : ' + frase.strip + '.'
-    end
+    decir_la_primera_frase(texto)
+    decir_el_resto_de_frases(texto)
     contar_las_palabras_del texto
   end
 
@@ -31,6 +24,21 @@ class Actor
 
   private
 
+  def decir_la_primera_frase(texto)
+    frases = texto.split('.')
+    primera_frase = frases[0].strip
+    puts "#{@name} : #{primera_frase}."
+  end
+
+  def decir_el_resto_de_frases(texto)
+    frases = texto.split('.')
+    frases.delete_at 0
+    tab = ' ' * @name.size
+    frases.each do |frase|
+      puts "#{tab} : #{frase.strip}."
+    end
+  end
+
   def contar_las_palabras_del(texto)
     @num_frases += 1
     @num_palabras += texto.split(' ').count
@@ -44,4 +52,3 @@ def titulo_de_la_obra(titulo)
   puts titulo
   puts '=' * size
 end
-
