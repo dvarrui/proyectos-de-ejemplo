@@ -66,9 +66,15 @@ class Actor
   end
 end
 
-def titulo_de_la_obra(titulo)
+def titulo_de_la_obra(titulo, tab: 0)
   size = titulo.size
-  puts '=' * size
-  puts titulo
-  puts '=' * size
+  tabs = ' ' * tab
+  color = :tanx
+  linea_en_color = Rainbow('=' * size).color(color)
+  titulo_en_color = Rainbow(titulo).color(color)
+
+  puts "#{tabs}#{linea_en_color}"
+  puts "#{tabs}#{titulo_en_color}"
+  puts "#{tabs}#{linea_en_color}"
+  puts "\n\n"
 end

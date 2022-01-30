@@ -3,12 +3,10 @@
 
 require_relative '03-actor'
 
-puts "="*50
-puts "Obra: Elimperio contraataca"
-puts "="*50
+titulo_de_la_obra 'El Imperio Contraataca', tab: 16
 
-luke  = Actor.new 'Luke Skywalker', :blue
-vader = Actor.new '   Darth Vader'
+luke  = Actor.new 'Luke Skywalker', :tan
+vader = Actor.new '   Darth Vader', :darkslategray
 
 vader.dice "¿Obiwan no te contó... lo qué le pasó a tu padre?"
 luke.dice_gritando  "¡Me dijo que tú lo mataste!"
