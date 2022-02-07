@@ -14,7 +14,7 @@ class Fibonacci
   end
 
   def to_s
-    @fib
+    @fib.join(', ')
   end
 
   private
@@ -29,18 +29,16 @@ class Fibonacci
 end
 
 
-below = 10
+below = 4000000 
 interval = 1..below
 
 fib = Fibonacci.new
 
 sum = 0
 interval.each do |number|
-  puts fib.to_s
-  puts "fib[#{number}]=#{fib.of(number)}"
+  sum += fib.of(number) if number.even?
 end
 
-# puts "Fibonacci"
-# puts "* Interval  : #{interval}"
-# puts "* Sum       : #{sum}" 
+puts sum
+
 
