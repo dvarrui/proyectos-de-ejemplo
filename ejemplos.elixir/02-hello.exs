@@ -5,6 +5,8 @@ defmodule Hello do
    end
 end
 
+Hello.sample
+
 # iex(1)> c("helloworld.ex")
 # [Hello]
 # iex(2)> Hello.sample
