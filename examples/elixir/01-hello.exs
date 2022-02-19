@@ -1,6 +1,6 @@
-# elixir hello.exs
+#!/usr/bin/env elixir
 
 IO.puts "Hello world!"
 
 # iex -> como irb
-# c('01-hello')
+# c("01-hello.exs")
