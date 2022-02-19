@@ -1,11 +1,14 @@
+#!/usr/bin/env elixir
 
-defmodule Hello do
-   def sample do
+defmodule Say do
+   def hello do
        IO.puts "Hello World!"
    end
 end
 
-# iex(1)> c("helloworld.ex")
-# [Hello]
-# iex(2)> Hello.sample
+Say.hello
+
+# iex(1)> c("02-hello.exs")
+# [Say]
+# iex(2)> Say.hello
 # Hello World!
