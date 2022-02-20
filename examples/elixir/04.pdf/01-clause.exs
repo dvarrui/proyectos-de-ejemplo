@@ -1,4 +1,5 @@
-defmodule Math do
+
+defmodule Clause do
 
   def is_even(num) when num === 1 do
     false
