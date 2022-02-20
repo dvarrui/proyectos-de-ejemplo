@@ -1,3 +1,4 @@
+#!/usr/bin/env elixir
 
 defmodule Hello do
    def sample do

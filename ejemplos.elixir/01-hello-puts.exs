@@ -1,4 +1,4 @@
-# elixir hello.exs
+#!/usr/bin/env elixir
 
 IO.puts "Hello world!"
 

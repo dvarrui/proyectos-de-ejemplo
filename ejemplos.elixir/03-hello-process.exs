@@ -1,3 +1,5 @@
+#!/usr/bin/env elixir
+
 current_process = self()
 
 # Spawn an Elixir process (not an operating system one!)

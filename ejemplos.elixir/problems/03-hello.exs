@@ -1,3 +1,5 @@
+#!/usr/bin/env elixir
+
 children = [
   TCP.Pool,
   {TCP.Acceptor, port: 4040}
