@@ -19,9 +19,9 @@ class Monomio
   end
 
   def to_h
-    { value => xexp }
+    { xexp => value }
   end
-  
+
   def to_s(mode=:default)
     return to_s_vector if mode == :vector
     return to_s_simple if mode == :simple
