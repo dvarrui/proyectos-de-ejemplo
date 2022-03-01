@@ -15,7 +15,7 @@ class MonomioSubsTest < Minitest::Test
   def test_m0_subs
     m = @m[0]
     r = m[0] - m[1]
-    assert_equal '8', r.to_s
+    assert_equal '+8', r.to_s
     r = m[1] - m[2]
     assert_equal '-3', r.to_s
     r = m[2] - m[0]
@@ -25,7 +25,7 @@ class MonomioSubsTest < Minitest::Test
   def test_m1_subs
     m = @m[1]
     r = m[0] - m[1]
-    assert_equal '8x', r.to_s
+    assert_equal '+8x', r.to_s
     r = m[1] - m[2]
     assert_equal '-2x', r.to_s
     r = m[2] - m[0]

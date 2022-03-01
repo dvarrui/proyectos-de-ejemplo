@@ -3,8 +3,15 @@ class Monomio
   attr_accessor :value, :xexp
 
   def initialize(value, xexp=1)
-    @value = value
-    @xexp = xexp
+    @data = { value: value, xexp: xexp }
+  end
+
+  def value
+    @data[:value]
+  end
+
+  def xexp
+    @data[:xexp]
   end
 
   def to_s(mode=:default)
@@ -14,49 +21,48 @@ class Monomio
   end
 
   def +(monomio)
-    unless @xexp == monomio.xexp
+    unless xexp == monomio.xexp
       raise '[FAIL] Los monomios no tienen igual exponente de x'
     end
-    value = @value + monomio.value
-    Monomio.new(value, @xexp)
+    new_value = value + monomio.value
+    Monomio.new(new_value, xexp)
   end
 
   def -(monomio)
-    unless @xexp == monomio.xexp
+    unless xexp == monomio.xexp
       raise '[FAIL] Los monomios no tienen igual exponente de x'
     end
-    value = @value - monomio.value
-    Monomio.new(value, @xexp)
+    new_value = value - monomio.value
+    Monomio.new(new_value, xexp)
   end
 
   def *(monomio)
-#    require 'pry-byebug'; binding.pry
-    value = @value * monomio.value
-    xexp = @xexp + monomio.xexp
-    Monomio.new(value, xexp)
+    new_value = value * monomio.value
+    new_xexp = xexp + monomio.xexp
+    Monomio.new(new_value, new_xexp)
   end
 
   def /(monomio)
-#    require 'pry-byebug'; binding.pry
-    value = @value / monomio.value
-    xexp = @xexp - monomio.xexp
-    Monomio.new(value, xexp)
+    new_value = value / monomio.value
+    new_xexp = xexp - monomio.xexp
+    Monomio.new(new_value, new_xexp)
   end
 
   private
 
   def to_s_default
-    part2 = "x^#{@xexp}"
-    part2 = '' if @xexp.zero?
-    if @xexp == 1
+    part2 = "x^#{xexp}"
+    part2 = '' if xexp.zero?
+    if xexp == 1
       part2 = 'x'
     end
 
-    part1 = "#{@value}"
-    part1 = "" if @value == 1
-    part1 = "1" if @value == 1 and part2 == ''
-    part1 = "-" if @value == -1
-    if @value.zero?
+    part1 = "#{value}"
+    part1 = "" if value == 1
+    part1 = "1" if value == 1 and part2 == ''
+    part1 = "-" if value == -1
+    part1 = '+' + part1 if value > 0
+    if value.zero?
       part1 = ''
       part2 = ''
     end
@@ -65,10 +71,10 @@ class Monomio
   end
 
   def to_s_vector
-    "[#{@value}, #{@xexp}]"
+    "[#{value}, #{xexp}]"
   end
 
   def to_s_simple
-    "#{@value}*x^#{@xexp}"
+    "#{value}*x^#{xexp}"
   end
 end

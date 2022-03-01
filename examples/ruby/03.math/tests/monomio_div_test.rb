@@ -17,7 +17,7 @@ class MonomioDivTest < Minitest::Test
     r = m[0] / m[1]
     assert_equal '-5', r.to_s
     r = m[2] / m[2]
-    assert_equal '1', r.to_s
+    assert_equal '+1', r.to_s
   end
 
   def test_m1_div
@@ -25,7 +25,7 @@ class MonomioDivTest < Minitest::Test
     r = m[0] / m[1]
     assert_equal '-3x', r.to_s
     r = m[2] / m[2]
-    assert_equal '1', r.to_s
+    assert_equal '+1', r.to_s
   end
 
   def test_m2_div
@@ -33,6 +33,6 @@ class MonomioDivTest < Minitest::Test
     r = m[0] / m[1]
     assert_equal '-7', r.to_s
     r = m[2] / m[2]
-    assert_equal '1', r.to_s
+    assert_equal '+1', r.to_s
   end
 end
