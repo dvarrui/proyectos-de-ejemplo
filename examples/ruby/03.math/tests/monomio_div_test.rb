@@ -16,23 +16,23 @@ class MonomioDivTest < Minitest::Test
     m = @m[0]
     r = m[0] / m[1]
     assert_equal '-5', r.to_s
-    r = m[2] / m[0]
+    r = m[2] / m[2]
     assert_equal '1', r.to_s
   end
 
-  def test_m1_mul
-    m = @m[2]
-    r = m[0] / m[1]
-    assert_equal '-3x', r.to_s
-    r = m[2] / m[0]
-    assert_equal '1', r.to_s
-  end
-
-  def test_m2_mul
+  def test_m1_div
     m = @m[1]
     r = m[0] / m[1]
+    assert_equal '-3x', r.to_s
+    r = m[2] / m[2]
+    assert_equal '1', r.to_s
+  end
+
+  def test_m2_div
+    m = @m[2]
+    r = m[0] / m[1]
     assert_equal '-7', r.to_s
-    r = m[2] / m[0]
+    r = m[2] / m[2]
     assert_equal '1', r.to_s
   end
 end

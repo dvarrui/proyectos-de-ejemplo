@@ -23,7 +23,6 @@ class Monomio
       part2 = ''
     end
 
-    require 'pry-byebug'; binding.pry
     part1 + part2
   end
 
