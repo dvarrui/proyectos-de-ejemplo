@@ -52,5 +52,9 @@ class Polinomio
     true
   end
 
+  def simplify
+    temp = {}
+    @data
+  end
 
 end

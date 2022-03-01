@@ -14,6 +14,14 @@ class Monomio
     @data[:xexp]
   end
 
+  def to_a
+    [ value, xexp]
+  end
+
+  def to_h
+    { value => xexp }
+  end
+  
   def to_s(mode=:default)
     return to_s_vector if mode == :vector
     return to_s_simple if mode == :simple
