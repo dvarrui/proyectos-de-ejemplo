@@ -15,14 +15,15 @@ class Monomio
     end
 
     part1 = "#{@value}"
-    part1 = "-" if @value.abs == 1
+    part1 = "" if @value == 1
+    part1 = "1" if @value == 1 and part2 == ''
+    part1 = "-" if @value == -1
     if @value.zero?
       part1 = ''
       part2 = ''
     end
 
-    #require 'pry-byebug'; binding.pry
-
+    require 'pry-byebug'; binding.pry
     part1 + part2
   end
 
@@ -38,6 +39,21 @@ class Monomio
     unless @xexp == monomio.xexp
       raise '[FAIL] Los monomios no tienen igual exponente de x'
     end
+    value = @value - monomio.value
     Monomio.new(value, @xexp)
+  end
+
+  def *(monomio)
+#    require 'pry-byebug'; binding.pry
+    value = @value * monomio.value
+    xexp = @xexp + monomio.xexp
+    Monomio.new(value, xexp)
+  end
+
+  def /(monomio)
+#    require 'pry-byebug'; binding.pry
+    value = @value / monomio.value
+    xexp = @xexp - monomio.xexp
+    Monomio.new(value, xexp)
   end
 end
