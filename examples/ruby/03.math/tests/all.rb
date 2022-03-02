@@ -2,7 +2,7 @@
 
 require 'minitest/autorun'
 
-require_relative 'monomio_default_string_test'
+require_relative 'monomio_to_s_test'
 require_relative 'monomio_array_test'
 require_relative 'monomio_hash_test'
 
