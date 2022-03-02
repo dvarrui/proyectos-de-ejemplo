@@ -2,7 +2,6 @@
 # Usage: rake
 
 require_relative 'tasks/install'
-require_relative 'tasks/build'
 
 # Define tasks
 desc 'Default action => check'

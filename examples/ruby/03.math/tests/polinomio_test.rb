@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'minitest/autorun'
-require_relative '../lib/polinomio'
+require_relative '../lib/math/polinomio'
 
 class PoliomioTest < Minitest::Test
   def setup
