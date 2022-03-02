@@ -1,17 +1,16 @@
-# frozen_string_literal: true
 
 require_relative 'utils'
-require_relative '../lib/version'
+require_relative '../lib/math/version'
 
 namespace :install do
   desc 'Check installation'
   task :check do
-    puts "[ INFO ] #{Version::NAME} version => #{Version::VERSION}"
+    puts "[INFO] #{Version::NAME} version => #{Version::VERSION}"
     fails = Utils.filter_uninstalled_gems(Utils.packages)
     if fails.size.zero?
-      puts '[  OK  ] Gems installed OK!'
+      puts '[ OK ] Gems installed OK!'
     else
-      puts '[ FAIL ] Gems not installed!: ' + fails.join(',')
+      puts '[FAIL] Gems not installed!: ' + fails.join(',')
     end
     testfile = File.join('.', 'tests', 'all.rb')
     a = File.read(testfile).split("\n")
@@ -19,11 +18,11 @@ namespace :install do
     c = Dir.glob(File.join('.', 'tests', '**', '*_test.rb'))
 
     if b.size == c.size
-      puts "[  OK  ] All test files included into #{testfile}"
+      puts "[ OK ] All test files included into #{testfile}"
     else
-      puts "[ FAIL ] Some ruby tests are not executed by #{testfile}"
+      puts "[FAIL] Some ruby tests are not executed by #{testfile}"
     end
-    puts "[ INFO ] Running #{testfile}"
+    puts "[INFO] Running #{testfile}"
     system(testfile)
   end
 

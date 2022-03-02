@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 
 ##
 # Module Utils with functions used by task/install.rb
