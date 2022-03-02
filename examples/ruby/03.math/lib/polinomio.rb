@@ -1,40 +1,47 @@
 
+require_relative 'monomio'
+
 class Polinomio
   attr_accessor :monomios
 
-  def initialize(monomios = {})
-    @monomios = monomios
-    ensure_input
+  def initialize(monomios = [])
+    @monomios = prepare_input monomios
+  end
+
+  def to_h
+    @monomios
   end
 
   def to_s(mode=:default)
     output = ''
-    @monomios.each do |monomio|
-      output += monomio.to_s(mode)
+    @monomios.each_value do |mono|
+      output += mono.to_s(mode)
     end
     output
   end
 
   def +(polinomio)
-    unless @xexp == monomio.xexp
-      raise '[FAIL] Los monomios no tienen igual exponente de x'
+    result = {}
+    polinomio.to_h.each_pair do |key, monomio|
+      result[:key] = @monomios[key] + monomio
     end
-    value = @value + monomio.value
-    Monomio.new(value, @xexp)
+    Polinomio.new(polinomio)
   end
 
-  def -(monomio)
-    unless @xexp == monomio.xexp
-      raise '[FAIL] Los monomios no tienen igual exponente de x'
+  def -(polinomio)
+    result = {}
+    polinomio.to_h.each_pair do |key, monomio|
+      result[:key] = @monomios[key] - monomio
     end
-    value = @value - monomio.value
-    Monomio.new(value, @xexp)
+    Polinomio.new(polinomio)
   end
 
   def *(monomio)
-    value = @value * monomio.value
-    xexp = @xexp + monomio.xexp
-    Monomio.new(value, xexp)
+    result = {}
+    polinomio.each_pair do |key, monomio|
+      result[:key] = @monomios[key] - monomio
+    end
+    Polinomio.new(polinomio)
   end
 
   def /(monomio)
@@ -45,16 +52,18 @@ class Polinomio
 
   private
 
-  def ensure_input
-    @monomios.each do |monomio|
+  def prepare_input(monomios)
+    output = {}
+    monomios.each do |monomio|
       raise '[ERROR] Entrada incorrecta al polinomio' unless monomio.class == Monomio
+      key = monomio.xexp
+      value = monomio
+      if output[key].nil?
+        output[key] = monomio
+      else
+        output[key] = output[key] + monomio
+      end
     end
-    true
+    output
   end
-
-  def simplify
-    temp = {}
-    @data
-  end
-
 end
