@@ -68,7 +68,8 @@ class Monomio
     part1 = "#{value}"
     part1 = "" if value == 1
     part1 = "1" if value == 1 and part2 == ''
-    part1 = "-" if value == -1
+    part1 = "-1" if value == -1 and part2 == ''
+    part1 = "-" if value == -1 and part2 != ''
     part1 = '+' + part1 if value > 0
     if value.zero?
       part1 = ''

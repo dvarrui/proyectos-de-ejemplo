@@ -9,7 +9,10 @@ class Polinomio
   end
 
   def to_h
-    @monomios
+    result = {}
+    @monomios.each_pair { |key,monomio| result[key]=monomio.value }
+    #require 'pry-byebug'; binding.pry
+    result
   end
 
   def to_s(mode=:default)

@@ -12,6 +12,11 @@ class MonomioDefaultStringTest < Minitest::Test
     @m << [ Monomio.new(8, 3), Monomio.new(-4, 3), Monomio.new(0, 3) ]
   end
 
+  def test_m_neg_1
+    m = Monomio.new(-1,0)
+    assert_equal "-1", m.to_s
+  end
+
   def test_m0_to_s
     m = @m[0]
     assert_equal "+5", m[0].to_s
