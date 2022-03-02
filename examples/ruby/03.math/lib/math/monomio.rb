@@ -43,6 +43,10 @@ class Monomio
     part1 + part2
   end
 
+  def to_pol
+    p = Polinomio.new( [self])
+  end
+
   def +(monomio)
     unless xexp == monomio.xexp
       raise '[FAIL] Los monomios no tienen igual exponente de x'
