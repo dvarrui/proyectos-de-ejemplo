@@ -15,10 +15,10 @@ class Polinomio
     result
   end
 
-  def to_s(mode=:default)
+  def to_s
     output = ''
     @monomios.each_value do |mono|
-      output += mono.to_s(mode)
+      output += mono.to_s
     end
     output
   end
