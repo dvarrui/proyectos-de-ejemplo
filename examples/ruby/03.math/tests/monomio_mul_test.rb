@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'minitest/autorun'
-require_relative '../lib/monomio'
+require_relative '../lib/math/monomio'
 
 class MonomioMulTest < Minitest::Test
   def setup

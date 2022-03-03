@@ -1,10 +1,9 @@
-# frozen_string_literal: true
 
 ##
 # Module Utils with functions used by task/install.rb
 module Utils
   def self.packages
-    %w[haml colorize pry-byebug]
+    %w[colorize pry-byebug]
   end
 
   def self.filter_uninstalled_gems(list)
