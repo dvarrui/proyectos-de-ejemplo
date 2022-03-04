@@ -28,4 +28,8 @@ class Monomio
     xexp = monomio_array[1]
     to_s(value, xexp)
   end
+
+  def self.puts(monomio)
+    STDOUT.puts monomio.to_s
+  end
 end
