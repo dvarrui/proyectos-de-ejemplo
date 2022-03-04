@@ -14,22 +14,39 @@ Monomio.puts mon1c
 
 puts "[info] Polinomios"
 pol1a = [ [3,2], [-5,0] ]
-Polinomio.puts pol1a.to_s
 pol1b =  Polinomio.array_to_s(pol1a)
 Polinomio.puts pol1b
 puts "-"
 pol2a = { 2 => 3, 1 => -4, 0 => -1 }
-Polinomio.puts pol2a
 pol2b = Polinomio.hash_to_a pol2a
 Polinomio.puts pol2b
 Polinomio.puts( Polinomio.array_to_s(pol2b))
 puts "-"
 
 pol3a = { 2 => -4, 1 => 0, 0 => 3 }
-Polinomio.puts pol3a
 pol3b = Polinomio.hash_to_a pol3a
-Polinomio.puts pol3b
 Polinomio.puts( Polinomio.array_to_s(pol3b))
 
-#puts p
-#puts p.to_h
+puts '-'
+pol4h = { 2 => 1, 1 => 0, 0 => 2 }
+pol5h = { 2 => 1, 1 => 0, 0 => -2 }
+
+Polinomio.puts_h_to_s pol4h
+Polinomio.puts_h_to_s pol5h
+
+puts "Suma"
+sum = Polinomio.add(pol4h, pol5h)
+Polinomio.puts_h_to_s sum
+
+puts "Resta"
+del = Polinomio.del(pol4h, pol5h)
+Polinomio.puts_h_to_s del
+
+puts "Mul"
+pol1h = { 2 => 2, 1 => 0, 0 => 2 }
+pol2h = { 2 => 0, 1 => 3, 0 => -1 }
+mul = Polinomio.mul(pol1h, pol2h)
+
+Polinomio.puts_h_to_s pol1h
+Polinomio.puts_h_to_s pol2h
+Polinomio.puts_h_to_s mul
