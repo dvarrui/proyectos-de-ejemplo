@@ -1,5 +1,4 @@
 
-
 class Panel
   attr_reader :data
 

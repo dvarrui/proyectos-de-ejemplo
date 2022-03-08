@@ -2,6 +2,7 @@
 
 require_relative 'panel'
 require_relative 'pretty'
+require_relative 'pretty_color'
 
 max = 20
 max.times do |index|
@@ -12,7 +13,7 @@ max.times do |index|
   panel = Panel.new
   panel.random_fill
   panel.calculate_sum
-  Pretty.print panel
+  PrettyColor.print panel
 
   puts ""
   panel.put_holes
