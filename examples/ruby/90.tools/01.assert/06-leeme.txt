@@ -1,4 +1,0 @@
-# module Test::Unit::Assertions 
-# assert(false, "This was expected to be true")
-# assert_not_same("x", "x") #Succeeds
-
