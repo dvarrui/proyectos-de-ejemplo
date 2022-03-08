@@ -3,7 +3,7 @@ require_relative 'panel'
 require_relative 'pretty'
 require_relative 'pretty_color'
 
-class Game
+class NumericBlock
 
   def self.create(max)
     max.times do |index|

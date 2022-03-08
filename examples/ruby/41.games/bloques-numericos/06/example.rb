@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require_relative 'game'
+require_relative 'numeric-block'
 
-Game.create(4)
+NumericBlock.create(4)
