@@ -33,5 +33,30 @@ class ApplyTest < Minitest::Test
   end
 
   def test_evaluate
+    combi = Combination.new(6, 8, 2)
+
+    combi2 = Combination.new(0, 0, 0)
+    result = { included: 0, in_position: 0 }
+    assert_equal result, Apply.evaluate(combi, combi2)
+
+    combi2 = Combination.new(0, 2, 0)
+    result = { included: 1, in_position: 0 }
+    assert_equal result, Apply.evaluate(combi, combi2)
+
+    combi2 = Combination.new(0, 8, 6)
+    result = { included: 2, in_position: 1 }
+    assert_equal result, Apply.evaluate(combi, combi2)
+
+    combi2 = Combination.new(6, 8, 0)
+    result = { included: 2, in_position: 2 }
+    assert_equal result, Apply.evaluate(combi, combi2)
+
+    combi2 = Combination.new(6, 8, 2)
+    result = { included: 3, in_position: 3 }
+    assert_equal result, Apply.evaluate(combi, combi2)
+
+    combi2 = Combination.new(6, 2, 8)
+    result = { included: 3, in_position: 1 }
+    assert_equal result, Apply.evaluate(combi, combi2)
   end
 end

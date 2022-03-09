@@ -2,7 +2,7 @@
 class Apply
 
   def self.evaluate(combination1, combination2)
-    included = evalute_included(combination1, combination2)
+    included = evaluate_included(combination1, combination2)
     in_position = evaluate_in_position(combination1, combination2)
     { included: included, in_position: in_position }
   end
