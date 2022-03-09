@@ -12,7 +12,7 @@ class Apply
 
     digit0 = combination2.value[0]
     digit1 = combination2.value[1]
-    digit2 = combination1.value[2]
+    digit2 = combination2.value[2]
 
     included +=1 if combination1.value.include? digit0
     included +=1 if combination1.value.include? digit1
