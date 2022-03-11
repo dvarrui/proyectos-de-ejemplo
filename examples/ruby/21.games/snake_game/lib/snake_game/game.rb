@@ -7,7 +7,9 @@ class Game
 
   def initialize
     @window = TermWindow.new
+    # Create Snake with coordenates of every slide (3 slides at beginning)
     @snake = Snake.new([[4,10], [4,9], [4,8]])
+    # TODO: It could be interesting... play with several players (snakes)
   end
 
   def create
@@ -16,11 +18,12 @@ class Game
     Curses.noecho
     Curses.curs_set(INVISIBLE_CURSOR)
 
-    run
+    play_loop
   end
 
   private
-  def run
+
+  def play_loop
     key = Curses::KEY_RIGHT
     score = 0
 
@@ -40,6 +43,7 @@ class Game
 
       key = prev_key unless [Curses::KEY_DOWN, Curses::KEY_UP, Curses::KEY_RIGHT, Curses::KEY_LEFT, 27].include?(key)
 
+      # TODO: It could be interesting... play using Joystick instead of keyboard
       case key
       when Curses::KEY_DOWN
         @snake.insert(0, [@snake[0][0], @snake[0][1] + 1])
@@ -73,7 +77,7 @@ class Game
 
       window.paint_snake(@snake)
     end
-    
+
     window.close
     Curses.close_screen
 
