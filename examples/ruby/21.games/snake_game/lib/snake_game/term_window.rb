@@ -1,7 +1,7 @@
 require 'curses'
 
 class TermWindow < Curses::Window
-  DEFAULT_WIDTH = 100
+  DEFAULT_WIDTH = 80
   DEFAULT_HEIGHT = 20
 
   attr_accessor :width, :height

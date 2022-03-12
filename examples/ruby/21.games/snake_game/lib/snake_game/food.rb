@@ -22,6 +22,7 @@ class Food
     end
   end
 
+  private   
   def generate_random_x
     Random.rand(1..@window.width - 2)
   end
