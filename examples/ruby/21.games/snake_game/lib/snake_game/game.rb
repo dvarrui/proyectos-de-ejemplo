@@ -1,4 +1,5 @@
 require 'curses'
+require_relative 'draw'
 
 class Game
   INVISIBLE_CURSOR = 0
@@ -29,12 +30,12 @@ class Game
 
     food = Food.new(window)
     food.relocate_without_conflict!(@snake)
-
     window.paint_food(food)
 
+    draw = Draw.new(window)
     while (key != 27)
-      window.setpos(0, (window.width / 2) - 10)
-      window.addstr(" Score: #{score.to_s} ")
+      draw.text_at(" SnakeGame ", 0, 5)
+      draw.text_at(" Score: #{score.to_s} ", 0, window.width - 15)
       window.timeout = 150
 
       prev_key = key

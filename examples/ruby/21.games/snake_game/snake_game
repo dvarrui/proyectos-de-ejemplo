@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+./bin/snake_game
