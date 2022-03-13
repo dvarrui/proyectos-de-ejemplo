@@ -1,5 +1,6 @@
 require 'curses'
 require_relative 'draw'
+require_relative 'input'
 
 class Game
   INVISIBLE_CURSOR = 0
@@ -25,7 +26,6 @@ class Game
   private
 
   def play_loop
-    key = Curses::KEY_RIGHT
     score = 0
 
     food = Food.new(window)
@@ -33,18 +33,23 @@ class Game
     window.paint_food(food)
 
     draw = Draw.new(window)
+    #input = Input.new(window)
+    #key = window.getch()
+    key = Curses::KEY_RIGHT
     while (key != 27)
       draw.text_at(" SnakeGame ", 0, 5)
       draw.text_at(" Score: #{score.to_s} ", 0, window.width - 15)
       window.timeout = 150
 
+    #  key = input.get
       prev_key = key
       event = window.getch()
       key = event == -1 ? key : event
 
-      key = prev_key unless [Curses::KEY_DOWN, Curses::KEY_UP, Curses::KEY_RIGHT, Curses::KEY_LEFT, 27].include?(key)
-
       # TODO: It could be interesting... play using Joystick instead of keyboard
+      key = prev_key unless [Curses::KEY_DOWN, Curses::KEY_UP, Curses::KEY_RIGHT, Curses::KEY_LEFT, 27].include?(key)
+      #@key = key
+
       case key
       when Curses::KEY_DOWN
         @snake.insert(0, [@snake[0][0], @snake[0][1] + 1])
@@ -61,7 +66,7 @@ class Game
       @snake[0][0] = 1 if @snake[0][0] == window.width - 1
       @snake[0][1] = 1 if @snake[0][1] == window.height - 1
 
-      if snake.crashed?
+      if @snake.crashed?
         break
       end
 
