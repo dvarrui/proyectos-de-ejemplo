@@ -12,6 +12,8 @@ class Game
     # Create Snake with coordenates of every slide (3 slides at beginning)
     @snake = Snake.new([[4,10], [4,9], [4,8]])
     # TODO: It could be interesting... play with several players (snakes)
+    @input = Input.new(window)
+    @draw = Draw.new(window)
   end
 
   def create
@@ -32,23 +34,12 @@ class Game
     food.relocate_without_conflict!(@snake)
     window.paint_food(food)
 
-    draw = Draw.new(window)
-    #input = Input.new(window)
-    #key = window.getch()
-    key = Curses::KEY_RIGHT
+    key = @input.key
     while (key != 27)
-      draw.text_at(" SnakeGame ", 0, 5)
-      draw.text_at(" Score: #{score.to_s} ", 0, window.width - 15)
+      @draw.text_at(" SnakeGame ", 0, 5)
+      @draw.text_at(" Score: #{score.to_s} ", 0, window.width - 15)
       window.timeout = 150
-
-    #  key = input.get
-      prev_key = key
-      event = window.getch()
-      key = event == -1 ? key : event
-
-      # TODO: It could be interesting... play using Joystick instead of keyboard
-      key = prev_key unless [Curses::KEY_DOWN, Curses::KEY_UP, Curses::KEY_RIGHT, Curses::KEY_LEFT, 27].include?(key)
-      #@key = key
+      key = @input.update
 
       case key
       when Curses::KEY_DOWN

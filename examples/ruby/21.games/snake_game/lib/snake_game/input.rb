@@ -11,14 +11,17 @@ class Input
     @key == 27
   end
 
-  def get
-    key = @key
+  def update
+    prev_key = @key
     event = @window.getch()
-    key = event == -1 ? key : event
+    @key = event == -1 ? @key : event
 
     # TODO: It could be interesting... play using Joystick instead of keyboard
-    key = @key unless [Curses::KEY_DOWN, Curses::KEY_UP, Curses::KEY_RIGHT, Curses::KEY_LEFT, 27].include?(key)
-    @key = key
-    @key.dup
+    @key = prev_key unless [Curses::KEY_DOWN,
+                            Curses::KEY_UP,
+                            Curses::KEY_RIGHT,
+                            Curses::KEY_LEFT,
+                            27].include?(@key)
+    @key
   end
 end
