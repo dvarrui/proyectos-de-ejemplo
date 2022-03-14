@@ -1,33 +1,21 @@
-require 'curses'
-require_relative 'draw'
+require_relative 'output'
 require_relative 'input'
 
 class Game
-  INVISIBLE_CURSOR = 0
-
   attr_reader :window, :snake
 
   def initialize
-    @window = TermWindow.new
+    @window = TermWindow.new(20, 60)
+
     # Create Snake with coordenates of every slide (3 slides at beginning)
-    @snake = Snake.new([[4,10], [4,9], [4,8]])
     # TODO: It could be interesting... play with several players (snakes)
+    @snake = Snake.new([[4,10], [4,9], [4,8]])
     @input = Input.new(window)
-    @draw = Draw.new(window)
+    Output.init
+    @output = Output.new(window)
   end
 
-  def create
-    Curses.init_screen()
-    Curses.cbreak()
-    Curses.noecho
-    Curses.curs_set(INVISIBLE_CURSOR)
-
-    play_loop
-  end
-
-  private
-
-  def play_loop
+  def play
     score = 0
 
     food = Food.new(window)
@@ -36,11 +24,11 @@ class Game
 
     key = @input.key
     while (key != 27)
-      @draw.text_at(" SnakeGame ", 0, 5)
-      @draw.text_at(" Score: #{score.to_s} ", 0, window.width - 15)
+      @output.print_at(" SnakeGame - (Press ESC to exit) ", 0, 5)
+      @output.print_at(" Score: #{score.to_s} ", 0, window.width - 15)
       window.timeout = 150
-      key = @input.update
 
+      key = @input.update
       case key
       when Curses::KEY_DOWN
         @snake.insert(0, [@snake[0][0], @snake[0][1] + 1])
@@ -68,17 +56,24 @@ class Game
         window.paint_food(food)
       else
         last_part = @snake.pop
-        window.setpos(last_part[1], last_part[0])
-        window.addstr(' ')
+        @output.print_at(' ', last_part[1], last_part[0])
       end
 
       window.paint_snake(@snake)
     end
 
     window.close
-    Curses.close_screen
+    Output.close
 
     puts("----- GAME OVER -----")
     puts("----- Score: #{score} -----")
+  end
+
+  private
+
+  def render
+  end
+
+  def update
   end
 end
