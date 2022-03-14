@@ -1,9 +1,12 @@
+
+require 'pry'
+
 class Food
   attr_accessor :window, :points, :symbol, :x, :y
 
   DEFAULT_SYMBOL = "*"
 
-  def initialize(window, x = nil, y = nil)
+  def initialize(window, x = 10, y = 4)
     @window = window
     @x = x || generate_random_x
     @y = y || generate_random_y
@@ -12,17 +15,19 @@ class Food
   end
 
   def has_been_eaten_by?(snake)
-    snake[0][0] == @x && snake[0][1] == @y
+    #binding.pry
+    snake[0][0] == x && snake[0][1] == y
   end
 
   def relocate_without_conflict!(snake)
-    if snake.include? [@x, @y]
-      @x = generate_random_x
-      @y = generate_random_y
+    if snake.include? [x, y]
+      x = generate_random_x
+      y = generate_random_y
     end
   end
 
-  private   
+  private
+
   def generate_random_x
     Random.rand(1..@window.width - 2)
   end

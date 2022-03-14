@@ -1,9 +1,11 @@
-require "snake_game/version"
+require_relative "snake_game/version"
 
 module SnakeGame
-  require 'snake_game/food'
-  require 'snake_game/snake'
-  require 'snake_game/term_window'
-  require 'snake_game/game'
-end
+  require_relative 'snake_game/input'
+  require_relative 'snake_game/output'
 
+  require_relative 'snake_game/game'
+  require_relative 'snake_game/food'
+  require_relative 'snake_game/snake'
+  require_relative 'snake_game/term_window'
+end

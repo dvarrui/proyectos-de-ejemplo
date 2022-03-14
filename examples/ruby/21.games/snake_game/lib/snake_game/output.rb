@@ -3,16 +3,19 @@ require 'curses'
 class Output
   INVISIBLE_CURSOR = 0
 
-  def initialize(window)
+  def initialize(window, debug = false)
     @window = window
+    @debug = debug
   end
 
   def print_at(text, x, y)
+    return if @debug
     @window.setpos(x, y)
     @window.addstr(text.to_s)
   end
 
   def self.init
+    return if @debug
     Curses.init_screen()
     Curses.cbreak()
     Curses.noecho
@@ -20,6 +23,7 @@ class Output
   end
 
   def self.close
+    return if @debug
     Curses.close_screen
   end
 end
