@@ -60,12 +60,7 @@ class Game
         @output.print_at(' ', last_part[1], last_part[0])
       end
     end
-
-    window.close
-    Output.close
-
-    puts("----- GAME OVER -----")
-    puts("----- Score: #{score} -----")
+    gameover
   end
 
   private
@@ -82,5 +77,13 @@ class Game
   end
 
   def update
+  end
+
+  def gameover
+    @window.close
+    Output.close
+
+    puts("----- GAME OVER -----")
+    puts("----- Score: #{@global[:score]} -----")
   end
 end
