@@ -1,4 +1,3 @@
-require 'curses'
 
 class Output
   INVISIBLE_CURSOR = 0
@@ -6,6 +5,7 @@ class Output
   def initialize(window, debug = false)
     @window = window
     @debug = debug
+    require 'curses' unless @debug
   end
 
   def print_at(text, x, y)

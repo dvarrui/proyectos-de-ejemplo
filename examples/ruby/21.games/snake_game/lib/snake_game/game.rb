@@ -54,6 +54,7 @@ class Game
         score += food.points
         food = Food.new(window)
         food.relocate_without_conflict!(snake)
+        @global[:food] = food
       else
         last_part = snake.pop
         @output.print_at(' ', last_part[1], last_part[0])

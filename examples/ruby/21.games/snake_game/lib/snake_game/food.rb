@@ -6,7 +6,7 @@ class Food
 
   DEFAULT_SYMBOL = "*"
 
-  def initialize(window, x = 10, y = 4)
+  def initialize(window, x = nil, y = nil)
     @window = window
     @x = x || generate_random_x
     @y = y || generate_random_y
