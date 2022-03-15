@@ -7,8 +7,8 @@ El contenido se organiza del siguiente modo:
 
 | Carpeta              | Contenido |
 | -------------------- | --------- |
-| [Ejemplos Ruby](./examples/ruby) | Ejemplos y miniproyectos realizados con Ruby |
-| [Ejemplos otros](./examples) | Ejemplos y miniproyectos realizados con otros lenguajes |
+| [examples/ruby](./examples/ruby) | Ejemplos y miniproyectos realizados con Ruby |
+| [examples](./examples) | Ejemplos y miniproyectos realizados con otros lenguajes |
 | [charlas](./charlas) | Charlas sobre diversos temas |
 | [comparativa](./comparativa) | Análisis comparativo de lenguajes de programación |
 
