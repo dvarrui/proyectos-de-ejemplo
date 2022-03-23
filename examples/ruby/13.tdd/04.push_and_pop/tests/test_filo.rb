@@ -23,11 +23,19 @@ class FiloTest < Test::Unit::TestCase
     assert_equal 2, filo.size
   end
 
-  def test_push_and_pop_then_size_0
+  def test_push_1_and_pop_1_then_size_0
     filo = Filo.new
     filo.push(1)
     filo.pop
     assert_equal 0, filo.size
   end
 
+  def test_push_2_and_pop_2_then_size_0
+    filo = Filo.new
+    filo.push(1)
+    filo.pop
+    filo.push(2)
+    filo.pop
+    assert_equal 0, filo.size
+  end
 end
