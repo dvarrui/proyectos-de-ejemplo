@@ -38,4 +38,10 @@ class FiloTest < Test::Unit::TestCase
     filo.pop
     assert_equal 0, filo.size
   end
+
+  def test_push_element_and_pop_element
+    filo = Filo.new
+    filo.push(42)
+    assert_equal 42, filo.pop
+  end
 end

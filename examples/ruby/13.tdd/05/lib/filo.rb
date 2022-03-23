@@ -1,20 +1,23 @@
 
 class Filo
-  attr_reader :size
 
   def initialize
-    @size = 0
+    @elements = []
+  end
+
+  def size
+    @elements.size
   end
 
   def empty?
-    true
+    @elements.size.zero?
   end
 
   def push(element)
-    @size += 1
+    @elements << element
   end
 
   def pop
-    @size -= 1
+    @elements.pop
   end
 end
