@@ -3,7 +3,7 @@
 require 'test/unit'
 require_relative '../lib/filo'
 
-class FiloTest < Test::Unit::TestCase
+class FiloSizeTest < Test::Unit::TestCase
 
   def test_new_filo_is_empty
     filo = Filo.new
@@ -39,9 +39,4 @@ class FiloTest < Test::Unit::TestCase
     assert_equal 0, filo.size
   end
 
-  def test_push_element_and_pop_element
-    filo = Filo.new
-    filo.push(42)
-    assert_equal 42, filo.pop
-  end
 end
