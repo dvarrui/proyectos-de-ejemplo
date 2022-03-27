@@ -26,20 +26,22 @@ class FiloPopTest < Test::Unit::TestCase
     assert_equal nil, filo.pop
   end
 
-  def test_push_10_elements_and_pop_10_elements
-    filo = Filo.new
-    ('a'..'i').each { |item| filo.push(item) }
-    p filo
-    assert_equal 'a', filo.pop
-    filo.pop
-    filo.pop
-    filo.pop
-    filo.pop
-    filo.pop
-    assert_equal 'g', filo.pop
-    filo.pop
-    assert_equal 'i', filo.pop
+  def test_filo_size_4_then_push_4_and_pop_4
+    filo = Filo.new(4)
+    (1..4).each { |item| filo.push(item) }
+    assert_equal 1, filo.pop
+    assert_equal 2, filo.pop
+    assert_equal 3, filo.pop
+    assert_equal 4, filo.pop
     assert_equal nil, filo.pop
-    p filo
+  end
+
+  def test_filo_size_5_then_push_6
+    filo = Filo.new(5)
+    (1..5).each { |item| filo.push(item) }
+    assert_raise do
+      filo.push(6)
+    end
+    assert_equal 5, filo.size
   end
 end
