@@ -18,7 +18,7 @@ class Filo
   def push(element)
     @elements[@push_index] = element
     @push_index += 1
-    @push_index = 0 if @push_index > @elements.size
+    @push_index = 0 if @push_index > (@elements.size - 1)
   end
 
   def pop
@@ -26,7 +26,7 @@ class Filo
     # require 'debug'; binding.break
     output = @elements[@pop_index]
     @pop_index += 1
-    @pop_index = 0 if @pop_index > @elements.size
+    @pop_index = 0 if @pop_index > (@elements.size - 1)
     output
   end
 end

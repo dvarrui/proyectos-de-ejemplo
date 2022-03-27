@@ -10,7 +10,7 @@ URL   :
 
 # 1. Presentation
 
-**Who** are us?
+**Who** are we?
 * We are computer engineers.
 * We teach IT in the Canary Islands (iespto.es)
 
@@ -31,7 +31,6 @@ And there is no need to correct quizzes! But also with Asker...
 ```
 We dont need to create questions!
 (Leitmotiv)
-
 ```
 
 **Where** is useful?
@@ -39,9 +38,7 @@ We dont need to create questions!
 * The aim is to improve the quality of life of the teacher.
 
 ---
-
 _If teachers are happy, they will be more productive and as result... the students will learn better._
-
 ---
 
 # 2. Installation
@@ -98,9 +95,9 @@ Creating a basic asker input.
 * Concept: defs
 
 **Improving inputs**
-* More HAML files into the same folder
 * Concept: tables and rows
 * Concept: def with files
+* More HAML files into the same folder
 
 # 7. Future
 
