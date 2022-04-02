@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-numbers = [ 4, -2, 0, 1, -4, -1, 2, 7, -7 ]
+numbers = [ 4, -2, 0, 1, -5, -1, 2, -7 ]
 
 def group1_with(elements)
   puts "[INFO] Using group1"
@@ -26,9 +26,15 @@ def group2_with(elements)
   return data[:negatives], data[:zeros], data[:positives] 
 end
 
-n, z, p = group2_with numbers
+def group3_with(elements)
+  puts "[INFO] Using group3"
+  data = elements.map { _1 <=> 0 }
+  return data.count(-1), data.count(0), data.count(1)
+end
+
+n, z, p = group3_with numbers
 
 puts " Numbers   : #{numbers}"
-puts " Negatives : #{n.sort}"
+puts " Negatives : #{n}"
 puts " Zeros     : #{z}"
-puts " Positives : #{p.sort}"
+puts " Positives : #{p}"
