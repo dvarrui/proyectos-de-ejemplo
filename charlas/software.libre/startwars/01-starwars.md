@@ -1,41 +1,35 @@
-[<< back](README.md) | [HOME](README.md) | [next >>](02-starwars.md)
+
 
 # Episodio 00000100b: Una Nueva Esperanza
 
-_"Hace mucho tiempo en una plataforma muy, muy lejana..."_
+_"Hace mucho tiempo en una plataforma muy, muy remota..."_
 
-logo
+![](images/01-starwars.png)
 
 ```
 Nos encontramos en un
 periodo de revueltas. Las
-aplicaciones rebeldes,
+aplicaciones hacker,
 se instalan desde repositorios
 libres, han logrado su
 primera victoria contra
-el malvado "Vendor-Locking".
+el malvado "Darth Vendor-Locking".
 
 Mediante ingeniería inversa, los
-programadores libres han
-conseguido conocer los protocolos
-ocultos de "Darth Vendor Locking".
+programadores hacker han
+conseguido descifrar los protocolos
+de "Darth Vendor-Locking".
 
-Perseguida por los
-siniestros agentes del copyright,
-la developer "Adha Samme" trata
+Perseguida por los siniestros
+agentes del copyright,
+la developer "Adha Lhower" trata
 de conectarse en remoto a su servidor,
 usando SSH, para copiar la información
-conseguida que puede salvar a su pueblo
-y devolver la libertad a las plataformas
+descifrada, que puede salvar su plataforma
+y devolver la libertad al software
 de toda Internet.
 ```
 
-> ¡Si! Lo admito. Esto es una frikada.
+> ¡Si! Lo admito. Esto es una _frikada_.
 
-Razonamiento:
-
-* Starwars es ciencia ficción.
-* Tienen tecnología... más avanzada que la nuestra.
-* Por tanto hay: hardware y software.
-
-La pregunta es: _¿Cómo es ese software?_
+[next >>](02-starwars.md)
