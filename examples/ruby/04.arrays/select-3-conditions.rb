@@ -13,10 +13,14 @@ end
 def group2_with(elements)
   puts "[INFO] Using group2"
   data = { zeros: [], positives: [], negatives: [] }
-  elements.each do |element|
-    data[:zeros] << element if element.zero?
-    data[:positives] << element if element.positive?
-    data[:negatives] << element if element.negative?
+  for element in elements
+    if element == 0
+      data[:zeros] << element 
+    elsif element > 0  
+      data[:positives] << element
+    else
+      data[:negatives] << element
+    end
   end
 
   return data[:negatives], data[:zeros], data[:positives] 
