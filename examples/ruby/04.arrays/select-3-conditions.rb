@@ -27,10 +27,12 @@ def group2_with(elements)
 end
 
 def group3_with(elements)
-  puts "[INFO] Using group3"
-  data = elements.map { _1 <=> 0 }
-  return data.count(-1), data.count(0), data.count(1)
+  puts "[INFO] Using group4"
+  data = { -1 => [], 0 => [], 1 => [] }
+  elements.each { data[_1 <=> 0] << _1 }
+  return data[-1], data[0], data[1]
 end
+
 
 n, z, p = group3_with numbers
 
