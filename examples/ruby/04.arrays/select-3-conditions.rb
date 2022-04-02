@@ -15,15 +15,15 @@ def group2_with(elements)
   data = { zeros: [], positives: [], negatives: [] }
   for element in elements
     if element == 0
-      data[:zeros] << element 
-    elsif element > 0  
+      data[:zeros] << element
+    elsif element > 0
       data[:positives] << element
     else
       data[:negatives] << element
     end
   end
 
-  return data[:negatives], data[:zeros], data[:positives] 
+  return data[:negatives], data[:zeros], data[:positives]
 end
 
 def group3_with(elements)
@@ -32,7 +32,6 @@ def group3_with(elements)
   elements.each { data[_1 <=> 0] << _1 }
   return data[-1], data[0], data[1]
 end
-
 
 n, z, p = group3_with numbers
 
