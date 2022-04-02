@@ -1,19 +1,21 @@
+#!/usr/bin/env ruby
 
-quux = proc {
-    print "QUUXQUUXQUUX!!!\n"
+puts "==== fase 1 ===="
+
+saludar = proc {
+  puts "Hola!"
 }
 
-print quux
-print "\n"
+puts "[INFO] #{saludar}"
+saludar.call
 
-quux.call
-print "\n"
+puts "\n==== fase 2 ===="
 
-def run ( p )
-    print "Vamos a llamar a un procedimiento ... \n"
-    p.call
-    print "Finalizado. \n"
+def run (p)
+  puts "[INFO] Vamos a llamar a un procedimiento ..."
+  p.call
+  puts "[INFO] Finalizado."
 end
 
-run(quux)
+run(saludar)
 
