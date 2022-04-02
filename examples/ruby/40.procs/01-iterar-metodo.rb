@@ -1,7 +1,7 @@
 #!/usr/bin/ruby
 
 def test(&block)
-   block.call
+  block.call
 end
 
 puts "SCRIPTNAME : #{$0}"

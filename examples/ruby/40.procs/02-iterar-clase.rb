@@ -5,10 +5,10 @@ class MyIterator
     @times = times
   end
 
-  def each(&block)
+  def each(block)
     i = 0
     while(i<@times)
-      puts "[#{i}] Executing block"
+      print "[#{i}] Executing block => "
       block.call
       i += 1
     end
@@ -16,5 +16,6 @@ class MyIterator
 end
 
 puts "SCRIPTNAME : #{$0}"
+p = Proc.new{ puts "I love Ruby!" }
 i = MyIterator.new(3)
-i.each { puts "I love Ruby!"  }
+i.each(p)

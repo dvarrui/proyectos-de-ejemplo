@@ -8,7 +8,7 @@ class MyIterator
   def each
     i = 0
     while(i<@times)
-      puts "[#{i}] Executing block"
+      print "[#{i}] Executing block => "
       yield
       i += 1
     end
