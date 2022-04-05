@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
-require_relative 'parafun-04-lib'
+
+require_relative 'lib/04-include_name_of.rb'
 
 obiwan = { name: 'Obiwan', type: 'jedi' }
 maul   = { name: 'Maul',   type: 'sith' }
