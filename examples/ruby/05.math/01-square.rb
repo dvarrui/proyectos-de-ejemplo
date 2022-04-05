@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative '01-square-lib'
+require_relative 'lib/01-square-lib'
 
 1.upto(10).each do |i|
   puts format(" Number: %02d",i) +
