@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative '02-nubex-lib'
+require_relative 'lib/02-nubex-lib'
 
 a = [ 90, 165, 244]
 
