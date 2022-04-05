@@ -1,25 +1,27 @@
+#!/usr/bin/env ruby
 
-class Fruta
+class Fruit
+
   def kind=(k)
     @kind = k
   end
+
   def kind
     @kind
   end
+
 end
 
-f2 = Fruta.new
-f2.kind = "banana"
-print " * Valor del atributo: ",f2.kind,"\n"
-
+f = Fruit.new
+f.kind = "banana"
+puts "(1) Veamos el tipo de la fruta..." + f.kind
 
 class Fruta
-     def inspect
-        "una fruta de la variedad " + @kind
-     end
+  def inspect
+    "una fruta de la variedad " + @kind
+  end
 end
 
-print " * Información del objeto: ",f2,"\n"
-
-p f2
+puts "(2) Información del objeto: #{f}"
+p f
 
