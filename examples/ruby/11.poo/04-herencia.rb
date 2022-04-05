@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 
 class Humano
   def identidad

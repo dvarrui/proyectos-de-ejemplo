@@ -1,7 +1,8 @@
+#!/usr/bin/env ruby
 
 class SingletonTest
   def size
-          print "25\n"
+    print "25\n"
   end
 end
 
