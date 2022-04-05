@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # http://rubylearning.com/blog/2013/04/04/ruby-matrix-the-forgotten-library/
 
-require_relative '13-matrix-lib'
+require_relative 'lib/13-matrix-lib'
 
 a = MyMatrix.new :size => 2, :identity => true
 puts "MyMatrix A #{a.to_s}"
