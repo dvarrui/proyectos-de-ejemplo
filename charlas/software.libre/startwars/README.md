@@ -4,7 +4,7 @@
 
 _"Hace mucho tiempo en una plataforma muy, muy remota..."_
 
-![](images/01-starwars.png)
+![](images/01-starwars/titulo.png)
 
 ```
 Nos encontramos en un
@@ -63,7 +63,20 @@ _Voy a unir todo lo que me gusta y... a ver qué sale._
 felicidad = [ :starwars, :software, :libre ]
 ```
 
----
+## 1.2 información
+
+Películas
+![](images/01-starwars/peliculas.png)
+
+Comics
+![](images/01-starwars/comics.png)
+
+Revistas
+![](images/01-starwars/revistas.png)
+
+Libros
+![](images/01-starwars/libros.png)
+
 
 # 2. Empezamos
 
