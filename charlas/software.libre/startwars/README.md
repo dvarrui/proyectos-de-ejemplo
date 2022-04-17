@@ -103,3 +103,27 @@ Imaginemos un granjero...
 Dentro de nuestras casas hay mucha tecnología... que no tenemos por qué conocer. Para eso están los expertos: electricistas, fontaneros, etc.
 
 ![](images/06-granja.png)
+
+
+definiciones
+* starwars
+* software
+* libre
+
+Buscar la felicidad en las cosas que nos gustan
+
+no me crean
+cuento de ciencia ficción
+aviso spolilers SW
+
+Qué es starwarsç
+Qué es software
+qué es libre
+
+jedi vs sisth... luchas de espadas con superpoderes.
+Los superpoderes de hoy en día y las luchas.
+Gente especial
+
+Gente normal
+Esto va de gente normal
+
