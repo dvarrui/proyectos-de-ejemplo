@@ -67,17 +67,34 @@ felicidad = [ :starwars, :software, :libre ]
 
 # 2. Empezamos
 
-```ruby
-felicidad[0] # => starwars
-```
+## 2.1 ¿Qué es Starwars? (La guerra de las galaxias)
 
-> AVISO: Puede contener spoilers de StarwWars.
+> AVISO: Puede contener spoilers de StarWars.
 
-## 2.1 Razonamiento
+* 1977
+* Su trama **describe las vivencias de un grupo de personajes** que habitan en una galaxia ficticia e interactúan con elementos como "la Fuerza"
+* La fuerza = un campo de energía metafísico y omnipresente​ que posee
+    1. un "lado luminoso" impulsado por la sabiduría, la nobleza y la justicia y utilizado por los Jedi, y
+    2. un "lado oscuro" usado por los Sith y provocado por la ira, el miedo y el odio.
 
-1. Starwars es ciencia ficción.
+> Los Jedi y los Sith... tienen una especia de "superpoderes llamativos". Ideal para hacer una película/espectáculo.
+
+
+
+# Software en StarWars
+
+
+Razonamiento:
+1. StarWars es aventuras y ciencia ficción.
 2. Tienen tecnología... más "avanzada" que la nuestra.
 3. Por tanto hay: hardware y software.
+
+
+Los superpoderes de hoy en día y las luchas.
+Gente especial
+
+
+
 
 > La pregunta es: _¿Cómo es ese software?_
 
@@ -105,25 +122,7 @@ Dentro de nuestras casas hay mucha tecnología... que no tenemos por qué conoce
 ![](images/06-granja.png)
 
 
-definiciones
-* starwars
-* software
-* libre
 
-Buscar la felicidad en las cosas que nos gustan
-
-no me crean
-cuento de ciencia ficción
-aviso spolilers SW
-
-Qué es starwarsç
-Qué es software
-qué es libre
-
-jedi vs sisth... luchas de espadas con superpoderes.
-Los superpoderes de hoy en día y las luchas.
-Gente especial
 
 Gente normal
 Esto va de gente normal
-
