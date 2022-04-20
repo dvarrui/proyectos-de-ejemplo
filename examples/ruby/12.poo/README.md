@@ -1,9 +1,10 @@
 
-
 # Características de POO
 
 > Enlaces de interés:
 > * https://es.wikibooks.org/wiki/Programaci%C3%B3n_Orientada_a_Objetos/Caracter%C3%ADsticas_de_la_POO
+> * https://ferestrepoca.github.io/paradigmas-de-programacion/poo/poo_teoria/concepts.html
+> * https://dewitters.com/object-oriented-programming-doesnt-need-encapsulation/
 
 Parece que hay un acuerdo acerca de qué características contempla la "orientación a objetos". Según es acuerdo, las características siguientes son las más importantes:
 1. Abstracción
@@ -60,3 +61,5 @@ Parece que hay un acuerdo acerca de qué características contempla la "orientac
 
 la recolección de basura o garbage collector es la técnica por la cual el entorno de objetos se encarga de destruir automáticamente, y por tanto desvincular la memoria asociada, los objetos que hayan quedado sin ninguna referencia a ellos. Esto significa que el programador no debe preocuparse por la asignación o liberación de memoria, ya que el entorno la asignará al crear un nuevo objeto y la liberará cuando nadie lo esté usando.
     En la mayoría de los lenguajes híbridos que se extendieron para soportar el Paradigma de Programación Orientada a Objetos como C++ u Object Pascal, esta característica no existe y la memoria debe desasignarse expresamente.
+
+
