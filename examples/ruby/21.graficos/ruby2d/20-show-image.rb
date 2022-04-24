@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-system("Rscript 20-create-png.r")
+system("Rscript r/20-create-png.r")
 
 require 'ruby2d'
 
