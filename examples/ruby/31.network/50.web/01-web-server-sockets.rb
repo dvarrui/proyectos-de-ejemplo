@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 require 'socket'
 
 port = 8081
