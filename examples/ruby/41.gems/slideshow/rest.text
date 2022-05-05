@@ -1,3 +1,17 @@
+# Helpers
+
+Today's Date
+
+{{ Date.today }}
+
+<%= include 'demo.text' %>
+
+<% step do %>
+* Catching all inappropriate operations on a type, either at
+  * compile time, or
+  * run time
+<% end %>
+
 # Web Services REST-Style: Universal Identifiers, Formats & Protocols
 
 Agenda
