@@ -43,26 +43,24 @@
 <p>¡Muchas gracias!</p>
 
 <p>Me presento:</p>
-<pre><code>me = {
-  :name    =&gt; “David Vargas Ruiz”,
-  :studies =&gt; “Ing. Informático ULPGC”,
-  :job     = &gt; “Profesor FP Informática”,
-  :twitter =&gt; @dvarrui,
-  :github  =&gt; dvarrui,
-  :email   =&gt; dvarrui@protonmail.com
-}
+<ul>
+  <li>David Vargas Ruiz</li>
+  <li>Ingeniero Informático ULPGC</li>
+  <li>Profesor FP Sistemas y Aplicaciones</li>
+</ul>
+
+<pre><code>Datos de contacto:
+  twitter =&gt; @dvarrui
+  github  =&gt; dvarrui
+  email   =&gt; dvarrui@protonmail.com
 </code></pre>
 
 <p>Mi discurso está condicionado:</p>
 <ul>
   <li><strong>Sysadmin</strong>: Profesor de sistemas operativos en ASIR</li>
-  <li><strong>Programación</strong>:
-    <ul>
-      <li>OOP y PF fan.</li>
-      <li>Trabajar bien, rápido y sin complicarse.</li>
-      <li>Dar a conocer Ruby más allá de Rails.</li>
-    </ul>
-  </li>
+  <li><strong>Programación</strong>: OOP y PF fan.</li>
+  <li>Dar a conocer <strong>Ruby</strong> más allá de Rails.</li>
+  <li>Trabajar bien, rápido y sin complicarse.</li>
   <li><strong>Software Libre</strong>: <em>¡Este es el camino!</em></li>
 </ul>
 
@@ -76,9 +74,9 @@
 
 <ol>
   <li>El problema</li>
-  <li>Scripting</li>
-  <li>Bash</li>
-  <li>Ruby</li>
+  <li>Ejemplos</li>
+  <li>Definición de Scripting (personal)</li>
+  <li>Propuesta</li>
 </ol>
 
 
@@ -87,19 +85,92 @@
 
 <section class="slide " id="4">
   <!-- _S9SLIDE_ -->
-<h1 id="1-el-problema">1. El problema</h1>
+<h1 id="el-problema">El problema</h1>
 
+<p>Situación:</p>
 <ul>
-  <li>Impartir el módulo de sistemas operativos en FP.</li>
-  <li>Poco tiempo para enseñar scripting: Bash(GNU/Linux), PowerShell(Windows).</li>
+  <li>Impartir el módulo de sistemas operativos en FP (2005-2006)</li>
+  <li>Poco tiempo para enseñar scripting y varias alternativas por plataforma.</li>
+</ul>
+
+<p>Mi definición:</p>
+<ul>
+  <li>Debe ser ágil y dinámico de crear =&gt; Interpretado + Editor de texto.</li>
   <li>Scripting = comandos del sistema + <em>“algo que los una de forma lógica”</em></li>
 </ul>
+
+<p>Posibles soluciones:</p>
+<ol>
+  <li>Ganar más tiempo
+    <ul>
+      <li>GNU/Linux =&gt; Bash</li>
+      <li>Windows =&gt; CMD, PowerShell</li>
+    </ul>
+  </li>
+  <li>Cambiar a un lenguaje de scripting mutiplataforma.</li>
+</ol>
 
 
 
 </section>
 
 <section class="slide " id="5">
+  <!-- _S9SLIDE_ -->
+<h1 id="ejemplos">Ejemplos</h1>
+
+
+
+</section>
+
+<section class="slide " id="6">
+  <!-- _S9SLIDE_ -->
+<h2 id="i-am-usernamesh">i-am-username.sh</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#/usr/bin/env bash</span>
+
+<span class="c"># SI poner espacios es un problema de sintaxis: name = $(whoami)</span>
+<span class="nv">name</span><span class="o">=</span><span class="si">$(</span><span class="nb">whoami</span><span class="si">)</span>         
+<span class="nv">rol</span><span class="o">=</span><span class="nv">$1</span>
+
+<span class="c"># NO poner espacios es un problema de sintáxis: if [$name == 'root']</span>
+<span class="c"># NO poner espacios es un problema de semántica: if [ $name=='root' ]</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$name</span> <span class="o">==</span> <span class="s1">'root'</span> <span class="o">]</span>
+<span class="k">then
+  </span><span class="nb">echo</span> <span class="s2">"root is not valid user!"</span>
+  <span class="nb">exit </span>1
+<span class="k">fi
+
+</span><span class="nb">echo</span> <span class="s2">"[</span><span class="nv">$rol</span><span class="s2">] My name is </span><span class="nv">$name</span><span class="s2">"</span>
+<span class="nb">exit </span>0
+</code></pre></div></div>
+
+
+
+</section>
+
+<section class="slide " id="7">
+  <!-- _S9SLIDE_ -->
+<h2 id="i-am-usernamerb">i-am-username.rb</h2>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#/usr/bin/env ruby</span>
+
+<span class="nb">name</span> <span class="o">=</span> <span class="sx">%x(whoami)</span> <span class="c1"># name = `whoami`</span>
+<span class="n">rol</span>  <span class="o">=</span> <span class="no">ARGV</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">||</span> <span class="s1">'unkown'</span>
+
+<span class="k">if</span> <span class="nb">name</span> <span class="o">==</span> <span class="s1">'root'</span>
+  <span class="nb">puts</span> <span class="s2">"root is not valid user!"</span>
+  <span class="nb">exit</span> <span class="mi">1</span>
+<span class="k">end</span>
+
+<span class="nb">puts</span> <span class="s2">"[</span><span class="si">#{</span><span class="n">rol</span><span class="si">}</span><span class="s2">] My name is </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+<span class="nb">exit</span> <span class="mi">0</span>
+</code></pre></div></div>
+
+
+
+</section>
+
+<section class="slide " id="8">
   <!-- _S9SLIDE_ -->
 <h1 id="1-scripting">1. Scripting</h1>
 
@@ -128,18 +199,11 @@
 Viendo código desde los más sencillo y que iremos complicando
 poco a poco.</p>
 
-<ul>
-  <li><a href="./03-show-info">show-info</a>: Hacer un que muestre alguna información del sistema en pantalla.</li>
-  <li><a href="./04-du-undo">do-undo</a>: Hacer uns script que cree directorios con determinados permisos.</li>
-  <li><a href="./05-radar">radar</a>: Hacer un script para “monitorizar” ciertos hosts.</li>
-  <li><a href="./06-software">software</a>: Configurar nuestra máquina con determinado software.</li>
-</ul>
-
 
 
 </section>
 
-<section class="slide " id="6">
+<section class="slide " id="9">
   <!-- _S9SLIDE_ -->
 
 
@@ -147,9 +211,9 @@ poco a poco.</p>
 
 </section>
 
-<section class="slide " id="7">
+<section class="slide " id="10">
   <!-- _S9SLIDE_ -->
-<h1 id="anexo">ANEXO</h1>
+<h1 id="enlaces-de-interés">Enlaces de interés</h1>
 
 <p><strong>Enlaces de interés:</strong></p>
 <ul>
@@ -160,6 +224,15 @@ poco a poco.</p>
     </ul>
   </li>
 </ul>
+
+<p>#</p>
+
+
+</section>
+
+<section class="slide " id="11">
+  <!-- _S9SLIDE_ -->
+<h1 id="scripting-con-ruby">Scripting con Ruby</h1>
 
 
 </section>
