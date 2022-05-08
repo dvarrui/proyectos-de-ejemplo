@@ -2,5 +2,6 @@
 
 <%= include 'md/intro.md' %>
 <%= include 'md/problema.md' %>
-<%= include 'md/comparativa.md' %>
+<%= include 'md/ejemplos.md' %>
 <%= include 'md/definicion.md' %>
+# <%= include 'md/propuesta.md' %>
