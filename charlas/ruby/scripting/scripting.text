@@ -2,5 +2,5 @@
 
 <%= include 'md/intro.md' %>
 <%= include 'md/problema.md' %>
-<%= include 'md/shell-scripting.md' %>
+<%= include 'md/comparativa.md' %>
 <%= include 'md/definicion.md' %>

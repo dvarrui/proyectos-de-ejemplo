@@ -13,6 +13,4 @@ Posibles soluciones:
 1. Ganar más tiempo
     * GNU/Linux => Bash
     * Windows => CMD, PowerShell
-1. Cambiar a scripting mutiplataforma. ¿Existe?
-
-Visita a OpenSUSE
+1. Cambiar a un lenguaje de scripting mutiplataforma.

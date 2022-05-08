@@ -29,6 +29,6 @@ Mi discurso está condicionado:
 # Agenda
 
 1. El problema
-1. Shell Scripting
-1. Mi definición de Scripting
-1. Ruby Scripting
+1. Ejemplos
+1. Definición de Scripting (personal)
+1. Propuesta

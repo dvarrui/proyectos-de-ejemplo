@@ -1,14 +1,17 @@
 #/usr/bin/env bash
 
-name=$(whoami)         # Los espacios son un problema! name = $(whoami)
-folder=$(pwd)
+# SI poner espacios es un problema de sintaxis: name = $(whoami)
+name=$(whoami)         
+rol=$1 
 
-if [ $name=='root' ] # Los espacios son un problema! if [$name=='root']
+# NO poner espacios es un problema de sintáxis: if [$name == 'root']
+# NO poner espacios es un problema de semántica: if [ $name=='root' ]
+if [ $name == 'root' ] 
 then
   echo "root is not valid user!"
   exit 1
 fi
 
-echo "My name is $name"
-echo "My current folder is $folder"
+echo "[$rol] My name is $name"
+exit 0
 
