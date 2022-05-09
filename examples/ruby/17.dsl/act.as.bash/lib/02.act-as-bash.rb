@@ -7,7 +7,6 @@ module ActAsBash
 
   def self.method_missing(method, *args, &block)
     command = "#{method} #{args.join(' ')}"
-    #puts "===> #{command}"
     system(command)
  end
 
