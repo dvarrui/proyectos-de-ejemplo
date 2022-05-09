@@ -1,8 +1,7 @@
 #!/usr/bin/env ruby
-require_relative 'lib/01-like-bash'
+require_relative 'lib/01.act-as-bash'
 
-module Example
-  extend LikeBash
+module ActAsBash
 
   echo "[INFO] Example 01 - echo"
 

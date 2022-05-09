@@ -1,11 +1,11 @@
 
-module LikeBash
+module ActAsBash
 
-  def echo(*args)
+  def self.echo(*args)
     puts args.join(' ')
   end
 
-  def method_missing(method, *args, &block)
+  def self.method_missing(method, *args, &block)
     command = "#{method} #{args.join(' ')}"
     #puts "===> #{command}"
     system(command)

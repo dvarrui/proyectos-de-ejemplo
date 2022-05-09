@@ -1,11 +1,11 @@
 #!/usr/bin/env ruby
 
-require_relative 'lib/02-like-bash'
+require_relative 'lib/02.act-as-bash'
 
-module Example
-  extend LikeBash
+module ActAsBash
 
   echo "[INFO] Example 02 - Commands"
   pwd
   mkdir 'temp'
+  whoami
 end
