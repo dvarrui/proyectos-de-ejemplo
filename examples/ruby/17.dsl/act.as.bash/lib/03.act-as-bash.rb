@@ -11,4 +11,8 @@ module ActAsBash
     system(command)
  end
 
+ def self.s(command)
+   %x(command)
+ end
+
 end
