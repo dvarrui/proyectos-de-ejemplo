@@ -8,4 +8,6 @@ module ActAsBash
   username = %x(whoami)
   echo username
   rmdir 'temp'
+  echo $S0
+  ecgo $S1
 end
