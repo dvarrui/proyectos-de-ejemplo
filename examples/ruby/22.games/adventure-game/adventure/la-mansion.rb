@@ -61,7 +61,7 @@ Hay una ventana cerrada en una de las paredes.',
     }
     add_room 'almacen', {
       desc: 'Estás es un almacén oscuro.
-Hay de cajas repartidas por toda la habitación y objetos tirados por el suelo.',
+Hay de cajas 📦 repartidas por toda la habitación y objetos tirados por el suelo.',
       doors: { 'norte' => 'pasillo1' }
     }
 
@@ -70,7 +70,7 @@ Hay de cajas repartidas por toda la habitación y objetos tirados por el suelo.'
     #Objeto:hueso:1:Un hueso::2:0
     add_item 'hueso', {
       room: 'almacen',
-      states: [ 'Hay un hueso en el suelo.' ]
+      states: [ "Hay un hueso \u{1F9B4} en el suelo." ]
     }
 
     #Objeto:perro:1:Un perro rabioso:Un perro comiéndose un hueso:9:0
