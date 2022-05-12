@@ -37,7 +37,7 @@ class Game
       puts ""
       inputs.each_pair { |key,value| puts("(#{key}) #{value}") }
       print "¿Qué eliges? "
-      option = gets.chomp
+      option = STDIN.gets.chomp
     end
     sleep 1
     option
