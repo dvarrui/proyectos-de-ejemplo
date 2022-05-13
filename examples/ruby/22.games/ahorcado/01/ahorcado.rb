@@ -19,7 +19,7 @@ puts
 
 palabras=[]
 
-f = File.new("ahorcado/diccionario.txt","r")
+f = File.new("diccionario.txt","r")
 f.each_line do |linea|
   palabras << linea unless linea.rstrip.rindex('#')==0
 end
