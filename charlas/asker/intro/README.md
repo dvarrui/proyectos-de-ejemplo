@@ -1,12 +1,64 @@
 
-```
-Event : Linux App Summit 2022
-Date  :
-Place :
-URL   :
-```
+# Asker
 
 ![](../images/logo.png)
+
+* Rubygems: https://rubygems.org/gems/asker-tool/
+* Repositorio: https://github/teuton-software/asker
+
+# Agradecimientos
+
+* Organización
+* Baltazar
+* Comunidad Asker (https://t.me/+FsuphhJSaaGVpKcv)
+* Teuton Software
+
+# Presentación
+
+* David Vargas Ruiz
+* Ingeniero Informático por la ULPGC
+* Profesor FP de Sistemas (IES Puerto de la Cruz).
+* Ruby, software libre y StarWars.
+
+# El problema
+
+* Como profesor siempre tenemos poco tiempo.
+* Corregir es aburrido, pero el feedback es muy importante.
+* Buscar formas/herramientas para automatizar tareas.
+* Los cuestionarios de Moodle se corrigen solos pero... las preguntas hay que crearlas.
+
+# Buscando la felicidad del profesorado
+
+_El problema ahora es cómo crear las preguntas de forma fácil_.
+
+# ¿Qué es Asker?
+
+* Es un generador de preguntas que se pueden importar facilmente en el **banco de preguntas de Moodle**.
+* Software libre
+* Multiplataforma
+* Desarrollado en Ruby
+
+# Inputs
+
+
+ para **crear muchas preguntas a
+partir de unos contenidos de entrada (input)**.
+
+
+Actualmente los "inputs" se crean con un editor de texto, pero la próxima
+versión de Asker incluirá una **herramienta gráfica** para ayudar a elaborar
+los "inputs" (contenidos de conocimiento).
+
+## Documentación
+
+Para saber más de la herramienta:
+* [Rubygems](https://rubygems.org/gems/asker-tool/): https://rubygems.org/gems/asker-tool/
+* [Documentación (versión 2.1)](https://www.rubydoc.info/gems/asker-tool/2.1.7)
+
+## Ejemplos
+
+* [Ejemplos](https://github.com/dvarrui/asker/tree/devel/docs/examples)
+* [Más ejemplos](https://github.com/dvarrui/asker-inputs)
 
 # 1. Presentation
 
@@ -104,3 +156,8 @@ Creating a basic asker input.
 * A lot of new ideas...
 
 _Thank you very much!_
+
+* David Vargas Ruiz
+* GitHub: @dvarrui
+* Twitter: @dvarrui
+* Email: dvarrui@protonmail.com
