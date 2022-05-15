@@ -1,15 +1,22 @@
 
-# ¿Cómo funciona?
+# 7. ¿Cómo funciona?
 
-* Abrimos un teminal
-* Ejecutamos `asker PATH/TO/INPUT/FILE`
+* Abrimos un terminal y ejecutamos `asker PATH/TO/INPUT/FILE`
 
-> NOTA: En el futuro esperamos tener un GUI
+![](images/asker-acdc.png)
 
-* La salida se guarda en la carpeta `output`.
-* Ahora, importamos el fichero `FILE-moodle.xml` en la plataforma Moodle.
+# 8. Ficheros de salida
 
-# Inputs
+* La salida se guarda en `output`.
+* El fichero `moodle.xml` se importa en Moodle.
+
+![](images/acdc-stats.png)
+
+# 9. Inputs
+
+_¿Qué son los inputs?_
+
+_¿Cómo sabe Asker sobre lo que tiene que trabajar?_
 
 Los **inputs** son las entradas que necesita Asker.
 * Fichero de texto.
@@ -17,35 +24,18 @@ Los **inputs** son las entradas que necesita Asker.
 
 ![](images/acdc-concept.png)
 
-# Inputs
+* El profesor domina su materia y tiene en su mente el mapa conceptual.
 
-Los **inputs** son las entradas que necesita Asker.
-* Fichero de texto.
-* Mapa conceptual sin enlaces explícitos.
+# 9. Ejemplos de inputs
 
-![](images/acdc-concept.png)
+* Ejemplos: https://github.com/teuton-software/asker/tree/master/docs/examples
+* Inputs reales: https://github.com/dvarrui/asker-inputs
 
-## Ejemplos
-
-* [Ejemplos](https://github.com/dvarrui/asker/tree/devel/docs/examples)
-* [Más ejemplos](https://github.com/dvarrui/asker-inputs)
-
-
-# 4. Inputs
-
-_How Asker knows... what have to do?_
-
-* Plain text file (HAML or XML)
-* Input contains **Conceptual map** with
-    * Concepts (and their definitions)
-    * relationships are not required because are guessed by Asker.
-* More input examples at https://github.com/dvarrui/asker-inputs.
-
-# 5. Learning
+# 10. Cómo aprender más sobre Asker
 
 URLs:
 * Rubygems: https://rubygems/gems/asker-tool
-* GitHub: https://guthub.com/teuton-software/asker
+* GitHub: https://github.com/teuton-software/asker
 
 Documentation with
 * Tutorials and videos
@@ -53,9 +43,9 @@ Documentation with
 More help
 * Regular Jitsi ONLINE events
 * Telegram Chat
-* email: teuton.software@protonmail.com
+* email: `teuton.software@protonmail.com`
 
-# 6. Create an input
+# 11. Creando un input
 
 Creating a basic asker input.
 * Create plain HAML file
@@ -69,12 +59,15 @@ Creating a basic asker input.
 * Concept: def with files
 * More HAML files into the same folder
 
-# 7. Future
+# 19. Ideas para el futuro
 
-* A lot of new ideas...
+* Entorno gráfico.
+* Mejorar "code": entrada de código.
+* Incluir "problem": definiciones de problemas.
 
-# Muchas gracias!
+# 20. Muchas gracias!
 
-* GitHub: @dvarrui
-* Twitter: @dvarrui
-* Email: `dvarrui@protonmail.com`
+* GitHub: @teuton-software
+* Email: `teuton-software@protonmail.com`
+
+![](images/teuton-software.png)

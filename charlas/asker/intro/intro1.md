@@ -6,7 +6,7 @@
 * Rubygems: https://rubygems.org/gems/asker-tool/
 * Repositorio: https://github/teuton-software/asker
 
-# Agradecimientos
+# 1. Agradecimientos
 
 * Organización
 * Baltazar
@@ -15,7 +15,7 @@
 
 ![](images/ujilliurex.png)
 
-# Presentación
+# 2. Presentación
 
 * David Vargas Ruiz
 * Ingeniero Informático por la ULPGC
@@ -24,7 +24,7 @@
 
 ![](images/presentacion.png)
 
-# El problema
+# 3. El problema
 
 * Como profesor siempre tenemos **poco tiempo**.
 * Corregir es aburrido, pero el **feedback** es muy importante.
@@ -33,7 +33,7 @@
 
 ![](images/moodle.png)
 
-# Buscando la felicidad del profesorado
+# 4. Buscando la felicidad del profesorado
 
 ```
   Si lo profesores están felices...
@@ -43,19 +43,17 @@
 
 Pero... _¿cómo crear las preguntas de forma fácil?_
 
-
-# ¿Qué es Asker?
+# 5. ¿Qué es Asker?
 
 * Es un generador de preguntas que se pueden importar fácilmente en **Moodle**.
-* Software libre
-* Multiplataforma
+* Software libre multiplataforma
 * Desarrollado en Ruby
 
 ![](images/rubygems.png)
 
-# Instalación
+# 6. Instalación
 
-* Instalación de Ruby: `sudo apt install ruby`
-* Instalación de la gema: `sudo gem install asker-tool`.
+1. Instalación de Ruby: `sudo apt install ruby`
+2. Instalación de la gema: `sudo gem install asker-tool`.
 
 ![](images/instalar.png)

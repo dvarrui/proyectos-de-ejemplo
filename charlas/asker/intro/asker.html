@@ -1,0 +1,303 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Your Title Here</title>
+
+<meta name="generator" content="Slide Show (S9) v4.1.0 on Ruby 3.1.0 (2021-12-25) [x86_64-linux]">
+<meta name="author"    content="Your Name Here" >
+
+<!-- S6 style sheet links -->
+<link rel="stylesheet" href="s62/screen.css">
+<link rel="stylesheet" href="asker.css">
+
+  
+
+</head>
+<body>
+
+<article id="presentation">
+
+
+<section class="slide " id="1">
+  
+
+<!-- _S9SLIDE_ -->
+<h1 id="asker">Asker</h1>
+
+<p><img src="images/logo.png" alt="" /></p>
+
+<ul>
+  <li>Rubygems: https://rubygems.org/gems/asker-tool/</li>
+  <li>Repositorio: https://github/teuton-software/asker</li>
+</ul>
+
+
+
+</section>
+
+<section class="slide " id="2">
+  <!-- _S9SLIDE_ -->
+<h1 id="1-agradecimientos">1. Agradecimientos</h1>
+
+<ul>
+  <li>Organización</li>
+  <li>Baltazar</li>
+  <li>Comunidad Asker (https://t.me/+FsuphhJSaaGVpKcv)</li>
+  <li>Teuton Software</li>
+</ul>
+
+<p><img src="images/ujilliurex.png" alt="" /></p>
+
+
+
+</section>
+
+<section class="slide " id="3">
+  <!-- _S9SLIDE_ -->
+<h1 id="2-presentación">2. Presentación</h1>
+
+<ul>
+  <li>David Vargas Ruiz</li>
+  <li>Ingeniero Informático por la ULPGC</li>
+  <li>Profesor FP de Sistemas (IES Puerto de la Cruz).</li>
+  <li>Ruby, software libre y StarWars.</li>
+</ul>
+
+<p><img src="images/presentacion.png" alt="" /></p>
+
+
+
+</section>
+
+<section class="slide " id="4">
+  <!-- _S9SLIDE_ -->
+<h1 id="3-el-problema">3. El problema</h1>
+
+<ul>
+  <li>Como profesor siempre tenemos <strong>poco tiempo</strong>.</li>
+  <li>Corregir es aburrido, pero el <strong>feedback</strong> es muy importante.</li>
+  <li>Buscar formas/herramientas para <strong>automatizar tareas</strong>.</li>
+  <li>Los cuestionarios de Moodle se corrigen solos pero… las preguntas hay que crearlas.</li>
+</ul>
+
+<p><img src="images/moodle.png" alt="" /></p>
+
+
+
+</section>
+
+<section class="slide " id="5">
+  <!-- _S9SLIDE_ -->
+<h1 id="4-buscando-la-felicidad-del-profesorado">4. Buscando la felicidad del profesorado</h1>
+
+<pre><code>  Si lo profesores están felices...
+  Serán más productivos y como resultado...
+  Los alumnos aprenderán mejor.
+</code></pre>
+
+<p>Pero… <em>¿cómo crear las preguntas de forma fácil?</em></p>
+
+
+
+</section>
+
+<section class="slide " id="6">
+  <!-- _S9SLIDE_ -->
+<h1 id="5-qué-es-asker">5. ¿Qué es Asker?</h1>
+
+<ul>
+  <li>Es un generador de preguntas que se pueden importar fácilmente en <strong>Moodle</strong>.</li>
+  <li>Software libre multiplataforma</li>
+  <li>Desarrollado en Ruby</li>
+</ul>
+
+<p><img src="images/rubygems.png" alt="" /></p>
+
+
+
+</section>
+
+<section class="slide " id="7">
+  <!-- _S9SLIDE_ -->
+<h1 id="6-instalación">6. Instalación</h1>
+
+<ol>
+  <li>Instalación de Ruby: <code>sudo apt install ruby</code></li>
+  <li>Instalación de la gema: <code>sudo gem install asker-tool</code>.</li>
+</ol>
+
+<p><img src="images/instalar.png" alt="" /></p>
+
+
+
+</section>
+
+<section class="slide " id="8">
+  <!-- _S9SLIDE_ -->
+<h1 id="7-cómo-funciona">7. ¿Cómo funciona?</h1>
+
+<ul>
+  <li>Abrimos un terminal y ejecutamos <code>asker PATH/TO/INPUT/FILE</code></li>
+</ul>
+
+<p><img src="images/asker-acdc.png" alt="" /></p>
+
+
+
+</section>
+
+<section class="slide " id="9">
+  <!-- _S9SLIDE_ -->
+<h1 id="8-ficheros-de-salida">8. Ficheros de salida</h1>
+
+<ul>
+  <li>La salida se guarda en <code>output</code>.</li>
+  <li>El fichero <code>moodle.xml</code> se importa en Moodle.</li>
+</ul>
+
+<p><img src="images/acdc-stats.png" alt="" /></p>
+
+
+
+</section>
+
+<section class="slide " id="10">
+  <!-- _S9SLIDE_ -->
+<h1 id="9-inputs">9. Inputs</h1>
+
+<p><em>¿Qué son los inputs?</em></p>
+
+<p><em>¿Cómo sabe Asker sobre lo que tiene que trabajar?</em></p>
+
+<p>Los <strong>inputs</strong> son las entradas que necesita Asker.</p>
+<ul>
+  <li>Fichero de texto.</li>
+  <li>Mapa conceptual sin enlaces explícitos.</li>
+</ul>
+
+<p><img src="images/acdc-concept.png" alt="" /></p>
+
+<ul>
+  <li>El profesor domina su materia y tiene en su mente el mapa conceptual.</li>
+</ul>
+
+
+
+</section>
+
+<section class="slide " id="11">
+  <!-- _S9SLIDE_ -->
+<h1 id="9-ejemplos-de-inputs">9. Ejemplos de inputs</h1>
+
+<ul>
+  <li>Ejemplos: https://github.com/teuton-software/asker/tree/master/docs/examples</li>
+  <li>Inputs reales: https://github.com/dvarrui/asker-inputs</li>
+</ul>
+
+
+
+</section>
+
+<section class="slide " id="12">
+  <!-- _S9SLIDE_ -->
+<h1 id="10-cómo-aprender-más-sobre-asker">10. Cómo aprender más sobre Asker</h1>
+
+<p>URLs:</p>
+<ul>
+  <li>Rubygems: https://rubygems/gems/asker-tool</li>
+  <li>GitHub: https://github.com/teuton-software/asker</li>
+</ul>
+
+<p>Documentation with</p>
+<ul>
+  <li>Tutorials and videos</li>
+</ul>
+
+<p>More help</p>
+<ul>
+  <li>Regular Jitsi ONLINE events</li>
+  <li>Telegram Chat</li>
+  <li>email: <code>teuton.software@protonmail.com</code></li>
+</ul>
+
+
+
+</section>
+
+<section class="slide " id="13">
+  <!-- _S9SLIDE_ -->
+<h1 id="11-creando-un-input">11. Creando un input</h1>
+
+<p>Creating a basic asker input.</p>
+<ul>
+  <li>Create plain HAML file</li>
+  <li>Context</li>
+  <li>Concept: names</li>
+  <li>Concept: tags</li>
+  <li>Concept: defs</li>
+</ul>
+
+<p><strong>Improving inputs</strong></p>
+<ul>
+  <li>Concept: tables and rows</li>
+  <li>Concept: def with files</li>
+  <li>More HAML files into the same folder</li>
+</ul>
+
+
+
+</section>
+
+<section class="slide " id="14">
+  <!-- _S9SLIDE_ -->
+<h1 id="19-ideas-para-el-futuro">19. Ideas para el futuro</h1>
+
+<ul>
+  <li>Entorno gráfico.</li>
+  <li>Mejorar “code”: entrada de código.</li>
+  <li>Incluir “problem”: definiciones de problemas.</li>
+</ul>
+
+
+
+</section>
+
+<section class="slide " id="15">
+  <!-- _S9SLIDE_ -->
+<h1 id="20-muchas-gracias">20. Muchas gracias!</h1>
+
+<ul>
+  <li>GitHub: @teuton-software</li>
+  <li>Email: <code>teuton-software@protonmail.com</code></li>
+</ul>
+
+<p><img src="images/teuton-software.png" alt="" /></p>
+
+
+</section>
+
+
+</article><!-- presentation -->
+
+<!-- S6 JS -->
+  <script src="s62/slides.keys.js"></script>
+  <script src="s62/slides.progress.js"></script>
+  <script src="s62/slides.classes.js"></script>
+  <script src="s62/slides.state.js"></script>
+  <script src="s62/slides.kernel.js"></script>
+  <script>
+     const {Deck, classes, keys, progress, state} = S6;
+     const deck = new Deck({ parent: "#presentation",
+                             plugins: [classes(), keys(), progress(), state()] });
+
+     
+  </script>
+
+</body>
+</html>
