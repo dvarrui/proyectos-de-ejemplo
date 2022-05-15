@@ -1,7 +1,7 @@
 
 # Scripting Feliz!
 
-![](../language/images/iloveruby.png)
+![](../../language/images/iloveruby.png)
 
 # 1. Agradecimientos
 
