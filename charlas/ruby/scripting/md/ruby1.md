@@ -1,8 +1,27 @@
 
+# Scripting Feliz!
+
+![](../language/images/iloveruby.png)
+
+# 1. Agradecimientos
+
+# 2. Presentación
+
+* David Vargas Ruiz
+* Ingeniero Informático ULPGC
+* Profesor FP Sistemas y Aplicaciones
+
+# 3. Agenda
+
+1. El problema
+1. Ejemplos
+1. Definición de Scripting (personal)
+1. Propuesta
+
 # El problema
 
 Situación:
-* Impartir el módulo de sistemas operativos en FP (2005-2006)
+* Impartir el módulo de sistemas operativos en FP.
 * Poco tiempo para enseñar scripting y varias alternativas por plataforma.
 
 Mi definición:

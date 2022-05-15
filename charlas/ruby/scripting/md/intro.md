@@ -3,32 +3,33 @@
 
 ![](../language/images/iloveruby.png)
 
-# Presentación
+# 1. Agradecimientos
 
-¡Muchas gracias!
+# 2. Presentación
 
-Me presento:
 * David Vargas Ruiz
 * Ingeniero Informático ULPGC
 * Profesor FP Sistemas y Aplicaciones
 
-```
-Datos de contacto:
-  twitter => @dvarrui
-  github  => dvarrui
-  email   => dvarrui@protonmail.com
-```
-
-Mi discurso está condicionado:
-* **Sysadmin**: Profesor de sistemas operativos en ASIR
-* **Programación**: OOP y PF fan.
-* Dar a conocer **Ruby** más allá de Rails.
-* Trabajar bien, rápido y sin complicarse.
-* **Software Libre**: _¡Este es el camino!_
-
-# Agenda
+# 3. Agenda
 
 1. El problema
 1. Ejemplos
 1. Definición de Scripting (personal)
 1. Propuesta
+
+# 4. El problema
+
+Situación:
+* Impartir el módulo de sistemas operativos en FP.
+* Poco tiempo para enseñar scripting y varias alternativas por plataforma.
+
+Mi definición:
+* Debe ser ágil y dinámico de crear => Interpretado + Editor de texto.
+* Scripting = comandos del sistema + _"algo que los una de forma lógica"_
+
+Posibles soluciones:
+1. Ganar más tiempo
+    * GNU/Linux => Bash
+    * Windows => CMD, PowerShell
+1. Cambiar a un lenguaje de scripting mutiplataforma.

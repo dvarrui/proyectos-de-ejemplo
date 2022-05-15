@@ -1,7 +1,6 @@
 
 
-<%= include 'md/intro.md' %>
-<%= include 'md/problema.md' %>
-<%= include 'md/ejemplos.md' %>
-<%= include 'md/definicion.md' %>
-# <%= include 'md/propuesta.md' %>
+<%= include 'md/ruby1.md' %>
+<%= include 'md/ruby2.md' %>
+<%= include 'md/ruby3.md' %>
+<%= include 'md/ruby4.md' %>
