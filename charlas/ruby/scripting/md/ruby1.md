@@ -13,23 +13,27 @@
 
 # 3. Agenda
 
-1. El problema
-1. Ejemplos
-1. Definición de Scripting (personal)
-1. Propuesta
+* El problema
+* Ejemplos
+* Definición de Scripting (personal)
+* Propuesta
 
-# El problema
+# 4. El problema
 
 Situación:
 * Impartir el módulo de sistemas operativos en FP.
 * Poco tiempo para enseñar scripting y varias alternativas por plataforma.
-
-Mi definición:
-* Debe ser ágil y dinámico de crear => Interpretado + Editor de texto.
-* Scripting = comandos del sistema + _"algo que los una de forma lógica"_
 
 Posibles soluciones:
 1. Ganar más tiempo
     * GNU/Linux => Bash
     * Windows => CMD, PowerShell
 1. Cambiar a un lenguaje de scripting mutiplataforma.
+
+Mi definición de scripting:
+* Debe ser ágil y rápido de crear.
+* Interpretado.
+
+```
+Scripting = comandos del sistema + "algo que los una de forma lógica"
+```

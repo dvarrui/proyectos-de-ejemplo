@@ -1,5 +1,9 @@
 
-# 1. Scripting
+# 5. Situación ideal
+
+# 6. El clásico Bash
+
+# 7. Definir scripting
 
 * Los **sysadmin/devops** somos programadores... de scripts.
 * Principal objetivo: Automatizar.
@@ -20,10 +24,9 @@ Vamos a seguir aprendiendo con ejemplos reales.
 Viendo código desde los más sencillo y que iremos complicando
 poco a poco.
 
+# 8. OpenSUSE
 
----
-
-# Enlaces de interés
+# 9. Propuesta
 
 **Enlaces de interés:**
 * Andrew Mallett (@theurbanpenguin): Ruby Scripting in Linux - See our mini-series of video tutorials!

@@ -1,7 +1,5 @@
 
-# Ejemplos
-
-## i-am-username.sh
+# 16 Ejemplo: i-am-username.sh
 
 ```bash
 #/usr/bin/env bash
@@ -22,7 +20,7 @@ echo "[$rol] My name is $name"
 exit 0
 ```
 
-## i-am-username.rb
+# 17. Ejemplo: i-am-username.rb
 
 ```ruby
 #/usr/bin/env ruby
@@ -38,3 +36,19 @@ end
 puts "[#{rol}] My name is #{name}"
 exit 0
 ```
+
+# 18. Mis conclusiones
+
+| Característica   | Bash | Ruby |
+| ---------------- | ---- | ---- |
+| Multiplataforma  | No   | Sí   |
+| Condicionales    | :-(  | sencilla |
+| Iteradores       | :-(  | sencilla |
+| Funciones        | :-(  | sencilla |
+| Reutilización    | :-(  | sencilla |
+
+* Ruby es ideal para el aprendizaje.
+* Transformación directa desde el pseudocódigo.
+* Se escribe casi como en inglés natural.
+
+# 19. Muchas gracias!
