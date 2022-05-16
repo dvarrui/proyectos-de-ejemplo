@@ -5,14 +5,16 @@
 Tu generador de preguntas para Moodle
 ```
 
+![](images/logo.png)
+
 # 1. Agradecimientos
 
 * Organización Ujilliurex
 * Baltasar Ortega Bort (Twitter: @baltolkien)
     * Fundador de KDE blog (https://www.kdeblog.com/author/balta)
     * Profesor de ciencias en Secundaria.
-* Comunidad Telegram: https://t.me/+FsuphhJSaaGVpKcv)
-* Teuton Software
+* Comunidad Telegram: https://t.me/+FsuphhJSaaGVpKcv
+* Equipo _Teuton Software_
 
 ![](images/ujilliurex.png)
 
