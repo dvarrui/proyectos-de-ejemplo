@@ -64,12 +64,8 @@ for princexml (CSS3 paged media support)
 <!-- _S9SLIDE_ -->
 <h1 id="asker">Asker</h1>
 
-<p><img src="images/logo.png" alt="" /></p>
-
-<ul>
-  <li>Rubygems: https://rubygems.org/gems/asker-tool/</li>
-  <li>Repositorio: https://github/teuton-software/asker</li>
-</ul>
+<pre><code>Tu generador de preguntas para Moodle
+</code></pre>
 
 
 
@@ -80,9 +76,14 @@ for princexml (CSS3 paged media support)
 <h1 id="1-agradecimientos">1. Agradecimientos</h1>
 
 <ul>
-  <li>Organización</li>
-  <li>Baltazar</li>
-  <li>Comunidad Asker (https://t.me/+FsuphhJSaaGVpKcv)</li>
+  <li>Organización Ujilliurex</li>
+  <li>Baltasar Ortega Bort (Twitter: @baltolkien)
+    <ul>
+      <li>Fundador de KDE blog (https://www.kdeblog.com/author/balta)</li>
+      <li>Profesor de ciencias en Secundaria.</li>
+    </ul>
+  </li>
+  <li>Comunidad Telegram: https://t.me/+FsuphhJSaaGVpKcv)</li>
   <li>Teuton Software</li>
 </ul>
 
@@ -113,10 +114,12 @@ for princexml (CSS3 paged media support)
   <!-- _S9SLIDE_ -->
 <h1 id="3-el-problema">3. El problema</h1>
 
+<pre><code>Como profesor... siempre tenemos poco tiempo.
+</code></pre>
 <ul>
-  <li>Como profesor siempre tenemos <strong>poco tiempo</strong>.</li>
   <li>Corregir es aburrido, pero el <strong>feedback</strong> es muy importante.</li>
   <li>Buscar formas/herramientas para <strong>automatizar tareas</strong>.</li>
+  <li>Moodle nos ayuda mucho.</li>
   <li>Los cuestionarios de Moodle se corrigen solos pero… las preguntas hay que crearlas.</li>
 </ul>
 
@@ -130,12 +133,14 @@ for princexml (CSS3 paged media support)
   <!-- _S9SLIDE_ -->
 <h1 id="4-buscando-la-felicidad-del-profesorado">4. Buscando la felicidad del profesorado</h1>
 
+<p>Centrando en foco en el <em>profesorado</em>.</p>
+
 <pre><code>  Si lo profesores están felices...
   Serán más productivos y como resultado...
   Los alumnos aprenderán mejor.
 </code></pre>
 
-<p>Pero… <em>¿cómo crear las preguntas de forma fácil?</em></p>
+<p>Pero… <em>¿cómo hacemos para crear las preguntas de forma fácil?</em></p>
 
 
 
@@ -146,9 +151,9 @@ for princexml (CSS3 paged media support)
 <h1 id="5-qué-es-asker">5. ¿Qué es Asker?</h1>
 
 <ul>
-  <li>Es un generador de preguntas que se pueden importar fácilmente en <strong>Moodle</strong>.</li>
+  <li>Es un generador de preguntas que luego se pueden importar fácilmente en <strong>Moodle</strong> (Formatos XML y Gift).</li>
   <li>Software libre multiplataforma</li>
-  <li>Desarrollado en Ruby</li>
+  <li>Desarrollado en Ruby (Sencillo y rápido).</li>
 </ul>
 
 <p><img src="images/rubygems.png" alt="" /></p>
@@ -162,7 +167,7 @@ for princexml (CSS3 paged media support)
 <h1 id="6-instalación">6. Instalación</h1>
 
 <ol>
-  <li>Instalación de Ruby: <code>sudo apt install ruby</code></li>
+  <li>Instalación de Ruby: <code>sudo apt install ruby</code> (<em>MacOS y OpenSUSE se pueden saltar este punto</em>)</li>
   <li>Instalación de la gema: <code>sudo gem install asker-tool</code>.</li>
 </ol>
 
@@ -176,9 +181,13 @@ for princexml (CSS3 paged media support)
   <!-- _S9SLIDE_ -->
 <h1 id="7-cómo-funciona">7. ¿Cómo funciona?</h1>
 
-<ul>
-  <li>Abrimos un terminal y ejecutamos <code>asker PATH/TO/INPUT/FILE</code></li>
-</ul>
+<pre><code>¿Cómo hacemos funcionar Asker?
+</code></pre>
+
+<ol>
+  <li>Abrimos un terminal y</li>
+  <li>ejecutamos el comando <strong>asker</strong>: <code>asker PATH/TO/INPUT/FILE</code></li>
+</ol>
 
 <p><img src="images/asker-acdc.png" alt="" /></p>
 
@@ -190,12 +199,10 @@ for princexml (CSS3 paged media support)
   <!-- _S9SLIDE_ -->
 <h1 id="8-ficheros-de-salida">8. Ficheros de salida</h1>
 
-<ul>
-  <li>La salida se guarda en <code>output</code>.</li>
-  <li>El fichero <code>moodle.xml</code> se importa en Moodle.</li>
-</ul>
+<pre><code>¿Y los resultados? La salida se guarda en la carpeta "output".
+</code></pre>
 
-<p><img src="images/acdc-stats.png" alt="" /></p>
+<p><img src="images/asker-output.png" alt="" /></p>
 
 
 
@@ -203,23 +210,12 @@ for princexml (CSS3 paged media support)
 
 <section class="slide " id="10">
   <!-- _S9SLIDE_ -->
-<h1 id="9-inputs">9. Inputs</h1>
+<h1 id="9-importar-preguntas">9. Importar preguntas</h1>
 
-<p><em>¿Qué son los inputs?</em></p>
+<pre><code>El fichero de salida `moodle.xml` se importa en Moodle.
+</code></pre>
 
-<p><em>¿Cómo sabe Asker sobre lo que tiene que trabajar?</em></p>
-
-<p>Los <strong>inputs</strong> son las entradas que necesita Asker.</p>
-<ul>
-  <li>Fichero de texto.</li>
-  <li>Mapa conceptual sin enlaces explícitos.</li>
-</ul>
-
-<p><img src="images/acdc-concept.png" alt="" /></p>
-
-<ul>
-  <li>El profesor domina su materia y tiene en su mente el mapa conceptual.</li>
-</ul>
+<p><img src="images/moodle-importar.png" alt="" /></p>
 
 
 
@@ -227,12 +223,22 @@ for princexml (CSS3 paged media support)
 
 <section class="slide " id="11">
   <!-- _S9SLIDE_ -->
-<h1 id="9-ejemplos-de-inputs">9. Ejemplos de inputs</h1>
+<h1 id="10-inputs">10. Inputs</h1>
+
+<pre><code>Los "inputs" son las entradas que necesita Asker para trabajar.
+</code></pre>
 
 <ul>
-  <li>Ejemplos: https://github.com/teuton-software/asker/tree/master/docs/examples</li>
-  <li>Inputs reales: https://github.com/dvarrui/asker-inputs</li>
+  <li>Fichero de texto.</li>
+  <li>Mapa conceptual sin enlaces explícitos.</li>
+  <li>Formato de entrada HAML y/o XML.</li>
 </ul>
+
+<p><img src="images/acdc-concept.png" alt="" /></p>
+
+<blockquote>
+  <p>El profesor domina su materia y tiene en su mente el mapa conceptual.</p>
+</blockquote>
 
 
 
@@ -240,25 +246,12 @@ for princexml (CSS3 paged media support)
 
 <section class="slide " id="12">
   <!-- _S9SLIDE_ -->
-<h1 id="10-cómo-aprender-más-sobre-asker">10. Cómo aprender más sobre Asker</h1>
+<h1 id="11-asker-en-acción">11. Asker en acción</h1>
 
-<p>URLs:</p>
-<ul>
-  <li>Rubygems: https://rubygems/gems/asker-tool</li>
-  <li>GitHub: https://github.com/teuton-software/asker</li>
-</ul>
+<pre><code>Veamos un ejemplo de Asker en acción... min = [11, 12, 13, 14]
+</code></pre>
 
-<p>Documentation with</p>
-<ul>
-  <li>Tutorials and videos</li>
-</ul>
-
-<p>More help</p>
-<ul>
-  <li>Regular Jitsi ONLINE events</li>
-  <li>Telegram Chat</li>
-  <li>email: <code>teuton.software@protonmail.com</code></li>
-</ul>
+<p><img src="images/mesa-de-trabajo.png" alt="" /></p>
 
 
 
@@ -266,22 +259,25 @@ for princexml (CSS3 paged media support)
 
 <section class="slide " id="13">
   <!-- _S9SLIDE_ -->
-<h1 id="11-creando-un-input">11. Creando un input</h1>
+<h1 id="15-creando-un-input">15. Creando un input</h1>
 
-<p>Creating a basic asker input.</p>
+<pre><code>Creando nuestro propio input...
+</code></pre>
+
 <ul>
-  <li>Create plain HAML file</li>
+  <li>Fichero en texto plano.</li>
   <li>Context</li>
   <li>Concept: names</li>
   <li>Concept: tags</li>
   <li>Concept: defs</li>
 </ul>
 
-<p><strong>Improving inputs</strong></p>
+<pre><code>¿Dónde encuentro ejemplos para no empezar de cero?
+</code></pre>
+
 <ul>
-  <li>Concept: tables and rows</li>
-  <li>Concept: def with files</li>
-  <li>More HAML files into the same folder</li>
+  <li>Ejemplos en la documentación de Asker: <strong>https://github.com/teuton-software/asker/tree/master/docs/examples</strong></li>
+  <li>Inputs reales usados en FP: <strong>https://github.com/dvarrui/asker-inputs</strong></li>
 </ul>
 
 
@@ -290,13 +286,15 @@ for princexml (CSS3 paged media support)
 
 <section class="slide " id="14">
   <!-- _S9SLIDE_ -->
-<h1 id="19-ideas-para-el-futuro">19. Ideas para el futuro</h1>
+<h1 id="16-mejorando-el-input">16. Mejorando el input</h1>
 
 <ul>
-  <li>Entorno gráfico.</li>
-  <li>Mejorar “code”: entrada de código.</li>
-  <li>Incluir “problem”: definiciones de problemas.</li>
+  <li>Concept: tables y rows</li>
+  <li>Concept: def con ficheros</li>
+  <li>Creando más ficheros HAML en la misma carpeta.</li>
 </ul>
+
+<p><img src="images/github-asker-inputs.png" alt="" /></p>
 
 
 
@@ -304,11 +302,49 @@ for princexml (CSS3 paged media support)
 
 <section class="slide " id="15">
   <!-- _S9SLIDE_ -->
-<h1 id="20-muchas-gracias">20. Muchas gracias!</h1>
+<h1 id="17-cómo-aprender-más-sobre-asker">17. Cómo aprender más sobre Asker</h1>
+
+<ul>
+  <li>Documentación:
+    <ul>
+      <li>GitHub: https://github.com/teuton-software/asker</li>
+      <li>Rubygems: https://rubygems/gems/asker-tool</li>
+    </ul>
+  </li>
+  <li>Grupo de Telegram:</li>
+  <li>email: <code>teuton.software@protonmail.com</code></li>
+</ul>
+
+<p><img src="images/github-asker-docs.png" alt="" /></p>
+
+
+
+</section>
+
+<section class="slide " id="16">
+  <!-- _S9SLIDE_ -->
+<h1 id="18-ideas-para-el-futuro">18. Ideas para el futuro</h1>
+
+<ul>
+  <li>Nuestro plan para el 2022: <strong>https://github.com/teuton-software/asker/blob/master/docs/todo.md</strong></li>
+  <li>Desarrollo abierto.</li>
+</ul>
+
+
+
+</section>
+
+<section class="slide " id="17">
+  <!-- _S9SLIDE_ -->
+<h1 id="19-fin">19. Fin</h1>
+
+<pre><code>puts "Muchas gracias!" * 1000
+</code></pre>
 
 <ul>
   <li>GitHub: @teuton-software</li>
   <li>Email: <code>teuton-software@protonmail.com</code></li>
+  <li>Comunidad Asker: https://t.me/+FsuphhJSaaGVpKcv)</li>
 </ul>
 
 <p><img src="images/teuton-software.png" alt="" /></p>

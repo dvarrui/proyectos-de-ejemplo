@@ -1,5 +1,9 @@
 
-# 14. Creando un input
+# 15. Creando un input
+
+```
+Creando nuestro propio input...
+```
 
 * Fichero en texto plano.
 * Context
@@ -7,16 +11,18 @@
 * Concept: tags
 * Concept: defs
 
-# 15. Mejorando el input
+```
+¿Dónde encuentro ejemplos para no empezar de cero?
+```
+
+* Ejemplos en la documentación de Asker: **https://github.com/teuton-software/asker/tree/master/docs/examples**
+* Inputs reales usados en FP: **https://github.com/dvarrui/asker-inputs**
+
+# 16. Mejorando el input
 
 * Concept: tables y rows
 * Concept: def con ficheros
 * Creando más ficheros HAML en la misma carpeta.
-
-# 16. Ejemplos de inputs
-
-* Ejemplos en la documentación de Asker: https://github.com/teuton-software/asker/tree/master/docs/examples
-* Inputs reales usados en FP: https://github.com/dvarrui/asker-inputs
 
 ![](images/github-asker-inputs.png)
 
@@ -32,12 +38,15 @@
 
 # 18. Ideas para el futuro
 
-* Nuestro plan para el 2022: https://github.com/teuton-software/asker/blob/master/docs/todo.md
+* Nuestro plan para el 2022: **https://github.com/teuton-software/asker/blob/master/docs/todo.md**
 * Desarrollo abierto.
 
-# 19. ¡Muchas gracias!
+# 19. Fin
 
-Contacto:
+```
+puts "Muchas gracias!" * 1000
+```
+
 * GitHub: @teuton-software
 * Email: `teuton-software@protonmail.com`
 * Comunidad Asker: https://t.me/+FsuphhJSaaGVpKcv)

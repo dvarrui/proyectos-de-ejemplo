@@ -1,24 +1,17 @@
 
 # Asker
 
-_Tu generador de preguntas para Moodle_
-
-![](images/logo.png)
-
-| Repo | URL |
-| ---- | --- |
-| Rubygems | https://rubygems.org/gems/asker-tool/ |
-| Repositorio | https://github/teuton-software/asker |
+```
+Tu generador de preguntas para Moodle
+```
 
 # 1. Agradecimientos
 
 * Organización Ujilliurex
-* Baltasar Ortega Bort
+* Baltasar Ortega Bort (Twitter: @baltolkien)
     * Fundador de KDE blog (https://www.kdeblog.com/author/balta)
     * Profesor de ciencias en Secundaria.
-    * Twitter: @baltolkien
-* Comunidad Asker:
-    * Telegram: https://t.me/+FsuphhJSaaGVpKcv)
+* Comunidad Telegram: https://t.me/+FsuphhJSaaGVpKcv)
 * Teuton Software
 
 ![](images/ujilliurex.png)
@@ -34,7 +27,9 @@ _Tu generador de preguntas para Moodle_
 
 # 3. El problema
 
-* Como profesor siempre tenemos **poco tiempo**.
+```
+Como profesor... siempre tenemos poco tiempo.
+```
 * Corregir es aburrido, pero el **feedback** es muy importante.
 * Buscar formas/herramientas para **automatizar tareas**.
 * Moodle nos ayuda mucho.
@@ -64,7 +59,6 @@ Pero... _¿cómo hacemos para crear las preguntas de forma fácil?_
 
 # 6. Instalación
 
-En dos pasos lo tenemos:
 1. Instalación de Ruby: `sudo apt install ruby` (_MacOS y OpenSUSE se pueden saltar este punto_)
 2. Instalación de la gema: `sudo gem install asker-tool`.
 
