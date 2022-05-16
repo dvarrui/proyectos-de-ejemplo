@@ -3,37 +3,48 @@
 
 ![](../../language/images/iloveruby.png)
 
-# 1. Agradecimientos
+# 2. Agradecimientos
 
-# 2. Presentación
+* Organización Ujilliurex
+
+![](images/ujilliurex.png)
+
+# 3. Presentación
 
 * David Vargas Ruiz
-* Ingeniero Informático ULPGC
-* Profesor FP Sistemas y Aplicaciones
+* Ingeniero Informático por la ULPGC
+* Profesor FP de Sistemas (IES Puerto de la Cruz).
+* Ruby, software libre y StarWars.
 
-# 3. Agenda
+![](images/presentacion.png)
+
+# 4. Agenda
 
 * El problema
 * Ejemplos
 * Definición de Scripting (personal)
 * Propuesta
 
-# 4. El problema
+# 5. El problema
 
+```
 Situación:
-* Impartir el módulo de sistemas operativos en FP.
-* Poco tiempo para enseñar scripting y varias alternativas por plataforma.
+```
 
-Posibles soluciones:
-1. Ganar más tiempo
+* Impartir el módulo de sistemas operativos en FP.
+* **Poco tiempo** para enseñar programación de scripting.
     * GNU/Linux => Bash
     * Windows => CMD, PowerShell
-1. Cambiar a un lenguaje de scripting mutiplataforma.
-
-Mi definición de scripting:
-* Debe ser ágil y rápido de crear.
-* Interpretado.
 
 ```
-Scripting = comandos del sistema + "algo que los una de forma lógica"
+Programación Sysadmin:
 ```
+
+* Los **sysadmin/devops** somos programadores... de scripts.
+* Principal objetivo: Automatizar.
+
+# 6. Alternativas
+
+1. No hacer nada: Coste cero.
+1. Ganar más tiempo: Quitar tiempo de otras unidades didácticas.
+1. Cambiar a un lenguaje de scripting mutiplataforma: ¿?

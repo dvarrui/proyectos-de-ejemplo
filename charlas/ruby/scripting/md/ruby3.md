@@ -1,85 +1,59 @@
 
-# 10. Instalación
+# 17 Ejemplo en Bash
+
+Ejemplo: **who-am-i.sh**
 
 ```bash
-sudo apt install ruby
-```
+#/usr/bin/env bash
 
-# 11. Variables
+# OJO poner espacios es un problema de sintaxis: name = $(whoami)
+name=$(whoami)         
+rol=$1
 
-```ruby
-name = "Obiwan"
-age = 42
-siths = [ "Darth Vader", "Darth Sidious", "Darth Maul"]
-```
+# OJO: no poner espacios es un problema de sintáxis: if [$name == 'root']
+# OJO: no poner espacios es un problema de semántica: if [ $name=='root' ]
+if [ $name == 'root' ]
+then # OJO: No hay que olvidar el then
+  echo "root is not valid user!"
+  exit 1
+fi
 
-# 12. Estructuras básicas
-
-```ruby
-if age < 18
-  puts "Sorry! Too younger!"
-end
-```
-
-```ruby
-jedis = [ "Obiwan", "Yoda", "Quigon-Jinn"]
-
-for jedi in jedis
-  puts "Hello #{jedi}"
-end
-```
-
-```ruby
-def greet(name)
-  puts "May the fourth, be with you #{name}!"
-end
-```
-
-# 13. Ejecutar comandos del sistema
-
-La instrucción `system` ejecuta un comando del sistema y devuelve `true/false`.
-
-```ruby
-ok = system("ping -c1 www.starwars.com")
-
-unless ok
-  puts "Starwars ERROR!"
-end
-```
-
-La instrucción `%x()` o "comillas inclinadas", ejecuta un comando del sistema y devuelve su contenido.
-
-```ruby
-name = ENV['USER'] # Leer las variables de entorno
-place = `pwd`
-
-puts "#{name} is into #{place}"
-```
-
-# 14. Entrada al script
-
-Paso de argumentos en el Array `ARGV`:
-
-```ruby
-puts "Hello #{ARGV[0]}!"
+echo "[$rol] My name is $name"
 exit 0
 ```
 
-Variables de entorno:
+# 18. Ejemplo en Ruby
+
+Ejemplo: **who-am-i.rb**
 
 ```ruby
-name = ENV['user']
+#/usr/bin/env ruby
 
-puts "My name is #{name}"
+name = %x(whoami) # Es equivalente a => name = `whoami`
+rol  = ARGV[0] || 'unkown'
+
+if name == 'root'
+  puts "root is not valid user!"
+  exit 1
+end
+
+puts "[#{rol}] My name is #{name}"
 exit 0
 ```
 
-De forma interactiva:
+# 19. Mis conclusiones
 
-```ruby
-print "¿Cómo te llamas? "
-name = gets
+* Ruby es ideal para el aprendizaje.
+* Transformación directa desde el pseudocódigo.
+* Transformación directa desde Bash.
+* Se escribe casi como en inglés natural.
+* Las empresas usan Ruby y Python como lenguages de scripting.
 
-puts "Hola #{name}!"
-exit 0
+# 20. Fin
+
 ```
+puts "Muchas gracias!" * 1000
+```
+
+* **GitHub**: `@dvarrui`
+* **Email**: `dvarrui@protonmail.com`
