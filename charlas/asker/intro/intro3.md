@@ -56,8 +56,8 @@ Nuestro plan para el 2022
 puts "Muchas gracias!" * 1000
 ```
 
-* **GitHub**: @teuton-software
-* Grupo de **Telegram**: https://t.me/+FsuphhJSaaGVpKcv
+* **GitHub**: `@teuton-software`
+* Grupo de **Telegram**: `https://t.me/+FsuphhJSaaGVpKcv`
 * **Email**: `teuton.software@protonmail.com`
 
-![](images/teuton-software.png)
+![](images/logo.png)

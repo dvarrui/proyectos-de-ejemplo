@@ -5,7 +5,7 @@
 Tu generador de preguntas para Moodle
 ```
 
-![](images/logo.png)
+![](images/teuton-software.png)
 
 # 1. Agradecimientos
 
@@ -14,7 +14,7 @@ Tu generador de preguntas para Moodle
     * Fundador de KDE blog (https://www.kdeblog.com/author/balta)
     * Profesor de ciencias en Secundaria.
 * Comunidad Telegram: https://t.me/+FsuphhJSaaGVpKcv
-* Equipo _Teuton Software_
+* Equipo _Teuton Software_ (@TeutonSoftware)
 
 ![](images/ujilliurex.png)
 
