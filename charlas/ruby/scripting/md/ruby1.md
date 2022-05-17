@@ -20,10 +20,8 @@
 
 # 4. Agenda
 
-* El problema
-* Posibles alternativas 
-* Propuesta
-* Definición de Scripting (personal)
+* El problema y posibles soluciones.
+* Definición personal de Scripting.
 * Lenguaje Ruby
 * Ejemplos
 
