@@ -1,7 +1,9 @@
 
 # 17 Ejemplo en Bash
 
-Ejemplo: **who-am-i.sh**
+![](images/whoami.sh.png)
+
+Ejemplo: **whoami.sh**
 
 ```bash
 #/usr/bin/env bash
@@ -24,7 +26,9 @@ exit 0
 
 # 18. Ejemplo en Ruby
 
-Ejemplo: **who-am-i.rb**
+![](images/whoami.rb.png)
+
+Ejemplo: **whoami.rb**
 
 ```ruby
 #/usr/bin/env ruby

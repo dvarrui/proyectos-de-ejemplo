@@ -51,11 +51,7 @@ sudo apt install ruby
 
 # 11. Variables
 
-```ruby
-name = "Obiwan"
-age = 42
-siths = [ "Darth Vader", "Darth Sidious", "Darth Maul"]
-```
+![](images/tipos-de-datos.png)
 
 # 12. Estructuras condicional
 
