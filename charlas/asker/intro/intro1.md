@@ -9,12 +9,12 @@ Tu generador de preguntas para Moodle
 
 # 1. Agradecimientos
 
-* Organización Ujilliurex
-* Baltasar Ortega Bort (Twitter: @baltolkien)
+* Organización **Ujilliurex**
+* **Baltasar Ortega Bort** (Twitter: @baltolkien)
     * Fundador de KDE blog (https://www.kdeblog.com/author/balta)
     * Profesor de ciencias en Secundaria.
-* Comunidad Telegram: https://t.me/+FsuphhJSaaGVpKcv
-* Equipo _Teuton Software_ (@TeutonSoftware)
+* Comunidad Asker **Telegram**
+* Equipo **Teuton Software** 
 
 ![](images/ujilliurex.png)
 
@@ -33,7 +33,7 @@ Tu generador de preguntas para Moodle
 Como profesor... siempre tenemos poco tiempo.
 ```
 * Corregir es aburrido, pero el **feedback** es muy importante.
-* Buscar formas/herramientas para **automatizar tareas**.
+* Buscar formas/herramientas para **automatizar tareas** (_Lo reconozco... soy más informático que profesor_)
 * Moodle nos ayuda mucho.
 * Los cuestionarios de Moodle se corrigen solos pero... las preguntas hay que crearlas.
 
