@@ -50,14 +50,18 @@ Programar scripts: Automatizar tareas, Sysadmin, Devops
 
 * Herramientas: Brew, **Yast**, **Vagrant**, Metasploit, Rails(**GitHub**, Shopify), etc.
 
-# 6. The Urban Penguin
+# 6. Definir scripting
 
-* Andrew Mallett (@theurbanpenguin)
-* Ruby Scripting in Linux - See our mini-series of video tutorials!
-    * http://ow.ly/BYIi30nifgZ
-    * https://www.theurbanpenguin.com/scripting-power-repetition/ruby-scripting-linux/
+Definición personal:
+* Lenguaje interpretado.
+* No se requiere IDE. Basta un editor texto plano.
+* Script => Ejecutar comandos del sistema + estructuras de control.
+* Comandos: Programas sin entorno gráfico.
 
 ```
-[?] Pero entonces... ¿qué es y qué no es scripting?
+[!] SCRIPTING = comandos_del_sistema() + "algo que los una de forma lógica"
 ```
-* No encuentro consenso
+
+* Automatizar/facilitar tareas.
+* Sólo mostrar mensajes cuando hay problemas.
+* Códigos de salida: `0 = OK`, `1 = Error`

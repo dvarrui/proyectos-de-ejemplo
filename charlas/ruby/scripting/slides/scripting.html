@@ -156,7 +156,6 @@
 <pre><code>[!] SCRIPTING = comandos_del_sistema() + "algo que los una de forma lógica"
 </code></pre>
 
-<p>Filosofía de los comandos y scripts:</p>
 <ul>
   <li>Automatizar/facilitar tareas.</li>
   <li>Sólo mostrar mensajes cuando hay problemas.</li>
@@ -200,12 +199,10 @@
     <!-- _S9SLIDE_ -->
 <h1 id="10-estructuras-condicional">10. Estructuras condicional</h1>
 
-<p>Estructura condicional:</p>
-
 <p><img src="images/condicional.png" alt="" /></p>
 
 <ul>
-  <li>Los paréntesis y “then” son opcionales:</li>
+  <li>Los paréntesis y el “then” son opcionales:</li>
 </ul>
 
 <pre><code>if (age &lt; 18) then
@@ -299,11 +296,7 @@ end
   <li>guardar la salida en una variable.</li>
 </ol>
 
-<pre><code class="language-ruby">name = ENV['USER'] # Leer las variables de entorno
-place = `pwd`
-
-puts "#{name} is into #{place}"
-</code></pre>
+<p><img src="images/leyendo-salida-comando.png" alt="" /></p>
 
 
 
@@ -313,29 +306,7 @@ puts "#{name} is into #{place}"
     <!-- _S9SLIDE_ -->
 <h1 id="18-entrada-al-script">18. Entrada al script</h1>
 
-<p>Paso de argumentos en el Array <code>ARGV</code>:</p>
-
-<pre><code class="language-ruby">puts "Hello #{ARGV[0]}!"
-
-exit 0
-</code></pre>
-
-<p>Variables de entorno:</p>
-
-<pre><code class="language-ruby">name = ENV['user']
-puts "My name is #{name}"
-
-exit 0
-</code></pre>
-
-<p>De forma interactiva:</p>
-
-<pre><code class="language-ruby">print "¿Cómo te llamas? "
-name = gets
-
-puts "Hola #{name}!"
-exit 0
-</code></pre>
+<p><img src="images/entrada-de-datos.png" alt="" /></p>
 
 
 

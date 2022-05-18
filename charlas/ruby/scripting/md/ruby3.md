@@ -1,5 +1,5 @@
 
-# 19. Ejemplo en Bash
+# 16. Ejemplo en Bash
 
 ![](images/whoami.sh.png)
 
@@ -24,7 +24,7 @@ echo "[$rol] My name is $name"
 exit 0
 ```
 
-# 20. Ejemplo en Ruby
+# 17. Ejemplo en Ruby
 
 ![](images/whoami.rb.png)
 
@@ -45,7 +45,7 @@ puts "[#{rol}] My name is #{name}"
 exit 0
 ```
 
-# 19. Mis conclusiones
+# 18. Resumen
 
 * Ruby es ideal para el aprendizaje.
 * Transformación directa desde el pseudocódigo.
@@ -55,7 +55,7 @@ exit 0
 
 ![](iamge/rubygems.png)
 
-# 20. Fin
+# 19. Fin
 
 ```
 puts "Muchas gracias!" * 1000
