@@ -2,7 +2,7 @@
 # 7. OpenSUSE
 
 ```
-[2013] Visita a la central de OpenSUSE en Nürenberg
+[+] Visita a la central de OpenSUSE en Nürenberg (2013)
 ```
 
 Lenguajes de scripting:
@@ -11,7 +11,7 @@ Lenguajes de scripting:
 * Perl
 
 Herramientas:
-* Yast, Vagrant, Metasploit, Rails(GitHub, Shopify), etc.
+* Brew, Yast, Vagrant, Metasploit, Rails(GitHub, Shopify), etc.
 
 # 8. The Urban Penguin
 
@@ -23,12 +23,9 @@ Herramientas:
 ```
 [?] Pero entonces... ¿qué es y qué no es scripting?
 ```
+* No encuentro consenso
 
 # 9. Definir scripting
-
-```
-[!] No encuentro consenso
-```
 
 Definición personal:
 * Lenguaje interpretado.
@@ -56,24 +53,23 @@ Filosofía de los comandos y scripts:
 ![](images/tipos-de-datos.png)
 
 * Tipado fuerte y dinámico igual que Bash.
+* Lenguage interpretado. No se compila igual que Bash.
 
 # 12. Estructuras condicional
 
 Estructura condicional:
 
-```ruby
-if age < 18
-  puts "Sorry! Too younger!"
-end
-```
+![](images/condicional.png)
 
 * Los paréntesis son opcionales
-* La keyword then es opcional
+
 ```
 if (age < 18)
   puts "Sorry! Too younger!"
 end
 ```
+
+* La keyword then es opcional
 
 ```
 if (age < 18) then
@@ -103,26 +99,23 @@ end
 
 ![](images/iterador-for.png)
 
-Hay muchas formas de hacer bucles e iterar.
+Bucle clásico:
 
 ![](images/bucle-while.png)
 
+```
+[!] Hay muchas otras formas de hacer bucles e iterar...
+```
+
 # 15. Métodos y funciones:
 
-```ruby
-def greet(name)
-  puts "May the fourth, be with you #{name}!"
-end
-```
+Método
 
-```ruby
-def am_i_root?
-  username = `whoami`.chomp
-  return true if username == 'root'
+![](images/metodo.png)
 
-  return false
-end
-```
+Función
+
+![](images/funcion.png)
 
 # 14. Ejecutar comandos
 

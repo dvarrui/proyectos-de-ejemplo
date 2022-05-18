@@ -20,6 +20,10 @@
 
 # 4. Agenda
 
+```
+¿Qué es lo que vamos a ver?
+```
+
 * El problema y posibles soluciones.
 * Definición personal de Scripting.
 * Lenguaje Ruby
@@ -28,7 +32,7 @@
 # 5. El problema
 
 ```
-[Situación] Poco tiempo para impartir programación de Scripting
+Poco tiempo para impartir programación de Scripting
 ```
 
 * Impartir el módulo de sistemas operativos en FP.
@@ -37,7 +41,7 @@
     * Windows => CMD, PowerShell
 
 ```
-[Programar scripts] Automatizar tareas, Sysadmin, Devops
+Programar scripts: Automatizar tareas, Sysadmin, Devops
 ```
 
 * Los **sysadmin/devops** somos programadores... de scripts.
@@ -48,3 +52,7 @@
 1. No hacer nada: Coste cero.
 1. Ganar más tiempo: Quitar tiempo de otras unidades didácticas.
 1. Cambiar a un lenguaje de scripting mutiplataforma: ¿?
+
+```
+Searching...
+```
