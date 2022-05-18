@@ -43,7 +43,7 @@ Programar scripts: Automatizar tareas, Sysadmin, Devops
 1. Cambiar a un lenguaje de scripting mutiplataforma: ¿?
 
 ```
-[+] 2013 - Visita a la central de OpenSUSE en Nürenberg
+(2013) Visita a la central de OpenSUSE en Nürenberg
 ```
 
 * Lenguajes de scripting: **Ruby**, Python y Perl.
@@ -59,7 +59,7 @@ Definición personal:
 * Comandos: Programas sin entorno gráfico.
 
 ```
-[!] SCRIPTING = comandos_del_sistema() + "algo que los una de forma lógica"
+SCRIPTING = comandos_del_sistema() + "algo que los una de forma lógica"
 ```
 
 * Automatizar/facilitar tareas.

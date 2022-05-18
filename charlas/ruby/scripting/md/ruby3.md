@@ -47,13 +47,13 @@ exit 0
 
 # 18. Resumen
 
-* Ruby es ideal para el aprendizaje.
-* Transformación directa desde el pseudocódigo.
+* Ruby es ideal para **aprender** a programar.
+* Transformación directa desde **pseudocódigo**.
 * Transformación directa desde Bash.
-* Se escribe casi como en inglés natural.
-* Las empresas usan Ruby y Python como lenguages de scripting.
+* Se escribe casi como en **inglés natural**.
+* Las **empresas usan Ruby** y Python como lenguages de scripting.
 
-![](iamge/rubygems.png)
+![](images/rubygems.png)
 
 # 19. Fin
 
