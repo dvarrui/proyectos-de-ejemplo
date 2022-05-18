@@ -1,5 +1,5 @@
 
-# 7. Empresas
+# 7. OpenSUSE
 
 ```
 [2013] Visita a la central de OpenSUSE en Nürenberg
@@ -15,54 +15,45 @@ Herramientas:
 
 # 8. The Urban Penguin
 
-* Andrew Mallett (@theurbanpenguin): Ruby Scripting in Linux - See our mini-series of video tutorials!
+* Andrew Mallett (@theurbanpenguin)
+* Ruby Scripting in Linux - See our mini-series of video tutorials!
     * http://ow.ly/BYIi30nifgZ
     * https://www.theurbanpenguin.com/scripting-power-repetition/ruby-scripting-linux/
 
 ```
-Pero entonces... ¿qué es y qué no es scripting?
+[?] Pero entonces... ¿qué es y qué no es scripting?
 ```
 
 # 9. Definir scripting
 
 ```
-Al no encontrar consenso con los compañeros... creo mi propia definición personal
+[!] No encuentro consenso
 ```
 
+Definición personal:
 * Lenguaje interpretado.
 * No se requiere IDE. Basta un editor texto plano.
 * Script => Ejecutar comandos del sistema + estructuras de control.
 * Comandos: Programas sin entorno gráfico.
 
 ```
-Scripting = comandos del sistema + "algo que los una de forma lógica"
+[!] SCRIPTING = comandos_del_sistema() + "algo que los una de forma lógica"
 ```
 
-* Nuestro objetivo es automatizar.
+Filosofía de los comandos y scripts:
+* Automatizar/facilitar tareas.
 * Sólo mostrar mensajes cuando hay problemas.
 * Códigos de salida: `0 = OK`, `1 = Error`
 
 # 10. Instalación
 
-```bash
-sudo apt install ruby
-```
+![](images/instalacion.png)
 
 * MacOS y OpenSUSE ya lo tienen preinstalado.
 
 # 11. Variables
 
-<<<<<<< HEAD
-Ejemplos variables String, Integer y Array:
-
-```ruby
-name = "Obiwan"
-age = 42
-siths = [ "Darth Vader", "Darth Sidious", "Darth Maul"]
-```
-=======
 ![](images/tipos-de-datos.png)
->>>>>>> 3c83f53d588d98a65580b9422b939ca89a3b25f5
 
 * Tipado fuerte y dinámico igual que Bash.
 
@@ -76,7 +67,8 @@ if age < 18
 end
 ```
 
-* Los parént
+* Los paréntesis son opcionales
+* La keyword then es opcional
 ```
 if (age < 18)
   puts "Sorry! Too younger!"
@@ -90,19 +82,32 @@ end
 
 ```
 
-# 13. Los iteradores
+# 13. Filosofía de Ruby (I)
 
-```ruby
-jedis = [ "Obiwan", "Yoda", "Quigon-Jinn"]
-
-for jedi in jedis
-  puts "Hello #{jedi}"
-end
-
-# Hay muchos más iteradores pero con este será suficiente por ahora
+```
+[ Principio 1 ] Buscar la felicidad del programador!
 ```
 
-# 14. Métodos y funciones:
+* Ruby está orientado a **"reducir" el tiempo del ser humano**. Todo el trabajo se trata de pasar a la máquina.
+
+```
+[?] ¿Esto es muy subjetivo?... ¿Cómo lo hacemos en realidad?_
+```
+
+* **Principio de menor sorpresa**.
+* Lenguaje, dinámico y flexible para dar **libertad al programador**.
+* Ruby es **simple por fuera**, pero complejo por dentro.
+* Importancia de parecerse al **lenguaje natural**.
+
+# 14. Los iteradores
+
+![](images/iterador-for.png)
+
+Hay muchas formas de hacer bucles e iterar.
+
+![](images/bucle-while.png)
+
+# 15. Métodos y funciones:
 
 ```ruby
 def greet(name)

@@ -1,7 +1,7 @@
 
 # I love Ruby: Scripting Feliz!
 
-![](../../language/images/iloveruby.png)
+![](images/iloveruby.png)
 
 # 2. Agradecimientos
 
@@ -28,7 +28,7 @@
 # 5. El problema
 
 ```
-Situación: Poco tiempo para impartir programación de Scripting
+[Situación] Poco tiempo para impartir programación de Scripting
 ```
 
 * Impartir el módulo de sistemas operativos en FP.
@@ -37,7 +37,7 @@ Situación: Poco tiempo para impartir programación de Scripting
     * Windows => CMD, PowerShell
 
 ```
-Programación Scripting: Automatizar tareas, Sysadmin, Devops
+[Programar scripts] Automatizar tareas, Sysadmin, Devops
 ```
 
 * Los **sysadmin/devops** somos programadores... de scripts.
