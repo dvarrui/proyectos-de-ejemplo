@@ -11,7 +11,6 @@ Definición personal:
 [!] SCRIPTING = comandos_del_sistema() + "algo que los una de forma lógica"
 ```
 
-Filosofía de los comandos y scripts:
 * Automatizar/facilitar tareas.
 * Sólo mostrar mensajes cuando hay problemas.
 * Códigos de salida: `0 = OK`, `1 = Error`
@@ -31,11 +30,9 @@ Filosofía de los comandos y scripts:
 
 # 10. Estructuras condicional
 
-Estructura condicional:
-
 ![](images/condicional.png)
 
-* Los paréntesis y "then" son opcionales:
+* Los paréntesis y el "then" son opcionales:
 
 ```
 if (age < 18) then
@@ -96,38 +93,8 @@ La instrucción `%x()` o "comillas inclinadas" sirven para:
 1. Ejecutar un comando del sistema y
 2. guardar la salida en una variable.
 
-```ruby
-name = ENV['USER'] # Leer las variables de entorno
-place = `pwd`
-
-puts "#{name} is into #{place}"
-```
+![](images/leyendo-salida-comando.png)
 
 # 18. Entrada al script
 
-Paso de argumentos en el Array `ARGV`:
-
-```ruby
-puts "Hello #{ARGV[0]}!"
-
-exit 0
-```
-
-Variables de entorno:
-
-```ruby
-name = ENV['user']
-puts "My name is #{name}"
-
-exit 0
-```
-
-De forma interactiva:
-
-```ruby
-print "¿Cómo te llamas? "
-name = gets
-
-puts "Hola #{name}!"
-exit 0
-```
+![](images/entrada-de-datos.png)
