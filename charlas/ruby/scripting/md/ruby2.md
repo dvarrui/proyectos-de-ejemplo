@@ -1,31 +1,5 @@
 
-# 7. OpenSUSE
-
-```
-[+] Visita a la central de OpenSUSE en Nürenberg (2013)
-```
-
-Lenguajes de scripting:
-* **Ruby**
-* Python
-* Perl
-
-Herramientas:
-* Brew, Yast, Vagrant, Metasploit, Rails(GitHub, Shopify), etc.
-
-# 8. The Urban Penguin
-
-* Andrew Mallett (@theurbanpenguin)
-* Ruby Scripting in Linux - See our mini-series of video tutorials!
-    * http://ow.ly/BYIi30nifgZ
-    * https://www.theurbanpenguin.com/scripting-power-repetition/ruby-scripting-linux/
-
-```
-[?] Pero entonces... ¿qué es y qué no es scripting?
-```
-* No encuentro consenso
-
-# 9. Definir scripting
+# 7. Definir scripting
 
 Definición personal:
 * Lenguaje interpretado.
@@ -42,49 +16,40 @@ Filosofía de los comandos y scripts:
 * Sólo mostrar mensajes cuando hay problemas.
 * Códigos de salida: `0 = OK`, `1 = Error`
 
-# 10. Instalación
+# 8. Instalación de Ruby
 
 ![](images/instalacion.png)
 
 * MacOS y OpenSUSE ya lo tienen preinstalado.
 
-# 11. Variables
+# 9. Variables
 
 ![](images/tipos-de-datos.png)
 
-* Tipado fuerte y dinámico igual que Bash.
-* Lenguage interpretado. No se compila igual que Bash.
+* Tipado fuerte y dinámico (igual que Bash).
+* Lenguage interpretado (igual que Bash).
 
-# 12. Estructuras condicional
+# 10. Estructuras condicional
 
 Estructura condicional:
 
 ![](images/condicional.png)
 
-* Los paréntesis son opcionales
-
-```
-if (age < 18)
-  puts "Sorry! Too younger!"
-end
-```
-
-* La keyword then es opcional
+* Los paréntesis y "then" son opcionales:
 
 ```
 if (age < 18) then
   puts "Sorry! Too younger!"
 end
-
 ```
 
-# 13. Filosofía de Ruby (I)
+# 11. Filosofía de Ruby
 
 ```
 [ Principio 1 ] Buscar la felicidad del programador!
 ```
 
-* Ruby está orientado a **"reducir" el tiempo del ser humano**. Todo el trabajo se trata de pasar a la máquina.
+* Ruby está orientado a **"reducir" el tiempo del ser humano**.
 
 ```
 [?] ¿Esto es muy subjetivo?... ¿Cómo lo hacemos en realidad?_
@@ -95,7 +60,9 @@ end
 * Ruby es **simple por fuera**, pero complejo por dentro.
 * Importancia de parecerse al **lenguaje natural**.
 
-# 14. Los iteradores
+![](images/rubylang.png)
+
+# 12. Los iteradores
 
 ![](images/iterador-for.png)
 
@@ -107,13 +74,13 @@ Bucle clásico:
 [!] Hay muchas otras formas de hacer bucles e iterar...
 ```
 
-# 15. Métodos y funciones:
+# 13. Métodos y funciones:
 
 Método
 
 ![](images/metodo.png)
 
-Función
+La función es un método que devuelve un objeto.
 
 ![](images/funcion.png)
 
@@ -121,17 +88,13 @@ Función
 
 La instrucción `system` ejecuta un comando del sistema y devuelve `true/false`.
 
-```ruby
-ok = system("ping -c1 www.starwars.com")
-
-unless ok
-  puts "Starwars ERROR!"
-end
-```
+![](images/system.png)
 
 # 15. Ejecutar comandos para lectura
 
-La instrucción `%x()` o "comillas inclinadas", ejecuta un comando del sistema y devuelve su contenido.
+La instrucción `%x()` o "comillas inclinadas" sirven para:
+1. Ejecutar un comando del sistema y
+2. guardar la salida en una variable.
 
 ```ruby
 name = ENV['USER'] # Leer las variables de entorno
@@ -140,12 +103,13 @@ place = `pwd`
 puts "#{name} is into #{place}"
 ```
 
-# 16. Entrada al script
+# 18. Entrada al script
 
 Paso de argumentos en el Array `ARGV`:
 
 ```ruby
 puts "Hello #{ARGV[0]}!"
+
 exit 0
 ```
 
@@ -153,8 +117,8 @@ Variables de entorno:
 
 ```ruby
 name = ENV['user']
-
 puts "My name is #{name}"
+
 exit 0
 ```
 

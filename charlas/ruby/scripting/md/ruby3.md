@@ -1,5 +1,5 @@
 
-# 17 Ejemplo en Bash
+# 19. Ejemplo en Bash
 
 ![](images/whoami.sh.png)
 
@@ -24,7 +24,7 @@ echo "[$rol] My name is $name"
 exit 0
 ```
 
-# 18. Ejemplo en Ruby
+# 20. Ejemplo en Ruby
 
 ![](images/whoami.rb.png)
 
@@ -53,6 +53,8 @@ exit 0
 * Se escribe casi como en inglés natural.
 * Las empresas usan Ruby y Python como lenguages de scripting.
 
+![](iamge/rubygems.png)
+
 # 20. Fin
 
 ```
@@ -61,3 +63,5 @@ puts "Muchas gracias!" * 1000
 
 * **GitHub**: `@dvarrui`
 * **Email**: `dvarrui@protonmail.com`
+
+![](images/puerto-de-la-cruz.png)
