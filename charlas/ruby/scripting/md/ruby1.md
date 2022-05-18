@@ -46,11 +46,9 @@ Programar scripts: Automatizar tareas, Sysadmin, Devops
 [+] 2013 - Visita a la central de OpenSUSE en Nürenberg
 ```
 
-Lenguajes de scripting:
-* **Ruby**, Python y Perl.
+* Lenguajes de scripting: **Ruby**, Python y Perl.
 
-Herramientas:
-* Brew, Yast, Vagrant, Metasploit, Rails(GitHub, Shopify), etc.
+* Herramientas: Brew, **Yast**, **Vagrant**, Metasploit, Rails(**GitHub**, Shopify), etc.
 
 # 6. The Urban Penguin
 
