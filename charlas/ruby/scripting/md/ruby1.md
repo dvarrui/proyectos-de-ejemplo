@@ -28,16 +28,16 @@
 # 5. El problema
 
 ```
-Situación:
+Situación: Poco tiempo para impartir programación de Scripting
 ```
 
 * Impartir el módulo de sistemas operativos en FP.
-* **Poco tiempo** para enseñar programación de scripting.
+* Varias plataformas:
     * GNU/Linux => Bash
     * Windows => CMD, PowerShell
 
 ```
-Programación Sysadmin:
+Programación Scripting: Automatizar tareas, Sysadmin, Devops
 ```
 
 * Los **sysadmin/devops** somos programadores... de scripts.

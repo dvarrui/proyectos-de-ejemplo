@@ -1,15 +1,17 @@
 
-# 7. OpenSUSE
+# 7. Empresas
 
 ```
 [2013] Visita a la central de OpenSUSE en Nürenberg
 ```
 
 Lenguajes de scripting:
-* Ruby
+* **Ruby**
 * Python
 * Perl
 
+Herramientas:
+* Yast, Vagrant, Metasploit, Rails(GitHub, Shopify), etc.
 
 # 8. The Urban Penguin
 
@@ -24,22 +26,21 @@ Pero entonces... ¿qué es y qué no es scripting?
 # 9. Definir scripting
 
 ```
-Al no encontrar consenso hablando con los compañeros...
-Esta es mi definición personal
+Al no encontrar consenso con los compañeros... creo mi propia definición personal
 ```
 
-Características:
 * Lenguaje interpretado.
-* No requiere IDE. Editor texto plano.
-* Ejecutar comandos del sistema + estructuras de control.
-* Programas NO interactivos.
-    * Nuestro objetivo es automatizar.
-    * Sólo mostrar mensajes cuando hay problemas.
-* Códigos de salida: `0 = OK`, `1 = Error`
+* No se requiere IDE. Basta un editor texto plano.
+* Script => Ejecutar comandos del sistema + estructuras de control.
+* Comandos: Programas sin entorno gráfico.
 
 ```
 Scripting = comandos del sistema + "algo que los una de forma lógica"
 ```
+
+* Nuestro objetivo es automatizar.
+* Sólo mostrar mensajes cuando hay problemas.
+* Códigos de salida: `0 = OK`, `1 = Error`
 
 # 10. Instalación
 
@@ -51,21 +52,27 @@ sudo apt install ruby
 
 # 11. Variables
 
+Ejemplos variables String, Integer y Array:
+
 ```ruby
 name = "Obiwan"
 age = 42
 siths = [ "Darth Vader", "Darth Sidious", "Darth Maul"]
 ```
 
+* Tipado fuerte y dinámico igual que Bash.
+
 # 12. Estructuras condicional
 
 Estructura condicional:
+
 ```ruby
 if age < 18
   puts "Sorry! Too younger!"
 end
 ```
 
+* Los parént
 ```
 if (age < 18)
   puts "Sorry! Too younger!"
