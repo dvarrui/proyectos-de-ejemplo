@@ -63,5 +63,6 @@ puts "Muchas gracias!" * 1000
 
 * **GitHub**: `@dvarrui`
 * **Email**: `dvarrui@protonmail.com`
+* Presentación: https://github.com/dvarrui/proyectos-de-ejemplo/tree/master/charlas/ruby/scripting/slides
 
 ![](images/puerto-de-la-cruz.png)
