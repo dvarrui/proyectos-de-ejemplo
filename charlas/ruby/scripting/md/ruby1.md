@@ -1,11 +1,11 @@
 
-# Scripting Feliz!
+# I love Ruby: Scripting Feliz!
 
 ![](../../language/images/iloveruby.png)
 
 # 2. Agradecimientos
 
-* Organización Ujilliurex
+* Organización **Ujilliurex**
 
 ![](images/ujilliurex.png)
 

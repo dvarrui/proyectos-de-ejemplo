@@ -52,6 +52,7 @@ sudo apt install ruby
 
 # 11. Variables
 
+<<<<<<< HEAD
 Ejemplos variables String, Integer y Array:
 
 ```ruby
@@ -59,6 +60,9 @@ name = "Obiwan"
 age = 42
 siths = [ "Darth Vader", "Darth Sidious", "Darth Maul"]
 ```
+=======
+![](images/tipos-de-datos.png)
+>>>>>>> 3c83f53d588d98a65580b9422b939ca89a3b25f5
 
 * Tipado fuerte y dinámico igual que Bash.
 
