@@ -1,5 +1,5 @@
 
-# 19. Ejemplo en Bash
+# 16. Ejemplo en Bash
 
 ![](images/whoami.sh.png)
 
@@ -24,7 +24,7 @@ echo "[$rol] My name is $name"
 exit 0
 ```
 
-# 20. Ejemplo en Ruby
+# 17. Ejemplo en Ruby
 
 ![](images/whoami.rb.png)
 
@@ -45,17 +45,17 @@ puts "[#{rol}] My name is #{name}"
 exit 0
 ```
 
-# 19. Mis conclusiones
+# 18. Resumen
 
-* Ruby es ideal para el aprendizaje.
-* Transformación directa desde el pseudocódigo.
+* Ruby es ideal para **aprender** a programar.
+* Transformación directa desde **pseudocódigo**.
 * Transformación directa desde Bash.
-* Se escribe casi como en inglés natural.
-* Las empresas usan Ruby y Python como lenguages de scripting.
+* Se escribe casi como en **inglés natural**.
+* Las **empresas usan Ruby** y Python como lenguages de scripting.
 
-![](iamge/rubygems.png)
+![](images/rubygems.png)
 
-# 20. Fin
+# 19. Fin
 
 ```
 puts "Muchas gracias!" * 1000
@@ -63,5 +63,6 @@ puts "Muchas gracias!" * 1000
 
 * **GitHub**: `@dvarrui`
 * **Email**: `dvarrui@protonmail.com`
+* **Presentación**: https://github.com/dvarrui/proyectos-de-ejemplo/tree/master/charlas/ruby/scripting/slides
 
 ![](images/puerto-de-la-cruz.png)

@@ -64,25 +64,7 @@
 
   <div class="slide">
     <!-- _S9SLIDE_ -->
-<h1 id="4-agenda">4. Agenda</h1>
-
-<pre><code>¿Qué es lo que vamos a ver?
-</code></pre>
-
-<ul>
-  <li>El problema y posibles soluciones.</li>
-  <li>Definición personal de Scripting.</li>
-  <li>Lenguaje Ruby</li>
-  <li>Ejemplos</li>
-</ul>
-
-
-
-  </div>
-
-  <div class="slide">
-    <!-- _S9SLIDE_ -->
-<h1 id="5-el-problema">5. El problema</h1>
+<h1 id="4-el-problema">4. El problema</h1>
 
 <pre><code>Poco tiempo para impartir programación de Scripting
 </code></pre>
@@ -111,7 +93,7 @@
 
   <div class="slide">
     <!-- _S9SLIDE_ -->
-<h1 id="6-alternativas">6. Alternativas</h1>
+<h1 id="5-alternativas">5. Alternativas</h1>
 
 <ol>
   <li>No hacer nada: Coste cero.</li>
@@ -119,63 +101,25 @@
   <li>Cambiar a un lenguaje de scripting mutiplataforma: ¿?</li>
 </ol>
 
-<pre><code>Searching...
+<pre><code>(2013) Visita a la central de OpenSUSE en Nürenberg
 </code></pre>
 
-
-
-  </div>
-
-  <div class="slide">
-    <!-- _S9SLIDE_ -->
-<h1 id="7-opensuse">7. OpenSUSE</h1>
-
-<pre><code>[+] Visita a la central de OpenSUSE en Nürenberg (2013)
-</code></pre>
-
-<p>Lenguajes de scripting:</p>
 <ul>
-  <li><strong>Ruby</strong></li>
-  <li>Python</li>
-  <li>Perl</li>
-</ul>
-
-<p>Herramientas:</p>
-<ul>
-  <li>Brew, Yast, Vagrant, Metasploit, Rails(GitHub, Shopify), etc.</li>
-</ul>
-
-
-
-  </div>
-
-  <div class="slide">
-    <!-- _S9SLIDE_ -->
-<h1 id="8-the-urban-penguin">8. The Urban Penguin</h1>
-
-<ul>
-  <li>Andrew Mallett (@theurbanpenguin)</li>
-  <li>Ruby Scripting in Linux - See our mini-series of video tutorials!
-    <ul>
-      <li>http://ow.ly/BYIi30nifgZ</li>
-      <li>https://www.theurbanpenguin.com/scripting-power-repetition/ruby-scripting-linux/</li>
-    </ul>
+  <li>
+    <p>Lenguajes de scripting: <strong>Ruby</strong>, Python y Perl.</p>
+  </li>
+  <li>
+    <p>Herramientas: Brew, <strong>Yast</strong>, <strong>Vagrant</strong>, Metasploit, Rails(<strong>GitHub</strong>, Shopify), etc.</p>
   </li>
 </ul>
 
-<pre><code>[?] Pero entonces... ¿qué es y qué no es scripting?
-</code></pre>
-<ul>
-  <li>No encuentro consenso</li>
-</ul>
-
 
 
   </div>
 
   <div class="slide">
     <!-- _S9SLIDE_ -->
-<h1 id="9-definir-scripting">9. Definir scripting</h1>
+<h1 id="6-definir-scripting">6. Definir scripting</h1>
 
 <p>Definición personal:</p>
 <ul>
@@ -185,10 +129,9 @@
   <li>Comandos: Programas sin entorno gráfico.</li>
 </ul>
 
-<pre><code>[!] SCRIPTING = comandos_del_sistema() + "algo que los una de forma lógica"
+<pre><code>SCRIPTING = comandos_del_sistema() + "algo que los una de forma lógica"
 </code></pre>
 
-<p>Filosofía de los comandos y scripts:</p>
 <ul>
   <li>Automatizar/facilitar tareas.</li>
   <li>Sólo mostrar mensajes cuando hay problemas.</li>
@@ -201,7 +144,7 @@
 
   <div class="slide">
     <!-- _S9SLIDE_ -->
-<h1 id="10-instalación">10. Instalación</h1>
+<h1 id="7-instalación-de-ruby">7. Instalación de Ruby</h1>
 
 <p><img src="images/instalacion.png" alt="" /></p>
 
@@ -215,13 +158,13 @@
 
   <div class="slide">
     <!-- _S9SLIDE_ -->
-<h1 id="11-variables">11. Variables</h1>
+<h1 id="8-variables">8. Variables</h1>
 
 <p><img src="images/tipos-de-datos.png" alt="" /></p>
 
 <ul>
-  <li>Tipado fuerte y dinámico igual que Bash.</li>
-  <li>Lenguage interpretado. No se compila igual que Bash.</li>
+  <li>Tipado fuerte y dinámico (igual que Bash).</li>
+  <li>Lenguage interpretado (igual que Bash).</li>
 </ul>
 
 
@@ -230,29 +173,17 @@
 
   <div class="slide">
     <!-- _S9SLIDE_ -->
-<h1 id="12-estructuras-condicional">12. Estructuras condicional</h1>
-
-<p>Estructura condicional:</p>
+<h1 id="9-estructuras-condicional">9. Estructuras condicional</h1>
 
 <p><img src="images/condicional.png" alt="" /></p>
 
 <ul>
-  <li>Los paréntesis son opcionales</li>
-</ul>
-
-<pre><code>if (age &lt; 18)
-  puts "Sorry! Too younger!"
-end
-</code></pre>
-
-<ul>
-  <li>La keyword then es opcional</li>
+  <li>Los paréntesis y el “then” son opcionales:</li>
 </ul>
 
 <pre><code>if (age &lt; 18) then
   puts "Sorry! Too younger!"
 end
-
 </code></pre>
 
 
@@ -261,17 +192,16 @@ end
 
   <div class="slide">
     <!-- _S9SLIDE_ -->
-<h1 id="13-filosofía-de-ruby-i">13. Filosofía de Ruby (I)</h1>
+<h1 id="10-filosofía-de-ruby">10. Filosofía de Ruby</h1>
 
 <pre><code>[ Principio 1 ] Buscar la felicidad del programador!
 </code></pre>
 
 <ul>
-  <li>Ruby está orientado a <strong>“reducir” el tiempo del ser humano</strong>. Todo el trabajo se trata de pasar a la máquina.</li>
+  <li>Ruby está orientado a <strong>“reducir” el tiempo del ser humano</strong>.</li>
 </ul>
 
-<pre><code>[?] ¿Esto es muy subjetivo?... ¿Cómo lo hacemos en realidad?_
-</code></pre>
+<p><em>¿Esto es muy subjetivo?… ¿Cómo lo hacemos en realidad?</em></p>
 
 <ul>
   <li><strong>Principio de menor sorpresa</strong>.</li>
@@ -280,13 +210,15 @@ end
   <li>Importancia de parecerse al <strong>lenguaje natural</strong>.</li>
 </ul>
 
+<p><img src="images/rubylang.png" alt="" /></p>
+
 
 
   </div>
 
   <div class="slide">
     <!-- _S9SLIDE_ -->
-<h1 id="14-los-iteradores">14. Los iteradores</h1>
+<h1 id="11-los-iteradores">11. Los iteradores</h1>
 
 <p><img src="images/iterador-for.png" alt="" /></p>
 
@@ -294,7 +226,7 @@ end
 
 <p><img src="images/bucle-while.png" alt="" /></p>
 
-<pre><code>[!] Hay muchas otras formas de hacer bucles e iterar...
+<pre><code>Hay muchas otras formas de hacer bucles e iterar...
 </code></pre>
 
 
@@ -303,13 +235,13 @@ end
 
   <div class="slide">
     <!-- _S9SLIDE_ -->
-<h1 id="15-métodos-y-funciones">15. Métodos y funciones:</h1>
+<h1 id="12-métodos-y-funciones">12. Métodos y funciones:</h1>
 
 <p>Método</p>
 
 <p><img src="images/metodo.png" alt="" /></p>
 
-<p>Función</p>
+<p>La función es un método que devuelve un objeto.</p>
 
 <p><img src="images/funcion.png" alt="" /></p>
 
@@ -319,16 +251,11 @@ end
 
   <div class="slide">
     <!-- _S9SLIDE_ -->
-<h1 id="14-ejecutar-comandos">14. Ejecutar comandos</h1>
+<h1 id="13-ejecutar-comandos">13. Ejecutar comandos</h1>
 
 <p>La instrucción <code>system</code> ejecuta un comando del sistema y devuelve <code>true/false</code>.</p>
 
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ok</span> <span class="o">=</span> <span class="nb">system</span><span class="p">(</span><span class="s2">"ping -c1 www.starwars.com"</span><span class="p">)</span>
-
-<span class="k">unless</span> <span class="n">ok</span>
-  <span class="nb">puts</span> <span class="s2">"Starwars ERROR!"</span>
-<span class="k">end</span>
-</code></pre></div></div>
+<p><img src="images/system.png" alt="" /></p>
 
 
 
@@ -336,46 +263,15 @@ end
 
   <div class="slide">
     <!-- _S9SLIDE_ -->
-<h1 id="15-ejecutar-comandos-para-lectura">15. Ejecutar comandos para lectura</h1>
+<h1 id="14-ejecutar-comandos-para-lectura">14. Ejecutar comandos para lectura</h1>
 
-<p>La instrucción <code>%x()</code> o “comillas inclinadas”, ejecuta un comando del sistema y devuelve su contenido.</p>
+<p>La instrucción <code>%x()</code> o “comillas inclinadas” sirve para:</p>
+<ol>
+  <li>Ejecutar un comando del sistema y</li>
+  <li>guardar la salida en una variable.</li>
+</ol>
 
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">name</span> <span class="o">=</span> <span class="no">ENV</span><span class="p">[</span><span class="s1">'USER'</span><span class="p">]</span> <span class="c1"># Leer las variables de entorno</span>
-<span class="n">place</span> <span class="o">=</span> <span class="sb">`pwd`</span>
-
-<span class="nb">puts</span> <span class="s2">"</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2"> is into </span><span class="si">#{</span><span class="n">place</span><span class="si">}</span><span class="s2">"</span>
-</code></pre></div></div>
-
-
-
-  </div>
-
-  <div class="slide">
-    <!-- _S9SLIDE_ -->
-<h1 id="16-entrada-al-script">16. Entrada al script</h1>
-
-<p>Paso de argumentos en el Array <code>ARGV</code>:</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="s2">"Hello </span><span class="si">#{</span><span class="no">ARGV</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">!"</span>
-<span class="nb">exit</span> <span class="mi">0</span>
-</code></pre></div></div>
-
-<p>Variables de entorno:</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">name</span> <span class="o">=</span> <span class="no">ENV</span><span class="p">[</span><span class="s1">'user'</span><span class="p">]</span>
-
-<span class="nb">puts</span> <span class="s2">"My name is </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="nb">exit</span> <span class="mi">0</span>
-</code></pre></div></div>
-
-<p>De forma interactiva:</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">print</span> <span class="s2">"¿Cómo te llamas? "</span>
-<span class="nb">name</span> <span class="o">=</span> <span class="nb">gets</span>
-
-<span class="nb">puts</span> <span class="s2">"Hola </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">!"</span>
-<span class="nb">exit</span> <span class="mi">0</span>
-</code></pre></div></div>
+<p><img src="images/leyendo-salida-comando.png" alt="" /></p>
 
 
 
@@ -383,29 +279,39 @@ end
 
   <div class="slide">
     <!-- _S9SLIDE_ -->
-<h1 id="17-ejemplo-en-bash">17 Ejemplo en Bash</h1>
+<h1 id="15-entrada-al-script">15. Entrada al script</h1>
+
+<p><img src="images/entrada-de-datos.png" alt="" /></p>
+
+
+
+  </div>
+
+  <div class="slide">
+    <!-- _S9SLIDE_ -->
+<h1 id="16-ejemplo-en-bash">16. Ejemplo en Bash</h1>
 
 <p><img src="images/whoami.sh.png" alt="" /></p>
 
 <p>Ejemplo: <strong>whoami.sh</strong></p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#/usr/bin/env bash</span>
+<pre><code class="language-bash">#/usr/bin/env bash
 
-<span class="c"># OJO poner espacios es un problema de sintaxis: name = $(whoami)</span>
-<span class="nv">name</span><span class="o">=</span><span class="si">$(</span><span class="nb">whoami</span><span class="si">)</span>         
-<span class="nv">rol</span><span class="o">=</span><span class="nv">$1</span>
+# OJO poner espacios es un problema de sintaxis: name = $(whoami)
+name=$(whoami)         
+rol=$1
 
-<span class="c"># OJO: no poner espacios es un problema de sintáxis: if [$name == 'root']</span>
-<span class="c"># OJO: no poner espacios es un problema de semántica: if [ $name=='root' ]</span>
-<span class="k">if</span> <span class="o">[</span> <span class="nv">$name</span> <span class="o">==</span> <span class="s1">'root'</span> <span class="o">]</span>
-<span class="k">then</span> <span class="c"># OJO: No hay que olvidar el then</span>
-  <span class="nb">echo</span> <span class="s2">"root is not valid user!"</span>
-  <span class="nb">exit </span>1
-<span class="k">fi
+# OJO: no poner espacios es un problema de sintáxis: if [$name == 'root']
+# OJO: no poner espacios es un problema de semántica: if [ $name=='root' ]
+if [ $name == 'root' ]
+then # OJO: No hay que olvidar el then
+  echo "root is not valid user!"
+  exit 1
+fi
 
-</span><span class="nb">echo</span> <span class="s2">"[</span><span class="nv">$rol</span><span class="s2">] My name is </span><span class="nv">$name</span><span class="s2">"</span>
-<span class="nb">exit </span>0
-</code></pre></div></div>
+echo "[$rol] My name is $name"
+exit 0
+</code></pre>
 
 
 
@@ -413,25 +319,25 @@ end
 
   <div class="slide">
     <!-- _S9SLIDE_ -->
-<h1 id="18-ejemplo-en-ruby">18. Ejemplo en Ruby</h1>
+<h1 id="17-ejemplo-en-ruby">17. Ejemplo en Ruby</h1>
 
 <p><img src="images/whoami.rb.png" alt="" /></p>
 
 <p>Ejemplo: <strong>whoami.rb</strong></p>
 
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#/usr/bin/env ruby</span>
+<pre><code class="language-ruby">#/usr/bin/env ruby
 
-<span class="nb">name</span> <span class="o">=</span> <span class="sx">%x(whoami)</span> <span class="c1"># Es equivalente a =&gt; name = `whoami`</span>
-<span class="n">rol</span>  <span class="o">=</span> <span class="no">ARGV</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">||</span> <span class="s1">'unkown'</span>
+name = %x(whoami) # Es equivalente a =&gt; name = `whoami`
+rol  = ARGV[0] || 'unkown'
 
-<span class="k">if</span> <span class="nb">name</span> <span class="o">==</span> <span class="s1">'root'</span>
-  <span class="nb">puts</span> <span class="s2">"root is not valid user!"</span>
-  <span class="nb">exit</span> <span class="mi">1</span>
-<span class="k">end</span>
+if name == 'root'
+  puts "root is not valid user!"
+  exit 1
+end
 
-<span class="nb">puts</span> <span class="s2">"[</span><span class="si">#{</span><span class="n">rol</span><span class="si">}</span><span class="s2">] My name is </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="nb">exit</span> <span class="mi">0</span>
-</code></pre></div></div>
+puts "[#{rol}] My name is #{name}"
+exit 0
+</code></pre>
 
 
 
@@ -439,15 +345,17 @@ end
 
   <div class="slide">
     <!-- _S9SLIDE_ -->
-<h1 id="19-mis-conclusiones">19. Mis conclusiones</h1>
+<h1 id="18-resumen">18. Resumen</h1>
 
 <ul>
-  <li>Ruby es ideal para el aprendizaje.</li>
-  <li>Transformación directa desde el pseudocódigo.</li>
+  <li>Ruby es ideal para <strong>aprender</strong> a programar.</li>
+  <li>Transformación directa desde <strong>pseudocódigo</strong>.</li>
   <li>Transformación directa desde Bash.</li>
-  <li>Se escribe casi como en inglés natural.</li>
-  <li>Las empresas usan Ruby y Python como lenguages de scripting.</li>
+  <li>Se escribe casi como en <strong>inglés natural</strong>.</li>
+  <li>Las <strong>empresas usan Ruby</strong> y Python como lenguages de scripting.</li>
 </ul>
+
+<p><img src="images/rubygems.png" alt="" /></p>
 
 
 
@@ -455,7 +363,7 @@ end
 
   <div class="slide">
     <!-- _S9SLIDE_ -->
-<h1 id="20-fin">20. Fin</h1>
+<h1 id="19-fin">19. Fin</h1>
 
 <pre><code>puts "Muchas gracias!" * 1000
 </code></pre>
@@ -463,7 +371,10 @@ end
 <ul>
   <li><strong>GitHub</strong>: <code>@dvarrui</code></li>
   <li><strong>Email</strong>: <code>dvarrui@protonmail.com</code></li>
+  <li><strong>Presentación</strong>: https://github.com/dvarrui/proyectos-de-ejemplo/tree/master/charlas/ruby/scripting/slides</li>
 </ul>
+
+<p><img src="images/puerto-de-la-cruz.png" alt="" /></p>
 
 
   </div>
