@@ -1,4 +1,8 @@
 
+# Aprender Ruby 
+
+* EN - [Poignant Ruby guide](http://poignant.guide/book/chapter-1.html)
+
 # Carbon
 
 Carbon is the easiest way to create and share beautiful images of your source code.
