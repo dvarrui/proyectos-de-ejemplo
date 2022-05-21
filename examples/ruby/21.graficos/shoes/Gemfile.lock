@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    shoes (3.0.1)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  shoes
+
+BUNDLED WITH
+   2.3.11

@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby 
+
 require 'shoes'
 
 Shoes.app(title: "My calculator", width: 200, height: 240) do
