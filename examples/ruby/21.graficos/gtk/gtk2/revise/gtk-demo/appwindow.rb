@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 # $Id: appwindow.rb,v 1.3 2003/03/23 12:59:17 mutoh Exp $
 =begin
 = Application main window

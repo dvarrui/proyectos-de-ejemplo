@@ -1,4 +1,5 @@
-#!/usr/local/bin/ruby -w
+#!/usr/bin/env ruby
+
 # -*- coding: utf-8 -*-
 
 require "graphics"

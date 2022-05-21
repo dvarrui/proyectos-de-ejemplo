@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby 
+
 require 'gtk2'
 
 buttom = Gtk::Button.new("Say Hello")

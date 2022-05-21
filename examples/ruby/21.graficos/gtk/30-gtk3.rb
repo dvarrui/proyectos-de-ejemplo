@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 # install glade 
 # install gtk3 libgtk-3-...
 # install gobject-introspection-devel
