@@ -1,3 +1,9 @@
+
+# ncurses
+
+Problemas con la instalación de ncurses
+
+```
 ❯ bundle install                                    
 
 Fetching gem metadata from https://rubygems.org/.
@@ -36,6 +42,6 @@ An error occurred while installing ncurses (0.9.1), and Bundler cannot continue.
 
 In Gemfile:
   ncurses
-
+```
 
 
