@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    libui (0.0.15)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  libui
+
+BUNDLED WITH
+   2.3.11
