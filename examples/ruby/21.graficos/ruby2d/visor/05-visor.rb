@@ -24,7 +24,9 @@ end
 
 def configuration(version:)
   set title: "visor #{version} (ruby2d)"
-  set background: 'blue'
+  set background: 'navy'
+  set width: 800
+  set height: 600
 end
 
 def load_images_names
