@@ -2,47 +2,61 @@
 
 require 'ruby2d'
 
+class Scene
+  OFFSET = 800
+
+  def initialize(filepath, index)
+    @filepath = filepath
+    @index = index
+
+    @x = 50 + @index * OFFSET
+    filename = File.basename(@filepath)
+    @image = Image.new(@filepath, x: @x, y: 100)
+    @text = Text.new("Filename: #{filename}", x: @x, y: 50, size: 40, color: 'white', z: 10)
+  end
+
+  def offset(value)
+    return if value.zero?
+    @image.x = @x + value * OFFSET
+    @text.x = @x + value * OFFSET
+  end
+end
+
 def configuration(version:)
   set title: "visor #{version} (ruby2d)"
   set background: 'blue'
-  @image = nil
 end
 
-def load_images
+def load_images_names
   dirbase = File.join(File.dirname(__FILE__), '..', 'images')
   Dir.glob(dirbase + '/*')
 end
 
-def show_image(filepath)
-  filename = File.basename(filepath)
-  text = Text.new("Filename: #{filename}", x: 50, y: 50, size: 40, color: 'white', z: 10)
-  if @image.nil?
-    @image = Image.new(filepath, x: 50, y: 100)
-  else
-    @image.path = filepath
+def create_scenes
+  filepaths = load_images_names
+  @scenes = []
+  filepaths.each_with_index do |filepath, index|
+    @scenes << Scene.new(filepath, index)
   end
+  @scenes
 end
 
 def process_input
-  images = load_images
-  index = 0
-  show_image(images[index])
-    on :key_down do |event|
+  offset = 0
+  on :key_down do |event|
     if ['q', 'escape', 'e'].include? event.key
       close
     elsif event.key == 'right'
-      index += 1
-      index = 0 if index == images.size
+      offset += 1
     elsif event.key == 'left'
-      index -= 1
-      index = (images.size - 1) if index < 0
+      offset -=1
     end
-    show_image(images[index])
+    puts "#{event.key}, #{offset}"
+    @scenes.each { |scene| scene.offset(offset) }
   end
 end
 
-
 configuration(version: 'v05')
-@images = load_images
+create_scenes
 process_input
 show
