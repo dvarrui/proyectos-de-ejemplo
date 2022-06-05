@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    highline (2.0.3)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  highline
+
+BUNDLED WITH
+   2.3.11
