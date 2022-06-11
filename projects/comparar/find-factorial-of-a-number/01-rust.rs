@@ -1,5 +1,5 @@
 use std::{i32};
- 
+
 fn main() {
   let number = 7;
 
@@ -15,4 +15,3 @@ fn factorial(n :i32) -> i32 {
   }
   factorial
 }
-
