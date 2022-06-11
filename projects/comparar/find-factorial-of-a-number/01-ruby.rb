@@ -1,14 +1,8 @@
-# Python program to find the factorial of a number provided by the user.
+# to find the factorial of a number
 
-# change the value for a different result
-num = 7
-
-# To take input from the user
-#num = int(input("Enter a number: "))
-
+number = 7
 factorial = 1
 
-# check if the number is negative, positive or zero
 if num < 0
   puts "Sorry, factorial does not exist for negative numbers"
 elsif num.zero?

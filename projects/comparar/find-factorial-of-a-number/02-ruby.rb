@@ -1,15 +1,14 @@
-# find the factorial of a number provided by the user using recursion
+# program to find the factorial of a number provided by the user.
 
-def factorial(x)
-  return 1 if x == 1
+print "Enter a number: "
+number = gets.to_i
 
-  return (x * factorial(x-1))
+if number < 0
+  puts "Sorry, factorial does not exist for negative numbers"
+elsif number.zero?
+  puts "The factorial of 0 is 1"
+else
+  factorial = 1
+  (2..number).each { factorial *= _1 } 
+  puts "Factorial(#{number})=#{factorial}"
 end
-
-num = 7
-
-# to take input from the user
-# print "Enter a number: "; num = gets.tp_i
-
-result = factorial(num)
-puts "The factorial of #{num} is #{result}"
