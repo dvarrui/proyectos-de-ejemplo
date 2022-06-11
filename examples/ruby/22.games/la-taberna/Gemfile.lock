@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    image2ascii (1.1.4)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  image2ascii
+
+BUNDLED WITH
+   2.3.11
