@@ -1,5 +1,6 @@
 fn main() {
-  let b = is_prime(25);
+  let b = is_prime(29);
+
   if b {
     println!("Is prime!");
   } else {
@@ -7,7 +8,7 @@ fn main() {
   }
 }
 
-fn is_prime(n: u32) -> bool {
+fn is_prime(n :u32) -> bool {
   if n <= 1 {
     return false;
   }
@@ -18,4 +19,5 @@ fn is_prime(n: u32) -> bool {
   }
   true
 }
+
 
