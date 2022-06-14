@@ -70,6 +70,7 @@ DEPENDENCIES
   tty
   tty-progressbar
   tty-prompt
+  tty-table
 
 BUNDLED WITH
    2.3.11
