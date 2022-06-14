@@ -18,7 +18,7 @@ bar2 = bars.register("two [:bar] :percent", total: 15)
 
 bars.start  # starts all registered bars timers
 
-th1 = Thread.new { 15.times { sleep(0.1); bar1.advance } }
+th1 = Thread.new { 15.times { sleep(0.2); bar1.advance } }
 th2 = Thread.new { 15.times { sleep(0.1); bar2.advance } }
 
 [th1, th2].each { |t| t.join }
