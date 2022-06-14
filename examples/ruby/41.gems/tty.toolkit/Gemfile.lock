@@ -68,6 +68,7 @@ PLATFORMS
 
 DEPENDENCIES
   tty
+  tty-progressbar
   tty-prompt
 
 BUNDLED WITH
