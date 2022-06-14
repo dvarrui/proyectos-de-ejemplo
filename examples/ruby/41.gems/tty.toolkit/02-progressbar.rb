@@ -13,8 +13,8 @@ end
 
 bars = TTY::ProgressBar::Multi.new("main [:bar] :percent")
 
-bar1 = bars.register("one [:bar] :percent", total: 15)
-bar2 = bars.register("two [:bar] :percent", total: 15)
+bar1 = bars.register("one [:bar] :percent", total: 15, bar_format: :arrow)
+bar2 = bars.register("two [:bar] :percent", total: 15, bar_format: :block)
 
 bars.start  # starts all registered bars timers
 
