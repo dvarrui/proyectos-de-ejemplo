@@ -13,6 +13,10 @@ GEM
       unicode_utils (~> 1.4)
     strings-ansi (0.2.0)
     tty (0.1.0)
+    tty-box (0.7.0)
+      pastel (~> 0.8)
+      strings (~> 0.2.0)
+      tty-cursor (~> 0.7)
     tty-color (0.6.0)
     tty-cursor (0.7.1)
     tty-markdown (0.7.0)
@@ -47,7 +51,9 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  pastel
   tty
+  tty-box
   tty-markdown
   tty-progressbar
   tty-prompt
