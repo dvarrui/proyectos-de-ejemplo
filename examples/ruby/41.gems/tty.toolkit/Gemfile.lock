@@ -43,6 +43,7 @@ GEM
       pastel (~> 0.8)
       strings (~> 0.2.0)
       tty-screen (~> 0.8)
+    tty-tree (0.4.0)
     unicode-display_width (2.1.0)
     unicode_utils (1.4.0)
     wisper (2.0.1)
@@ -58,6 +59,7 @@ DEPENDENCIES
   tty-progressbar
   tty-prompt
   tty-table
+  tty-tree
 
 BUNDLED WITH
    2.3.11
