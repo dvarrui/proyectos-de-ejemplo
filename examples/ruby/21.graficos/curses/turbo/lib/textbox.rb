@@ -2,7 +2,8 @@
 require 'curses'
 
 class TextBox
-
+  attr_reader :data
+  
   def initialize(x:, y:, w:, h:)
     @box_position = { x: x, y: y }
     @box_size = { w: w, h: h }
@@ -16,8 +17,8 @@ class TextBox
       case ch
       when "q"
         return
-      when "\e" # ESC
-        return
+      when Curses::KEY_DOWN
+        @prompt[:y] += 1
       else
         @data[@prompt[:y]] << ch
         pos = global_position

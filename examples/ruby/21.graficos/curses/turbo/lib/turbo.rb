@@ -20,6 +20,7 @@ module Turbo
     textbox = TextBox.new(x:5, y:5, w:10, h:10)
     textbox.run
     close
+    puts textbox.data
   end
 
   def self.close
