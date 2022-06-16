@@ -1,5 +1,6 @@
 
 require "curses"
+require_relative "textbox"
 
 module Turbo
   extend Curses
@@ -11,26 +12,17 @@ module Turbo
     stdscr.box('|', "-")
     setpos(0,3); addstr(" TURBO (v0.1.0) ")
     setpos(24,3); addstr(" <Press 'q' to quit> ")
-  end 
+  end
 
   def self.run
-    init 
+    init
 
-    @pos = { x:10, y:10 }
-    loop do
-      c = get_char
-      case c
-      when "q"
-        return
-      when "\e" # ESC
-        return
-      else
-        setpos(@pos[:y], @pos[:x]); addstr(c)
-        @pos[:x] += 1
-      end
-    end
+    textbox = TextBox.new(x:5, y:5, w:10, h:10)
+    textbox.run
+    close
+  end
+
+  def self.close
     close_screen
   end
-end 
-
-
+end
