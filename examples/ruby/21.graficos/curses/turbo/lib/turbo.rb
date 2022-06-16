@@ -1,7 +1,7 @@
 
 require "curses"
 
-module Screen
+module Turbo
   extend Curses
 
   def self.init

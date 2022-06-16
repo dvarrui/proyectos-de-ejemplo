@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative "lib/screen"
+require_relative "lib/turbo"
 
-Screen.run
+Turbo.run
 
