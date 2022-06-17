@@ -34,6 +34,5 @@ module Turbo
 
   def self.close(boxes)
     close_screen
-    boxes[0].debug
   end
 end

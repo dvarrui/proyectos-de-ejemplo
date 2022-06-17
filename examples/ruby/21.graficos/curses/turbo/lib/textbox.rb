@@ -17,15 +17,20 @@ class TextBox
     render
     loop do
       ch = Curses.get_char
+      internal_debug
       case ch
       when "\e" # ESC
         return
+      when "\n" #Curses::KEY_DOWN
+        key_enter
       when Curses::KEY_DOWN
         key_down
       when Curses::KEY_UP
         key_up
       when Curses::KEY_BACKSPACE
         key_backspace
+      when 233
+        key_delete
       when Curses::KEY_LEFT
         key_left
       when Curses::KEY_RIGHT
@@ -38,8 +43,6 @@ class TextBox
   end
 
   def render
-    internal_debug
-
     @data.each_with_index do |line, index|
       y = @position.y + index
       x = @position.x
@@ -56,12 +59,6 @@ class TextBox
     Curses.addstr(text)
   end
 
-  def debug
-    @data.each_with_index do |line, index|
-      puts " #{index} : #{line}"
-    end
-  end
-
   private
 
   def internal_debug
@@ -70,9 +67,7 @@ class TextBox
                            @position.y + @cursor.y )
 
     line = @data[@cursor.y]
-    msg = "[DEBUG] Position: box(#{@position.x},#{@position.y}) " \
-          "cursor(#{@cursor.x},#{@cursor.y}) " \
-          "global(#{pos.x},#{pos.y})  " \
+    msg = "[DEBUG] " \
           "Data: lines=#{@data.size}, size=#{line.size}, current_line=<#{line}>      "
     write_xy(3, 23, msg)
   end
@@ -95,6 +90,13 @@ class TextBox
     @cursor.x -= 1
   end
 
+  def key_delete
+    return if current_line.size.zero?
+    return if @cursor.x == current_line.size
+
+    current_line[@cursor.x] = ''
+  end
+
   def key_left
     return if @cursor.x.zero?
 
@@ -114,11 +116,19 @@ class TextBox
     @cursor.x = current_line.size if @cursor.x >= current_line.size
   end
 
-  def key_down
+  def key_enter
     return if @cursor.y >= @size.h
 
     @cursor.y += 1
     @data << "" if current_line.nil?
+    @cursor.x = 0
+  end
+
+  def key_down
+    return if @cursor.y >= @size.h
+    return if @data[@cursor.y + 1].nil?
+
+    @cursor.y += 1
     @cursor.x = current_line.size if @cursor.x >= current_line.size
   end
 
