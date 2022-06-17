@@ -14,6 +14,7 @@ class TextBox
   end
 
   def run
+    render
     loop do
       ch = Curses.get_char
       case ch
@@ -33,13 +34,12 @@ class TextBox
         add_char(ch)
       end
       render
-      pos = global_position
-      Curses.setpos(pos.y, pos.x);
-      Curses.addstr('')
     end
   end
 
   def render
+    internal_debug
+
     @data.each_with_index do |line, index|
       y = @position.y + index
       x = @position.x
@@ -49,7 +49,10 @@ class TextBox
       Curses.setpos(y, x - 5)
       Curses.addstr("%3d:" % (index+1) )
     end
-    internal_debug
+
+    pos = global_position
+    Curses.setpos(pos.y, pos.x);
+    Curses.addstr('')
   end
 
   def debug
