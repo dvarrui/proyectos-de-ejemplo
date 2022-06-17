@@ -22,7 +22,7 @@ module Turbo
 
   def self.build_boxes
     boxes = []
-    boxes << TextBox.new(x:6, y:6, w:9, h:9)
+    boxes << TextBox.new(x:7, y:4, w:9, h:9)
     boxes
   end
 

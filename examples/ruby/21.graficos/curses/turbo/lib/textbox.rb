@@ -72,7 +72,7 @@ class TextBox
           "global(#{pos.x},#{pos.y})  "
     Curses.setpos(1,3); Curses.addstr(msg)
     line = @data[@cursor.y]
-    msg = "Data     : lines=#{@data.size}, current_line=<#{line}>, size=#{line.size}      "
+    msg = "Data     : lines=#{@data.size}, size=#{line.size}, current_line=<#{line}>      "
     Curses.setpos(2,3); Curses.addstr(msg)
     pos
   end
@@ -91,6 +91,7 @@ class TextBox
   def key_backspace
     return if @cursor.x.zero?
 
+    current_line[@cursor.x - 1] = ''
     @cursor.x -= 1
   end
 
