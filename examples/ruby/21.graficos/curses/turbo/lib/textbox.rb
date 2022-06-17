@@ -45,6 +45,9 @@ class TextBox
       x = @position.x
       Curses.setpos(y, x)
       Curses.addstr(line + " ")
+
+      Curses.setpos(y, x - 5)
+      Curses.addstr("%3d:" % (index+1) )
     end
     internal_debug
   end
@@ -63,7 +66,7 @@ class TextBox
                            @position.y + @cursor.y )
     msg = "Position : box(#{@position.x},#{@position.y}) " \
           "cursor(#{@cursor.x},#{@cursor.y}) " \
-          "global(#{pos.x},#{pos.y}) "
+          "global(#{pos.x},#{pos.y})  "
     Curses.setpos(1,3); Curses.addstr(msg)
     line = @data[@cursor.y]
     msg = "Data     : lines=#{@data.size}, current_line=<#{line}>, size=#{line.size}      "
@@ -79,7 +82,7 @@ class TextBox
   end
 
   def key_down
-    return if @cursor.y > @size.h
+    return if @cursor.y >= @size.h
 
     @cursor.x = 0
     @cursor.y += 1
