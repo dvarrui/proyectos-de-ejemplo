@@ -46,6 +46,7 @@ class TextBox
       Curses.setpos(y, x)
       Curses.addstr(line + " ")
     end
+    internal_debug
   end
 
   def debug
@@ -56,15 +57,24 @@ class TextBox
 
   private
 
+  def internal_debug
+    point_class = Struct.new(:x, :y)
+    pos = point_class.new( @position.x + @cursor.x,
+                           @position.y + @cursor.y )
+    msg = "Position : box(#{@position.x},#{@position.y}) " \
+          "cursor(#{@cursor.x},#{@cursor.y}) " \
+          "global(#{pos.x},#{pos.y}) "
+    Curses.setpos(1,3); Curses.addstr(msg)
+    line = @data[@cursor.y]
+    msg = "Data     : lines=#{@data.size}, current_line=<#{line}>, size=#{line.size}      "
+    Curses.setpos(2,3); Curses.addstr(msg)
+    pos
+  end
+
   def global_position
     point_class = Struct.new(:x, :y)
     pos = point_class.new( @position.x + @cursor.x,
                            @position.y + @cursor.y )
-    Curses.setpos(1,3); Curses.addstr("Box position    (#{@position.x}, #{@position.y}) ")
-    Curses.setpos(2,3); Curses.addstr("Cursor position (#{@cursor.x}, #{@cursor.y}) ")
-    Curses.setpos(3,3); Curses.addstr("Global position (#{pos.x}, #{pos.y}) ")
-    line = @data[@cursor.y]
-    Curses.setpos(4,3); Curses.addstr("Data[#{@cursor.y}] <#{line}> (#{line.size}) ")
     pos
   end
 
