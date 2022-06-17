@@ -68,13 +68,13 @@ class TextBox
     point_class = Struct.new(:x, :y)
     pos = point_class.new( @position.x + @cursor.x,
                            @position.y + @cursor.y )
-    msg = "Position : box(#{@position.x},#{@position.y}) " \
-          "cursor(#{@cursor.x},#{@cursor.y}) " \
-          "global(#{pos.x},#{pos.y})  "
-    write_xy(3, 24, msg)
+
     line = @data[@cursor.y]
-    msg = "Data : lines=#{@data.size}, size=#{line.size}, current_line=<#{line}>      "
-    write_xy(50, 24, msg)
+    msg = "[DEBUG] Position: box(#{@position.x},#{@position.y}) " \
+          "cursor(#{@cursor.x},#{@cursor.y}) " \
+          "global(#{pos.x},#{pos.y})  " \
+          "Data: lines=#{@data.size}, size=#{line.size}, current_line=<#{line}>      "
+    write_xy(3, 23, msg)
   end
 
   def global_position

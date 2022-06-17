@@ -16,7 +16,7 @@ module Turbo
     end
     #stdscr.box('|', "-")
     setpos(21,3); addstr("-" * 80)
-    setpos(22,3); addstr(" [Press 'ESC' to quit] ")
+    setpos(22,3); addstr("[Press 'ESC' to quit] ")
     build_boxes
   end
 
