@@ -51,7 +51,7 @@ class TextBox
       Curses.attrset(Curses.color_pair(15))
       write_xy(x, y, line)
       write_xy(x + line.size, y, tail)
-      Curses.attrset(Curses.color_pair(12))
+      Curses.attrset(Curses.color_pair(0))
       write_xy(x -5 , y, "%3d:" % (index+1))
       Curses.attrset(Curses.color_pair(15))
     end
