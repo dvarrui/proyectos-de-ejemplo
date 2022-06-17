@@ -88,21 +88,6 @@ class TextBox
     @data[@cursor.y]
   end
 
-  def key_down
-    return if @cursor.y >= @size.h
-
-    @cursor.y += 1
-    @data << "" if current_line.nil?
-    @cursor.x = current_line.size if @cursor.x >= current_line.size
-  end
-
-  def key_up
-    return if @cursor.y.zero?
-
-    @cursor.y -= 1
-    @cursor.x = current_line.size if @cursor.x >= current_line.size
-  end
-
   def key_backspace
     return if @cursor.x.zero?
 
@@ -116,9 +101,24 @@ class TextBox
   end
 
   def key_right
-    return if @cursor.x < @size.w
+    return if @cursor.x >= @size.w
 
-    @cursor.x += 1 if @cursor.x < @data[@cursor.y].size
+    @cursor.x += 1 if @cursor.x <= current_line.size
+  end
+
+  def key_up
+    return if @cursor.y.zero?
+
+    @cursor.y -= 1
+    @cursor.x = current_line.size if @cursor.x >= current_line.size
+  end
+
+  def key_down
+    return if @cursor.y >= @size.h
+
+    @cursor.y += 1
+    @data << "" if current_line.nil?
+    @cursor.x = current_line.size if @cursor.x >= current_line.size
   end
 
   def add_char(ch)
