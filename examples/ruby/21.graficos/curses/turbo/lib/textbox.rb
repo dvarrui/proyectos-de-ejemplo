@@ -48,8 +48,12 @@ class TextBox
       x = @position.x
       tail = '  '
       tail = '$ ' if line.size == @size.w
-      write_xy(x, y, line + tail)
+      Curses.attrset(Curses.color_pair(15))
+      write_xy(x, y, line)
+      write_xy(x + line.size, y, tail)
+      Curses.attrset(Curses.color_pair(12))
       write_xy(x -5 , y, "%3d:" % (index+1))
+      Curses.attrset(Curses.color_pair(15))
     end
 
     pos = global_position
@@ -71,7 +75,7 @@ class TextBox
     line = @data[@cursor.y]
     msg = "[DEBUG] " \
           "Data: lines=#{@data.size}, size=#{line.size}, current_line=<#{line}>      "
-    write_xy(3, 23, msg)
+    write_xy(3, 19, msg)
   end
 
   def global_position

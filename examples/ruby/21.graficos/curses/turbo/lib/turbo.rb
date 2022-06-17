@@ -10,17 +10,26 @@ module Turbo
     crmode
     cbreak
     noecho
+    if !Curses.has_colors?
+      addstr "This Terminal does not support colors!"
+    else
+      start_color
+      (0..15).each { |i| Curses.init_pair(i, i, 0) }
+    end
+
     stdscr.keypad = true
     at_exit do
       Curses.close_screen
     end
-    #stdscr.box('|', "-")
-    setpos(21,3); addstr("-" * 80)
-    setpos(22,3); addstr("[Press 'ESC' to quit] ")
-    build_boxes
+    build
   end
 
-  def self.build_boxes
+  def self.build
+    Curses.attrset(Curses.color_pair(0))
+    setpos(21,3); addstr("-" * 90)
+    setpos(22,3); addstr("[ ESC ]")
+    setpos(23,3); addstr("  Quit")
+
     boxes = []
     boxes << TextBox.new(x:7, y:4, w:9, h:9)
     boxes
