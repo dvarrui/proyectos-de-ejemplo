@@ -6,7 +6,7 @@ class TextBox
 
   def initialize(x:, y:, w:, h:)
     point_class = Struct.new(:x, :y)
-    @position = point_class.new(x, y)
+    @position = point_class.new(5, 5)
     size_class = Struct.new(:w, :h)
     @size = size_class.new(w, h)
     @cursor = point_class.new(0, 0)
@@ -43,16 +43,17 @@ class TextBox
     @data.each_with_index do |line, index|
       y = @position.y + index
       x = @position.x
-      Curses.setpos(y, x)
-      Curses.addstr(line + " ")
-
-      Curses.setpos(y, x - 5)
-      Curses.addstr("%3d:" % (index+1) )
+      write_xy(x, y, line + " ")
+      write_xy(x -5 , y, "%3d:" % (index+1))
     end
 
     pos = global_position
-    Curses.setpos(pos.y, pos.x);
-    Curses.addstr('')
+    write_xy(pos.x, pos.y, '')
+  end
+
+  def write_xy(x, y, text)
+    Curses.setpos(y, x);
+    Curses.addstr(text)
   end
 
   def debug
@@ -70,11 +71,10 @@ class TextBox
     msg = "Position : box(#{@position.x},#{@position.y}) " \
           "cursor(#{@cursor.x},#{@cursor.y}) " \
           "global(#{pos.x},#{pos.y})  "
-    Curses.setpos(1,3); Curses.addstr(msg)
+    write_xy(3, 1, msg)
     line = @data[@cursor.y]
     msg = "Data     : lines=#{@data.size}, size=#{line.size}, current_line=<#{line}>      "
-    Curses.setpos(2,3); Curses.addstr(msg)
-    pos
+    write_xy(3, 2, msg)
   end
 
   def global_position
