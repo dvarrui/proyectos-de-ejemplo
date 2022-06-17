@@ -6,7 +6,7 @@ class TextBox
 
   def initialize(x:, y:, w:, h:)
     point_class = Struct.new(:x, :y)
-    @position = point_class.new(6, 5)
+    @position = point_class.new(6, 1)
     size_class = Struct.new(:w, :h)
     @size = size_class.new(w, h)
     @cursor = point_class.new(0, 0)
@@ -71,10 +71,10 @@ class TextBox
     msg = "Position : box(#{@position.x},#{@position.y}) " \
           "cursor(#{@cursor.x},#{@cursor.y}) " \
           "global(#{pos.x},#{pos.y})  "
-    write_xy(3, 1, msg)
+    write_xy(3, 22, msg)
     line = @data[@cursor.y]
-    msg = "Data     : lines=#{@data.size}, size=#{line.size}, current_line=<#{line}>      "
-    write_xy(3, 2, msg)
+    msg = "Data : lines=#{@data.size}, size=#{line.size}, current_line=<#{line}>      "
+    write_xy(50, 22, msg)
   end
 
   def global_position
