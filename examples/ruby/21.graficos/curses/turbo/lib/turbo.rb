@@ -14,9 +14,9 @@ module Turbo
     at_exit do
       Curses.close_screen
     end
-    stdscr.box('|', "-")
-    setpos(0,3); addstr(" TURBO (v0.1.0) ")
-    setpos(24,3); addstr(" <Press 'ESC' to quit> ")
+    #stdscr.box('|', "-")
+    setpos(21,3); addstr("-" * 80)
+    setpos(22,3); addstr(" [Press 'ESC' to quit] ")
     build_boxes
   end
 

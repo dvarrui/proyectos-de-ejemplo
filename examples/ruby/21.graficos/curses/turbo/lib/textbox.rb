@@ -71,10 +71,10 @@ class TextBox
     msg = "Position : box(#{@position.x},#{@position.y}) " \
           "cursor(#{@cursor.x},#{@cursor.y}) " \
           "global(#{pos.x},#{pos.y})  "
-    write_xy(3, 22, msg)
+    write_xy(3, 24, msg)
     line = @data[@cursor.y]
     msg = "Data : lines=#{@data.size}, size=#{line.size}, current_line=<#{line}>      "
-    write_xy(50, 22, msg)
+    write_xy(50, 24, msg)
   end
 
   def global_position
@@ -104,7 +104,7 @@ class TextBox
   def key_right
     return if @cursor.x >= @size.w
 
-    @cursor.x += 1 if @cursor.x <= current_line.size
+    @cursor.x += 1 if @cursor.x < current_line.size
   end
 
   def key_up
