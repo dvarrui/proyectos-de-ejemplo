@@ -84,20 +84,24 @@ class TextBox
     pos
   end
 
+  def current_line
+    @data[@cursor.y]
+  end
+
   def key_down
     return if @cursor.y >= @size.h
 
-    @cursor.x = 0
     @cursor.y += 1
-    @data << "" if @data[@cursor.y].nil?
+    @data << "" if current_line.nil?
+    @cursor.x = current_line.size if @cursor.x >= current_line.size
   end
 
   def key_up
     return if @cursor.y.zero?
 
-    @cursor.x = 0
     @cursor.y -= 1
-    return ''  end
+    @cursor.x = current_line.size if @cursor.x >= current_line.size
+  end
 
   def key_backspace
     return if @cursor.x.zero?
