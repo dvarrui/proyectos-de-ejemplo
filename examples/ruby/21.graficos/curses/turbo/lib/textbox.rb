@@ -6,7 +6,7 @@ class TextBox
 
   def initialize(x:, y:, w:, h:)
     point_class = Struct.new(:x, :y)
-    @position = point_class.new(5, 5)
+    @position = point_class.new(6, 5)
     size_class = Struct.new(:w, :h)
     @size = size_class.new(w, h)
     @cursor = point_class.new(0, 0)
