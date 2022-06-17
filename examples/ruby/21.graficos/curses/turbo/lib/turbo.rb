@@ -8,27 +8,32 @@ module Turbo
   def self.init
     init_screen
     crmode
-    Curses.cbreak
+    cbreak
     noecho
-    Curses.stdscr.keypad = true
+    stdscr.keypad = true
     at_exit do
       Curses.close_screen
     end
     stdscr.box('|', "-")
     setpos(0,3); addstr(" TURBO (v0.1.0) ")
-    setpos(24,3); addstr(" <Press 'q' to quit> ")
+    setpos(24,3); addstr(" <Press 'ESC' to quit> ")
+    build_boxes
+  end
+
+  def self.build_boxes
+    boxes = []
+    boxes << TextBox.new(x:5, y:5, w:9, h:9)
+    boxes
   end
 
   def self.run
-    init
-
-    textbox = TextBox.new(x:5, y:5, w:9, h:9)
-    textbox.run
-    close
-    textbox.debug
+    boxes = init
+    boxes[0].run
+    close(boxes)
   end
 
-  def self.close
+  def self.close(boxes)
     close_screen
+    boxes[0].debug
   end
 end
