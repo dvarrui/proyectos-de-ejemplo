@@ -122,9 +122,9 @@ class TextBox
   end
 
   def add_char(ch)
-    return if @cursor.x >= @size.w
+    return if @cursor.x >= @size.w or current_line.size == @size.w
 
-    if @cursor.x == @data[@cursor.y].size
+    if @cursor.x == current_line.size
       @data[@cursor.y] << ch
     else
       @data[@cursor.y].insert(@cursor.x, ch)
