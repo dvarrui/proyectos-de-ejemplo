@@ -29,7 +29,7 @@ class TextBox
         key_up
       when Curses::KEY_BACKSPACE
         key_backspace
-      when 233
+      when 330
         key_delete
       when Curses::KEY_LEFT
         key_left
@@ -144,6 +144,7 @@ class TextBox
     if @cursor.x == current_line.size
       @data[@cursor.y] << ch
     else
+      require 'debug'; binding.break
       @data[@cursor.y].insert(@cursor.x, ch)
     end
     @cursor.x += 1
