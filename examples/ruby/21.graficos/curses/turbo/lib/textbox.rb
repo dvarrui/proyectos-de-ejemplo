@@ -46,7 +46,9 @@ class TextBox
     @data.each_with_index do |line, index|
       y = @position.y + index
       x = @position.x
-      write_xy(x, y, line + " ")
+      tail = '  '
+      tail = '$ ' if line.size == @size.w
+      write_xy(x, y, line + tail)
       write_xy(x -5 , y, "%3d:" % (index+1))
     end
 
