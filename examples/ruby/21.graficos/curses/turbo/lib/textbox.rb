@@ -20,37 +20,22 @@ class TextBox
       when "\e" # ESC
         return
       when Curses::KEY_DOWN
-        ch = key_down
+        key_down
       when Curses::KEY_UP
-        ch = key_up
+        key_up
       when Curses::KEY_BACKSPACE
-        ch = ''
-        next if @cursor.x.zero?
-
-        @cursor.x -= 1
+        key_backspace
       when Curses::KEY_LEFT
-        ch = ''
-        next if @cursor.x.zero?
-
-        @cursor.x -= 1
+        key_left
       when Curses::KEY_RIGHT
-        ch = ''
-        next if @cursor.x < @size.w
-
-        @cursor.x += 1 if @cursor.x < @data[@cursor.y].size
+        key_right
       else
-        save = ch
-        ch = ''
-        next if @cursor.x > @size.w
-
-        ch = save
-        @data[@cursor.y] << ch
-        @cursor.x += 1
+        add_char(ch)
       end
       render
       pos = global_position
-      Curses.setpos(pos.y, pos.x + 1);
-      Curses.addstr('#')
+      Curses.setpos(pos.y, pos.x);
+      Curses.addstr('')
     end
   end
 
@@ -75,25 +60,51 @@ class TextBox
     point_class = Struct.new(:x, :y)
     pos = point_class.new( @position.x + @cursor.x,
                            @position.y + @cursor.y )
-    Curses.setpos(3,3)
-    Curses.addstr("(#{pos.x}, #{pos.y}) ")
+    Curses.setpos(1,3); Curses.addstr("Box position    (#{@position.x}, #{@position.y}) ")
+    Curses.setpos(2,3); Curses.addstr("Cursor position (#{@cursor.x}, #{@cursor.y}) ")
+    Curses.setpos(3,3); Curses.addstr("Global position (#{pos.x}, #{pos.y}) ")
+    line = @data[@cursor.y]
+    Curses.setpos(4,3); Curses.addstr("Data[#{@cursor.y}] <#{line}> (#{line.size}) ")
     pos
   end
 
   def key_down
-    return '' if @cursor.y > @size.h
+    return if @cursor.y > @size.h
 
     @cursor.x = 0
     @cursor.y += 1
     @data << "" if @data[@cursor.y].nil?
-    return ''
   end
 
   def key_up
-    return '' if @cursor.y.zero?
+    return if @cursor.y.zero?
 
     @cursor.x = 0
     @cursor.y -= 1
-    return ''
+    return ''  end
+
+  def key_backspace
+    return if @cursor.x.zero?
+
+    @cursor.x -= 1
+  end
+
+  def key_left
+    return if @cursor.x.zero?
+
+    @cursor.x -= 1
+  end
+
+  def key_right
+    return if @cursor.x < @size.w
+
+    @cursor.x += 1 if @cursor.x < @data[@cursor.y].size
+  end
+
+  def add_char(ch)
+    return if @cursor.x >= @size.w
+
+    @data[@cursor.y] << ch
+    @cursor.x += 1
   end
 end
