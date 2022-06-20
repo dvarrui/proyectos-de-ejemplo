@@ -10,20 +10,16 @@ class World
     @origin = Struct.new(:x, :y).new(x, y)
 
     @filename = filename
-    @data = []
-    @data <<  '0 0 0 0 0 0 0 0 0 0'
-    @data <<  '0 0 0 0 0 1 1 1 0 0'
-    @data <<  '0 0 0 0 0 0 0 0 0 0'
-    @data <<  '0 0 1 0 0 0 0 0 0 0'
-    @data <<  '0 0 1 0 0 0 0 0 1 0'
-    @data <<  '0 0 1 1 1 0 0 0 1 0'
-    @data <<  '0 0 0 0 0 0 0 0 1 0'
-    @data <<  '0 0 0 0 0 0 0 0 0 0'
+    @data = load(filename)
   end
 
   def render
-    @data.each_with_index do |line, index|
-      @output.print_at(line, origin.y + index, origin.x)
+    @data.each_with_index do |row, rowindex|
+      row.each_with_index do |cell, colindex|
+        x = origin.x + colindex
+        y = origin.y + rowindex
+        @output.print_at(cell, y, x)
+      end
     end
   end
 
@@ -31,4 +27,22 @@ class World
     @step += 1
   end
 
+  private
+
+  def load(filename)
+    map = ""
+    map += "..00........\n"
+    map += ".......000..\n"
+    map += ".........0..\n"
+    map += ".0.......0..\n"
+    map += ".0.......0..\n"
+    map += ".0..........\n"
+    map += "......00....\n"
+    map += "............\n"
+
+    map.gsub!('.', ' ')
+    @data = map.split("\n")
+    @data.map! { _1.chars}
+    @data
+  end
 end

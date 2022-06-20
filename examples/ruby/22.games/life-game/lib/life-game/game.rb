@@ -12,7 +12,7 @@ class Game
     Output.init
     @output = Output.new(window)
 
-    @world = World.new(x: 5, y: 2, filename: filename)
+    @world = World.new(filename: filename, x: 5, y: 2)
     @world.output = @output
   end
 
@@ -32,7 +32,7 @@ class Game
   def render
     @output.print_at(" LifeGame ", 0, 2)
     @output.print_at(" (Press ESC to exit) ", 19, 2)
-    @output.print_at(" Steps: %d " % @world.step, 19, @window.width - 15)
+    @output.print_at(" Steps: %d " % @world.step, 19, @window.width - 16)
 
     @world.render
     @window.refresh
@@ -44,7 +44,6 @@ class Game
 
   def gameover
     Output.close
-
-    puts("----- GAME OVER -----")
+    puts("[LifeGame] GAME OVER!")
   end
 end
