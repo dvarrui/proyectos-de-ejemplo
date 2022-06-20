@@ -30,6 +30,7 @@ class World
   end
 
   def update
+    @step += 1
   end
 
 end

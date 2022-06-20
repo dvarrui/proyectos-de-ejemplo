@@ -13,6 +13,7 @@ class Game
     @output = Output.new(window)
 
     @world = World.new(x: 5, y: 5, filename: filename)
+    @world.output = @output
   end
 
   def play
@@ -20,8 +21,8 @@ class Game
     while (key != 27)
       render
       window.timeout = 150
-
       key = @input.update
+      update
     end
     gameover
   end
@@ -32,9 +33,12 @@ class Game
     @output.print_at(" LifeGame ", 0, 2)
     @output.print_at(" (Press ESC to exit) ", 19, 2)
     @output.print_at(" Steps: %d " % @world.step, 19, @window.width - 15)
+
+    @world.render
   end
 
   def update
+    @world.update
   end
 
   def gameover
