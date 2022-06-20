@@ -1,5 +1,4 @@
 
-
 class World
   attr_accessor :output
   attr_reader :step
