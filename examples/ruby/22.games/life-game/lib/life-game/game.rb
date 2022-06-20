@@ -1,20 +1,18 @@
 require_relative 'term_window'
 require_relative 'output'
 require_relative 'input'
+require_relative 'world'
 
 class Game
   attr_reader :window
 
-  def initialize
+  def initialize(filename)
     @window = TermWindow.new(20, 60)
     @input = Input.new(window)
     Output.init
-    @output = Output.new(window, false)
+    @output = Output.new(window)
 
-    # Create Snake with coordenates of every slide (3 slides at beginning)
-    # TODO: It could be interesting... play with several players (snakes)
-    @cells = %w(0 0 0 0 1 1 1 0 0 0)
-    @step = 0
+    @world = World.new(x: 5, y: 5, filename: filename)
   end
 
   def play
@@ -24,10 +22,6 @@ class Game
       window.timeout = 150
 
       key = @input.update
-      case key
-      when 27
-        gameover
-      end
     end
     gameover
   end
@@ -35,8 +29,9 @@ class Game
   private
 
   def render
-    @output.print_at(" LifeGame - (Press ESC to exit) ", 0, 2)
-    @output.print_at(" Steps: %d " % @step, 19, @window.width - 15)
+    @output.print_at(" LifeGame ", 0, 2)
+    @output.print_at(" (Press ESC to exit) ", 19, 2)
+    @output.print_at(" Steps: %d " % @world.step, 19, @window.width - 15)
   end
 
   def update

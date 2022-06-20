@@ -1,29 +1,26 @@
 
+require 'curses'
+
 class Output
   INVISIBLE_CURSOR = 0
 
-  def initialize(window, debug = false)
+  def initialize(window)
     @window = window
-    @debug = debug
-    require 'curses' unless @debug
   end
 
   def print_at(text, x, y)
-    return if @debug
     @window.setpos(x, y)
     @window.addstr(text.to_s)
     @window.refresh
   end
 
   def paint(node)
-    return if @debug
     @window.setpos(node.y, node.x)
     @window.addstr(node.symbol)
     @window.refresh
   end
 
   def self.init
-    return if @debug
     Curses.init_screen()
     Curses.cbreak()
     Curses.noecho
@@ -31,7 +28,6 @@ class Output
   end
 
   def self.close
-    return if @debug
     Curses.close_screen
   end
 end
