@@ -12,7 +12,7 @@ class Game
     Output.init
     @output = Output.new(window)
 
-    @world = World.new(x: 5, y: 5, filename: filename)
+    @world = World.new(x: 5, y: 2, filename: filename)
     @world.output = @output
   end
 
@@ -35,6 +35,7 @@ class Game
     @output.print_at(" Steps: %d " % @world.step, 19, @window.width - 15)
 
     @world.render
+    @window.refresh
   end
 
   def update

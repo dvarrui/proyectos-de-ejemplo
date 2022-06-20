@@ -8,16 +8,14 @@ class Output
     @window = window
   end
 
-  def print_at(text, x, y)
-    @window.setpos(x, y)
+  def print_at(text, y, x)
+    @window.setpos(y, x)
     @window.addstr(text.to_s)
-    @window.refresh
   end
 
   def paint(node)
     @window.setpos(node.y, node.x)
     @window.addstr(node.symbol)
-    @window.refresh
   end
 
   def self.init
