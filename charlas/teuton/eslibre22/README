@@ -1,4 +1,10 @@
 
+Preparativos:
 * Instalar la plantilla: `slideshow install slidy`
-* `create.rb` para dar las orden de crear la presentación.
 
+Contenidos:
+* Los contenidos se guardan en ficheros Markdown dentro de la carpeta md.
+* Las imágenes se guardan en `slides/images`
+
+Crear la presentación
+* `create.rb` para dar las orden de crear la presentación.
