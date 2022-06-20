@@ -1,5 +1,2 @@
 
-# slideshow install slidy
-# create
-
 <%= include 'md/01.md' %>
