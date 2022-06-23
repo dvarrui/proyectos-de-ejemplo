@@ -16,7 +16,9 @@ Hora  : 10:30-10:55
 * Equipo Teuton Software
 * Comunidad Teuton de Telegram
 
-`Todo lo que vamos a ver está hecho con Software Libre`
+```
+Todo lo que vamos a ver está hecho con Software Libre
+```
 
 # 3. Presentación
 
@@ -131,7 +133,7 @@ teuton localtest
 
 # 13. Equipos remotos
 
-![](images/teuton-esquema.svg)
+![](images/teuton-esquema.png)
 
 * Un host tiene teuton instalado.
 * El resto tienen SSH para poder acceder.
@@ -161,4 +163,4 @@ teuton remotetest
 
 * **Email**: teuton.software@protonmail.com
 * **Telegram**: "TEUTON Software"
-* **GitHub**: @teuton-software, @dvarrui 
+* **GitHub**: @teuton-software, @dvarrui
