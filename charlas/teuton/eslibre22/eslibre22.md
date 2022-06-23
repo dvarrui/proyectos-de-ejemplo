@@ -149,10 +149,16 @@ teuton remotetest
 
 # 15. Configuración de los hosts
 
+![](images/configyaml.png)
 
+# 16. Saber más
 
-16. ¿qué más se puede hacer?
-17. URLs: Más tests y documentación
-18. _
-19. _
-20. Gracias / datos de contacto
+* GitHub y docs: https://github.com/teuton-software/teuton
+* Rubygems: https://rubygems.org/gems/teuton
+* Ejemplos: https://github.com/dvarrui/teuton-tests
+
+# 17. Muchas Gracias
+
+* **Email**: teuton.software@protonmail.com
+* **Telegram**: "TEUTON Software"
+* **GitHub**: @teuton-software, @dvarrui 
