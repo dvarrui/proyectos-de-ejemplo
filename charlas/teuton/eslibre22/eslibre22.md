@@ -70,3 +70,18 @@ Carlos Ble "Código sostenible"
 5. Ejemplos
 6. Programame
 7. QA dev ops
+
+
+8. Instalación de Teuton, Rubygems
+9. Test local
+10. Target/run/expect
+11. Ventajas de Teuton: DSL sencillo
+12. Ejemplo: usuarios/carpetas/software
+13. Resultados
+14. Test remoto
+15. Resultados
+16. ¿qué más se puede hacer?
+17. URLs: Más tests y documentación
+18. _
+19. _
+20. Gracias / datos de contacto
