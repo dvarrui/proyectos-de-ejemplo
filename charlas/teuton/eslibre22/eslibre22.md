@@ -6,12 +6,12 @@ Fecha : Viernes 24
 Lugar : Sala Núñez
 Hora  : 10:30-10:55
 ```
+
 ![](images/teuton-logo.png)
 
 # 2. Agradecimientos
 
 ¡Muchas gracias!
-
 * Organización **EsLibre22**
 * Equipo Teuton Software
 * Comunidad Teuton de Telegram
@@ -21,8 +21,7 @@ Hora  : 10:30-10:55
 # 3. Presentación
 
 * David Vargas Ruiz
-* Ingeniero Informático por la ULPGC
-* Profesor FP de Sistemas y Aplicaciones
+* GitHub: **@dvarrui**
 * Ruby, software libre y StarWars.
 
 ![](images/presentacion.png)
@@ -30,34 +29,34 @@ Hora  : 10:30-10:55
 # 4. Teuton
 
 ¿Qué es?
-
 * Programa multiplataforma.
 * Licencia Software libre.
 * Test de infraestructura.
 
 ¿Qué resuelve?
-
 1. Revisar nuestra infraestructura
 2. Los profesores pueden automatizar sus correcciones y realizarlas en remoto
-
 
 # 5. TDD
 
 Defnición
-
-* Desarrollo guiado por pruebas de software.
-* El propósito de TDD es lograr un código limpio que funcione.
+* **Desarrollo guiado por pruebas de software**.
+* Lograr un código limpio que funcione.
 * Garantizar que el software cumple con los requisitos que se han establecido.
 
 ```
-Robert C. Martin "Clean Code"
-Carlos Ble "Código sostenible"
+=> Robert C. Martin "Clean Code"
+=> Carlos Ble "Código sostenible"
 ```
 
-# 6. Ejemplo TDD
+# 6. Ejemplo: Factorizar
+
+![mymath-factorize.png](images/mymath-factorize.png)
+
+# 7. Ejemplo: test_factorize
 
 
-# 6. Programame
+# 7. Concurso de programación
 
 ![programame](images/programame.png)
 
