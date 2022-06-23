@@ -72,6 +72,8 @@ end
 
 # 7. Ejemplo: test_factorize
 
+![test-factorize.png](images/test-factorize.png)
+
 ```ruby
 require 'test/unit'
 require_relative 'mymath.rb'
@@ -102,19 +104,26 @@ Finished in 0.000458562 seconds.
 
 ![programame](images/programame.png)
 
-# 9. Buena práctica 
+# 9. QA
 
 Aplicar **tests para mantener la calidad** de...
 * Mi código.
 * ¿Mi infraestructura?
 * ¿Mis scripts?
 
-TEUTON
-* 
+![](images/rubygems.png)
+
+# 10. Instalar Teuton
+
+Instalar TEUTON:
+* Instalar Ruby
+* `gem install teuton`, instalar la gema
+
+![](images/command-teuton.png)
+
+# 11. Test local
 
 
-8. Instalación de Teuton, Rubygems
-9. Test local
 10. Target/run/expect
 11. Ventajas de Teuton: DSL sencillo
 12. Ejemplo: usuarios/carpetas/software
@@ -126,6 +135,3 @@ TEUTON
 18. _
 19. _
 20. Gracias / datos de contacto
-
-
-
