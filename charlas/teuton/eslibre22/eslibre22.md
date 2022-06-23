@@ -108,19 +108,49 @@ Instalar TEUTON:
 
 # 11. Test local
 
-Target/run/expect
+![](images/localtest.png)
+
+Para ejecutar el test hacemos:
+```
+teuton localtest
+```
 
 # 12. DSL sencillo
 
-# 13. Test remoto
+* **target**: Descripción del objetivo
+* **run**: Comando que ejecutamos para comprobar.
+* **expect**: Lo que esperamos "ver" en la salida del comando anterior.
+
+```
+1) Si sabes qué comando usar para comprobar el target...
+2) Y sabes que debes "mirar" en la salida del comando...
+¡Ya tienes el test!
+```
+
+> https://github.com/dvarrui/teuton-tests
+
+# 13. Equipos remotos
 
 ![](images/teuton-esquema.svg)
 
-12. Ejemplo: usuarios/carpetas/software
-13. Resultados
+* Un host tiene teuton instalado.
+* El resto tienen SSH para poder acceder.
 
-14. Test remoto
-15. Resultados
+# 14. Test remoto
+
+¿Existe el usuario "Obiwan" en los equipos remotos?
+
+![](images/remotetest.png)
+
+Para ejecutar el test hacemos:
+```
+teuton remotetest
+```
+
+# 15. Configuración de los hosts
+
+
+
 16. ¿qué más se puede hacer?
 17. URLs: Más tests y documentación
 18. _
