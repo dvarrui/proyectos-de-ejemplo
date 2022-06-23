@@ -81,23 +81,8 @@ require_relative 'mymath.rb'
 class TestFactor < Test::Unit::TestCase
   def test_factorize_34
     assert_equal [2, 17], MyMath.factorize(34)
-    assert_equal [2, 2, 2], MyMath.factorize(8)
   end
 end
-```
-
-Salida del test:
-
-```bash
-Loaded suite ./examples/factors/test_factorize1
-Started
-.
-Finished in 0.000458562 seconds.
--------------------------------------------------------------------------------
-1 tests, 2 assertions, 0 failures, 0 errors, 0 pendings, 0 omissions, 0 notifications
-100% passed
--------------------------------------------------------------------------------
-2180.73 tests/s, 4361.46 assertions/s
 ```
 
 # 8. Concurso de programación
@@ -123,11 +108,17 @@ Instalar TEUTON:
 
 # 11. Test local
 
+Target/run/expect
 
-10. Target/run/expect
-11. Ventajas de Teuton: DSL sencillo
+# 12. DSL sencillo
+
+# 13. Test remoto
+
+![](images/teuton-esquema.svg)
+
 12. Ejemplo: usuarios/carpetas/software
 13. Resultados
+
 14. Test remoto
 15. Resultados
 16. ¿qué más se puede hacer?

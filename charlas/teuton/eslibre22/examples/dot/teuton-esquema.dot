@@ -1,14 +1,11 @@
 graph structs {
   node [shape=record; style=rounded];
-  tnode [label="<rol>T-Node|<user>Teacher"];
+  tnode [label="<rol>TEUTON|<user>Teacher"];
 
   node [shape=record; style=rounded];
-  snode1 [label="<rol>S-Node|<user>Student.1"];
-  snode2 [label="<rol>S-Node|<user>Student.2"];
-  snode3 [label="<rol>S-Node|<user>Student.3"];
-
-  // node [shape=circle; style=filled];
-  // net [label="red"]
+  snode1 [label="<rol>SSH|<user>Student.1"];
+  snode2 [label="<rol>SSH|<user>Student.2"];
+  snode3 [label="<rol>SSH|<user>Student.3"];
 
   tnode:rol -- snode1:rol;
   tnode:rol -- snode2:rol;
