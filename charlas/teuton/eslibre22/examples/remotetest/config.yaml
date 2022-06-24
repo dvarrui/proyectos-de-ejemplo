@@ -1,0 +1,14 @@
+# File: remotetest/confyg.yaml
+---
+global:
+  host1_username: root
+cases:
+- tt_members: Student-1
+  host1_ip: 192.168.1.101
+  host1_password: secret1
+- tt_members: Student-2
+  host1_ip: 192.168.1.102
+  host1_password: secret2
+- tt_members: Student-3
+  host1_ip: 192.168.1.103
+  host1_password: secret3

@@ -100,7 +100,6 @@ Aplicar **tests para mantener la calidad** de...
 
 # 10. Instalar Teuton
 
-Instalar TEUTON:
 * Instalar Ruby
 * `gem install teuton`, instalar la gema
 
@@ -151,13 +150,42 @@ teuton remotetest
 
 ![](images/configyaml.png)
 
-# 16. Saber más
+```
+# File: remotetest/config.yaml
+---
+global:
+  host1_username: root
+cases:
+- tt_members: Student-1
+  host1_ip: 192.168.1.101
+  host1_password: secret1
+- tt_members: Student-2
+  host1_ip: 192.168.1.102
+  host1_password: secret2
+- tt_members: Student-3
+  host1_ip: 192.168.1.103
+  host1_password: secret3
+```
+
+# 16. Informes
+
+![](images/sendcopyto.png)
+
+```
+play do
+  show
+  export format: :html
+  send copy_to: :host1
+end
+```
+
+# 17. URLs
 
 * GitHub y docs: https://github.com/teuton-software/teuton
 * Rubygems: https://rubygems.org/gems/teuton
 * Ejemplos: https://github.com/dvarrui/teuton-tests
 
-# 17. Muchas Gracias
+# 18. Muchas Gracias
 
 * **Email**: teuton.software@protonmail.com
 * **Telegram**: "TEUTON Software"
