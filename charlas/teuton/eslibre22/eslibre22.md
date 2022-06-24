@@ -167,7 +167,7 @@ cases:
   host1_password: secret3
 ```
 
-# 16. Informes
+# 16. Generar informes
 
 ![](images/sendcopyto.png)
 
@@ -179,13 +179,36 @@ play do
 end
 ```
 
-# 17. URLs
+# 17. Expect
+
+```
+expect 'obiwan', expect line/s with "obiwan".
+expect ['obiwan', 'kenobi', expect line/s with "obiwan" and kenobi".
+expect_one 'obiwan', expect only one line with "obiwan".
+expect_one ['obiwan','kenobi'], expect only one line with "obiwan" and "kenobi".
+expect_none 'obiwan', expect no line with "obiwan".
+expect_none ['obiwan', 'kenobi'], expect no line with "obiwan" and "kenobi".
+expect /Obiwan|obi-wan/, Expect line/s with Obiwan or obi-wan. This example uses regular expresions.
+```
+
+```ruby
+target 'Exist user vader'
+run    'cat /etc/passwd'
+```
+
+```
+expect result.find("vader").count.eq(1), expect there exists only 1 line with "vader" text.
+expect result.find(/Darth|darth/).find(/Vader|vader/).count.gt(2), expect there exists more than 2 lines with texts "Darth" and "Vader".
+expect result.not_find('#').find('vader').count.lt(3), expects there exists less than 3 lines with text "vader" and without "#" symbol.
+```
+
+# 18. URLs
 
 * GitHub y docs: https://github.com/teuton-software/teuton
 * Rubygems: https://rubygems.org/gems/teuton
 * Ejemplos: https://github.com/dvarrui/teuton-tests
 
-# 18. Muchas Gracias
+# 19. Muchas Gracias
 
 * **Email**: teuton.software@protonmail.com
 * **Telegram**: "TEUTON Software"
