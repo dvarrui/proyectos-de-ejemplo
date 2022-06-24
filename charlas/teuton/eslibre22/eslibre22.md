@@ -11,7 +11,6 @@ Hora  : 10:30-10:55
 
 # 2. Agradecimientos
 
-¡Muchas gracias!
 * Organización **EsLibre22**
 * Equipo Teuton Software
 * Comunidad Teuton de Telegram
@@ -41,10 +40,9 @@ Todo lo que vamos a ver está hecho con Software Libre
 
 # 5. TDD
 
-Defnición
 * **Desarrollo guiado por pruebas de software**.
-* Lograr un código limpio que funcione.
-* Garantizar que el software cumple con los requisitos que se han establecido.
+* Lograr código limpio que funcione.
+* **Garantizar** que el software **cumple con los requisitos** que se han establecido.
 
 ```
 => "Clean Code"        Robert C. Martin
@@ -135,8 +133,8 @@ teuton localtest
 
 ![](images/teuton-esquema.png)
 
-* Un host tiene teuton instalado.
-* El resto tienen SSH para poder acceder.
+* Un host con TEUTON instalado.
+* El resto con SSH para poder acceder.
 
 # 14. Test remoto
 
