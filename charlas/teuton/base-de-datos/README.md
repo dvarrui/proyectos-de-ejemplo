@@ -23,7 +23,20 @@ insert into Persons (name, age) values ( "Yoda", 980);
 select * from Persons
 select name from Persons order by name;
 
+/tarea> file alumno01 
+alumno01: SQLite 3.x database, last written using SQLite version 3036000
+
 
 6. /home/alumno/tarea/01.sql
+select count(name) from persons where age >= 18;
+
+sqlite3 tarea/alumno01 ".read tarea/01.sql"
+2
+
 7. /home/alumno/tarea/02.sql
+select name from Persons order by name;
+select name from Persons order by name limit 1;
+Luke
+
+sqlite3 tarea/alumno01 ".read tarea/02.sql"
 
