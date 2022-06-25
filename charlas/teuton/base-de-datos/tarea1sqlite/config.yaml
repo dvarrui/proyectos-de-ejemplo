@@ -1,0 +1,17 @@
+---
+global:
+cases:
+- tt_members: Student-1
+  host1_ip: 192.168.1.42
+  host1_port: 2231
+  host1_username: vagrant
+  host1_password: vagrant
+  id: '01'
+
+- tt_members: Student-2
+  host1_ip: 192.168.1.42
+  host1_port: 2232
+  host1_username: vagrant
+  host1_password: vagrant
+  id: '02'
+

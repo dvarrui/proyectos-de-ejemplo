@@ -40,3 +40,7 @@ Luke
 
 sqlite3 tarea/alumno01 ".read tarea/02.sql"
 
+# Crear el Test de Teuton
+
+teuton new tarea1sqlite
+

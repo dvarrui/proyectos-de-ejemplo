@@ -1,0 +1,52 @@
+CONFIGURATION
++----------------+--------------+
+| host1_ip       | 192.168.1.42 |
+| host1_password | vagrant      |
+| host1_port     | 2231         |
+| host1_username | vagrant      |
+| id             | 01           |
+| tt_members     | Student-1    |
+| tt_sequence    | false        |
+| tt_skip        | false        |
+| tt_testname    | tarea1sqlite |
++----------------+--------------+
+
+
+GROUPS
+- Sqlite
+    01 (1.0/1.0)
+        Description : Instalar sqlite versión 3.36.0
+        Command     : sqlite3 -version
+        Duration    : 0.198 (ssh)
+        Alterations : find(3.36.0) & count
+        Expected    : 1 (String)
+        Result      : 1 (Integer)
+- Tareas SQL
+    02 (1.0/1.0)
+        Description : Crea script SQL en el fichero tarea/01.sql
+        Command     : sqlite3 tarea/alumno01.db '.read tarea/01.sql'
+        Duration    : 0.137 (ssh)
+        Alterations : find(2) & count
+        Expected    : 1 (String)
+        Result      : 1 (Integer)
+    03 (1.0/1.0)
+        Description : Crea script SQL en el fichero tarea/02.sql
+        Command     : sqlite3 tarea/alumno01.db '.read tarea/02.sql'
+        Duration    : 0.104 (ssh)
+        Alterations : find(Luke) & count
+        Expected    : 1 (String)
+        Result      : 1 (Integer)
+
+RESULTS
++--------------+---------------------------+
+| case_id      | 01                        |
+| start_time   | 2022-06-25 16:48:50 +0100 |
+| finish_time  | 2022-06-25 16:48:51 +0100 |
+| duration     | 0.439071224               |
+| unique_fault | 0                         |
+| max_weight   | 3.0                       |
+| good_weight  | 3.0                       |
+| fail_weight  | 0.0                       |
+| fail_counter | 0                         |
+| grade        | 100                       |
++--------------+---------------------------+

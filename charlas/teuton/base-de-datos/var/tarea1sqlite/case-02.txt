@@ -1,0 +1,54 @@
+CONFIGURATION
++----------------+--------------+
+| host1_ip       | 192.168.1.42 |
+| host1_password | vagrant      |
+| host1_port     | 2232         |
+| host1_username | vagrant      |
+| id             | 02           |
+| tt_members     | Student-2    |
+| tt_sequence    | false        |
+| tt_skip        | false        |
+| tt_testname    | tarea1sqlite |
++----------------+--------------+
+
+LOGS
+    [16:48:50] [41mERROR[0m: [Errno::ECONNREFUSED] SSH on <vagrant@192.168.1.42> exec: sqlite3 -version
+
+GROUPS
+- Sqlite
+    01 (0.0/1.0)
+        Description : Instalar sqlite versión 3.36.0
+        Command     : sqlite3 -version
+        Duration    : 0.001 (ssh)
+        Alterations : find(3.36.0) & count
+        Expected    : 1 (String)
+        Result      : 0 (Integer)
+- Tareas SQL
+    02 (0.0/1.0)
+        Description : Crea script SQL en el fichero tarea/01.sql
+        Command     : sqlite3 tarea/alumno02.db '.read tarea/01.sql'
+        Duration    : 0.0 (ssh)
+        Alterations : find(2) & count
+        Expected    : 1 (String)
+        Result      : 0 (Integer)
+    03 (0.0/1.0)
+        Description : Crea script SQL en el fichero tarea/02.sql
+        Command     : sqlite3 tarea/alumno02.db '.read tarea/02.sql'
+        Duration    : 0.0 (ssh)
+        Alterations : find(Luke) & count
+        Expected    : 1 (String)
+        Result      : 0 (Integer)
+
+RESULTS
++--------------+---------------------------+
+| case_id      | 02                        |
+| start_time   | 2022-06-25 16:48:50 +0100 |
+| finish_time  | 2022-06-25 16:48:50 +0100 |
+| duration     | 0.001482804               |
+| unique_fault | 0                         |
+| max_weight   | 3.0                       |
+| good_weight  | 0.0                       |
+| fail_weight  | 3.0                       |
+| fail_counter | 3                         |
+| grade        | 0                         |
++--------------+---------------------------+
