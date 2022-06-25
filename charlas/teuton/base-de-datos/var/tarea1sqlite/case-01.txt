@@ -13,26 +13,34 @@ CONFIGURATION
 
 
 GROUPS
-- Sqlite
+- Software Sqlite
     01 (1.0/1.0)
-        Description : Instalar sqlite versión 3.36.0
+        Description : Instalar sqlite versión 3.36.0.
         Command     : sqlite3 -version
-        Duration    : 0.198 (ssh)
+        Duration    : 0.384 (ssh)
         Alterations : find(3.36.0) & count
         Expected    : 1 (String)
         Result      : 1 (Integer)
-- Tareas SQL
     02 (1.0/1.0)
-        Description : Crea script SQL en el fichero tarea/01.sql
+        Description : Crear la base de datos en 'tarea/alumno01.db'.
+        Command     : file tarea/alumno01.db
+        Duration    : 0.037 (ssh)
+        Alterations : find(tarea/alumno01.db) & find(SQLite) & find(3.x) & find(database) & count
+        Expected    : 1 (String)
+        Result      : 1 (Integer)
+- Crear varias sentencias SQL dentro de scripts
+    03 (2.0/2.0)
+        Description : Crea script SQL en el fichero 'tarea/01.sql'.
+
         Command     : sqlite3 tarea/alumno01.db '.read tarea/01.sql'
-        Duration    : 0.137 (ssh)
+        Duration    : 0.04 (ssh)
         Alterations : find(2) & count
         Expected    : 1 (String)
         Result      : 1 (Integer)
-    03 (1.0/1.0)
+    04 (2.0/2.0)
         Description : Crea script SQL en el fichero tarea/02.sql
         Command     : sqlite3 tarea/alumno01.db '.read tarea/02.sql'
-        Duration    : 0.104 (ssh)
+        Duration    : 0.041 (ssh)
         Alterations : find(Luke) & count
         Expected    : 1 (String)
         Result      : 1 (Integer)
@@ -40,12 +48,12 @@ GROUPS
 RESULTS
 +--------------+---------------------------+
 | case_id      | 01                        |
-| start_time   | 2022-06-25 16:48:50 +0100 |
-| finish_time  | 2022-06-25 16:48:51 +0100 |
-| duration     | 0.439071224               |
+| start_time   | 2022-06-26 00:24:22 +0100 |
+| finish_time  | 2022-06-26 00:24:23 +0100 |
+| duration     | 0.502211581               |
 | unique_fault | 0                         |
-| max_weight   | 3.0                       |
-| good_weight  | 3.0                       |
+| max_weight   | 6.0                       |
+| good_weight  | 6.0                       |
 | fail_weight  | 0.0                       |
 | fail_counter | 0                         |
 | grade        | 100                       |

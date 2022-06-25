@@ -12,26 +12,34 @@ CONFIGURATION
 +----------------+--------------+
 
 LOGS
-    [16:48:50] [41mERROR[0m: [Errno::ECONNREFUSED] SSH on <vagrant@192.168.1.42> exec: sqlite3 -version
+    [00:24:22] [41mERROR[0m: [Errno::ECONNREFUSED] SSH on <vagrant@192.168.1.42> exec: sqlite3 -version
 
 GROUPS
-- Sqlite
+- Software Sqlite
     01 (0.0/1.0)
-        Description : Instalar sqlite versión 3.36.0
+        Description : Instalar sqlite versión 3.36.0.
         Command     : sqlite3 -version
         Duration    : 0.001 (ssh)
         Alterations : find(3.36.0) & count
         Expected    : 1 (String)
         Result      : 0 (Integer)
-- Tareas SQL
     02 (0.0/1.0)
-        Description : Crea script SQL en el fichero tarea/01.sql
+        Description : Crear la base de datos en 'tarea/alumno02.db'.
+        Command     : file tarea/alumno02.db
+        Duration    : 0.0 (ssh)
+        Alterations : find(tarea/alumno02.db) & find(SQLite) & find(3.x) & find(database) & count
+        Expected    : 1 (String)
+        Result      : 0 (Integer)
+- Crear varias sentencias SQL dentro de scripts
+    03 (0.0/2.0)
+        Description : Crea script SQL en el fichero 'tarea/01.sql'.
+
         Command     : sqlite3 tarea/alumno02.db '.read tarea/01.sql'
         Duration    : 0.0 (ssh)
         Alterations : find(2) & count
         Expected    : 1 (String)
         Result      : 0 (Integer)
-    03 (0.0/1.0)
+    04 (0.0/2.0)
         Description : Crea script SQL en el fichero tarea/02.sql
         Command     : sqlite3 tarea/alumno02.db '.read tarea/02.sql'
         Duration    : 0.0 (ssh)
@@ -42,13 +50,13 @@ GROUPS
 RESULTS
 +--------------+---------------------------+
 | case_id      | 02                        |
-| start_time   | 2022-06-25 16:48:50 +0100 |
-| finish_time  | 2022-06-25 16:48:50 +0100 |
-| duration     | 0.001482804               |
+| start_time   | 2022-06-26 00:24:22 +0100 |
+| finish_time  | 2022-06-26 00:24:22 +0100 |
+| duration     | 0.001795629               |
 | unique_fault | 0                         |
-| max_weight   | 3.0                       |
+| max_weight   | 6.0                       |
 | good_weight  | 0.0                       |
-| fail_weight  | 3.0                       |
-| fail_counter | 3                         |
+| fail_weight  | 6.0                       |
+| fail_counter | 4                         |
 | grade        | 0                         |
 +--------------+---------------------------+
