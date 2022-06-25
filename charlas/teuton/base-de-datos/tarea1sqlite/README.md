@@ -1,6 +1,6 @@
 ```
 Test unit name : tarea1sqlite
-Date           : 2022-06-25 16:55:18 +0100
+Date           : 2022-06-26 00:42:25 +0100
 Teuton version : 2.3.6
 ```
 
@@ -22,14 +22,15 @@ Teuton version : 2.3.6
 
 > NOTE: Save every 'param: value' into config file.
 
-## Sqlite
+## Software sqlite
 
 Crear MV Debian.
 
 Go to [HOST1](#required-hosts) host, and do next:
 * Instalar sqlite versión 3.36.0.
+* Crear la base de datos en 'tarea/alumnoID.db'.
 
-## Tareas sql
+## Crear varias sentencias sql dentro de scripts
 
 Crear la carpeta /home/nombre-alumno/tarea.
 
@@ -37,8 +38,8 @@ Dentro de la carpeta anterior crear una base de datos sqlite3 con el nombre 'alu
 (Donde XX es el ID asignado por el profesor a cada alumno)
 
 Go to [HOST1](#required-hosts) host, and do next:
-* Crea script SQL en el fichero 'tarea/01.sql'.
+* (x2.0) Crea script SQL en el fichero 'tarea/01.sql'.
 .
     * Escribe sentencia SQL para contar el número de registros de la tabla Persons con age mayor o igual a 18
-* Crea script SQL en el fichero tarea/02.sql.
+* (x2.0) Crea script SQL en el fichero tarea/02.sql.
     * Escribe sentencia SQL para mostrar el primer name de la tabla Persons ordenada alfabéticamente
