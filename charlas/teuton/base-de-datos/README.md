@@ -43,4 +43,10 @@ sqlite3 tarea/alumno01 ".read tarea/02.sql"
 # Crear el Test de Teuton
 
 teuton new tarea1sqlite
+Crear los test de cada target en start.rb
+Configurar las máquinas en config.yaml
+Ejecutar la prueba "teuton tarea1sqlite"
+Ver resultados en var/tarea1sqlite
+
+# Crear enunciado
 
