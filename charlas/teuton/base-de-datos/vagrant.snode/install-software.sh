@@ -7,7 +7,7 @@ zypper install -y tree nmap git
 zypper install -y neofetch lsb-release
 
 zypper install -y figlet
-figlet "Snode.1" > /etc/motd
+figlet "Snode 1" > /etc/motd
 echo "" >> /etc/motd
 echo "Teuton" >> /etc/motd
 echo "https://github.com/teuton-software/teuton" >> /etc/motd
