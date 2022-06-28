@@ -1,0 +1,27 @@
+---
+global:
+cases:
+- tt_members: Samara
+  tt_moodle_id: salbbla@gobiernodecanarias.org
+  host1_ip: 172.19.99.2
+  host1_port: 2231
+  host1_username: vagrant
+  host1_password: vagrant
+  id: '01'
+
+- tt_members: Javier
+  tt_moodle_id: fcrinav@gobiernodecanarias.org
+  host1_ip: 172.19.99.2
+  host1_port: 2232
+  host1_username: vagrant
+  host1_password: vagrant
+  id: '02'
+
+- tt_members: Daniel
+  tt_moodle_id: ddiagarf@gobiernodecanarias.org
+  tt_skip: true
+  host1_ip: 172.19.99.2
+  host1_port: 2233
+  host1_username: vagrant
+  host1_password: vagrant
+  id: '03'
