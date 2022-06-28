@@ -1,6 +1,6 @@
 
 group "Software Sqlite" do
-  readme "Crear MV Debian."
+  readme "Crear MV."
 
   target "Instalar sqlite versión 3.36.0."
   run "sqlite3 -version", on: :host1
