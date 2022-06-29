@@ -1,13 +1,15 @@
 
-group "Crear varias sentencias SQL dentro de scripts" do
+group "Crear consultas SQL dentro de ficheros" do
 
-  cmd = "sqlite3 files/persons.db"
+  database = get(:database_file)
 
-  target "Crea script SQL en el fichero 'files/01.sql'.\n", weight: 2
-  run "#{cmd} '.read files/01.sql'"
+  target "Crea script SQL en el fichero 'files/01.sql'.\n"
+  readme "Consulta SQL para averiguar el número de 'persons' con 'age' mayor o igual a 18"
+  run "sqlite3 #{database} '.read files/01.sql'"
   expect_one "2"
 
-  target "Crea script SQL en el fichero tarea/02.sql", weight: 2
-  run "#{cmd} '.read files/02.sql'"
+  target "Crea script SQL en el fichero tarea/02.sql"
+  readme "Encontrar el primer 'name' de 'persons' alfabéticamente."
+  run "sqlite3 #{database} '.read files/02.sql'"
   expect_one "Luke"
 end
