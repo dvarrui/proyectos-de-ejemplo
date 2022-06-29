@@ -1,5 +1,6 @@
 
 use "sqlite"
+use "sql"
 
 play do
   show
