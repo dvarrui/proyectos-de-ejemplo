@@ -3,5 +3,5 @@ use "sqlite"
 
 play do
   show
-  export
+  export format: :colored_text
 end
