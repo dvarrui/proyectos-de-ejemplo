@@ -2,5 +2,6 @@
 global:
 cases:
 - tt_members: Local
+  host1_ip: 'localhost'
   sqlite_version: '3.38'
   database_file: 'files/persons.db'
