@@ -2,6 +2,7 @@
 group "Software Sqlite" do
 
   version = get(:sqlite_version)
+  
   target "Instalar sqlite versión #{version}"
   run "sqlite3 -version"
   expect_one version
