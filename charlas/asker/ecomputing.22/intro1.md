@@ -10,6 +10,8 @@ Tu generador de preguntas para Moodle
 # 1. Agradecimientos
 
 * Organización.
+* Software Libre
+* Lenguage de programación **Ruby**
 * Comunidad Asker **Telegram**
 * Equipo **Teuton Software** 
 
@@ -18,7 +20,6 @@ Tu generador de preguntas para Moodle
 # 2. Presentación
 
 * David Vargas Ruiz
-* Ingeniero Informático por la ULPGC
 * Profesor FP de Sistemas (IES Puerto de la Cruz).
 * Ruby, software libre y StarWars.
 

@@ -33,7 +33,7 @@ Los "inputs" son las entradas que necesita Asker para trabajar.
 ```
 
 * Fichero de texto.
-* Mapa conceptual sin enlaces explícitos.
+* Una especie de _"Mapa conceptual" sin enlaces explícitos_.
 * Formato de entrada HAML y/o XML.
 
 ![](images/acdc-concept.png)
