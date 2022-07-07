@@ -1,5 +1,5 @@
 
-# SnameGame
+# SnakeGame
 
 _Siempre me ha gustado este juego..._
 
@@ -15,5 +15,5 @@ Voy a jugar con el programa y con el código.
 
 # Aprendiendo sobre el código
 
-* [Gemfile](doc/gemfile.md)
+* [Gemfile](docs/gemfile.md)
 * [Rakefile](docs/rakefile.md)
