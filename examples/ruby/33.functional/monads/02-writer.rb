@@ -7,8 +7,8 @@ class Writer
     puts self.to_s
   end
 
-  def unit
-    @value
+  def self.unit(value, log)
+    Writer.new(value, log)
   end
 
   def bind(proc, log)
@@ -17,15 +17,14 @@ class Writer
   end
 
   def to_s
-    "Writer #{@log.rjust(8)}: #{@value}"
+    "#{@log.ljust(17)}: #{@value}"
   end
 end
-
-m = Writer.new(5)
 
 sqrt = ->(number) { Math.sqrt(number) }
 add_one = ->(number) { number + 1 }
 half = ->(number) { number / 2.0 }
 
-m.bind(sqrt, "Root").bind(add_one, "Add one").bind(half, "Half")
+m = Writer.unit(5, "Initial value")
+m.bind(sqrt, "Took square root").bind(add_one, "Added one").bind(half, "Divided by 2")
 
