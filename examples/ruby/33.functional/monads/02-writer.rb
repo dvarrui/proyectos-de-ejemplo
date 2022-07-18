@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 class Writer
-  def initialize(value, log = [])
+  def initialize(value, log = "New")
     @value = value
     @log = log
     puts self.to_s
@@ -11,22 +11,21 @@ class Writer
     @value
   end
 
-  def bind(proc)
+  def bind(proc, log)
     new_value = proc.call(@value)
-    new_log = @log << proc.to_s
-    self.class.new(new_value, new_log)
+    self.class.new(new_value, log)
   end
 
   def to_s
-    "Writer monad (value=#{@value}, log=#{@log})"
+    "Writer #{@log.rjust(8)}: #{@value}"
   end
 end
 
-m1 = Writer.new(5)
+m = Writer.new(5)
 
 sqrt = ->(number) { Math.sqrt(number) }
 add_one = ->(number) { number + 1 }
-half = ->(number) { number / 1 }
+half = ->(number) { number / 2.0 }
 
-m2 = m1.bind(sqrt).bind(add_one).bind(half)
+m.bind(sqrt, "Root").bind(add_one, "Add one").bind(half, "Half")
 
