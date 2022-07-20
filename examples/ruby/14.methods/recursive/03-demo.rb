@@ -3,26 +3,24 @@
 require_relative '01-split_text_with_dict'
 
 def debug(dict, text)
-  puts "dict :#{dict}"
-  puts "text : #{text}"
-  puts "solutions:"
   solutions = split_text_with_dict(text, dict)
-  solutions.each { |solution| puts "* #{solution.to_s}" }
-  puts "\n"
+  if solutions.size.zero?
+    puts "#{text} => No solution"
+  elsif solutions.size == 1
+    puts "#{text} => #{solutions.first.join(" ")}"
+  else
+    puts "#{text} "
+    solutions.each { |solution| puts " => #{solution.join(" ")}" }
+  end
 end
 
-dict = [ "a", "b", "c" ]
-text = "abc"
-debug dict, text
+dict = [ "a", "abc", "b", "bc", "cd" ]
 
-dict = [ "a", "b", "c" ]
-text = "abd"
-debug dict, text
+puts "dict : #{dict.to_s}\n\n"
 
-dict = [ "a", "bc", "c" ]
-text = "abc"
-debug dict, text
-  
-dict = [ "a", "ab", "bc", "c" ]
-text = "abc"
-debug dict, text
+debug dict, "abcd"
+debug dict, "abbc"
+debug dict, "abcbcd"
+debug dict, "acdbc"
+debug dict, "abcdd"
+
