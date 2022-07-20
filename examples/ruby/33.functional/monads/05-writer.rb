@@ -13,7 +13,7 @@ half = Writer.unit( lam_half, "Divided by 2")
 m1 = Writer.unit(5, "Initial value")
 m2 = m1.bind(sqrt).bind(add_one).bind(half)
 
-puts "The final value is #{m2.value}\n"
+puts "The final value is #{m2.value}\n\n"
 puts "This value was derived as follows:"
 puts m2.log
 

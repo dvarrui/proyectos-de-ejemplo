@@ -4,10 +4,10 @@ class Writer
 
   def initialize(value, log = "New")
     @value = value
-    if value.is_a? Proc 
+    if value.is_a? Proc
       @log = log
     else
-      @log = msg(log, @value)
+      @log = log + ": " + @value.to_s 
     end
   end
 
@@ -19,19 +19,8 @@ class Writer
     proc = mwriter.value 
     log = mwriter.log
     new_value = proc.call(@value)
-    new_log = @log + "\n" + msg(log, new_value)
+    new_log = @log + "\n" + log
     self.class.new(new_value, new_log)
   end
-
-  def to_s
-    "Writer value:#{@value}, log=#{log.to_s}"
-  end
-
-  private
-
-  def msg(log, value)
-    "#{log.rjust(18)} => #{value.to_s}"
-  end
-
 end
 
