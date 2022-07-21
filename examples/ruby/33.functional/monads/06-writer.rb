@@ -15,10 +15,8 @@ class Writer
   end
 
   def bind(mwriter)
-    proc = mwriter.value 
-    log = mwriter.log
-    new_value = proc.call(@value)
-    new_log = @log + "\n" + log
+    new_value = mwriter.value.call(@value)
+    new_log = @log + "\n" + mwriter.log
     self.class.new(new_value, new_log)
   end
 end
