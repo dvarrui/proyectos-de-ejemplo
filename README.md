@@ -10,7 +10,6 @@ El contenido se organiza del siguiente modo:
 | [examples/ruby](./examples/ruby) | Ejemplos y miniproyectos realizados con Ruby |
 | [examples](./examples) | Ejemplos y miniproyectos realizados con otros lenguajes |
 | [charlas](./charlas) | Charlas sobre diversos temas |
-| [comparativa](./comparativa) | Análisis comparativo de lenguajes de programación |
 
 ---
 
