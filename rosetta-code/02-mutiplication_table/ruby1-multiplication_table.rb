@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
-number = ARGV.first.to_i || 10
+print "Write a number: "
+number = gets.to_i
 
 def multiplication_table(number)
   1.upto(10) do |i|
