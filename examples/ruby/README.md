@@ -2,6 +2,7 @@
 # Aprender Ruby 
 
 * EN - [Poignant Ruby guide](http://poignant.guide/book/chapter-1.html)
+* [Comparing implementations of the Monkey language VIII: The Spectacular Interpreted Special (Ruby, Python and Lua)](https://medium.com/@mario.arias.c/comparing-implementations-of-the-monkey-language-viii-the-spectacular-interpreted-special-ruby-2f9e4ed2e660)
 
 # Carbon
 
