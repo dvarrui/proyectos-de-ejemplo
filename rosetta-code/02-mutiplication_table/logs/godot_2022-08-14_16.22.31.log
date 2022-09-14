@@ -1,0 +1,8 @@
+Godot Engine v3.4.stable.official.206ba70f4 - https://godotengine.org
+OpenGL ES 3.0 Renderer: Mesa Intel(R) UHD Graphics (CML GT2)
+OpenGL ES Batching: ON
+ 
+SCRIPT ERROR: Parse Error: The method "quit" isn't declared in the current class.
+   at: GDScript::reload (res://./godot1.gd:9) - Parse Error: The method "quit" isn't declared in the current class.
+ERROR: Method failed. Returning: ERR_PARSE_ERROR
+   at: reload (modules/gdscript/gdscript.cpp:566) - Method failed. Returning: ERR_PARSE_ERROR

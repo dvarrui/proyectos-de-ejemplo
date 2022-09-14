@@ -1,21 +1,45 @@
 
 # Tarea: tabla de multiplicar
 
-Generar la table de mutiplicación 10x10 en formato de medio triángulo de productos.
+## Descripción
+
+Mostrar la tabla de multiplicar.
 
 Salida:
 ```
-    |   1   2   3   4   5   6   7   8   9  10
-----+----------------------------------------
-  1 |   1   2   3   4   5   6   7   8   9  10
-  2 |       4   6   8  10  12  14  16  18  20
-  3 |           9  12  15  18  21  24  27  30
-  4 |              16  20  24  28  32  36  40
-  5 |                  25  30  35  40  45  50
-  6 |                      36  42  48  54  60
-  7 |                          49  56  63  70
-  8 |                              64  72  80
-  9 |                                  81  90
- 10 |                                     100
+Write a number: 2
+  1 *  2 =   2
+  2 *  2 =   4
+  3 *  2 =   6
+  4 *  2 =   8
+  5 *  2 =  10
+  6 *  2 =  12
+  7 *  2 =  14
+  8 *  2 =  16
+  9 *  2 =  18
+ 10 *  2 =  20
 ```
 
+## Esquema
+
+Podemos descomponer la tarea en los siguientes pasos:
+1. El usuario introduce un número (`number`).
+2. A continuación, un bucle de 1 hasta 10 (`i` será la variable que define cada ciclo).
+3. Para cada ciclo mostraremos en pantalla `i * number = i*number`.
+4. Fin del programa
+
+# Ejemplos
+
+Vamos a ver cómo se implementa cada uno de los anteriores pasos en diferentes lenguajes.
+
+## Ejemplo: Ruby
+
+```ruby
+# step 1
+print "Write a number: "
+number = gets.to_i
+
+1.upto(10) do |i| # step 2
+  puts " %2d * %2d = %3d" % [ i, number, i*number ] # step 3
+end
+```
