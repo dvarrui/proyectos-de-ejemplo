@@ -120,3 +120,175 @@ log "hello"
 # Logging `temp` from String
 String.log("temp")
 ```
+
+## La palabra clave `self`
+
+El intérprete de Ruby ejecuta todas y cada una de las líneas dentro de un objeto: el objeto `self`. Aquí hay algunas reglas importantes con respecto a `self`.
+
+* `self` cambia constantemente a medida que se ejecuta un programa.
+* Solo un objeto puede ser `self` en un momento dado.
+* Cuando se llama a un método, el receptor se convierte en `self`.
+* Todas las variables de instancia son variables de instancia de `self`, y todos los métodos sin un receptor explícito se llaman desde `self`.
+* Tan pronto como llama a un método en otro objeto, ese otro objeto (receptor) se convierte en `self`.
+
+En el nivel superior, `self` es `main`, que es un `Object`. Tan pronto como se inicia un programa de Ruby, el intérprete de Ruby crea un objeto llamado `main` y todo el código subsiguiente se ejecuta en el contexto de este objeto. Este contexto también se denomina contexto de nivel superior.
+
+```ruby
+puts self       # main
+puts self.class # class
+```
+
+En una definición de clase o módulo, el rol de `self` lo asume la propia clase o módulo.
+
+```ruby
+puts self  # main
+
+class Language
+  puts self  # Language
+
+  def compile
+    puts self  # #<Language:0x00007fc7c191c9f0>
+  end
+end
+
+ruby = Language.new
+ruby.compile
+```
+
+# Definición dinámica de clases y métodos
+
+El constructor `Class` y `define_method` permiten generar clases y métodos sobre la marcha, mientras se ejecuta el programa.
+
+```ruby
+Language = Class.new do
+  define_method :interpret do
+    puts "Interpreting the code"
+  end
+end
+
+Language.new.interpret # Interpreting the code
+```
+
+## Lamada dinámica de métodos
+
+Cuando se llama a un método, en realidad se está enviando un mensaje a un objeto.
+
+```ruby
+my_obj.my_method(arg)
+```
+
+Ruby proporciona una sintaxis alternativa para llamar a un método dinámicamente, utilizando el método `send`. Esto se llama envío dinámico y es una técnica poderosa, ya que se puede esperar hasta el último momento para decidir a qué método llamar, mientras el código está en ejecución.
+
+```ruby
+my_obj.send(:my_method, arg)
+```
+
+## Missing Methods
+
+Cuando se llama a un método en un objeto, el intérprete de Ruby va a la clase del objeto y busca el método de instancia. Si no lo puede encontrar, busca en la cadena principal de la clase, hasta llegar a `BasicObject`. Si no encuentra el método en ninguna parte, llama a un método llamado `method_missing` en el receptor original, es decir, el objeto.
+
+El método `method_missing` se define originalmente en la clase `BasicObject`. Sin embargo, puede anularlo en su clase para interceptar y manejar métodos desconocidos.
+
+```ruby
+class Language
+  def interpret
+    puts "Interpreting"
+  end
+
+  def method_missing(name, *args)
+    puts "Method #{name} doesn't exist on #{self.class}"
+  end
+end
+
+ruby = Language.new
+ruby.interpret # Interpreting
+ruby.compile   # Method compile doesn't exist on Language
+```
+
+## instance_eval
+
+Este método `BasicObject#instance_eval` evalúa un bloque en el contexto de un objeto.
+
+```ruby
+class Language
+  def initialize(name)
+    @name = name
+  end
+
+  def interpret
+    puts "Interpreting the code"
+  end
+end
+
+puts "***instance_eval with object***"
+
+ruby = Language.new "Ruby"
+
+ruby.instance_eval do
+  puts "self: #{self}"
+  puts "instance variable @name: #{@name}"
+  interpret
+end
+
+puts "\n***instance_eval with class***"
+
+Language.instance_eval do
+  puts "self: #{self}"
+
+  def compile
+    puts "Compiling the code"
+  end
+
+  compile
+end
+
+Language.compile
+```
+
+El programa anterior produce la siguiente salida.
+
+```
+***instance_eval with object***
+self: #<Language:0x00007fc6bb107730>
+instance variable @name: Ruby
+Interpreting the code
+
+***instance_eval with class***
+self: Language
+Compiling the code
+Compiling the code
+```
+
+## Definiciones de clase
+
+Una definición de clase de Ruby es solo un código normal que se ejecuta. Cuando usa la palabra clave `class` para crear una clase, no solo está dictando cómo se comportarán los objetos en el futuro. En realidad estás ejecutando código.
+
+```ruby
+class MyClass
+  puts "Hello from MyClass"
+  puts self
+end
+
+# Output
+# Hello from MyClass
+# MyClass
+```
+
+## class_eval()
+
+Evalúa un bloque en el contexto de una clase existente. Esto le permite reabrir la clase y definir un comportamiento adicional en ella.
+
+```ruby
+class MyClass
+end
+
+MyClass.class_eval do
+  def my_method
+    puts "#{self}"
+  end
+end
+
+MyClass.new.my_method  # #<MyClass:0x00007f945e110b80>
+```
+
+Una ventaja de `class_eval` es que fallará si la clase aún no existe. Esto le impide crear nuevas clases accidentalmente.
