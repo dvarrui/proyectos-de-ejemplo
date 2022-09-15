@@ -19,6 +19,10 @@ input = "Cabecera...\"title\"=\"vistas.\"bonitas."
 filter = /\"title\"=\"(\w+[.]+)\"/
 apply_filter_to(filter, input)
 
+input = "Cabecera...\"title\"=\"Habitación.\"bonitas."
+filter = /\"title\"=\"([A-Za-z.áéíóú]+)*\"/
+apply_filter_to(filter, input)
+
 input = "Cabecera...\"title\"=\"Habitación con vistas.\"bonitas."
-filter = /\"title\"=\"(\w+)*\"/
+filter = /\"title\"=\"([A-Za-z.áéíóú ]+)*\"/
 apply_filter_to(filter, input)
