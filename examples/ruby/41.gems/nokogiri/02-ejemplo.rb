@@ -4,11 +4,27 @@ require "nokogiri"
 
 html = <<EOF
 <html>
-  <div class="jedi">Obiwan</div>
-  <div>R2D2</div>
+  <header>Esto es el header</header>
+  <body>
+    <h1>Este es el body</h1>
+    <div id="obiwan" class="jedi">Obiwan Kenobi</div>
+    <div>
+      <p>R2D2</p>
+    </div>
+    <p>Ejemplo de Nokogiri</p>
+  </body>
 </html>
 EOF
 
 doc = Nokogiri::HTML.parse(html)
-puts doc.css("div jedi")
+
+puts "=== Todas las etiquetas div ==="
+puts doc.css("div")
+
+puts "\n=== Todas las etiquetas div p ==="
+puts doc.css("div p")
+
+puts "\n=== Localizar class ==="
+items = doc.css("div")
+puts items.select { |i| i["class"] == "jedi" }
 
