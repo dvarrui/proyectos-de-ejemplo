@@ -23,6 +23,7 @@ puts doc.css("div")
 
 puts "\n=== Todas las etiquetas div p ==="
 puts doc.css("div p")
+doc.css("div p").each { puts "p.text = #{_1.text}" }
 
 puts "\n=== Localizar class ==="
 items = doc.css("div")
