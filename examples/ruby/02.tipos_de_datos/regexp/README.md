@@ -2,4 +2,5 @@
 # Expresiones regulares
 
 Enlaces de interés:
-* https://www.ralfebert.com/snippets/ruby-rails/regex_cheat_sheet/
+* [Special variables](https://ruby.fandom.com/wiki/Special_variable)
+* [Regex cheat sheet](https://www.ralfebert.com/snippets/ruby-rails/regex_cheat_sheet/)
