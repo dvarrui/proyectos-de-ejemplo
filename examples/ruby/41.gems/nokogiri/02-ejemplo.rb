@@ -10,5 +10,5 @@ html = <<EOF
 EOF
 
 doc = Nokogiri::HTML.parse(html)
-puts doc.css("div jedi")
+puts doc.css("div .jedi")
 
