@@ -291,4 +291,104 @@ end
 MyClass.new.my_method  # #<MyClass:0x00007f945e110b80>
 ```
 
-Una ventaja de `class_eval` es que fallará si la clase aún no existe. Esto le impide crear nuevas clases accidentalmente.
+Una ventaja de `class_eval` es que fallará si la clase no existe. Esto le impide crear nuevas clases accidentalmente.
+
+## Clases y métodos Singleton
+
+Se puede definir métodos en objetos individuales, en lugar de definirlos en la clase del objeto.
+
+```ruby
+animal = "cat"
+
+def animal.speak
+  puts self
+end
+
+animal.speak  # cat
+```
+
+Cuando se define el método singleton en el objeto `animal`, Ruby hace lo siguiente:
+
+1. Se crea una nueva clase anónima, también llamada singleton/eigenclass (clase propia).
+2. Se define el método `speak`en esa clase.
+3. Se hace que esta nueva clase sea la clase del objeto `animal`.
+4. Se hace que la clase original del objeto (String), la superclase de la clase singleton.
+
+`animal -> Singleton -> String -> Object`
+
+> **NOTA DEL TRADUCTOR**: Los objetos siempre se crean con una clase y una clase singleton. Ejemplo:
+> ```ruby
+dog = "dog"
+dog.class # => String
+dog.singleton_class # => #<Class:#<String:0x00007f9f0b02ddf0>>
+> ```
+> De modo que realmente el objeto tiene la siguiente cadena de herencia:
+> ```ruby
+dog.singleton_class.ancestors
+=>
+[#<Class:#<String:0x00007f9f0b02ddf0>>,
+ String,
+ Comparable,
+ Object,
+ PP::ObjectMixin,
+ Kernel,
+ BasicObject]
+> ```
+> Aunque para "simplificar" se podría dar por "válida" la explicación anterior.
+
+Las clases son objetos y los nombres de clase son solo constantes. Llamar a un método en una clase es lo mismo que llamar a un método en un objeto.
+
+> La superclase de la clase singleton de un objeto es la clase del objeto. La superclase de la clase singleton de una clase es la clase singleton de la superclase de la clase.
+
+Se pueden definir atributos en una clase de la siguiente manera:
+
+```ruby
+class Foo
+  class << self
+    attr_accessor :bar
+  end
+end
+
+Foo.bar = "It works"
+puts Foo.bar
+```
+
+Recuerde que un atributo es solo un par de métodos. Si define un atributo en la clase singleton, se convierten en métodos de clase.
+
+> **NOTA DEL TRADUCTOR**: Realmente un atributo es un atributo privado. Esto es que no se podría acceder desde fuera del objeto. Por ello es necesario crear métodos públicos (getter y setter) para acceder al valor del atributo.
+> Ruby permite crear los métodos getter y setter con el mismo nombre de los atributos, y da la "ilusión" de que accedemos directamente al atributo pero no. Accedemos al método.
+> Por ejemplo la siguente definición de clase:
+> ```ruby
+class Person
+  attr_accesor :name
+end
+> ```
+> Es equivalente a esta otra:
+> ```ruby
+class Person
+  def name
+    @name
+  end
+  def name=(name)
+    @name = name # Attribute definition
+  end
+end
+> ```
+> Realmente attr_accesor no crea atributos, sino métodos getter y setter.
+> ```ruby
+jedi = Person.new
+jedi.name = "Obiwan"
+jedi.name # => "Obiwan"  
+> ```
+
+## Conclusión
+
+Mantenga su código lo más simple posible y agregue complejidad a medida que lo necesite.
+
+Aunque la metaprogramación en Ruby parece magia, sigue siendo solo programación. Está muy arraigado que apenas se puede escribir Ruby idiomático sin usar algunas técnicas de metaprogramación.
+
+Ruby espera que cambie el modelo de objeto, vuelva a abrir clases, defina métodos dinámicamente y cree/ejecute código sobre la marcha.
+
+Escribir un código de metaprogramación perfecto puede ser difícil al principio, por lo que generalmente es más fácil ir mejorando el código sobre la marcha.
+
+Cuando comience, esfuércese por hacer que su código sea correcto en los casos generales y lo suficientemente simple como para que pueda agregar casos especiales más adelante.
