@@ -18,9 +18,9 @@ Si desea mantenerse en conectacto y recibir actualizaciones cuando agrege nuevas
 
 ## Capítulo 1 Conceptos básicos de Ruby
 
-* [1.1 Hola Rubí!!!](1.1.hello.md)
-* 1.2 Variables y Tipos
-* 1.3 Selección y bucle
+* [1.1 Hola Rubí!!!](101-hello.md)
+* [1.2 Variables y Tipos](102-var_and_types.md)
+* [1.3 Selección y bucle](103-selection_and_looping.md)
 * 1.4 matrices
 * 1.5 hashes
 * 1.6 Métodos
