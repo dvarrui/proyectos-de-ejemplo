@@ -7,4 +7,12 @@ Enlaces de interés:
 * https://jupyter.org/install: pip install notebook
 
 
-zypper install jupyter-notebook
+## OpenSUSE
+
+* zypper install jupyter-notebook
+
+> https://medium.com/recursivelabs/ruby-kernel-for-jupyter-notebook-5ecdecd31af3
+
+* gem install cztop rbczmq ffi-rzmq iruby
+* iruby register -force
+* jupiter-notebook
