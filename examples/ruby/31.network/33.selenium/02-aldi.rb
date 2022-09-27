@@ -1,16 +1,29 @@
 #!/usr/bin/env ruby
 
-require "selenium-webdriver" # set webdriver gem for Selenium
+require "selenium-webdriver" 
+require "debug"
+
+def pause
+  puts "Push enter to continue"
+  gets
+end
 
 url = "https://www.aldi.es/supermercados/encuentra-tu-supermercado.html"
 
 driver = Selenium::WebDriver.for :firefox
 driver.navigate.to url
 
-driver.get url
-elements = driver.find_elements(:tag_name, 'li')
-elements.each { |e| puts e.text }
+elements = driver.find_elements(:tag_name, 'button')
+elements.each do |e| 
   
+  if e.text.size > 1
+    puts e.text
+    e.click if e.text=="SALTAR"
+  end
+end
+  
+pause
+
 # driver.find_element(:class, "mod-region-selector__dropdown textfield__control").click 
 
 # text_box = driver.find_element(:name, "Zip") # Selects element by its name
