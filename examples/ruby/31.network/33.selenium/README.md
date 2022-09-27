@@ -1,6 +1,7 @@
 
 Enlaces de interés:
 * https://www.lambdatest.com/blog/selenium-ruby/
+* https://www.selenium.dev/documentation/webdriver/elements/select_lists/
 
 # Instalación y configuración
 
@@ -16,6 +17,6 @@ Descargar el driver:
 Los ejemplos de Selenium se ejecutan dentro de un contenedor de la siguiente forma:
 
 ```bash
-./rub.sh example/01-example.rb
+./docker/run.sh 01-example.rb
 ```
 
