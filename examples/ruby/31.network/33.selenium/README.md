@@ -1,4 +1,10 @@
 
+Los ejemplos de Selenium se ejecutan dentro de un contenedor de la siguiente forma:
+
+```bash
+./rub.sh example/01-example.rb
+```
+
 # Selenium
 
 Instalar al gema:
