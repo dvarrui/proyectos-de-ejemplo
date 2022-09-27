@@ -1,5 +1,8 @@
 
-# Selenium
+Enlaces de interés:
+* https://www.lambdatest.com/blog/selenium-ruby/
+
+# Instalación y configuración
 
 Instalar al gema:
 * `gem install "selenium-webdriver"`
