@@ -1,0 +1,4 @@
+private*
+*.lock
+temp/*
+docker/temp/*
