@@ -25,6 +25,9 @@ driver = Selenium::WebDriver.for :firefox
 driver.get URL
 driver.manage.timeouts.implicit_wait = 30
 
+puts "[INFO] Windows #{driver.window_handles}"
+puts "[INFO] Title \"#{driver.title}\""
+
 b = get_button("SALTAR", driver)
 puts "==> click #{b.text}"
 b.click
@@ -34,9 +37,11 @@ puts "==> send_keys Zip"
 
 pause
 
-b = get_button("Buscar", driver)
-puts "==> click #{b.text}"
-b.click
+puts "Leer la segunda ventana"
+handles = driver.window_handles
+puts "[INFO] Windows #{handles}"
+driver.switch_to.window(handles[1])
+puts "[INFO] Title \"#{driver.title}\""
 
 pause
 
