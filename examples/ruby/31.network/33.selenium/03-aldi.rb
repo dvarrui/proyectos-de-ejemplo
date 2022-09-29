@@ -11,8 +11,11 @@ end
 def get_button(text, driver)
   driver.find_elements(:tag_name, 'button').each do |button|
     return button if button.text == text
+    puts "[INFO] #{button.text} button exist!" unless button.text.size.zero?
   end
-  puts "[ERROR] Button #{text} not found!"
+
+  driver.quit
+  puts "[ERROR] #{text} button not found!"
   exit 1
 end
 
@@ -26,8 +29,10 @@ b = get_button("SALTAR", driver)
 puts "==> click #{b.text}"
 b.click
 
-driver.find_element(name: 'Zip').send_keys '38000'
+driver.find_element(name: 'Zip').send_keys '38000', :return
 puts "==> send_keys Zip"
+
+pause
 
 b = get_button("Buscar", driver)
 puts "==> click #{b.text}"
