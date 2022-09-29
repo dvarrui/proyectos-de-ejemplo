@@ -20,28 +20,33 @@ def get_button(text, driver)
 end
 
 URL = "https://www.aldi.es/supermercados/encuentra-tu-supermercado.html"
+CODE = "38000"
 
 driver = Selenium::WebDriver.for :firefox
 driver.get URL
 driver.manage.timeouts.implicit_wait = 30
 
-puts "[INFO] Windows #{driver.window_handles}"
-puts "[INFO] Title \"#{driver.title}\""
+puts "    - Title \"#{driver.title}\""
 
 b = get_button("SALTAR", driver)
 puts "==> click #{b.text}"
 b.click
 
-driver.find_element(name: 'Zip').send_keys '38000', :return
+s = driver.find_element(name: "Radius")
+#s.select_by(:text,'100 km')
+
+driver.find_element(name: 'Zip').send_keys CODE, :return
 puts "==> send_keys Zip"
 
 pause
 
 puts "Leer la segunda ventana"
 handles = driver.window_handles
-puts "[INFO] Windows #{handles}"
 driver.switch_to.window(handles[1])
-puts "[INFO] Title \"#{driver.title}\""
+puts "    - Title \"#{driver.title}\""
+b = get_button("Continuar", driver)
+puts "==> click #{b.text}"
+b.click
 
 pause
 
