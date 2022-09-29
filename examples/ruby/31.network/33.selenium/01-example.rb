@@ -11,5 +11,7 @@ puts "Step 2/3"
 driver.navigate.to "https://www.tutorialspoint.com/index.htm" # launch browser
 
 puts "Step 3/3"
+puts "(Push enter)"
+gets
 driver.close # close browser
 
