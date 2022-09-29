@@ -86,18 +86,19 @@ end
 
 ## Axiomas
 
-* Left-identity para `pass`: Llamar a `pass` a un nuevo valor recién aplicado el método `wrap` es lo mismo que aplicar el bloque directamente al valor.
-```ruby
-jedi = Identity.wrap("obiwan")
-jedi.pass { block } # => block("obiwan")
-```
+* _Left-identity_ para `pass`: Llamar a `pass` a un nuevo valor recién aplicado el método `wrap` es lo mismo que aplicar el bloque directamente al valor.
 
-* right-identity para `pass`: Llamar a `pass` con un bloque que solo llama a `wrap` da como resultado el mismo objeto.
-```ruby
+> **NOTA DEL TRSADUCTOR**
+> ```ruby
+Identity.wrap("obiwan").pass { block } # => block("obiwan")
+> ```
+
+* _Right-identity_ para `pass`: Llamar a `pass` con un bloque que solo llama a `wrap` da como resultado el mismo objeto.
+
+> **NOTA DEL TRADUCOTR**
+> ```ruby
 jedi = Identity.wrap("obiwan")
 jedi.pass { wrap } # => Identity.wrap("obiwan")
-```
+> ```
 
-
-     Anidamiento:
-     Anidar bloques de pases debería ser equivalente a llamarlos en secuencia.
+* Anidamiento: Anidar bloques con `pass` debería ser equivalente a llamarlos en secuencia.
