@@ -8,10 +8,14 @@ def pause
   gets
 end
 
-def get_button(text, driver)
+def click_button(text, driver)
   driver.find_elements(:tag_name, 'button').each do |button|
-    return button if button.text == text
-    puts "[INFO] #{button.text} button exist!" unless button.text.size.zero?
+    if button.text == text
+      puts "==> click #{button.text}"
+      button.click
+      return true
+    end
+    # puts "    * button... #{button.text}" unless button.text.size.zero?
   end
 
   driver.quit
@@ -28,12 +32,13 @@ driver.manage.timeouts.implicit_wait = 30
 
 puts "    - Title \"#{driver.title}\""
 
-b = get_button("SALTAR", driver)
-puts "==> click #{b.text}"
-b.click
+click_button("SALTAR", driver)
 
-s = driver.find_element(name: "Radius")
-#s.select_by(:text,'100 km')
+driver.navigate.refresh
+
+select_element = driver.find_element(name: "Radius")
+select = Selenium::WebDriver::Support::Select.new(select_element)
+select.select_by(:text,'100 km')
 
 driver.find_element(name: 'Zip').send_keys CODE, :return
 puts "==> send_keys Zip"
@@ -44,9 +49,7 @@ puts "Leer la segunda ventana"
 handles = driver.window_handles
 driver.switch_to.window(handles[1])
 puts "    - Title \"#{driver.title}\""
-b = get_button("Continuar", driver)
-puts "==> click #{b.text}"
-b.click
+click_button("Continuar", driver)
 
 pause
 
