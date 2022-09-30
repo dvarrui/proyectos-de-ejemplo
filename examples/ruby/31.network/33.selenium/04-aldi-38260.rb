@@ -10,5 +10,6 @@ aldi.click_button("SALTAR")
 aldi.filter(CODE)
 aldi.click_link("Mapa")
 aldi.click_button("Calcule la ruta:")
+puts aldi.get_telefono
 aldi.pause
 aldi.quit

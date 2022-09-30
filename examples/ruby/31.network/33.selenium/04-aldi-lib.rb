@@ -61,6 +61,11 @@ class Aldi
     exit 1
   end
 
+  def get_telefono
+    e = @driver.find_element(id: "RoutingAddressPhone")
+    e.text.split.last
+  end
+
   def quit
     @driver.quit
   end
