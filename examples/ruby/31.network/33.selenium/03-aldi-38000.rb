@@ -11,11 +11,11 @@ end
 def click_button(text, driver)
   driver.find_elements(:tag_name, 'button').each do |button|
     if button.text == text
+      puts "    [Window] #{driver.title}"
       puts "==> click #{button.text}"
       button.click
       return true
     end
-    # puts "    * button... #{button.text}" unless button.text.size.zero?
   end
 
   driver.quit
@@ -30,7 +30,6 @@ driver = Selenium::WebDriver.for :firefox
 driver.get URL
 driver.manage.timeouts.implicit_wait = 30
 
-puts "    [Window] #{driver.title}"
 
 click_button("SALTAR", driver)
 
@@ -45,7 +44,6 @@ puts "==> send_keys Zip"
 
 handles = driver.window_handles
 driver.switch_to.window(handles[1])
-puts "    [Window] #{driver.title}"
 click_button("Continuar", driver)
 
 pause

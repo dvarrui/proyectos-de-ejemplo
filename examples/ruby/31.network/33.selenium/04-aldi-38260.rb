@@ -16,7 +16,6 @@ def click_button(text, driver)
       button.click
       return true
     end
-    # puts "    * button... #{button.text}" unless button.text.size.zero?
   end
 
   driver.quit
@@ -31,6 +30,7 @@ driver = Selenium::WebDriver.for :firefox
 driver.get URL
 driver.manage.timeouts.implicit_wait = 30
 
+
 click_button("SALTAR", driver)
 
 driver.navigate.refresh
@@ -39,8 +39,6 @@ puts "==> send_keys Zip"
 
 handles = driver.window_handles
 driver.switch_to.window(handles[1])
-puts "    [Window] #{driver.title}"
-click_button("Continuar", driver)
 
 pause
 
