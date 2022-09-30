@@ -30,7 +30,7 @@ driver = Selenium::WebDriver.for :firefox
 driver.get URL
 driver.manage.timeouts.implicit_wait = 30
 
-puts "    - Title \"#{driver.title}\""
+puts "    [Window] #{driver.title}"
 
 click_button("SALTAR", driver)
 
@@ -43,18 +43,11 @@ select.select_by(:text,'100 km')
 driver.find_element(name: 'Zip').send_keys CODE, :return
 puts "==> send_keys Zip"
 
-pause
-
-puts "Leer la segunda ventana"
 handles = driver.window_handles
 driver.switch_to.window(handles[1])
-puts "    - Title \"#{driver.title}\""
+puts "    [Window] #{driver.title}"
 click_button("Continuar", driver)
 
 pause
 
-# driver.find_element(:class, "mod-region-selector__dropdown textfield__control").click
-
-# text_box = driver.find_element(:name, "Zip") # Selects element by its name
-# text_box.send_keys("38000") # Type in the box
 driver.quit
