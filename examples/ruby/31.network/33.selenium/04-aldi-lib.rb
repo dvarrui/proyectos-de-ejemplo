@@ -23,14 +23,19 @@ class Aldi
         puts "==> click #{button.text}"
         button.click
         return true
-      else
-        puts "    [Debug] Button #{button.text}" unless button.text.size.zero?
       end
     end
 
     @driver.quit
     puts "[ERROR] #{text} button not found!"
     exit 1
+  end
+
+  def exist_button?(text)
+    @driver.find_elements(:tag_name, 'button').each do |button|
+      return true if button.text == text
+    end
+    false
   end
 
   def filter(code)
@@ -47,6 +52,7 @@ class Aldi
   end
 
   def click_link(text)
+    @driver.navigate.refresh
     @driver.find_elements(:tag_name, 'a').each do |a|
       if a.text == text
         puts "    [Window] #{@driver.title}"
