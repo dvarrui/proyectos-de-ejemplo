@@ -2,7 +2,6 @@
 require "selenium-webdriver"
 
 class AldiPhoneNumber
-  attr_reader :driver
   URL = "https://www.aldi.es/supermercados/encuentra-tu-supermercado.html"
 
   def initialize
