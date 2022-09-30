@@ -1,7 +1,7 @@
 
 Enlaces de interés:
+* https://www.selenium.dev/documentation/webdriver
 * https://www.lambdatest.com/blog/selenium-ruby/
-* https://www.selenium.dev/documentation/webdriver/elements/select_lists/
 
 # Instalación y configuración
 
@@ -12,9 +12,10 @@ Descargar el driver:
 * https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
 * `wget https://github.com/mozilla/geckodriver/releases/download/v0.31.0/geckodriver-v0.31.0-linux64.tar.gz`
 
-# Docker (devel)
+# Docker 
 
-Los ejemplos de Selenium se ejecutan dentro de un contenedor de la siguiente forma:
+Los script se pueden ejecutar en la máquina real si hemos instalado las dependencias (punto anterior), o
+también lo podemos ejecutar desde un contenedor docker de la siguiente forma:
 
 ```bash
 ./docker/run.sh 01-example.rb
