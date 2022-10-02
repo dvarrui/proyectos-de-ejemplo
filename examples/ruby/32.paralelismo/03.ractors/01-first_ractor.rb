@@ -1,12 +1,11 @@
-r = Ractor.new { puts "This is my first ractor" }
+r = Ractor.new { puts "[ractor1] This is my first ractor (#{Process.pid})" }
 # This is my first ractor
-
 # create a ractor with a name
 r = Ractor.new name: 'second_ractor' do
-  puts "This is my second ractor"
+  puts "[ractor2] This is my second ractor (#{Process.pid})"
 end
 # This is my second ractor
 
-puts r.name
+puts "[main] Ractor name #{r.name} (#{Process.pid})"
 # => "second_ractor"
 sleep 1
