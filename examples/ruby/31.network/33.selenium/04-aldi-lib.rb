@@ -1,5 +1,6 @@
 
 require "selenium-webdriver"
+require "colorize"
 
 class Aldi
   attr_reader :driver
@@ -12,22 +13,25 @@ class Aldi
   end
 
   def pause
-    puts "(Push enter to continue)"
+    puts "(Push enter to continue)".colorize(:light_yellow)
     gets
   end
 
-  def click_button(text)
+  def click_button(text, debug: true)
     @driver.find_elements(:tag_name, 'button').each do |button|
       if button.text == text
-        puts "    [Window] #{@driver.title}"
-        puts "==> click #{button.text}"
-        button.click
-        return true
+        puts "==> click button #{button.text.colorize(:white)}" if debug
+        begin
+          button.click
+          return true
+        rescue Selenium::WebDriver::Error::UnexpectedAlertOpenError
+          return false
+        end
       end
     end
 
     @driver.quit
-    puts "[ERROR] #{text} button not found!"
+    puts "    [ERROR] #{text} button not found!".colorize(:light_red)
     exit 1
   end
 
@@ -45,7 +49,7 @@ class Aldi
     select.select_by(:text,'5 km')
 
     @driver.find_element(name: 'Zip').send_keys code, :return
-    puts "==> send_keys #{code} to Zip"
+    puts "==> filter by Zip = #{code.colorize(:white)}"
 
     handles = @driver.window_handles
     @driver.switch_to.window(handles[1])
@@ -55,15 +59,14 @@ class Aldi
     @driver.navigate.refresh
     @driver.find_elements(:tag_name, 'a').each do |a|
       if a.text == text
-        puts "    [Window] #{@driver.title}"
-        puts "==> click #{a.text}"
+        puts "==> click link #{a.text.colorize(:white)}"
         a.click
         return true
       end
     end
 
     @driver.quit
-    puts "[ERROR] #{text} link not found!"
+    puts "    [ERROR] #{text} link not found!".colorize(:light_red)
     exit 1
   end
 
