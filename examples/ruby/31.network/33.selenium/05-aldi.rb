@@ -2,6 +2,8 @@
 
 require_relative "05-aldi-lib"
 
-CODE = "38670"
+URL = "https://www.aldi.es/supermercados/encuentra-tu-supermercado.html"
+codes = [ "38670", "38550", "38260", "38611", "35014", "35214", "38639" ]
 
-puts AldiPhoneNumber.new.get(CODE)
+index = rand(0..codes.size)
+puts AldiPhoneNumber.new(URL).get(codes[index])

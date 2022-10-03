@@ -9,14 +9,13 @@ codes.each do |code|
   aldi = Aldi.new(URL)
   aldi.click_button("SALTAR", debug: false)
   aldi.filter(code)
-  # aldi.pause if code == "38639"
   if aldi.exist_button? "Continuar"
-    puts "    [DEBUG] filtered by #{code} and try Continuar.."
-    next
+    puts "    [SKIP] Continuar button"
     # aldi.click_button("Continuar")
+  else
+    aldi.click_link("Mapa", debug: false)
+    aldi.click_button("Calcule la ruta:", debug: false)
   end
-  aldi.click_link("Mapa", debug: false)
-  aldi.click_button("Calcule la ruta:", debug: false)
   puts "    Teléfono: #{aldi.get_telefono.colorize(:green)}"
   aldi.quit
 end
