@@ -55,11 +55,11 @@ class Aldi
     @driver.switch_to.window(handles[1])
   end
 
-  def click_link(text)
+  def click_link(text, debug: true)
     @driver.navigate.refresh
     @driver.find_elements(:tag_name, 'a').each do |a|
       if a.text == text
-        puts "==> click link #{a.text.colorize(:white)}"
+        puts "==> click link #{a.text.colorize(:white)}" if debug
         a.click
         return true
       end
@@ -71,8 +71,12 @@ class Aldi
   end
 
   def get_telefono
-    e = @driver.find_element(id: "RoutingAddressPhone")
-    e.text.split.last
+    begin
+      e = @driver.find_element(id: "RoutingAddressPhone")
+      return e.text.split.last
+    rescue
+      return ""
+    end
   end
 
   def quit
