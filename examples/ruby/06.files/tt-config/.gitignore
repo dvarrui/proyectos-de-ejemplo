@@ -1,3 +1,4 @@
 private*
 *.lock
 *.yaml
+*.yml
