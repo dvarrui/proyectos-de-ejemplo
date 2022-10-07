@@ -19,20 +19,14 @@ EOF
 
 doc = Nokogiri::HTML.parse(html)
 
-puts "=== Todas las etiquetas div ==="
-puts doc.css("div")
-
-puts "\n=== Todas las etiquetas div p ==="
+puts "\n==> Localizar div p "
 puts doc.css("div p")
 
-puts "\n=== Texto de las etiquetas div p ==="
-doc.css("div p").each { puts "p.text = #{_1.text}" }
-
-puts "\n=== Localizar div id obiwan ==="
+puts "\n==> Localizar div id:obiwan"
 items = doc.css("div")
 puts items.select { |i| i["id"] == "obiwan" }
 
-puts "\n=== Localizar div class droides ==="
+puts "\n==> Localizar div class:droides"
 items = doc.css("div")
 puts items.select { |i| i["class"] == "droides" }
 
