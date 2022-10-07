@@ -40,7 +40,6 @@ class Airbnb
       if button.attribute(attr_name) == text
         puts "==> click button #{attr_name}=#{text}" if debug
         button.click
-        #rescue Selenium::WebDriver::Error::UnexpectedAlertOpenError
       end
     end
 
