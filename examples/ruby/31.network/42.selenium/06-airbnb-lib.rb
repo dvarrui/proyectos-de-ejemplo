@@ -39,12 +39,8 @@ class Airbnb
     @driver.find_elements(:tag_name, 'button').each do |button|
       if button.attribute(attr_name) == text
         puts "==> click button #{attr_name}=#{text}" if debug
-        begin
-          button.click
-          return true
-        rescue Selenium::WebDriver::Error::UnexpectedAlertOpenError
-          return false
-        end
+        button.click
+        #rescue Selenium::WebDriver::Error::UnexpectedAlertOpenError
       end
     end
 
