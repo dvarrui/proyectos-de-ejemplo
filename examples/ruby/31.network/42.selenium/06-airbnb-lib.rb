@@ -35,11 +35,10 @@ class Airbnb
     exit 1
   end
 
-  def click_button_class(text, debug: true)
+  def click_button_attr(attr_name, text, debug: true)
     @driver.find_elements(:tag_name, 'button').each do |button|
-      binding.break
-      if button.text == text
-        puts "==> click button #{button.text.colorize(:white)}" if debug
+      if button.attribute(attr_name) == text
+        puts "==> click button #{attr_name}=#{text}" if debug
         begin
           button.click
           return true
