@@ -1,8 +1,11 @@
 
-# Rust features
+# Rust lang
+
+* Installation `zypper install cargo`
+
+# Features
 
 * `cargo run` compile and run program.
-* In Rust, variables are immutable by default.
 
 Basic types
 * Scalar types: integer, float, boolean and char.
@@ -11,6 +14,7 @@ Basic types
     * array (fixed length, same type elements)
 
 Conceptos:
+* In Rust, variables are immutable by default.
 * types vs variant
 * methods vs functions vs macros
 * traits
@@ -20,4 +24,6 @@ Conceptos:
 
 # Pendiente
 
-* Ejemplo con crate ferrysay
+* Ejemplo con crate ferrysay: https://docs.rs/ferris-says/0.1.1/ferris_says/fn.say.html
+* Dependencias en: https://crates.io/
+
