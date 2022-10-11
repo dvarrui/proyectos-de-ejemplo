@@ -26,12 +26,12 @@ module Turbo
 
   def self.build
     Curses.attrset(Curses.color_pair(0))
-    setpos(21,3); addstr("-" * 90)
-    setpos(22,3); addstr("[ ESC ]")
-    setpos(23,3); addstr("  Quit")
+    setpos(22,3); addstr("-" * 90)
+    setpos(23,3); addstr("[ ESC ]")
+    setpos(24,3); addstr("  Quit")
 
     boxes = []
-    boxes << TextBox.new(x:7, y:4, w:9, h:9)
+    boxes << TextBox.new(x:7, y:4, w:89, h:18)
     boxes
   end
 

@@ -75,7 +75,7 @@ class TextBox
     line = @data[@cursor.y]
     msg = "[DEBUG] " \
           "Data: lines=#{@data.size}, size=#{line.size}, current_line=<#{line}>      "
-    write_xy(3, 19, msg)
+    write_xy(3, 21, msg)
   end
 
   def global_position
