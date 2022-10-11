@@ -1,10 +1,12 @@
 
 
+
 DUDAS
 
+* Las anotaciones sirven para el análisis estático??mypi pero sobre todo para ayudar al IDE 
+  a mostrar información útil y para generar documentación más detallada.
 * Diferencia entre tupla y lista. Tupla es inmutable. 
   Pero esto es una utilidad de implementación pero no implica cambios en los algoritmos.
-
 * El operador // es confuso.
 
 * ¿Qué utilidad tiene tratar los booleanos como enteros?
