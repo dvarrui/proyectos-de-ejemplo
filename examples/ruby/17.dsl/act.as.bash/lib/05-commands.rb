@@ -1,13 +1,12 @@
-
 module ActAsBash
-
-  def self.echo(*args)
+  def echo(*args)
     puts args.join(' ')
   end
 
-  def self.method_missing(method, *args, &block)
+  def method_missing(method, *args, &block)
     command = "#{method} #{args.join(' ')}"
     system(command)
  end
-
 end
+
+extend ActAsBash

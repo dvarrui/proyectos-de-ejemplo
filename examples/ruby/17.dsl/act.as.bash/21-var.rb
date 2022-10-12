@@ -1,7 +1,14 @@
 #!/usr/bin/env ruby
-require_relative "lib/02-echo"
+
+def echo(*args)
+  puts args.join(' ')
+end
 
 echo "[Example] #{$0}"
 echo "Hola", 42
 echo "qué", "tal?"
-exit 0
+
+puts $0
+puts $1
+puts $2
+
