@@ -1,8 +1,8 @@
 
 module ActAsBash
-
-  def self.echo(*args)
+  def echo(*args)
     puts args.join(' ')
   end
-
 end
+
+extend ActAsBash
