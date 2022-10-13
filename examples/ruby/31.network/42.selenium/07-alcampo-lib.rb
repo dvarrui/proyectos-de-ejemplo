@@ -55,16 +55,6 @@ class Alcampo
     false
   end
 
-  def filter_destino(dest)
-    @driver.navigate.refresh
-    id = "bigsearch-query-location-input"
-    @driver.find_element(id: id).send_keys dest, :return
-    puts "==> filter by Destino = #{dest.colorize(:white)}"
-
-    #handles = @driver.window_handles
-    #@driver.switch_to.window(handles[1])
-  end
-
   def click_link(text, debug: true)
     @driver.navigate.refresh
     @driver.find_elements(:tag_name, 'a').each do |a|
@@ -78,15 +68,6 @@ class Alcampo
     @driver.quit
     puts "    [ERROR] #{text} link not found!".colorize(:light_red)
     exit 1
-  end
-
-  def get_telefono
-    begin
-      e = @driver.find_element(id: "RoutingAddressPhone")
-      return e.text.split.last
-    rescue
-      return ""
-    end
   end
 
   def quit
