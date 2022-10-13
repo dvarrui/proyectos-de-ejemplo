@@ -2,7 +2,7 @@
 require "selenium-webdriver"
 require "colorize"
 
-class Alcampo
+class Selenium
   attr_reader :driver
 
   def initialize(url)

@@ -1,11 +1,11 @@
 #!/usr/bin/env ruby
 
-require_relative "07-alcampo-lib"
+require_relative "07-selenium-lib"
 require 'debug'
 
 URL = "https://www.alcampo.es/empresa/tiendas"
 
-browser = Alcampo.new(URL)
+browser = Selenium.new(URL)
 puts "[Title] #{browser.driver.title}"
 
 driver = browser.driver
