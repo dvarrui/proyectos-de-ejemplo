@@ -11,4 +11,7 @@ echo "qué", "tal?"
 puts $0
 puts $1
 puts $2
+puts $?
+puts $!
+puts $@
 
