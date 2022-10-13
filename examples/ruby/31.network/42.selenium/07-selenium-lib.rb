@@ -2,7 +2,7 @@
 require "selenium-webdriver"
 require "colorize"
 
-class Selenium
+class SeleniumWrapper
   attr_reader :driver
 
   def initialize(url)
