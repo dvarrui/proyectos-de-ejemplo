@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative "07-selenium-lib"
+require_relative "lib/selenium-wrapper"
 require 'debug'
 
 URL = "https://www.alcampo.es/empresa/tiendas"
