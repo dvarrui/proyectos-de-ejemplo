@@ -4,4 +4,4 @@
 > Enlaces de interés:
 > * http://rosettacode.org/wiki/Rosetta_Code
 
-Los códigos de ejemplo se han extraído del proyecto "Rosetta Code".
+Muchos de los ejemplos se han extraído del proyecto "Rosetta Code".
