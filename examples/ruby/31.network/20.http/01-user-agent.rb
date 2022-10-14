@@ -3,7 +3,7 @@ require "net/http"
 
 urls = []
 urls << "https://pokemongolive.com/events/community-day/"
-urls << "https://www.airbnb.es/"
+urls << "https://www.nba.com"
 
 urls.each do |url|
   uri = URI(url)
