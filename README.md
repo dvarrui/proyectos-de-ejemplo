@@ -17,6 +17,3 @@ El contenido se organiza del siguiente modo:
 
 Django:
 * [MVP - Minimum Viable Product](https://github.com/sdelquin/mvp): proyecto hecho con Django por `sdelquin`.
-
-
-
