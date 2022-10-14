@@ -7,7 +7,10 @@ class SeleniumWrapper
 
   def initialize(url)
     @url = url
-    @driver = Selenium::WebDriver.for :firefox
+    # @driver = Selenium::WebDriver.for :firefox
+    options = Selenium::WebDriver::Firefox::Options.new
+    options.headless!
+    @driver = Selenium::WebDriver.for(:firefox, capabilities: [options])
     @driver.get @url
     @driver.manage.timeouts.implicit_wait = 30
   end
