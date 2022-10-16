@@ -1,5 +1,5 @@
 private*
 *.lock
-*.html
+*.html*
 temp/*
 docker/temp/*
