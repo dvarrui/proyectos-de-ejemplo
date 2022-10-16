@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative "04-aldi-lib"
+require_relative "lib/04-aldi-lib"
 
 URL = "https://www.aldi.es/supermercados/encuentra-tu-supermercado.html"
 codes = [ "38670", "38550", "38260", "38611", "35014", "35214", "38639" ]
