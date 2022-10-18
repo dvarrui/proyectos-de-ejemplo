@@ -1,13 +1,22 @@
 #!/usr/bin/env ruby
 
-source = <<~RUBY
-  a = 3
-  b = 4
-  c = a + b
-  puts c
-RUBY
+class Demo
+  def self.call
+    source = <<~RUBY
+      puts d
+      a = 3
+      b = 4
+      c = a + b
+      puts c
+    RUBY
 
-source.split("\n").each_with_index do |line, index|
-  puts "#{index}: #{line}"
-  eval(line, binding)
+    d = "hola"
+
+    source.split("\n").each_with_index do |line, index|
+      puts "#{index}: #{line}"
+      eval(line, binding)
+    end
+  end
 end
+
+Demo.call
