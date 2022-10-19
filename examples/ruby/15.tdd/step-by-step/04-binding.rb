@@ -1,5 +1,8 @@
 #!/usr/bin/env ruby
 
+require "colorize"
+require "debug"
+
 source = <<~RUBY
   puts d
   a = 3
@@ -10,10 +13,11 @@ RUBY
 
 d = "hola"
 
+scope = binding
 source.split("\n").each_with_index do |line, index|
-  puts "#{index}: #{line}"
+  puts "#{index}: #{line}".colorize(:white)
   begin
-    eval(line, binding)
+    scope = eval("#{line}; binding", scope)
   rescue NameError => e
     puts "[NameError] #{e}"
   end
