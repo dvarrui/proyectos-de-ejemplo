@@ -7,7 +7,8 @@ module StepByStep
   def self.call(source)
     scope = binding
     source.split("\n").each_with_index do |line, index|
-      puts "#{index}: #{line}".colorize(:white)
+      system("clear")
+      show_code(source, index)
       begin
         scope = eval("#{line}; binding", scope)
       rescue NameError => e
@@ -15,6 +16,15 @@ module StepByStep
       end
       print "(enter)"
       gets
+    end
+  end
+
+  def self.show_code(source, current)
+    lines = source.split("\n")
+    lines.each_with_index do |line, index|
+      str = "#{index}: #{line}"
+      str = str.colorize(:white) unless index == current
+      puts str
     end
   end
 end
