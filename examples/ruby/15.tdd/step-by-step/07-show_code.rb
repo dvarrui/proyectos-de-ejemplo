@@ -10,21 +10,28 @@ module StepByStep
       system("clear")
       show_code(source, index)
       begin
+        puts "\n[output]".colorize(:white)
         scope = eval("#{line}; binding", scope)
       rescue NameError => e
         puts "[NameError] #{e}"
       end
-      print "(enter)"
+      print "\n(enter)"
       gets
     end
   end
 
   def self.show_code(source, current)
+    puts "[source code]".colorize(:white)
     lines = source.split("\n")
     lines.each_with_index do |line, index|
-      str = "#{index}: #{line}"
-      str = str.colorize(:white) unless index == current
-      puts str
+      arrow = " "
+      color = :white
+      if index == current
+        arrow = "\u{279C}"
+        color = :light_white
+      end
+      str = "#{index}: #{arrow} #{line}"
+      puts str.colorize(color)
     end
   end
 end
