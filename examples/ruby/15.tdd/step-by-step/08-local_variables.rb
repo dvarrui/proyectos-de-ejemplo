@@ -5,9 +5,12 @@ require "debug"
 
 module StepByStep
   def self.call(source)
+    show_code(source)
+    print "\n(enter)"
+    gets
+
     scope = nil # Do not pass binding to first eval
     source.split("\n").each_with_index do |line, index|
-      system("clear")
       show_code(source, index)
       begin
         puts "\n[output]".colorize(:white)
@@ -20,7 +23,8 @@ module StepByStep
     end
   end
 
-  def self.show_code(source, current)
+  def self.show_code(source, current = -1)
+    system("clear")
     puts "[source code]".colorize(:white)
     lines = source.split("\n")
     lines.each_with_index do |line, index|
