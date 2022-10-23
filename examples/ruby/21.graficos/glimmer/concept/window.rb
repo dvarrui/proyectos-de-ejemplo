@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 require 'glimmer-dsl-libui'
+require "debug"
 
 class ConceptWindow
   include Glimmer
@@ -18,28 +19,33 @@ class ConceptWindow
     ]
   end
 
-  def launch
-    window('Concept', 600, 600) {
+  def init
+    @window = window('Concept', 600, 600) {
       margined true
 
       vertical_box {
         form {
           stretchy false
-          entry {
+          @entry_name = entry {
             label 'Name'
             text <=> [self, :name]
           }
-          entry {
+          @entry_tags = entry {
             label 'Tags'
             text <=> @tags
           }
-          entry {
-            label 'Type'
-            text <=> [self, :type]
+        }
+
+        horizontal_box {
+          stretchy false
+          button('New line') {
           }
-          entry {
-            label 'Text'
-            text <=> [self, :text]
+          button('Close') {
+          }
+          button('Save') {
+            on_clicked do
+              msg_box('Data saved!')
+            end
           }
         }
 
@@ -63,8 +69,16 @@ class ConceptWindow
           end
         }
       }
-    }.show
+    }
+  end
+
+  def show
+    @entry_name.text = @name
+    @entry_tags.text = @tags
+    @window.show
   end
 end
 
-ConceptWindow.new.launch
+w = ConceptWindow.new
+w.init
+w.show
