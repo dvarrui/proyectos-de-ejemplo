@@ -4,9 +4,9 @@ require "debug"
 
 class ConceptWindow
   include Glimmer
-  Line = Struct.new(:type, :text, :actio)
+  Line = Struct.new(:type, :text)
   attr_accessor :name, :tags
-  attr_accessor :lines, :type, :text, :action
+  attr_accessor :lines, :type, :text
 
   def initialize
     @name = "España"
