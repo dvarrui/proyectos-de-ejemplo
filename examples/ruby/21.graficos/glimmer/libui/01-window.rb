@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 # mLibUI Original Version:
 
 require 'libui'
