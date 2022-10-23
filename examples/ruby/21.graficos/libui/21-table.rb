@@ -1,9 +1,9 @@
+#!/usr/bin/env ruby
 # LibUI Original Version:
 
 require 'libui'
 
 UI = LibUI
-
 UI.init
 
 main_window = UI.new_window('Animal sounds', 300, 200, 1)

@@ -1,7 +1,7 @@
+#!/usr/bin/env ruby
 # Glimmer DSL for LibUI Version:
 
 require 'glimmer-dsl-libui'
-
 include Glimmer
 
 data = [
