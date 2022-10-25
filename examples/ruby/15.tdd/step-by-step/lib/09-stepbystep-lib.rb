@@ -22,15 +22,15 @@ module StepByStep
   end
 
   def self.show_code(source, current = -1, scope = nil)
-    system("clear")
+    puts "\e[H\e[2J" # clear screen
     puts "[source code]             [variables]".colorize(:white)
     lines = source.split("\n")
     lines.each_with_index do |line, index|
-      arrow = " "
+      arrow = "  "
       color = :white
       lvar = ""
       if index == current
-        arrow = "\u{279C}"
+        arrow = "->" # Unicode arrow "\u{279C}" do not works fine on Windows :-(
         color = :light_white
         lvar = variables_from(scope)
       end
