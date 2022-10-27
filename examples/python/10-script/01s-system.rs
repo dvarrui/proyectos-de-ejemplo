@@ -8,5 +8,6 @@ fn main() {
             .stdin(Stdio::null())
             .stdout(Stdio::inherit())
             .output()
-            .expect("failed to execute process");
+            .unwrap()
+            .stdout;
 }
