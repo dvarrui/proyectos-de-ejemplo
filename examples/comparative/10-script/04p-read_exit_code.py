@@ -1,9 +1,9 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
-from subprocess import run
+import os
 
-p = run( [ 'ping -c 1 192.168.1.1 > /dev/null' ] )
-print( 'exit status code:', p.returncode )
+retcode = os.system('ping -c 1 1.1.1.1 > /dev/null 2> /dev/null')
+print( 'exit status code:', retcode)
 
-p = run( [ 'ping -c 1 192.168.16.16 > /dev/null' ] )
-print( 'exit status code:', p.returncode )
+retcode = os.system('ping -c 1 192.168.16.16 > /dev/null 2> /dev/null')
+print( 'exit status code:', retcode)
