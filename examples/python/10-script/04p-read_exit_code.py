@@ -1,9 +1,9 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
-from subprocess import run
+import subprocess
 
-p = run( [ 'ping -c 1 192.168.1.1 > /dev/null' ] )
+p = subprocess.run( [ 'ping', '-c', '1', '8.8.8.8' ], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL )
 print( 'exit status code:', p.returncode )
 
-p = run( [ 'ping -c 1 192.168.16.16 > /dev/null' ] )
+p = subprocess.run( [ 'ping', '-c', '1', '192.168.16.16' ], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL )
 print( 'exit status code:', p.returncode )
