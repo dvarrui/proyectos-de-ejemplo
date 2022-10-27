@@ -4,5 +4,5 @@ fn main() {
     let output = Command::new("date")
                          .output()
                          .unwrap();
-    println!("{:?}", output);
+    println!("La fecha actual es: {:?}", output);
 }
