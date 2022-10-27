@@ -1,7 +1,6 @@
 
 def si(&block)
   result = block.call
-  $SI =
   if result
     $SI = true
   else
