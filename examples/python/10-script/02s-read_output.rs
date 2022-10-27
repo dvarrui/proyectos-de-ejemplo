@@ -5,5 +5,5 @@ fn main() {
                          .output()
                          .unwrap();
     let text = String::from_utf8_lossy(&output.stdout);
-    println!("La fecha actual es: {}", text);
+    println!("La fecha actual es: {} (OK)", text);
 }
