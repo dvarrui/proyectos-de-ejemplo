@@ -2,42 +2,69 @@
 
 `EN CONSTRUCCIÓN!!!`
 
-# De dónde venimos
+# ¿De dónde venimos?
 
-Puesto que los Strings son objetos, debe existir un método constructor definido en la clase que al invocarse crea una instancia del objeto.
+_Una de las grandes preguntas_
 
-* Ejemplo Ruby:
+En POO los objetos se crean a partir del constructor de la clase. Un constructor es un método encargado de crear nuevas instancias de la clase.
 
-```ruby
->> b = String.new("Bye")
-=> "Bye"
->> b.class
-=> String
->>
-```
+## Contructor: ¿estilo llamada a función o estilo invocación de método?
 
-```ruby
->> c = String("Good bye")
-=> "Good bye"
->> c.class
-=> String
-```
+En Python se usa `Person("Darth Vader")` para invocar al constructor. No está visible pero internamente se construye un nuevo objeto `Person` y se invoca al método `__init__` de la instancia para inicializar sus valores.
 
 ```python
->>> a = "hola"
->>> a.__len__()
-4
->>> len(a)
-4
->>>
+class Person:
+  def __init(self, name):
+    self.name = name
+
+
+vader = Person("Darth Vader")
 ```
 
+En Ruby tenemos que las clases tiene el método `new` que usamos construir nuevas instancias.
+
 ```ruby
->> a = "hello"
-=> "hello"
->> a.length
-=> 5
->> a.size
-=> 5
+class Person
+  def initialize(name)
+    @name = name
+  end
+end
+
+obiwan = Person.new("Obi-wan Kenobi")
+```
+
+Invocar al constructor sin usar new no funcionará. Por ejemplo `yoda = Person("Maestro Yoda")` devuelve `Undefined error`. Aunque, hace poco descubrí que _hay algunas clases de Ruby_ donde podemos usar un constructor como función:
+
+```ruby
+>> Integer(1.6)
+=> 1
+>> Float(16)
+=> 16.0
+>> String("why?")
+=> "why?"
 >>
 ```
+
+Esto lo descubrí por casualidad. Realmente esto tipos de datos, aunque son objetos, normalmente los creamos en modo _syntax sugar_ (Aquí tengo que seguir indagando)
+
+```ruby
+a = 6
+b = 1.6
+c = "why?"
+```
+
+## Clases en mayúsculas o minúsculas
+
+En Ruby las clases se crean siempre empezando con mayúscula. En caso constrario hay un `Syntax Error`. En cambio en Python podemos crear las clases en mayúsculas o minúsculas.
+
+Me surge la duda: ¿Por qué las clases `type`, `str`, `int` son minúsculas cuando los tutoriales recomiendan `PascalCase`?
+
+¿Será mantener la "sensación" de que estamos invocando a una función aunque no sea cierto? El estilo de función de un constructor-función se refuerza al usar nombres de clase en minúscula.
+
+## Vestigios del pasado
+
+Será ¿porque en versiones anteriores de Python existían esas funciones y al crear las clases/objetos se decidió mantenerlos en minúscula para que pareciera que nada había cambiado?
+
+El hecho de que hayan llamado a la clase padre `type` me hace pensar que es así. De modo que cuando se muestra la clase de un objeto en Python aparece `<type 'str'>` como queriendo decir que el objeto es de "tipo string".
+
+Antes vimos que en Ruby no se suele usar constructor-función, y aunque los nombres de función/método se suelen escribir en minúsculas, es posible crear una función/método Ruby que simule ser un contructor-función. Pero vamos, que no se usa de esta forma... aunque quiero averiguar... ¿por qué existe esa posibilidad aunque no se usa? ¿Vestigios del pasado Ruby?
