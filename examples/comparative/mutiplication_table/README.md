@@ -1,6 +1,8 @@
 
 # Tarea: tabla de multiplicar
 
+> Ejemplos/idea del proyecto [Rosetta Code](http://rosettacode.org/wiki/Rosetta_Code)
+
 ## Descripción
 
 Mostrar la tabla de multiplicar.
@@ -27,4 +29,3 @@ Podemos descomponer la tarea en los siguientes pasos:
 2. A continuación, un bucle de 1 hasta 10 (`i` será la variable que define cada ciclo).
 3. Para cada ciclo mostraremos en pantalla `i * number = i*number`.
 4. Fin del programa
-
