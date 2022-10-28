@@ -61,9 +61,13 @@ Me surge la duda: ¿Por qué las clases `type`, `str`, `int` son minúsculas cua
 
 ## Vestigios del pasado
 
+**Python**
+
 Será ¿porque en versiones anteriores de Python existían esas funciones y al crear las clases/objetos se decidió mantenerlos en minúscula para que pareciera que nada había cambiado?
 
 El hecho de que hayan llamado a la clase padre `type` me hace pensar que es así. De modo que cuando se muestra la clase de un objeto en Python aparece `<type 'str'>` como queriendo decir que el objeto es de "tipo string".
+
+**Ruby**
 
 Antes vimos que en Ruby no se suele usar constructor-función, y aunque los nombres de función/método se suelen escribir en minúsculas, es posible crear una función/método Ruby que simule ser un contructor-función. Pero vamos, que no se usa de esta forma... aunque quiero averiguar... ¿por qué existe esa posibilidad aunque no se usa? ¿Vestigios del pasado Ruby?
 
@@ -83,12 +87,12 @@ false
 false
 ```
 
-No encuentro que `Integer()` sea un método de la clase `main`. Pero leyendo en foros de Ruby y leyendo el código fuente en GitHub (https://github.com/ruby/ruby) da la sensación que las clases Integer, Float, String (y alguna más) están definidas en el C del propio intérprete Ruby. Son especiales en este sentido. El resto de clases/tipos de objetos se definen usando el propio lenguaje Ruby.
+No encuentro que `Integer()` sea un método de la clase `main`. Pero leyendo en foros de Ruby y leyendo el código fuente en GitHub (https://github.com/ruby/ruby) vemos que las clases Integer(numeric.c), Float(numeric.c), String(string.c), Symbol(string.c) están definidas en el C del propio código fuente del intérprete Ruby. Son especiales en este sentido. El resto de clases/tipos de objetos se definen usando el propio lenguaje Ruby.
 
 Entonces en Ruby el contructor es invocar al new de la clase, pero estas clases especiales están predefinidas en el propio intérprete (Por lo menos es así en CRuby/MRI).
 
 ## ¿Qué imagen queremos dar?
 
-Da la sensación que en Python se pretende "ocultar" la POO en la forma de consultar la clase/tipo de una variable y que parezca una función.
+Da la sensación que en Python se pretende "ocultar" la POO y que parezca que usamos funciones.
 
-En Ruby parece que pretender mostrar un aspecto POO y métodos para todo. Ocultando que hay clases particulares con un constructor-función.
+En Ruby parece que se pretende mostrar siempre un aspecto POO, usando métodos de objetos y clases para todo. Ocultando que hay particulares como constructor-función.
