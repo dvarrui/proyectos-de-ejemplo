@@ -22,7 +22,7 @@ Como `type` es una clase, y para constuir instancias en python se hace `NombreCl
 > DUDAS:
 > 1. ¿Por qué las clases type, str, int son minúsculas cuando la recomendación para crear las clases en Python es nombrarlas PascalCase?
 > 2. ¿Será para mantener deliveradamente la "sensación" de que estamos invocando a una función aunque no sea cierto?
-> 3. ¿Es porque en versiones anteriores de Python existían esas funciones y al crear las clases/objetos se decidió mantenerlos en minúscula para que pareciera que nada había cambiado?
+> 3. ¿Es porque en versiones anteriores de Python existían esas funciones y al crear las clases/objetos se decidió mantenerlos en minúscula para que pareciera que nada había cambiado? El hecho de que hayan llamado a la clase padre `type` me hace pensar que es así. De modo que cuando se muestra la clase de un objeto en Python aparece `<type 'str'>` como queriendo decir que el objeto es de "tipo string".
 
 En Ruby un objeto tiene una clase y esa clase tiene la clase `Class`. Por convención la clase Class tiene a ella misma como clase. En Ruby, siempre se sigue el criterio `PascalCase` para los nombres de las clases.
 
@@ -36,9 +36,6 @@ En Ruby un objeto tiene una clase y esa clase tiene la clase `Class`. Por conven
 >> Class.class
 => Class
 ```
-
-
-
 
 
 Puesto que los Strings son objetos, debe existir un método constructor definido en la clase que al invocarse crea una instancia del objeto.
