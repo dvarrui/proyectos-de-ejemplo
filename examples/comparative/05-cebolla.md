@@ -1,7 +1,7 @@
 
 # Somos como una cebolla
 
-![](https://www.pngitem.com/pimgs/m/554-5547000_shrek-and-his-donkey-png-download-shrek-the.png)
+![](https://www.pngitem.com/pimgs/m/554-5547000_shrek-and-his-donkey-png-download-shrek-the.pnhttps://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP._68gm-6J3d1nBcHIfkB7GAHaDz%26pid%3DApi&f=1&ipt=a906504dba8fd9f448aaf71466dbab5b99f49a47ab9eb8e9bcd9163d90dc1632&ipo=images)
 
 ```
 Shrek: Los ogros somos como... ¡cebollas!
