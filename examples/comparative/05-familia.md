@@ -34,7 +34,7 @@ print(x2)
 Ejecutamo el programa Python3:
 
 ```bash
-❯ python3 files/011-resolver_ecuacion.py
+❯ python3 files/051-resolver_ecuacion.py
 3.0
 4.0
 ```
@@ -42,7 +42,7 @@ Ejecutamo el programa Python3:
 Tenemos las dos soluciones de la ecuación de 2do grado. Ahora vamos a ejecutar **el mismo código** con el intérprete de Ruby.
 
 ```bash
-❯ ruby files/011-resolver_ecuacion.py
+❯ ruby files/051-resolver_ecuacion.py
 3.04.0%   
 ```
 
@@ -63,12 +63,12 @@ print(x2, "\n")
 Y volvemos a ejecutar "el mismo código" con Python3 y Ruby.
 
 ```
-❯ python3 files/012-resolver_ecuacion.py
+❯ python3 files/052-resolver_ecuacion.py
 3.0
 
 4.0
 
-❯ ruby files/012-resolver_ecuacion.py
+❯ ruby files/052-resolver_ecuacion.py
 3.0
 4.0
 ```
@@ -97,12 +97,12 @@ puts x2
 Tampoco cambia mucho. En lugar de `print` se usa habitualmente `puts`, y los paréntesis para los argumentos son opcionales. Ejecutamos para probarlo:
 
 ```
-❯ ruby files/013-resolver_ecuacion.rb
+❯ ruby files/053-resolver_ecuacion.rb
 3.0
 4.0
 
-❯ python3 files/013-resolver_ecuacion.rb
-  File "./files/013-resolver_ecuacion.rb", line 11
+❯ python3 files/053-resolver_ecuacion.rb
+  File "./files/053-resolver_ecuacion.rb", line 11
     puts x1
          ^^
 SyntaxError: invalid syntax

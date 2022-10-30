@@ -3,8 +3,8 @@
 
 Reflexiones sobre Python y Ruby...
 
-1. [Como una cebolla](05-cebolla.md)
-1. [Familia](01-familia.md)
-1. [¿Qué soy?](02-que_soy.md)
-1. [¡El huevo!](03-el_huevo.md)
-1. [¿De dónde venimos?](04-de_donde_venimos.md)
+1. [Como una cebolla](01-cebolla.md)
+5. [Familia](05-familia.md)
+6. [¿Qué soy?](06-que_soy.md)
+7. [¡El huevo!](07-el_huevo.md)
+8. [¿De dónde venimos?](08-de_donde_venimos.md)
