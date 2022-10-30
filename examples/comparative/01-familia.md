@@ -140,14 +140,14 @@ A continuación mostramos una tabla con los cambios realizados en el lenguaje Py
 | 16 | exceptions module       | Built-in scope, library manual |
 | 17 | file.xreadlines         | for line in file: (or X=iter(file)) |
 | 18 | file                    | open (and io module classes) |
-| 19 | function.func_code      | function.__code__ |
+| 19 | function.func_code      | function.\_\_code\_\_ |
 | 20 | from ... *, within a function | May only appear at the top level of a file |
-| 21 | __getattr__ run by built-ins | Redefine __X__ methods in wrapper classes |
+| 21 | \_\_getattr\_\_ run by built-ins | Redefine \_\_X\_\_ methods in wrapper classes |
 | 22 | import mod, in same package   | from . import mod, package-relative form
 | 23 | long                    | int |
 | 24 | old input               | eval(input()) |
 | 25 | os.popen2/3/4           | subprocess.Popen (os.popen retained) |
-| 26 | __metaclass__ = M       | class C(metaclass=M): |
+| 26 | \_\_metaclass\_\_ = M       | class C(metaclass=M): |
 | 27 | Mixed type comparisons, sorts | Nonnumeric mixed type comparisons are errors |
 | 28 | map(), range(), etc. as lists | list(map()), list(range()) (built-ins) |
 | 29 | map(None, ...)          | zip (or manual code to pad results) |
@@ -168,13 +168,13 @@ A continuación mostramos una tabla con los cambios realizados en el lenguaje Py
 | 44 | types.List              | Typelist (types is for nonbuilt-in names only) |
 | 45 | Unbound methods         | Functions (staticmethod to call via instance) |
 | 46 | u'ccc'                  | 'ccc' |
-| 47 | 'X'                     | repr(X) |
+| 47 | \`X\`                   | repr(X) |
 | 48 | X <> Y                  | X != Y  |
 | 49 | xrange                  | range |
-| 50 | X.next                  | X.__next__, called by next(X) |
-| 51 | X.__getslice__          | X.__getitem__ passed a slice object |
-| 52 | X.__setslice__          | X.__setitem__ passed a slice object |
+| 50 | X.next                  | X.\_\_next\_\_, called by next(X) |
+| 51 | X.\_\_getslice\_\_      | X.\_\_getitem\_\_ passed a slice object |
+| 52 | X.\_\_setslice\_\_      | X.\_\_setitem\_\_ passed a slice object |
 | 53 | X=D.keys(); X.sort()    | sorted(D) (or list(D.keys())) |
-| 54 | X.__cmp__(y)            | __lt__, __gt__, __eq__, etc. |
-| 55 | X.__nonzero__           | X.__bool__ |
-| 56 | X.__hex__, X.__oct__    | X._index__ |
+| 54 | X.\_\_cmp\_\_(y)        | \_\_lt\_\_, \_\_gt\_\_, \_\_eq\_\_, etc. |
+| 55 | X.\_\_nonzero\_\_           | X.\_\_bool\_\_ |
+| 56 | X.\_\_hex\_\_, X.\_\_oct\_\_    | X.\_\_index\_\_ |
