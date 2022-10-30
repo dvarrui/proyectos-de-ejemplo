@@ -2,7 +2,7 @@
 
 # ¿De dónde venimos?
 
-_Una de las grandes preguntas_
+_¿De dónde venimos? Una de las grandes preguntas._
 
 En POO los objetos se crean a partir del constructor de la clase. Un constructor es un método encargado de crear nuevas instancias de la clase.
 

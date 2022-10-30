@@ -2,12 +2,14 @@
 
 # ¿Qué soy?
 
-_¿Cómo averiguar el tipo/clase de un objeto?_
+_¿Quiénes somos¿ ¿A dónde vamos? ¿De dónde venimos?. Son las grandes preguntas._
 
 > Enlace de interés:
 > * https://stackoverflow.com/questions/48066220/python-class
 
-Una cadena de texto o string es un tipo de dato, y tanto en Python como en Ruby los strings son objetos. En Ruby, por ejemplo, todos los objetos tienen un método `.class` que nos devuelve la clase del propio objeto:
+¿Cómo averiguar el tipo/clase de un valor/objeto?
+
+Una cadena de texto o string es un tipo de dato, y tanto en Python como en Ruby los strings son objetos. En Ruby, por ejemplo, todos los objetos tienen un método `class` que nos devuelve la clase del propio objeto:
 
 ```ruby
 > irb
