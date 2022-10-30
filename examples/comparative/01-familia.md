@@ -118,7 +118,7 @@ Explícitamente se ha indicado que la ejecución del código se ha hecho con Pyt
 
 En el caso de Ruby no se indica, porque todas las versiones de Ruby dan la misma salida.
 
-A continuación mostramos los cambios realizados en el lenguaje según "Learning Python" de Mark Lutz (No aparecen las nuevas funcionalidades sólo los cambios):
+A continuación mostramos una tabla con los cambios realizados en el lenguaje Python, extraída del libro "_Learning Python_" de Mark Lutz (No aparecen nuevas funcionalidades sólo los cambios):
 
 | ID | Removed                 | Replacement |
 | -- | ----------------------- | ----------- |
