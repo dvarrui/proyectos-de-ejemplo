@@ -22,7 +22,7 @@ Para lidiar con problemas complejos hay una frase: _"Divide y vencerás"_. Como 
 
 Vamos a imaginarnos un sistema de capas superpuestas, donde el nivel N se comunica con los niveles inmediatamente superior (N+1), e inmediatamente inferior (N-1). Excepto lo niveles de los extremos que sólo se comunicarán con una capa/nivel.
 
-## Código máquina
+## Capa: Código máquina
 
 Empecemos desde el Hardware (podríamos hacerlo más abajo... pero por ahora desde aquí valdrá). Para comunicarnos con el hardware (interacción hombre-máquina) podemos usar el código máquina.
 
@@ -41,9 +41,9 @@ Y... ¡gualá! Ya programaba en ensamblador.
 
 > Bueno... el proceso se repetía muchas veces para corregir los errores.
 
-## Ensamblador
+## Capa: Ensamblador
 
-Para mejorar el proceso anterior, Kathleen Booth, invente el primer lenguaje ensamblador.
+Para mejorar el proceso anterior, Kathleen Booth, inventa el primer lenguaje ensamblador.
 
 ![](https://img.microsiervos.com/images2022/KathleenBooth.jpg)
 
@@ -60,10 +60,12 @@ Cons:
 
 Por simplicidad, vamos a suponer una la máquina del tipo [Johnny Simulator](https://github.com/dvarrui/johnny-simulator-es). El código máquina contiene números, que son instrucciones para que la CPU haga algo con la memoria RAM y la ALU.
 
-El siguiente ejemplo suma los valores de las direcciones <10> y <11>. Almacena el resultado en la dirección <12>:
+El siguiente ejemplo,  suma los valores de las direcciones <10> y <11>. Almacena el resultado en la dirección <12>:
 ```
-001: TAKE 010
-002: ADD  011
-003: SAVE 012
-004: HLT  000
+TAKE 010
+ADD  011
+SAVE 012
+HLT  000
 ```
+
+Aunque es mejor (para un humano) escribir código ensamblador en lugar de código máquina, todavía tenemos que conocer bien la arquitectura de la máquina sobre la que queremos ejecutar nuestro programa.
