@@ -51,12 +51,11 @@ La idea es que en lugar de usar números para programar (código máquina), vamo
 
 Pros:
 * Es más fácil para el programador recordar las palabras del lenguaje de programación que los números.
-* A partir del mismo código fuente, el compilador podría generar código para distintas arquitecturas (con limitaciones).
 
 Cons:
 * Ahora tenemos que hacer 2 pasos en lugar de 1 para obtener un ejecutable. (1) Escribir el código fuente y (2) compilar el programa.
 
-## Ejemplo ensablador: Sumando números
+## Ejemplo: Sumando números
 
 Por simplicidad, vamos a suponer una la máquina del tipo [Johnny Simulator](https://github.com/dvarrui/johnny-simulator-es). El código máquina contiene números, que son instrucciones para que la CPU haga algo con la memoria RAM y la ALU.
 
@@ -68,4 +67,29 @@ SAVE 012
 HLT  000
 ```
 
-Aunque es mejor (para un humano) escribir código ensamblador en lugar de código máquina, todavía tenemos que conocer bien la arquitectura de la máquina sobre la que queremos ejecutar nuestro programa.
+Pros:
+* Aunque es mejor (para un humano) escribir código ensamblador en lugar de código máquina, todavía tenemos que conocer bien la arquitectura de la máquina sobre la que queremos ejecutar nuestro programa.
+Cons:
+* El código ensamblador está acoplado a una arquitectura concreta.
+
+## Capa: Lenguajes de bajo nivel
+
+Si queremos que nuestro programa se pueda ejecutar en diferentes arquitecturas sin modificarlo, tenemos que escribirlo de algún modo que nuestro código no esté acoplado a la arquitectura.
+
+Los lenguajes de bajo nivel (C, C++, Rust, Nim, etc), nos permiten escribir código independiente de la arquitectura. El compilador será el encargado de leer el código fuente y lidiar con la tarea de traducir esas órdenes a código máquina para una arquitectura objetivo.
+
+Veamos un ejemplo en C para sumar dos números:
+
+```
+#include <stdio.h>
+
+int main() {
+  int num1, num2, sum;
+  num1 = 3;
+  num2 = 4;
+  sum = num1 + num2;
+
+  printf("Sum of %d and %d is: %d\n", num1, num2, sum);
+  return 0;
+}
+```
