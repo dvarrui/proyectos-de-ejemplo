@@ -150,6 +150,8 @@ Podríamos ver qué código ensamblador para la máquina real se genera a partir
 
 Es más complicado de entender el ensamblador puesto que hay conocer los registros que dispone nuestra arquitectura para programar.
 
+## Tamaño de las variables
+
 C es más sencillo de usar, pero cuando queremos usar una variable hay que especificar el tipo (tipado estático). Esto es, indicar el tipo de dato que almacenará. Esto es necesario para que el compilador tenga la información del número de bytes que tiene que reservar para cada variable.
 
 Si cambiamos num1 y num2 por 10000000000 tenemos un error de desbordamiento:
@@ -161,4 +163,32 @@ examples/052-sumar.c:5:10: aviso: el desbordamiento en la conversión de ‘long
       |          ^~~~~~~~~~~
 ```
 
-El espacio reservado para almacenar una variable de tipo `int` no es suficiente (en esta arquitectura) para guardar el valor 10000000000.
+El espacio reservado para almacenar una variable de tipo `int` puede ser suficiente o dependiendo de la arquitectura.
+
+> Enlace de interés:
+> * https://stackoverflow.com/questions/7180196/size-of-integer-in-c
+
+El tamaño en bytes que se utiliza para guardar un dato `int` de C dependerá del compilador, el SO y la plataforma. En mi caso, obtengo los siguientes tamaños, pero no se puede garantizar que el programa se comporte igual en distintas plataformas.
+
+```
+❯ gcc examples/053-size_of.c
+❯ ./a.out
+size of int : 4
+size of signed int : 4
+size of unsigned long : 8
+```
+
+En cambio, si usamos Rust, nos aseguramos de que al especificar el tipo de dato además especificamos la capacidad de almacenamiento que se usará (https://doc.rust-lang.org/book/ch03-02-data-types.html). Usando el tipo `i32`, estamos especificando tamaño de 4 bytes (32 bits) con signo.
+
+```rust
+fn main() {
+    let num1: i32;
+    let num2: i32;
+    let sum: i32;
+
+    num1 = 4;
+    num2 = 3;
+    sum = num1 + num2;
+    println!("{} + {} = {}", num1, num2, sum);
+}
+```
