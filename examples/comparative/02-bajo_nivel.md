@@ -120,3 +120,7 @@ fn main() {
     println!("{} + {} = {}", num1, num2, sum);
 }
 ```
+
+## Estructuras de control
+
+En el documento anterior vimos un ejemplo de multiplicación en ensamblador, que implementaba una tarea repetitiva. No hablamos de estructura repetitiva.

@@ -72,3 +72,38 @@ Pros:
 * Aunque es mejor (para un humano) escribir código ensamblador en lugar de código máquina, todavía tenemos que conocer bien la arquitectura de la máquina sobre la que queremos ejecutar nuestro programa.
 Cons:
 * El código ensamblador está acoplado a una arquitectura concreta.
+
+## Ejemplo: Multiplicación de números
+
+Veamos otro ejemplo de código ensamblador de nuestra máquina "Johnny Simulator".
+
+Como no existe la instrucción de mutiplicar, entonces la multiplicación de num1 (dirección <10>) por num2 (dirección <11>) se lleva a cabo haciendo sumando repetidas veces el contenido de num1 en la posición de memoria del resultado final (dirección <12>), la cual se inicializa previamente a cero.
+
+```
+000: NULL 012
+001: TAKE 012
+002: ADD  010
+003: SAVE 012
+004: DEC  011
+005: TST  011
+006: JMP  001
+007: HLT  000
+```
+
+En cada ciclo el valor de la dirección <11> se reduce en 1. El bucle continúa hasta que el valor de la dirección <11> haya llegado al valor 0.
+
+Cons:
+* Para poder entender el código del programa ensamblador, **necesitamos de documentación** (una explicación). En caso contrario es muy difícil entenderlo (para un humano).
+* **Vemos que no tenemos estructuras de control** ([condicionales](https://es.wikipedia.org/wiki/Sentencia_condicional) y bucles). De hecho ese concepto no existe en ensamblador porque no es un elemento de la máquina. Y hemos dicho que este lenguaje está directamente relacionado con la máquina. Lo que la máquina tiene es lo que nos deja ver el lenguaje.
+
+**ACLARACIÓN**
+
+Se podría discutir si hemos programado una estructura condicional, un bucle o no, así que vamos a matizarlo un poco. Realmente hemos creado un programa que realiza una tarea repetitiva, donde se pregunta por el estado de una posición de memoria (`TST 011`) y en función del resultado se realiza o no un salto (`JMP 001`). Por tanto diremos que tenemos un "bucle", pero no vamos a llamarlo "estructura iterativa" por el momento. Volveremos a este asunto más adelante.
+
+Realmente, a partir de aquí se podría construir todo lo que se lleva a cabo en las capas superiores. Pero somos humanos y necesitamos ir capa por capa para que nuestra mente pueda lidiar con tanta complejidad.
+
+Cada nivel N "simplifica" funciones del nivel anterior (N-1) para hacerlos más fáciles de usar por los humanos. Y cuando el nivel N se vuelve demasiado "engorroso" necesitamos crear el nivel N+1 que continua el proceso de simplificar.
+
+La simplificación que produce N+1 sobre N
+* Nos da la ventaja de poder hacer cosas más complicadas de forma más sencilla. El nivel N+1 es una abstracción del nivel N.
+* Pero por el contrario, perdemos la posibilidad de acceder al nivel de detalle que nos ofrece el nivel N.
