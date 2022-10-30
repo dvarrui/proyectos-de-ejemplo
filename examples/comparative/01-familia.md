@@ -125,7 +125,7 @@ A continuación mostramos una tabla con los cambios realizados en el lenguaje Py
 | 01 | 9999L                   | 9999 |
 | 02 | anydbm module           | dbm (renamed) |
 | 03 | apply(f, ps, ks)        | f(*ps, **ks) |
-| 04 | __builtin__             | builtins (renamed) |
+| 04 | \__builtin\__           | builtins (renamed) |
 | 05 | 'bbb' for byte strings  | b'bbb' |
 | 06 | class MyException:      | class MyException(Exception): |
 | 07 | cmp(x, y)               | (x > y) - (x < y) |
