@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
 # Variables del script
 CURSO="curso1920"
 MODULOS="hardware ingles lenguaje-de-marcas sistemas-operativos redes"
@@ -16,10 +17,10 @@ fi
 
 mkdir $CURSO
 
+# Esto es lo que se repite
 for I in $MODULOS
 do
-  # Esto es lo que se repite
-  mkdir $CURSO/$I
-  echo $ALUMNO > $CURSO/$I/leeme.txt
+  FOLDER=$CURSO/$I
+  mkdir $FOLDER
+  echo $ALUMNO > $FOLDER/leeme.txt
 done
-
