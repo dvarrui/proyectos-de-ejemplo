@@ -8,7 +8,7 @@ Los lenguajes de bajo nivel (C, C++, Rust, Nim, etc), nos permiten escribir cód
 
 Veamos un ejemplo en C para sumar dos números:
 
-```
+```c
 #include <stdio.h>
 
 int main() {
@@ -25,17 +25,17 @@ int main() {
 Para obtener un ejecutable (fichero con el código máquina) debemos compilar:
 
 ```
-❯ gcc examples/051-sumar.c
+❯ gcc examples/021-sumar.c
 ❯ file a.out
 a.out: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0
 ❯ ./a.out
 Sum of 3 and 4 is: 7
 ```
 
-Podríamos ver qué código ensamblador para la máquina real se genera a partir de este programa C, mediante `gcc -S examples/'515-sumar.c`. Obtenemos el siguiente fichero:
+Podríamos ver qué código ensamblador para la máquina real se genera a partir de este programa C, mediante `gcc -S examples/'021-sumar.c`. Obtenemos el siguiente fichero:
 
 ```
-1		.file	"051-sumar.c"
+ 1		.file	"021-sumar.c"
  2		.text
  3		.section	.rodata
  4	.LC0:
@@ -82,24 +82,24 @@ Es más complicado de entender el ensamblador puesto que hay conocer los registr
 
 C es más sencillo de usar, pero cuando queremos usar una variable hay que especificar el tipo (tipado estático). Esto es, indicar el tipo de dato que almacenará. Esto es necesario para que el compilador tenga la información del número de bytes que tiene que reservar para cada variable.
 
-Si cambiamos num1 y num2 por 10000000000 tenemos un error de desbordamiento:
+Si cambiamos el valor de num1 por 10000000000, tenemos un error de desbordamiento:
 ```
-❯ gcc examples/052-sumar.c
-examples/052-sumar.c: En la función ‘main’:
-examples/052-sumar.c:5:10: aviso: el desbordamiento en la conversión de ‘long int’ a ‘int’ cambia el valor de ‘10000000000’ a ‘1410065408’ [-Woverflow]
+❯ gcc examples/022-sumar.c
+examples/022-sumar.c: En la función ‘main’:
+examples/022-sumar.c:5:10: aviso: el desbordamiento en la conversión de ‘long int’ a ‘int’ cambia el valor de ‘10000000000’ a ‘1410065408’ [-Woverflow]
     5 |   num1 = 10000000000;
       |          ^~~~~~~~~~~
 ```
 
-El espacio reservado para almacenar una variable de tipo `int` puede ser suficiente o dependiendo de la arquitectura.
+El espacio reservado para almacenar el valor de nuestra variable de tipo `int` puede ser suficiente o no, dependiendo de la arquitectura. El tamaño en bytes que se utiliza para guardar un dato `int` de C dependerá del compilador, del SO y de la plataforma.
 
 > Enlace de interés:
 > * https://stackoverflow.com/questions/7180196/size-of-integer-in-c
 
-El tamaño en bytes que se utiliza para guardar un dato `int` de C dependerá del compilador, el SO y la plataforma. En mi caso, obtengo los siguientes tamaños, pero no se puede garantizar que el programa se comporte igual en distintas plataformas.
+En mi caso, obtengo los siguientes tamaños, pero no se puede garantizar que el programa se va a comportar igual en distintas plataformas.
 
 ```
-❯ gcc examples/053-size_of.c
+❯ gcc examples/023-size_of.c
 ❯ ./a.out
 size of int : 4
 size of signed int : 4
@@ -108,7 +108,7 @@ size of unsigned long : 8
 
 En cambio, si usamos Rust, nos aseguramos de que al especificar el tipo de dato además especificamos la capacidad de almacenamiento que se usará (https://doc.rust-lang.org/book/ch03-02-data-types.html). Usando el tipo `i32`, estamos especificando tamaño de 4 bytes (32 bits) con signo.
 
-```rust
+```ruby
 fn main() {
     let num1: i32;
     let num2: i32;
@@ -124,3 +124,10 @@ fn main() {
 ## Estructuras de control
 
 En el documento anterior vimos un ejemplo de multiplicación en ensamblador, que implementaba una tarea repetitiva. No hablamos de estructura repetitiva.
+
+A medida que programamos, detectamos secuencias o patrones de código que se repiten que nos sirven para resolver problemas similares.
+
+De este modo tenemos las estructuras de control:
+* Secuencial
+* Condicional
+* Repetitiva

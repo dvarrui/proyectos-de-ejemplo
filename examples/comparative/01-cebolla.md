@@ -53,9 +53,6 @@ La idea es que en lugar de usar números para programar (código máquina), vamo
 Pros:
 * Es más fácil para el programador recordar las palabras del lenguaje de programación que los números.
 
-Cons:
-* Ahora tenemos que hacer 2 pasos en lugar de 1 para obtener un ejecutable. (1) Escribir el código fuente y (2) compilar el programa.
-
 ## Ejemplo: Sumando números
 
 Por simplicidad, vamos a suponer una la máquina del tipo [Johnny Simulator](https://github.com/dvarrui/johnny-simulator-es). El código máquina contiene números, que son instrucciones para que la CPU haga algo con la memoria RAM y la ALU.
@@ -68,9 +65,8 @@ SAVE 012
 HLT  000
 ```
 
-Pros:
-* Aunque es mejor (para un humano) escribir código ensamblador en lugar de código máquina, todavía tenemos que conocer bien la arquitectura de la máquina sobre la que queremos ejecutar nuestro programa.
 Cons:
+* Aunque es mejor (para un humano) escribir código ensamblador en lugar de código máquina, todavía tenemos que conocer bien la arquitectura de la máquina sobre la que queremos ejecutar nuestro programa.
 * El código ensamblador está acoplado a una arquitectura concreta.
 
 ## Ejemplo: Multiplicación de números
@@ -96,9 +92,11 @@ Cons:
 * Para poder entender el código del programa ensamblador, **necesitamos de documentación** (una explicación). En caso contrario es muy difícil entenderlo (para un humano).
 * **Vemos que no tenemos estructuras de control** ([condicionales](https://es.wikipedia.org/wiki/Sentencia_condicional) y bucles). De hecho ese concepto no existe en ensamblador porque no es un elemento de la máquina. Y hemos dicho que este lenguaje está directamente relacionado con la máquina. Lo que la máquina tiene es lo que nos deja ver el lenguaje.
 
-**ACLARACIÓN**
+## Aclaración
 
-Se podría discutir si hemos programado una estructura condicional, un bucle o no, así que vamos a matizarlo un poco. Realmente hemos creado un programa que realiza una tarea repetitiva, donde se pregunta por el estado de una posición de memoria (`TST 011`) y en función del resultado se realiza o no un salto (`JMP 001`). Por tanto diremos que tenemos un "bucle", pero no vamos a llamarlo "estructura iterativa" por el momento. Volveremos a este asunto más adelante.
+Se podría discutir si hemos programado una estructura condicional, un bucle o no, así que vamos a matizarlo un poco.
+
+Realmente hemos creado un programa que realiza una tarea repetitiva, donde se pregunta por el estado de una posición de memoria (`TST 011`) y en función del resultado se realiza o no un salto (`JMP 001`). Por tanto diremos que tenemos un "bucle", pero no vamos a llamarlo "estructura iterativa" por el momento. Volveremos a este asunto más adelante.
 
 Realmente, a partir de aquí se podría construir todo lo que se lleva a cabo en las capas superiores. Pero somos humanos y necesitamos ir capa por capa para que nuestra mente pueda lidiar con tanta complejidad.
 
@@ -106,4 +104,4 @@ Cada nivel N "simplifica" funciones del nivel anterior (N-1) para hacerlos más 
 
 La simplificación que produce N+1 sobre N
 * Nos da la ventaja de poder hacer cosas más complicadas de forma más sencilla. El nivel N+1 es una abstracción del nivel N.
-* Pero por el contrario, perdemos la posibilidad de acceder al nivel de detalle que nos ofrece el nivel N.
+* Pero por el contrario, perdemos acceso a los detalles.
