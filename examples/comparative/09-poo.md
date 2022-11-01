@@ -58,4 +58,11 @@ Person es un entidad con  datos y métodos:
 
 ## Self
 
-Es curioso cómo 
+| Lenguaje | Tipado   | Self      |
+| -------- | -------- | --------- |
+| Java     | Estático |           |
+| Python   | Dinámico | Requerido |
+| Ruby     | Dinámico |           |
+| Rust     | Estático | Requerido |
+
+Me resulta curioso ver que Rust y Python requieren del uso del parámetro `self` en la definición de las clases. Sin embargo Java y Ruby no lo necesitan. ¿Por qué lo necesitan?

@@ -21,3 +21,11 @@ film += "(episode I)"
 names = ['obiwan', 'vader']
 names += ['yoda']
 ```
+
+## Resumen
+
+Los lenguajes de alto nivel tienen en común que "ocultan" al humano (programador) los detalles de implementación (la máquina). El foco se pone en resolver el algoritmo que da respuesta a nuestro problema sin prestar atención a los detalles de cómo lo resuelve la máquina. Confiamos en que el intérprete/compilador tome las decisiones adecuadas en ese sentido.
+
+Los lenguajes de bajo nivel, por el contrario, implican al "humano" en la toma de decisiones de la implementación (decisiones a nivel de máquina).
+
+A veces necesitaremos bajo nivel y otras alto nivel. Depende.
