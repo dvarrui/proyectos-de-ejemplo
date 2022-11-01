@@ -11,3 +11,5 @@ Reflexiones sobre Ensamblador, C, Rust, Python y Ruby...
 6. [¿Qué soy?](06-que_soy.md)
 7. [¡El huevo!](07-el_huevo.md)
 8. [¿De dónde venimos?](08-de_donde_venimos.md)
+9. [¿Es importante tener clase?](09-class.md)
+10. [¿Self o no self?](10-self.md)

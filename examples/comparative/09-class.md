@@ -1,8 +1,6 @@
 [<< back](README.md)
 
-# Programación orientada a objetos
-
-## Clases y objetos
+# Las clases y objetos
 
 En el paradigma POO debemos tener un mecanismo para definir "entidades" que encapsulen datos+métodos. Entendiendo por métodos, funcione que pueden acceder a los datos encapsulados dentro de la entidad.
 

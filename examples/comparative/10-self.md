@@ -1,6 +1,6 @@
 [<< back](README.md)
 
-# Self o no self. Esa es la cuestión.
+# ¿Self o no self? Esa es la cuestión.
 
 Del documento anterior sacamos la siguiente tabla resumen:
 
@@ -18,33 +18,35 @@ Creamos una clase Person en python y definimos dos atributos `name` y `self.rol`
 ```python
 >>> class Person:
 ...   rol = "jedi"
-...   def __init__(self):
-...     self.name = "yoda"
+...   def __init__(self, name):
+...     self.name = name
 ...
->>> a = Person()
->>> a.rol
+>>> yoda = Person("yoda")
+>>> yoda.rol
 'jedi'
->>> a.name
+>>> yoda.name
 'yoda'
->>> b = Person()
->>> b.rol
+>>> vader = Person("vader")
+>>> vader.rol
 'jedi'
->>> b.name
-'yoda'
+>>> vader.name
+'vader'
 ```
 
-¿Es posible que `rol` sea atributo de clase (compartido entre todas las instancias) y `name` atributo de instancia (no compartido entre instancias). Probamos y parece que no:
+¿Es posible que `rol` sea atributo de clase (compartido entre todas las instancias) y `name` atributo de instancia (no compartido entre instancias). Parece que no. Simplemente son dos formas de crear variables de instancia.
 
 ```python
->>> b.rol = "sith"
->>> b.name = "vader"
->>> b.rol
+>>> Person.rol
+'jedi'
+>>> vader.rol = "sith"
+>>> vader.name = "Darth Vader"
+>>> vader.rol
 'sith'
->>> b.name
-'vader'
->>> a.rol
+>>> vader.name
+'Darth Vader'
+>>> yoda.rol
 'jedi`
->>> a.name
+>>> yoda.name
 'yoda'
 ```
 
