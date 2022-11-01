@@ -1,0 +1,6 @@
+
+class_eval vs. instance_eval in Ruby
+https://www.akshaykhot.com/class_eval_vs_instance_eval_in_ruby/
+
+Evaluation Options in Ruby
+https://www.infoq.com/articles/eval-options-in-ruby/
