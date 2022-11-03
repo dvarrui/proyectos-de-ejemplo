@@ -13,12 +13,12 @@
 # require Foo
 #
 # IMPORTANTE!!!: elixirc lib/clause-lib.exs
-require Clause
+require Klause
 
 IO.puts "[ info ] odd? 1, 2"
-IO.puts Clause.is_odd 1
-IO.puts Clause.is_odd 2
+IO.puts Klause.is_odd 1
+IO.puts Klause.is_odd 2
 
 IO.puts "[ info ] even? 1, 2"
-IO.puts Clause.is_even 1
-IO.puts Clause.is_even 2
+IO.puts Klause.is_even 1
+IO.puts Klause.is_even 2
