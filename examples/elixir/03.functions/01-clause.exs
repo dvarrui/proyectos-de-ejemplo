@@ -1,6 +1,6 @@
 #!/usr/bin/env elixir
 
-defmodule Clause do
+defmodule Klause do
   def is_even(num) when num === 1 do
     false
   end
@@ -19,8 +19,8 @@ defmodule Clause do
 end
 
 IO.puts "[ info ] odd? 1, 2"
-IO.puts Clause.is_odd 1
-IO.puts Clause.is_odd 2
+IO.puts Klause.is_odd 1
+IO.puts Klause.is_odd 2
 
 IO.puts "[ info ] even? 1, 2"
 IO.puts Clause.is_even 1

@@ -1,5 +1,5 @@
 
-defmodule Clause do
+defmodule Klause do
 
   def is_even(num) when num === 1 do
     false
