@@ -4,6 +4,7 @@ class Humano
   def identidad
     print "soy una persona.\n"
   end
+
   def tarifa_tren(edad)
     if edad < 12
       print "tarifa reducida.\n"
@@ -15,7 +16,7 @@ end
 
 Humano.new.identidad
 
-class Estudiante<Humano
+class Estudiante < Humano
   def identidad
     print "soy un estudiante.\n"
   end
