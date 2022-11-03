@@ -1,7 +1,6 @@
 #!/usr/bin/env elixir
 
 defmodule MY do
-
   def send_hi() do
     send(self(), :hi)
   end
@@ -12,7 +11,5 @@ defmodule MY do
   end
 end
 
-
 MY.send_hi
-
 MY.info
