@@ -13,7 +13,7 @@
 # import Foo
 #
 # IMPORTANTE: elixirc lib/11-clause-lib.exs
-import Clause
+import Klause
 
 IO.puts "[ info ] odd? 1, 2"
 IO.puts is_odd 1
