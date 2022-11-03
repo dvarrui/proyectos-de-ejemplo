@@ -1,3 +1,5 @@
+#!/usr/bin/env elixir
+
 defmodule MathTest do
   use ExUnit.Case, async: true
 
