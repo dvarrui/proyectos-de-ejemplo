@@ -10,8 +10,8 @@
 # alias Foo.Bar, as: Bar
 #
 # IMPORTANTE!!!: elixirc lib/clause-lib.exs
-require Clause
-alias Clause, as: Math
+require Klause
+alias Klause, as: Math
 
 IO.puts "[ info ] odd? 1, 2"
 IO.puts Math.is_odd 1
