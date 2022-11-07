@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# https://github.com/tomstuart/monads
 
 class Optional
   attr_reader :value
