@@ -10,19 +10,18 @@ class InstTest
   end
 
   def info
-    "#{self} foo=#{@foo} bar=#{@bar}"
+    puts "#{self} foo=#{@foo} bar=#{@bar}"
   end
 end
 
 i = InstTest.new
-puts i
 i.info
 
 puts " defined? " + defined? i
 
 i.set_foo(2)
-puts i.info
+i.info
 
 i.set_bar(4)
-puts i.info
+i.info
 
