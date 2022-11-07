@@ -7,7 +7,7 @@ class Optional
     @value = value
   end
 
-  def bind(&block)
+  def bind(block)
     return self if value.nil?
 
     new_value = block.call(value)
@@ -23,9 +23,9 @@ class Optional
   end
 end
 
-
-yoda = Optional.from_value("yoda").bind { _1.upcase }
-vader = Optional.from_value(nil).bind { _1.upcase }
+upcase = lambda { _1.upcase }
+yoda = Optional.from_value("yoda").bind upcase
+vader = Optional.from_value(nil).bind upcase
 
 puts yoda
 puts vader
