@@ -12,10 +12,10 @@ class Optional
     return self if value.nil?
 
     new_value = block.call(value)
-    Optional.from_value(new_value)
+    Optional.unit(new_value)
   end
 
-  def self.from_value(value)
+  def self.unit(value)
     Optional.new(value)
   end
 
@@ -25,8 +25,8 @@ class Optional
 end
 
 upcase = lambda { _1.upcase }
-yoda = Optional.from_value("yoda").bind upcase
-vader = Optional.from_value(nil).bind upcase
+yoda = Optional.unit("yoda").bind upcase
+vader = Optional.unit(nil).bind upcase
 
 puts yoda
 puts vader
