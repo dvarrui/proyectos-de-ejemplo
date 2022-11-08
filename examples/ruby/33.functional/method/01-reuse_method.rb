@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby 
+#!/usr/bin/env ruby
 
 def sum(x,y)
   x + y
@@ -26,7 +26,8 @@ class Calculator
 end
 
 c = Calculator.new()
+# Podemos usar funciones de primera clase para usarlos donde y cuando queramos
+# Pasamos el metodo sum() a una variable del objeto
 c.function = method(:sum)
 
 puts c.run(3, 4)
-

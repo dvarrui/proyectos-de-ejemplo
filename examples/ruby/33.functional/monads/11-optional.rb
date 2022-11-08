@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# https://github.com/tomstuart/monads
 
 class Optional
   attr_reader :value
@@ -7,14 +8,14 @@ class Optional
     @value = value
   end
 
-  def bind(&block)
+  def bind(block)
     return self if value.nil?
 
     new_value = block.call(value)
-    Optional.from_value(new_value)
+    Optional.unit(new_value)
   end
 
-  def self.from_value(value)
+  def self.unit(value)
     Optional.new(value)
   end
 
@@ -23,9 +24,9 @@ class Optional
   end
 end
 
-
-yoda = Optional.from_value("yoda").bind { _1.upcase }
-vader = Optional.from_value(nil).bind { _1.upcase }
+upcase = lambda { _1.upcase }
+yoda = Optional.unit("yoda").bind upcase
+vader = Optional.unit(nil).bind upcase
 
 puts yoda
 puts vader
