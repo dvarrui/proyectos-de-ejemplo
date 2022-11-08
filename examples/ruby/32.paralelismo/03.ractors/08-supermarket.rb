@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 supermarket = Ractor.new do
   loop do
     order = Ractor.receive
