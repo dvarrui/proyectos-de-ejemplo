@@ -69,3 +69,8 @@ Se va a organizar un taller (un curso práctico) de 4 sesiones con la siguiente 
 | 3        | la libertad de mejorar el programa y hacer públicas esas mejoras a los demás, de modo que toda la comunidad se beneficie (mejora) |
 
 > Las libertades 1 y 3 requieren acceso al código fuente, porque estudiar y modificar software sin su código fuente es muy poco viable.
+
+
+```ruby
+5.times { puts "Hello!" }
+```
