@@ -23,24 +23,28 @@ Se va a organizar un taller (un curso práctico) de 4 sesiones con la siguiente 
 
 # Contenidos
 
-Bloque 1: Email, videoconferencias y las normas.
+> Bloque 1: Email, videoconferencias y las normas.
+
 * Licencias libres vs privativas
 * Creación y uso de cuentas de correo
 * Creación y uso de salas de videoconferencia
 
-Bloque 2: Hojas de cálculo
+> Bloque 2: Hojas de cálculo
+
 * Ordenación y filtrado de datos.
 * Fórmulas y formatos.
 * Creación de gráficos.
 * Formato CVS de intercambio.
 
-Bloque 3: Informes
+> Bloque 3: Informes
+
 * Formato de texto, estilos y creación de índices
 * Cabecera y pie de página
 * Inserción de imágenes y hojas de cálculo.
 * PDF vs informes vs texto plano.
 
-Bloque 4: Seguridad
+> Bloque 4: Seguridad
+
 * Comunicaciones seguras
 * Encriptación y firma.
 * GPG
