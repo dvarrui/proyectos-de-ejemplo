@@ -36,6 +36,10 @@ https://notepad.onghu.com/2022/why-we-use-jruby/
 
 Best Regards,
 
+## Glimmer DSL SWT
+
+https://github.com/AndyObtiva/glimmer-dsl-swt/blob/master/docs/reference/GLIMMER_PACKAGING_AND_DISTRIBUTION.md
+
 ## Natalie
 
 A unique Ruby implementation, compiled to C++ (WIP): https://github.com/natalie-lang/natalie
