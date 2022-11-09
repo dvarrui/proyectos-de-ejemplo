@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
-from lib.greet import *
+from a.b.b1 import *
+from a.c.c1 import *
 
-greet1("Vader")
-greet2("Leia")
-greet3("Obiwan")
-greet4("Yoda")
+b_info("main")
+c_info("main")
 
-saludar1("Vader")
