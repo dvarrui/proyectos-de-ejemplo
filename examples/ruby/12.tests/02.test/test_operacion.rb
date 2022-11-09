@@ -1,6 +1,6 @@
 #!/usr/bin/ruby
 
-require 'operacion'
+require_relative 'operacion'
 require 'test/unit'
 
 class OperacionTest < Test::Unit::TestCase
