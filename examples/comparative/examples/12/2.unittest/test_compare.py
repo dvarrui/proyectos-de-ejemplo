@@ -14,7 +14,3 @@ class TestCompare(unittest.TestCase):
   def test_less(self):
     num = 100
     assert num < 200
-
-
-if __name__ == '__main__':
-    unittest.main()

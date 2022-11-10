@@ -14,7 +14,3 @@ class TestSquare(unittest.TestCase):
 
   def tesequality(self):
     assert 10 == 11
-
-
-if __name__ == '__main__':
-    unittest.main()
