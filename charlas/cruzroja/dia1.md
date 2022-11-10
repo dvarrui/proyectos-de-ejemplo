@@ -125,8 +125,6 @@ Hello
 
 ![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.x0__b1kBPbz3uLqLQDx08gHaDu%26pid%3DApi&f=1&ipt=321874b0c4e030e6cb0eadd3114d4ccea73164ce88318467d7ae40fe7be225c2&ipo=images)
 
-> Tarea: Enviar correo presentándote y haciendo alguna pregunta.
-
 # Salas de conferencia
 
 * Creación y uso de salas de videoconferencia
@@ -147,3 +145,5 @@ Instalar:
 * Ruta de instalación
 * Iconos
 * ¿Desinstalar?
+
+> Tarea: Enviar correo presentándote y haciendo alguna pregunta.
