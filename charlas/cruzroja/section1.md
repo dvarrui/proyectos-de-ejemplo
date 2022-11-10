@@ -1,4 +1,6 @@
 
+![](https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.puertodelacruz.nl%2Fwp-content%2Fuploads%2F2014%2F02%2Fhome.jpg&f=1&nofb=1&ipt=20adfad16512742fb74404efd95bcd267a84ea5c6ab99650ac4d9252cf78fc8d&ipo=images)
+
 # Taller de Introducción a la ofimática
 
 * Temporalización: Los jueves en horario de tarde (17:00 a 19:00)
@@ -42,24 +44,38 @@ Bloque 4: Seguridad
 * Encriptación y firma.
 * GPG
 
----
-
-# Ofimática
 
 ![](https://www.copiadoraseimpresoras.com/wp-content/uploads/2017/06/daisi-ofimatica-ofimatica.jpg)
+
+# Ofimática
 
 * Conjunto de aplicaciones y herramientas informáticas que se utilizan en las funciones de oficina para optimizar, automatizar, mejorar tareas y procedimientos relacionados.
 * Nos permiten idear, crear, manipular, transmitir o almacenar la información necesaria en una oficina.
 
-# Cruz Roja
 
-![](https://www2.cruzroja.es/documents/5640665/13624839/CRUZ+ROJA+VERTICAL+ALTA.jpeg/c2a5f9d4-a060-286c-160f-b4de0a0b74c0?version=1.0&t=1610983902639&imagePreview=1)
+# Cruz Roja
 
 > https://www2.cruzroja.es/que-hacemos
 
 * **Inclusión Social**: Actuamos con las personas que están en **riesgo de pobreza y exclusión para que tengan las oportunidades y recursos necesarios** para participar en la vida económica, social y cultural disfrutando un nivel de vida y bienestar que se considere normal en la sociedad en la que ellos viven.
 * **Empleo**: Actuamos **promover la igualdad de oportunidades** y, de esta forma, quienes se encuentran en esta situación de desventaja puedan acceder al mercado laboral en igualdad de condiciones.
 * **Educación**: Actuamos con las personas para **promover la Igualdad de oportunidades, participación activa** y contribuir a la Lucha contra la Discriminación.
+
+
+![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcloud10.todocoleccion.online%2Fantiguedades-tecnicas%2Ftc%2F2018%2F11%2F23%2F22%2F141422418_113530688.jpg&f=1&nofb=1&ipt=51425615cfef49aa97b633e209433ad377501a674be6d4ebf43ec4ac1ef8b3f4&ipo=images)
+
+![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP._7eALKX4HsSZeVFPtmoWpQHaFj%26pid%3DApi&f=1&ipt=912a853a2ea7bc1085e62ea90d0b45d39ac9e02dec7a01b4926282dc363dadcb&ipo=images)
+
+## Vendor locking
+
+> https://en.wikipedia.org/wiki/Vendor_lock-in
+
+In economics, vendor lock-in, also known as proprietary lock-in or customer lock-in, makes a customer dependent on a vendor for products, unable to use another vendor without substantial switching costs.
+
+The use of open standards and alternative options makes systems tolerant of change, so that decisions can be postponed until more information is available or unforeseen events are addressed. Vendor lock-in does the opposite: it makes it difficult to move from one solution to another.
+
+![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.mj92IUHcqSc0gFgFs8qvFwHaDp%26pid%3DApi&f=1&ipt=e1381359b08bd2825cde155f6f7dd8973ff198143ca8850776806c726ffba471&ipo=images)
+
 
 # Licencias de software
 
@@ -93,3 +109,26 @@ Hello
 Hello
 Hello
 ```
+
+---
+
+# Correo electrónico
+
+* Creación y uso de cuentas de correo.
+* `tenerife.rb@proton.me`
+* Comunicación OFFLINE. Dudas y consultas.
+* Enviar correos con adjuntos.
+* Crear un ZIP (empaquetado).
+
+![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.x0__b1kBPbz3uLqLQDx08gHaDu%26pid%3DApi&f=1&ipt=321874b0c4e030e6cb0eadd3114d4ccea73164ce88318467d7ae40fe7be225c2&ipo=images)
+
+
+# Salas de conferencia
+
+* Creación y uso de salas de videoconferencia
+* https://meet.jit.si/ofimatica-cruzroja
+
+
+# Instalar software
+
+* 
