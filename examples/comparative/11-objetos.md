@@ -2,7 +2,9 @@
 
 # Objetos
 
-En Java todo son objetos, en Python todo son objetos, en Ruby todo son objetos. ¿Todo son objetos? ¿Todos definen "todo" igual?
+En Java todo son objetos, en Python todo son objetos, en Ruby todo son objetos. ¿Todo son objetos para todos? Pero ¿todos definen "todo" igual?
+
+_Igual no es todo, todo lo que parece. ;-)_
 
 ## ¿Las funciones son objetos?
 
