@@ -3,6 +3,7 @@
 
 # Taller de Introducción a la ofimática
 
+Presentación:
 * Temporalización: Los jueves en horario de tarde (17:00 a 19:00)
 * Lugar: La Universidad Popular del Puerto de la Cruz, 4º planta, aula 42.
 * Requisitos: Un ordenador por alumn@ con acceso a Internet.
@@ -38,7 +39,7 @@ Bloque 3: Informes
 * Inserción de imágenes y hojas de cálculo.
 * PDF vs informes vs texto plano.
 
-Bloque 4: Seguridad
+Bloque 4: Seguridad (según necesidades)
 
 * Comunicaciones seguras
 * Encriptación y firma.
@@ -52,6 +53,7 @@ Bloque 4: Seguridad
 * Conjunto de aplicaciones y herramientas informáticas que se utilizan en las funciones de oficina para optimizar, automatizar, mejorar tareas y procedimientos relacionados.
 * Nos permiten idear, crear, manipular, transmitir o almacenar la información necesaria en una oficina.
 
+![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.vg8gETi4hyAyZGxhJ921kgHaE8%26pid%3DApi&f=1&ipt=a892bb8cf827d067a93a7f86f1975e83a5cab333585950fb067e4ff522a69852&ipo=images)
 
 # Cruz Roja
 
@@ -123,14 +125,25 @@ Hello
 
 ![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.x0__b1kBPbz3uLqLQDx08gHaDu%26pid%3DApi&f=1&ipt=321874b0c4e030e6cb0eadd3114d4ccea73164ce88318467d7ae40fe7be225c2&ipo=images)
 
+> Tarea: Enviar correo presentándote y haciendo alguna pregunta.
 
 # Salas de conferencia
 
 * Creación y uso de salas de videoconferencia
 * https://meet.jit.si/ofimatica-cruzroja
-* Modo de trabajo.
+* Perfiles.
+* Desactivar imagen y sonido.
+* El chat.
+* Encuestas
 
 # Instalar software
 
+Descargar:
 * Firefox (https://www.mozilla.org/es-ES/firefox/new/)
 * LibreOffice (https://es.libreoffice.org/)
+
+Instalar:
+* Licencia
+* Ruta de instalación
+* Iconos
+* ¿Desinstalar?
