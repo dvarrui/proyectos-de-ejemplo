@@ -118,6 +118,7 @@ Hello
 * `tenerife.rb@proton.me`
 * Comunicación OFFLINE. Dudas y consultas.
 * Enviar correos con adjuntos.
+* Capturar imagen.
 * Crear un ZIP (empaquetado).
 
 ![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.x0__b1kBPbz3uLqLQDx08gHaDu%26pid%3DApi&f=1&ipt=321874b0c4e030e6cb0eadd3114d4ccea73164ce88318467d7ae40fe7be225c2&ipo=images)
@@ -127,8 +128,9 @@ Hello
 
 * Creación y uso de salas de videoconferencia
 * https://meet.jit.si/ofimatica-cruzroja
-
+* Modo de trabajo.
 
 # Instalar software
 
-* 
+* Firefox (https://www.mozilla.org/es-ES/firefox/new/)
+* LibreOffice (https://es.libreoffice.org/)
