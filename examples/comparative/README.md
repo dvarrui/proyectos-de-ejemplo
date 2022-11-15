@@ -15,3 +15,4 @@ Reflexiones sobre Ensamblador, C, Python, Ruby y Rust.
 10. [¿Self o no self?](10-self.md)
 11. [Todo son objetos](11-objetos.md)
 12. [Main](12-main.md)
+13. [Arrays](13-arrays.md)
