@@ -10,13 +10,20 @@
 
 # Hojas de cálculo
 
-* Filas, columnas y celdas
-* Números, textos y fórmulas
+* Estructura: Filas, columnas, celdas y hojas.
+    * Ficheros CSV
+    * Datos abiertos: https://datos.gob.es/es/catalogo
+    * https://datos.gob.es/es/catalogo/l01380380-ofertas-de-empleo1
+* Contenido: Números, textos y fórmulas
+* Formato: bordes, colores, alto, ancho. etc.
 
-# Formato CVS de intercambio.
+# Ejemplos
 
-* Datos abiertos: https://datos.gob.es/es/catalogo
-* https://datos.gob.es/es/catalogo/l01380380-ofertas-de-empleo1
-* Ordenación y filtrado de datos.
 * Fórmulas y formatos.
 * Creación de gráficos.
+* Ordenación y filtrado de datos.
+
+# ANEXO
+
+* Materiales CC-BY-SA: https://ifanlo.com/libro-de-ejercicios-de-libreoffice-calc/
+* Curso abierto: https://oficinalibre.net/course/view.php?id=4
