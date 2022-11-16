@@ -65,7 +65,7 @@ El mismo ejemplo en Ruby:
 require_relative "lib/greet"
 ```
 
-## Trayectorias absolutas vs relativas
+## Punto de entrada, trayectoria absoluta y relativa
 
 Hasta aquí, todo parecido.
 
@@ -85,14 +85,37 @@ En Python, la respuesta depende del "punto de entrada" o cómo se inicie la ejec
 from hi import *
 ```
 
-Pero si el "punto de entrada" es el fichero `main.py`, entonces el fichero `lib/greet.py` debe hacer esta otra referencia para acceder a `lib/hi.py`
+Pero si el "punto de entrada" es el fichero `main.py`, entonces el fichero `lib/greet.py` debe hacer otra referencia para acceder a `lib/hi.py`.
+
+Usando trayecto absoluta desde el "punto de entrada":
 
 ```python
 # File: lib/greet.py
 from lib.hi import *
 ```
 
-**Conclusión**
+Usando trayectoria relativa:
+```
+# File: lib/greet.py
+from .hi import *
+```
 
+## Niveles superiores
+
+* En Python no se puede acceder o referenciar a ficheros que estén un nivel superior del "punto de entrada".
+* El punto de entrada en Python establece un límite de los ficheros que serán accesibles a nuestro proyecto.
+* En Ruby, no existe esa limitación/restricción.
+
+_¿Tiene sentido? ¿Es útil esa restricción para mantener un orden o tener el proyecto bien organizado?_
+
+# Conclusión
+
+Punto de entrada:
 * En Python es importante definir el "punto de entrada". Esto es, el fichero que inicia la ejecución.
 * En Ruby cualquier fichero puede ser punto de entrada.
+
+| Referencia                   | Python                      | Ruby |
+| ---------------------------- | --------------------------- | ----------------- |
+| Bibliotecas instaladas       | import LIBNAME              | require "LIBNAME" |
+| Absoluta al punto de entrada | from PATH.TO.FILE import *  | No existe punto de entrada |
+| Relativa al fichero          | from .PATH.TO.FILE import * | require_relative "FILE" |
