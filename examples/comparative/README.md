@@ -16,4 +16,4 @@ Reflexiones sobre Ensamblador, C, Python, Ruby y Rust.
 11. [Todo son objetos](11-objetos.md)
 12. [Main](12-main.md)
 13. [Arrays](13-arrays.md)
-14. [Modules](14-modules.md)
+14. [Punto de entrada](14-entry_point.md)
