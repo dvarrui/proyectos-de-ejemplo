@@ -2,17 +2,20 @@
 
 # Paradigmas
 
-Wikipedia: Forma de clasificar los lenguajes de programación en función de sus características.
+* El concepto de paradigma se utiliza en la vida cotidiana como sinónimo de ejemplo o para hacer referencia a algo que se toma como modelo.
+* Wikipedia: Forma de clasificar los lenguajes de programación en función de sus características.
 
-Los paradigmas de programación:
-* imperativo en el que el programador instruye a la máquina cómo cambiar su estado,
-    * procedimental que agrupa las instrucciones en procedimientos,
-    * orientado a objetos que agrupa las instrucciones con la parte del estado en el que operan,
-* declarativo en el que el programador simplemente declara las propiedades del resultado deseado, pero no cómo calcularlo
-    * funcional en el que el resultado deseado se declara como el valor de una serie de aplicaciones de función,
-    * lógico en la que el resultado deseado se declara como la respuesta a una pregunta sobre un sistema de hechos y reglas,
-    * matemático en el que el resultado deseado se declara como la solución de un problema de optimización
-    * reactivo en el que se declara el resultado deseado con flujos de datos y la propagación del cambio
+| Tipo | Nombre | Descripción |
+| ---- | ------ | ----------- |
+| Imperativo | | El programador instruye a la máquina cómo cambiar su estado |
+| Imperativo | Procedimental | Agrupa las instrucciones en procedimientos |
+| Imperativo | Orientado a objetos | Agrupa las instrucciones con la parte del estado en el que operan |
+| Declarativo | | El programador simplemente declara las propiedades del resultado deseado, pero no cómo calcularlo |
+| Declarativo | Funcional | El resultado deseado se declara como el valor de una serie de aplicaciones de función |
+| Declarativo | Lógico | El resultado deseado se declara como la respuesta a una pregunta sobre un sistema de hechos y reglas |
+| Declarativo | Matemático | El que el resultado deseado se declara como la solución de un problema de optimización |
+| Declarativo | Reactivo | Se declara el resultado deseado con flujos de datos y la propagación del cambio |
+
 
 # 1. Multiplicación en ensamblador
 
