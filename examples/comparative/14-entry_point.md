@@ -108,14 +108,43 @@ from .hi import *
 
 _¿Tiene sentido? ¿Es útil esa restricción para mantener un orden o tener el proyecto bien organizado?_
 
-# Conclusión
+## Nombres
 
-Punto de entrada:
-* En Python es importante definir el "punto de entrada". Esto es, el fichero que inicia la ejecución.
-* En Ruby cualquier fichero puede ser punto de entrada.
+Supongamos el siguiente proyecto Python:
+
+```
+├── main.py
+├── name
+│   └── rename.py
+└── name.py
+```
+
+En el main ponemos `from name import *` para usar el fichero `name,py`. Si ahora además queremos usar el fichero `name/rename.py` y hacemos `from name.rename import` tenemos un error `ModuleNotFoundError: No module named 'name.rename'; 'name' is not a package`.
+
+No podemos tener un fichero NAME.py y una carpeta NAME en el mismo nivel.
+
+En Ruby, ¡si se puede!
+
+# Conclusiones
+
+Python:
+* Es importante definir el "punto de entrada". Esto es, el fichero que inicia la ejecución.
+* Sólo se puede acceder a los ficheros dentro del proyecto, y a las bibliotecas instaladas en el sistema.
+* Los nombres de ficheros no deben coincidir con los nombres de carpetas.
+
+Ruby:
+* Cualquier fichero puede ser punto de entrada.
+* Los nombres de ficheros y carpetas pueden repetirse.
+* Se puede acceder a cualquier fichero dentro o fuera del proyecto, y a las bibliotecas instaladas en el sistema.
 
 | Referencia                   | Python                      | Ruby |
 | ---------------------------- | --------------------------- | ----------------- |
 | Bibliotecas instaladas       | import LIBNAME              | require "LIBNAME" |
 | Absoluta al punto de entrada | from PATH.TO.FILE import *  | No existe punto de entrada |
 | Relativa al fichero          | from .PATH.TO.FILE import * | require_relative "FILE" |
+
+Son dos formas diferentes de trabajar que emanan de dos filosofías diferentes. En el Zen d Python se dice _"debería haber preferentemente una única forma de hacer las cosas"_, y realmente el diseño de su lenguaje debe estar alineado en esta dirección.
+
+Podemos ver que cada lenguaje tiene sus propios principios, que pueden coincidir en parte con los de otros lenguajes. Podríamos discutir sobre esos principios, pero ahora no es el tema. Lo que quiero recalcar ahora es que un lenguaje cuyo diseño está alineado con sus principios... está bien diseñado.
+
+Entiendo que el creador de un nuevo lenguaje parte de unos principios, luego diseña su lenguaje para satisfacer esa necesidad pero si el resultado no cumple el objetivo habrá que rehacer el lenguaje o... cambiar los principios: ;-)
