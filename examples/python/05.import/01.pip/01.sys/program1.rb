@@ -1,15 +1,9 @@
 #!/usr/bin/ruby
 
 def count_words(sentence)
-  summary = {}
+  summary = Hash.new(0)
   words = sentence.split(' ')
-  words.each do |word|
-    if summary[word].nil?
-      summary[word] = 1
-    else
-      summary[word] += 1
-    end
-  end
+  words.each { |word| summary[word] += 1 }
   summary
 end
 

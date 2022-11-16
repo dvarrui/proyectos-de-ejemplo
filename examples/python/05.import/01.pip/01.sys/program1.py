@@ -1,3 +1,5 @@
+# https://www.askpython.com/python/python-command-line-arguments
+
 import sys
 
 sentence = sys.argv[1]
