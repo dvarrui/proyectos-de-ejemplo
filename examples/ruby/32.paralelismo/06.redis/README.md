@@ -1,6 +1,11 @@
 
 # Redis
 
+> Enlaces de interés:
+> * https://www.ionos.es/digitalguide/hosting/cuestiones-tecnicas/redis-tutorial-paso-a-paso/
+
+## Instalación y hola mundo
+
 Servidor Redis
 * `zypper in redis` para instalar Redis en la máquina.
 * Documentación: https://redis.io/docs/data-types/
