@@ -3,9 +3,9 @@ require "thor"
 
 class MyCLI < Thor
   desc "hello NAME", "say hello to NAME"
-
-  def hello(name, from=nil)
-    puts "from: #{from}" if from
+  option :from
+  def hello(name)
+    puts "from: #{options[:from]}" if options[:from]
     puts "Hello #{name}"
   end
 end
