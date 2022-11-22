@@ -18,5 +18,11 @@ params = {
 }
 
 res = Net::HTTP.get_response(uri, params)
-puts "==> Code: #{res.code}"
-puts "==> Size: #{res.body.size}"
+
+puts "==> Code           : #{res.code}"
+puts "    HTTP version   : #{res.http_version}"
+puts "    Content type   : #{res.content_type}"
+puts "    Content length : #{res.content_length}"
+puts "    Decode content : #{res.decode_content}"
+puts "    Body enconding : #{res.body_encoding}"
+
