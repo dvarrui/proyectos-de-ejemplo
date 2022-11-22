@@ -17,3 +17,5 @@ Reflexiones sobre Ensamblador, C, Python, Ruby y Rust.
 12. [Main](12-main.md)
 13. [Arrays](13-arrays.md)
 14. [Punto de entrada](14-entry_point.md)
+15. [La frontera](15-frontera.md)
+16. [¿Me ves ahora?](16-ocultacion.md)
