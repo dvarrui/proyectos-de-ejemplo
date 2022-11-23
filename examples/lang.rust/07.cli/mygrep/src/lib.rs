@@ -7,7 +7,6 @@ pub fn find_matches(content: &str, pattern: &str, mut writer: impl std::io::Writ
     }
 }
 
-
 #[test]
 fn find_a_match() {
     let mut result = Vec::new();
