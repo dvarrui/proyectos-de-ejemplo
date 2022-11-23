@@ -11,29 +11,31 @@ struct Cli {
 }
 
 use anyhow::{Context, Result};
+use indicatif::ProgressBar;
 
 fn main() -> Result<()> {
-    println!("Making code testable");
+    println!("Add first test");
     let args = Cli::parse();
     let content = std::fs::read_to_string(&args.path)
-        .with_context(|| format!("could not read file `{}`", args.path.display()))?;
+        .with_context(|| format!("Could not read file `{:?}`", &args.path))?;
 
-    find_matches(&content, &args.pattern, &mut std::io::stdout());
-
+    find_matches(&content, &args.pattern);
     Ok(())
 }
 
-fn find_matches(content: &str, pattern: &str, mut writer: impl std::io::Write) {
+fn find_matches(content: &str, pattern: &str) {
     for line in content.lines() {
         if line.contains(pattern) {
-            writeln!(writer, "{}", line);
+            println!("{}", line);
         }
     }
 }
 
+fn answer() -> i32 {
+  42
+}
+
 #[test]
-fn find_a_match() {
-    let mut result = Vec::new();
-    find_matches("lorem ipsum\ndolor sit amet", "lorem", &mut result);
-    assert_eq!(result, b"lorem ipsum\n");
+fn test_answer() {
+    assert_eq!(answer(), 42);
 }
