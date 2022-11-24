@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     example (0.1.0)
-      rb_sys
+      rb_sys (~> 0.9.39)
 
 GEM
   remote: https://rubygems.org/

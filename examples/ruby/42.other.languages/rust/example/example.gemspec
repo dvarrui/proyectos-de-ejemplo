@@ -26,9 +26,10 @@ Gem::Specification.new do |spec|
 
   spec.extensions = ["ext/example/extconf.rb"]
   # needed until rubygems supports Rust support is out of beta
-  spec.add_dependency "rb_sys"
+  spec.add_dependency "rb_sys", "~> 0.9.39"
   # only needed when developing or packaging your gem
   spec.add_development_dependency "rake-compiler", "~> 1.2.0"
+
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
