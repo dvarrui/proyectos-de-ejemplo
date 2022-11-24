@@ -5,18 +5,24 @@
 * https://dev.to/kojix2/making-rubygem-with-rust-2ji6. Writing Ruby extensions in C is a popular way to speed up Ruby. A few days ago on Reddit, I read a po...
 
 
-# 1. Llamando a Rust desde Ruby
+# 1. Ejecutando Rust desde Ruby
 
-_Vamos a escribir una extensión de una gema Ruby para llamar a Rust desde Ruby._
+Vamos a escribir una extensión de una gema Ruby para llamar a Rust desde Ruby.
 
 ## 1.1 Esqueleto del proyecto
 
 Vamos a crear un proyecto de gema Ruby y dentro pondremos el código de Rust.
+
 * `bundle gem example`
 * `mkdir example/ext`, carpeta para las extensiones de la gema.
 
-## 1.2 Proyecto Rust
+## 1.2 Ficheros de Rust
 
+Vamos a modificar/crear los siguientes ficheros:
+* `example/ext/example/Cargo.toml`
+* `example/ext/example/src/lib.rs`
+
+Empezamos...
 * `cd example/ext`, nos movemos a la carpeta de las extensiones.
 * `cargo new example`, creamos un nuevo paquete de Rust.
 * Modificamos el fichero de configuración del paquete Rust (`Cargo.toml`)
@@ -33,7 +39,7 @@ magnus = "0.4"
 > * Las extensiones de Ruby deben construirse como bibliotecas de sistemas dinámicos, esto se hace con el atributo `crate-type`.
 > * Además vamos a usar la biblioteca (crate) `magnus` dentro de nuestro proyecto Rust para conectar Rust con Ruby.
 
-* Creamos el fichero **src/lib.rs** con el siguiente contenido:
+* Creamos el fichero `src/lib.rs` con el siguiente contenido:
 
 ```rust
 use magnus::{define_global_function, function};
@@ -53,13 +59,22 @@ fn init() {
 > * En esta función, se definen las clases de Ruby y se vinculan las funciones de Rust a los métodos de Ruby.
 > * Más tarde Ruby llamará a la función 'init' definida en su extensión.
 
-## 1.2 Gema Ruby
+## 1.2 Comprobar
 
-Para empaquetar la extensión en una gema, vamos a usar `rb_sys` y `rake-compiler`. Estas herramientas crearán automáticamente su extensión Rust como una biblioteca dinámica y luego la empaquetarán como una gema.
+* `cargo build` para comprobar que el código Rust compila correctamente.
 
-> Nota: La versión más reciente de `rubygems` tiene soporte beta para compilar Rust, por lo que en el futuro la gema `rb_sys` no será necesaria.
 
-* Modificamos el fichero `example.gemspec` para incluir información de la extensión:
+## 1.3 Ficheros de Ruby
+
+Vamos a modificar los siguientes ficheros:
+* `example.gemspec`
+* `ext/example/extconf.rb`
+* `lib/example.rb`.
+* `Rakefile`
+
+Empezamos...
+
+* Modificamos el fichero de especificaciones de la gema `example.gemspec`:
 
 ```ruby
 spec.extensions = ["ext/example/extconf.rb"]
@@ -70,6 +85,11 @@ spec.add_dependency "rb_sys", "~> 0.9.39"
 # only needed when developing or packaging your gem
 spec.add_development_dependency "rake-compiler", "~> 1.2.0"
 ```
+* `bundle install`, para instalar la gemas requeridas.
+
+> **NOTA**
+> * En este proceso vamos a usar las gemas `rb_sys` y `rake-compiler`, que servirán para crear la extensión de Rust como una biblioteca dinámica y luego la empaquetarán como una gema.
+> * La versión más reciente de `rubygems` tiene soporte beta para compilar Rust, por lo que en el futuro la gema `rb_sys` no será necesaria.
 
 * Creamos el fichero `ext/example/extconf.rb`.
 
@@ -80,17 +100,57 @@ require "rb_sys/mkmf"
 create_rust_makefile("example/example")
 ```
 
-> Ruby usará este archivo durante el proceso de compilación y generará un Makefile en el directorio ext. Consulte la gema `rb_sys` para obtener más información.
+> **NOTA**
+> * Ruby usará este archivo durante el proceso de compilación y generará un Makefile en el directorio ext. Consulte la gema `rb_sys` para obtener más información.
+> * Consulte el ejemplo `rust_blank` para ver ejemplos de `extconf.rb` y `Rakefile`.
 
-
-Consulte el ejemplo `rust_blank` para ver ejemplos de `extconf.rb` y `Rakefile`.
-
-Ejecutar `rake` compile colocará la extensión en `lib/example/example.so` (o .bundle en macOS), que cargarías desde Ruby así:
-
-* Modificar el fichero `lib/example.rb`.
-
+* Modificar el fichero `lib/example.rb` y añadimos lo siguiente.
 ```ruby
 require_relative "example/example"
 ```
 
-For a more detailed example (including cross-compilation and more), see the rb-sys example project. Although the code in lib.rs does not feature magnus, but it will compile and run properly.
+> Para obtener un ejemplo más detallado (incluida la compilación cruzada y más), consulte el proyecto de ejemplo `rb-sys`. Aunque el código en `lib.rs` no incluye `magnus`, se compilará y ejecutará correctamente.
+
+* Modificar el fichero `Rakefile` para incluir la acción de compilar la extensión:
+
+```ruby
+# frozen_string_literal: true
+
+require "bundler/gem_tasks"
+require "rake/testtask"
+require "rake/extensiontask"
+
+task default: :test
+Rake::TestTask.new do |t|
+  t.libs << "test"
+  t.pattern = "test/**/*_test.rb"
+end
+
+Rake::ExtensionTask.new("example") do |ext|
+  ext.lib_dir = "lib/example"
+end
+
+task :remove_ext do
+  path = "lib/example/example.bundle"
+  File.unlink(path) if File.exist?(path)
+end
+
+Rake::Task["build"].enhance [:remove_ext]
+```
+
+## 1.4 Compilación
+
+* Estamos en la carpeta principal del proyecto.
+
+```
+Using rake 13.0.6
+Using ast 2.4.2
+Using bundler 2.3.18
+Using rb_sys 0.9.44
+Using example 0.1.0 from source at `.`
+
+Bundle complete! 5 Gemfile dependencies, 20 gems now installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.```
+```
+
+* `rake compile`, para compilar las extensiones. Esto creará el fichero `lib/example/example.so` (o .bundle en macOS).

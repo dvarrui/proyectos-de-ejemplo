@@ -2,13 +2,21 @@
 
 require "bundler/gem_tasks"
 require "rake/testtask"
+require "rake/extensiontask"
 
-Rake::TestTask.new(:test) do |t|
+task default: :test
+Rake::TestTask.new do |t|
   t.libs << "test"
-  t.libs << "lib"
-  t.test_files = FileList["test/**/*_test.rb"]
+  t.pattern = "test/**/*_test.rb"
 end
 
-require "standard/rake"
+Rake::ExtensionTask.new("example") do |ext|
+  ext.lib_dir = "lib/example"
+end
 
-task default: %i[test standard]
+task :remove_ext do
+  path = "lib/example/example.bundle"
+  File.unlink(path) if File.exist?(path)
+end
+
+Rake::Task["build"].enhance [:remove_ext]
