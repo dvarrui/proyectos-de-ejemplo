@@ -61,8 +61,8 @@ fn init() {
 
 ## 1.2 Comprobar
 
+* Desde el directorio `example/ext/example`.
 * `cargo build` para comprobar que el código Rust compila correctamente.
-
 
 ## 1.3 Ficheros de Ruby
 
@@ -85,7 +85,7 @@ spec.add_dependency "rb_sys", "~> 0.9.39"
 # only needed when developing or packaging your gem
 spec.add_development_dependency "rake-compiler", "~> 1.2.0"
 ```
-* `bundle install`, para instalar la gemas requeridas.
+* `bundle install`, para instalar la gemas.
 
 > **NOTA**
 > * En este proceso vamos a usar las gemas `rb_sys` y `rake-compiler`, que servirán para crear la extensión de Rust como una biblioteca dinámica y luego la empaquetarán como una gema.
@@ -141,16 +141,4 @@ Rake::Task["build"].enhance [:remove_ext]
 ## 1.4 Compilación
 
 * Estamos en la carpeta principal del proyecto.
-
-```
-Using rake 13.0.6
-Using ast 2.4.2
-Using bundler 2.3.18
-Using rb_sys 0.9.44
-Using example 0.1.0 from source at `.`
-
-Bundle complete! 5 Gemfile dependencies, 20 gems now installed.
-Use `bundle info [gemname]` to see where a bundled gem is installed.```
-```
-
-* `rake compile`, para compilar las extensiones. Esto creará el fichero `lib/example/example.so` (o .bundle en macOS).
+* `rake compile`, para compilar las extensiones y crear el fichero `lib/example/example.so` (o .bundle en macOS).
