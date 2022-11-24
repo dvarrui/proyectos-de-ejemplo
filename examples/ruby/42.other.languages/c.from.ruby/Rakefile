@@ -11,34 +11,14 @@ task :default do
   system("rake -T")
 end
 
-namespace :compile do
-  desc 'Compile 01 (C example)'
-  task :e01 do
-    id="01"
-    system("gcc -c -fPIC #{id}-ffi.c -o #{id}-ffi.o")
-    system("gcc -shared -o #{id}-ffi.so #{id}-ffi.o")
-  end
-
-  desc 'Compile 02 (Java example)'
-  task :e02 do
-    name="Test"
-    system("javac #{name}.java")
-    system("jar -cvf #{name.downcase}.jar #{name}.class")
-  end
+desc 'Compile (C example)'
+task :compile do
+  system("gcc -c -fPIC ffi.c -o ffi.o")
+  system("gcc -shared -o ffi.so ffi.o")
 end
 
-namespace :clean do
-  desc 'Clean 01 (Remove temp files)'
-  task :e01 do
-    id="01"
-    system("rm #{id}-ffi.o")
-    system("rm #{id}-ffi.so")
-  end
-
-  desc 'Clean 02 (Remove temp files)'
-  task :e02 do
-    name = 'Test'
-    system("rm #{name}.class")
-    system("rm #{name.downcase}.jar")
-  end
+desc 'Clean (Remove temp files)'
+task :clean do
+  system("rm ffi.o")
+  system("rm ffi.so")
 end
