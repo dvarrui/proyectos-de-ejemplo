@@ -12,6 +12,11 @@ nextcloud = Nextcloud.new(
 )
 
 ocs = nextcloud.ocs
-puts "* ocs.webdav.directory: #{ocs.webdav.directory}"
-webdav = nextcloud.webdav
-puts "* webdav.directory(@path): #{webdav.directory.instance_variable_get(:@path)}"
+user = ocs.user.find("dvarrui")
+
+tags = %i(enabled id quota email displayname phone address website twitter groups language meta)
+puts tags
+tags.each do |tag|
+  label = "user.#{tag}"
+  puts "#{label.rjust(16)} = #{user.send(tag)}"
+end
