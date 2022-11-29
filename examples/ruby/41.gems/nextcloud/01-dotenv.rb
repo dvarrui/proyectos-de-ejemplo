@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
-
 require "dotenv"
-require "nextcloud"
 
-settings = Dotenv.load("private.env")
+settings = Dotenv.load
 puts settings
