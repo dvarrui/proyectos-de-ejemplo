@@ -15,7 +15,7 @@ ocs = nextcloud.ocs
 user = ocs.user.find("dvarrui")
 
 tags = %i(enabled id quota email displayname phone address website twitter groups language meta)
-puts tags
+
 tags.each do |tag|
   label = "user.#{tag}"
   puts "#{label.rjust(16)} = #{user.send(tag)}"
