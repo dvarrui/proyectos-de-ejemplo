@@ -10,17 +10,23 @@ print "  mes? "
 mes = gets.to_i
 print "  año? "
 anno = gets.to_i
+puts "(Vamos a validar la fecha #{dia}/#{mes}/#{anno})"
+puts ""
 
 # Validar los datos
-puts "(Vamos a validar la fecha #{dia}/#{mes}/#{anno})"
-
 #   Validar mes (valor entre 1 y 12)
 #   Según el valor del mes sabremos el máximo de días de ese mes (max)
 diasmeses = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+if mes < 1 or mes > 12
+  puts "[ERROR] El valor del MES es incorrecto!"
+  exit
+end
 
 maxdias = diasmeses[mes]
-
-puts "(Días del mes=#{maxdias})"
+if dia < 1 or dia > maxdias
+  puts "[ERROR] El valor del DIA es incorrecto!"
+  exit
+end
 
 #   Averiguar si año es bisiesto (múltiplo de 4)
 #   Validar día (valor entre 1 y max)
