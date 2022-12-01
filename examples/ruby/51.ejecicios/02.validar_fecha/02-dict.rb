@@ -16,6 +16,12 @@ puts "(Vamos a validar la fecha #{dia}/#{mes}/#{anno})"
 
 #   Validar mes (valor entre 1 y 12)
 #   Según el valor del mes sabremos el máximo de días de ese mes (max)
+diasmeses = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+maxdias = diasmeses[mes]
+
+puts "(Días del mes=#{maxdias})"
+
 #   Averiguar si año es bisiesto (múltiplo de 4)
 #   Validar día (valor entre 1 y max)
 
