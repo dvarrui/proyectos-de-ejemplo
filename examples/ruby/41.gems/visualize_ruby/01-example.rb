@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require "visualize_ruby"
 
 ruby_code = <<~RUBY
@@ -9,5 +11,4 @@ ruby_code = <<~RUBY
 RUBY
 
 results = VisualizeRuby::Builder.new(ruby_code: ruby_code).build
-VisualizeRuby::Graphviz.new(results).to_graph(path: "example.png")
-
+VisualizeRuby::Graphviz.new(results).to_graph(path: "output_example.png")
