@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+puts "==> Compile Nim files"
+
+filenames = Dir.glob("*.nim")
+
+filenames.each do |filename|
+  cmd = "nim c #{filename}"
+  puts "==> [EXEC] #{cmd}"
+  puts ""
+  system(cmd)
+end
