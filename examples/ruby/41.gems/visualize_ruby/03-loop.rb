@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 
 require "visualize_ruby"
 
@@ -20,9 +21,8 @@ VisualizeRuby.new do |vb|
   vb.trace do
     Looping.new.call
   end
-  vb.output_path = "loop.png" # file name with media extension.
+  vb.output_path = "output_loop.png" # file name with media extension.
   # in_line_local_method_calls = true # default, in line method body when calling methods on self. Looks better when tracing execution.
   # only_graphs = ["call"] # When a graph has many sub-graphs only include listed.
   # unique_nodes = true # default, Duplicate nodes with the same description are merged to point single node.
 end
-

@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require "visualize_ruby"
 
 ruby_code = <<~RUBY
@@ -27,6 +29,5 @@ RUBY
 VisualizeRuby.new do |vb|
   vb.ruby_code = ruby_code # String, File, Pathname
   vb.trace(calling_code)  # String, File, Pathname, Proc - optional
-  vb.output_path = "runner_trace.png" # file name with media extension.
+  vb.output_path = "output_runner_trace.png" # file name with media extension.
 end
-
