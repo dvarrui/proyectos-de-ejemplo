@@ -6,7 +6,7 @@ filenames = Dir.glob("*.nim")
 
 filenames.each do |filename|
   programfile = File.basename(filename, ".nim")
-  cmd = "rm -i #{programfile}"
+  cmd = "rm #{programfile}"
   puts "==> [EXEC] #{cmd}"
   system(cmd)
 end
