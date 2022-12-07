@@ -2,20 +2,26 @@
 # Características de POO
 
 > Enlaces de interés:
+> * http://worrydream.com/EarlyHistoryOfSmalltalk/
 > * https://es.wikibooks.org/wiki/Programaci%C3%B3n_Orientada_a_Objetos/Caracter%C3%ADsticas_de_la_POO
 > * https://ferestrepoca.github.io/paradigmas-de-programacion/poo/poo_teoria/concepts.html
 > * https://dewitters.com/object-oriented-programming-doesnt-need-encapsulation/
 
-Parece que hay un acuerdo acerca de qué características contempla la "orientación a objetos". Según es acuerdo, las características siguientes son las más importantes:
+Parece que hay consenso en asociar las siguientes características a la programación  "orientación a objetos".
+
 1. Abstracción
 2. Encapsulamiento
 3. Modularidad
 4. Ocultación
 
+Otras
+5. Polimorfismo
+6. Herencia
+
 ## 1. Abstracción
 
-* Denota las características esenciales de un objeto, donde se capturan sus comportamientos.
-* Cada objeto en el sistema sirve como modelo de un "agente" abstracto que puede **realizar trabajo, informar y cambiar su estado, y "comunicarse" con otros objetos** en el sistema **sin revelar cómo se implementan estas características**.
+* Características esenciales de un objeto, donde se capturan sus comportamientos.
+* Cada objeto en el sistema sirve como modelo de un "agente" abstracto que puede **realizar trabajos, informar y cambiar su estado, y "comunicarse" con otros objetos** en el sistema **sin revelar cómo se implementan estas características**.
 
 ## 2. Encapsulamiento
 
@@ -40,13 +46,13 @@ Parece que hay un acuerdo acerca de qué características contempla la "orientac
 
 ## 5. Polimorfismo
 
-* Comportamientos diferentes, asociados a objetos distintos, pueden compartir el mismo nombre; al llamarlos por ese nombre se utilizará el comportamiento correspondiente al objeto que se esté usando. O, dicho de otro modo, las referencias y las colecciones de objetos pueden contener objetos de diferentes tipos, y la invocación de un comportamiento en una referencia producirá el comportamiento correcto para el tipo real del objeto referenciado.
+* Comportamientos diferentes, asociados a objetos distintos, pueden compartir el mismo nombre; al llamarlos por ese nombre se utilizará el comportamiento correspondiente al objeto que se esté usando.
+* Dicho de otro modo, las referencias y las colecciones de objetos pueden contener objetos de diferentes tipos, y la invocación de un comportamiento en una referencia producirá el comportamiento correcto para el tipo real del objeto referenciado.
 
 > NOTA: El polimorfismo es natural en Ruby por el "duck typing".
 
 * **Cuando esto ocurre en "tiempo de ejecución", esta última característica se llama asignación tardía o asignación dinámica (Ejemplo Ruby)**.
 * Algunos lenguajes proporcionan medios más estáticos (en "tiempo de compilación") de polimorfismo, tales como las plantillas y la sobrecarga de operadores de C++.
-
 
 ## 6. Herencia
 
@@ -69,14 +75,11 @@ la recolección de basura o garbage collector es la técnica por la cual el ento
 > Enlace de interés:
 > * https://styde.net/encapsulamiento-en-la-programacion-orientada-a-objetos/
 
-**El encapsulamiento en la programación orientada a Objetos ¿Recuerdan que este también es un elemento fundamental del modelo de objetos?** sabía que esa era la respuesta, entonces empezaremos con la lección.
-
 ## 1. Definamos Encapsulamiento
 
 * Es el proceso de almacenar en una misma sección los elementos de una abstracción que constituyen su estructura y su comportamiento; **sirve para separar el interfaz contractual de una abstracción y su implantación**.
-* Pero..! ¿Cómo consigo esto?, ¡tranquilo! esto se consigue a través de la ocultación de información, ves como todo es más fácil estando relajado, ¿No sabes que es la ocultación de información?, ¡Tranquilo!, No, aún no estás tranquilo, ¿Ya? seguimos, Ocultación de información es el proceso de ocultar «Todos los Secretos» de un objeto que no aportan a sus características específicas.
-* Para que la abstracción funcione como debe, la implementación debe estar encapsulada, nunca está de más recordar que **cada clase debe tener dos partes, una interfaz y una implementación**, tranquilo no te asustes si no sabes que es una clase, ya llegaremos a ese tema, de momento manténgase concentrado en la encapsulación.
-
+* Esto se consigue a través de la ocultación de información. Ocultación de información es el proceso de ocultar «Todos los Secretos» de un objeto que no aportan a sus características específicas.
+* Para que la abstracción funcione como debe, la implementación debe estar encapsulada, nunca está de más recordar que **cada clase debe tener dos partes, una interfaz y una implementación**.
 
 Existen tres niveles de acceso para el encapsulamiento, los cuales son:
 1. **Público (Public)**: Todos pueden acceder a los datos o métodos de una clase que se definen con este nivel, este es el nivel más bajo, esto es lo que tu quieres que la parte externa vea.
