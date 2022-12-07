@@ -143,3 +143,11 @@ Se que esto puede confundir a un no "rubydev", pero Person es la clase de la ins
 >> Person.instance_variables
 => [:@rol]
 ```
+
+## SmallTalk
+
+¡Que la clase de `Class` sea ella misma no es tan raro! Esto lo tenía SmallTalk 76.
+
+![](http://worrydream.com/EarlyHistoryOfSmalltalk/Images/thumbnails/st76.jpg)
+
+Además vemos como `Integer` y `Float` también son clases.
