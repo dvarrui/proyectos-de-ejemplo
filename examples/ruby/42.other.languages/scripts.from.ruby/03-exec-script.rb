@@ -17,7 +17,7 @@ end
 execute = Execute.new
 
 code = <<~CODE
- puts "Hola, soy Ruby!"
+ puts "Hola #{`whoami`.strip}, soy Ruby!"
 CODE
 execute.ruby(code)
 
