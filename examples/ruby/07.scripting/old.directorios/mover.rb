@@ -1,7 +1,4 @@
 #!/usr/bin/ruby -w
-#
-# Autor: David Vargas <dvargas@canarias.org>
-#
 
 class Mover
   attr_accessor :modo
@@ -51,7 +48,7 @@ class Mover
           print "ERROR:",ruta1,", ",ruta2,"\n"
         end
       end
-    end 
+    end
   end
 
 end
@@ -64,4 +61,3 @@ else
   m.modo = :escribir
   m.ejecutar
 end
-
