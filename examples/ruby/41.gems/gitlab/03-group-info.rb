@@ -18,8 +18,10 @@ list.each do |item|
     puts "#{label.rjust(15)} #{data[label]}"
   end
 
-  puts "projects".rjust(15)
-  data['projects'].each do |project|
-    puts "#{project['id'].to_s.rjust(15)} #{project['name']}"
+  unless data['projects'].nil?
+    puts "projects".rjust(15)
+    data['projects'].each do |project|
+      puts "#{project['id'].to_s.rjust(15)} #{project['name']}"
+    end
   end
 end
