@@ -8,6 +8,6 @@ labels.each do |label|
   puts "#{label.rjust(15)} #{data[label]}"
 end
 puts "projects".rjust(15)
-data['projects'].each do |group|
-  puts "#{group['id'].to_s.rjust(15)} #{group['name']}"
+data['projects'].each do |project|
+  puts "#{project['id'].to_s.rjust(15)} #{project['name']}"
 end
