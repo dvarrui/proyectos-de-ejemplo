@@ -11,12 +11,18 @@ bar:
     - 1
     - 2.0
 ";
+    println!("\n==> Contentc
+    ");
+    println!("{:?}", s);
+
+
     let docs = YamlLoader::load_from_str(s).unwrap();
 
     // Multi document support, doc is a yaml::Yaml
     let doc = &docs[0];
 
     // Debug support
+    println!("\n==> Read YAML");
     println!("{:?}", doc);
 
     // Index access for map & array
@@ -33,5 +39,6 @@ bar:
         let mut emitter = YamlEmitter::new(&mut out_str);
         emitter.dump(doc).unwrap(); // dump the YAML object to a String
     }
+    println!("\n==> Dump YAML");
     println!("{}", out_str);
 }
