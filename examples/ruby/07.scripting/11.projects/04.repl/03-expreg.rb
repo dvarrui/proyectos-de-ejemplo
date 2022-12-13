@@ -1,7 +1,7 @@
 # necesita un terminal ANSI!!!
 st = "\033[7m"
 en = "\033[m"
-while TRUE
+while true
   print "str> "
   STDOUT.flush
   str = gets
