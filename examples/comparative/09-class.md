@@ -32,7 +32,7 @@ class Person:
 
 IMHO, aunque Rust no tiene "clases", si tiene un mecanismo para crear entidades que encapsulan datos+métodos. Usando "structs+impl".
 
-```rust
+```
 struct Person {
     name: String
 }
@@ -50,6 +50,6 @@ fn main() {
 }
 ```
 
-Person es un entidad con  datos y métodos:
-* Al crear una clase o un struct+impl estamos definiendo la entidad Person.
-* Los objetos o variables tipo struct son las intancias de la entidad Person.
+Person es un entidad con datos y métodos:
+* Al crear una clase o un struct+impl estamos definiendo la entidad `Person`.
+* Los objetos o variables tipo struct son las instancias de la entidad `Person`.

@@ -103,5 +103,5 @@ Realmente, a partir de aquí se podría construir todo lo que se lleva a cabo en
 Cada nivel N "simplifica" funciones del nivel anterior (N-1) para hacerlos más fáciles de usar por los humanos. Y cuando el nivel N se vuelve demasiado "engorroso" necesitamos crear el nivel N+1 que continua el proceso de simplificar.
 
 La simplificación que produce N+1 sobre N
-* Nos da la ventaja de poder hacer cosas más complicadas de forma más sencilla. El nivel N+1 es una abstracción del nivel N.
+* Nos da la ventaja de poder hacer cosas más complejas de forma más sencilla. El nivel N+1 es una abstracción del nivel N.
 * Pero por el contrario, perdemos acceso a los detalles.

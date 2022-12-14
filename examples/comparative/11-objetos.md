@@ -53,7 +53,7 @@ Method
 7
 ```
 
-## ¿Las clases son objetos?
+## ¿Las clases?
 
 Y además, en Ruby las clases... son objetos.
 

@@ -138,7 +138,7 @@ Conclusión:
 * En Ruby las variables definidas en un "scope" sea principal a no, son variables internas de dicho ámbito. Las variables globales son diferentes de las variables normales.
 
 **Reflexión**
-* En Python este comportamiento de permitir el acceso desde niveles inferiores de la jerarquía hacia los niveles superiores es extensivo a definiciones de variables, imports de módulos, etc. Por tanto, mantiene coherencia en su comportamiento. 
+* En Python este comportamiento de permitir el acceso desde niveles inferiores de la jerarquía hacia los niveles superiores es extensivo a definiciones de variables, "entry point", imports de módulos, etc. Por tanto, mantiene coherencia en su comportamiento.
 
 ## El ámbito dentro de las clases
 
