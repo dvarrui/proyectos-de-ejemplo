@@ -19,3 +19,4 @@ Reflexiones sobre Ensamblador, C, Python, Ruby y Rust.
 14. [Punto de entrada](14-entry_point.md)
 15. [La frontera](15-frontera.md)
 16. [¿Me ves ahora?](16-ocultacion.md)
+17. [Scope](17-scope.md)
