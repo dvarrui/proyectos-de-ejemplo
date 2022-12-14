@@ -11,6 +11,12 @@ OptionParser.new do |opts|
   end
 end.parse!
 
-p options
-p ARGV
+if options.empty?
+  puts "Usage: #{$0} --help"
+  exit 1
+end 
+
+puts "==> Your inputs:"
+puts "    Options : #{options}"
+puts "    ARGV    : #{ARGV}"
 

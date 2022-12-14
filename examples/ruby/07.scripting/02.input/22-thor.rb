@@ -2,7 +2,7 @@
 require "thor"
 
 class MyCLI < Thor
-  desc "hello NAME", "say hello to NAME"
+  desc "hello NAME [FROM_NAME]", "say hello to NAME"
 
   def hello(name, from=nil)
     puts "from: #{from}" if from
