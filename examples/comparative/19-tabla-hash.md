@@ -2,9 +2,20 @@
 
 # Diccionario, Hash o Mapa.
 
+* Diccionarios: Se llaman en Python y dotNet.
+* Hash: es el nombre que reciben en Ruby.
+* Mapas: así los nombran Java, C++ y Go. Mapa es el término usando en las matemáticas, pero tiene un significado diferente en la programación funcional .
+* Tabla: en Lua.
+* Matriz asociativa: en PHP.
+
+Al final hablamos de lo mismo. Una tabla asociativa clave->valor que se implementa internamente haciendo "hashing".
+
 ## Definición
 
-https://es.wikipedia.org/wiki/Tabla_hash
+> Enlaces de interés:
+> * https://es.wikipedia.org/wiki/Tabla_hash
+> * https://en.wikipedia.org/wiki/Associative_array
+> * https://qastack.mx/programming/2884068/what-is-the-difference-between-a-map-and-a-dictionary
 
 Una tabla hash, matriz asociativa, hashing, mapa hash, tabla de dispersión o tabla fragmentada es una estructura de datos que implementa el tipo de dato abstracto llamado Diccionario.
 * Asocia llaves o claves con valores.
