@@ -4,9 +4,11 @@
 
 * Diccionarios: Se llaman en Python y dotNet.
 * Hash: es el nombre que reciben en Ruby.
-* Mapas: así los nombran Java, C++ y Go. Mapa es el término usando en las matemáticas, pero tiene un significado diferente en la programación funcional .
-* Tabla: en Lua.
+* HashMaps: Se llaman en Rust.
+* Mapas: así los nombran Java, C++ y Go. Mapa es el término usando en las matemáticas, pero tiene un significado diferente en la programación funcional.
+* Tables: en Lua.
 * Matriz asociativa: en PHP.
+* etc
 
 Al final hablamos de lo mismo. Una tabla asociativa clave->valor que se implementa internamente haciendo "hashing".
 
@@ -115,3 +117,8 @@ Salida
 3
 2
 ```
+
+Conclusión:
+* En Python, recorrer un diccionario por defecto, es lo mismo que recorrer sus claves.
+* En Ruby, recorrer un diccionario por defecto, es lo mismo que recorrer sus elementos (key: value).
+
