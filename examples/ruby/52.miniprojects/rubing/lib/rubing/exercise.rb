@@ -6,9 +6,13 @@ class Exercise
     is_done?
   end
 
+  def done?
+    @done
+  end
+
   def call
-    puts "=" * 40
-    puts "=> Exercise: #{filename}"
+    puts "\n" + "_" * 50
+    puts "=> Exercise: #{filename}\n\n"
     syntax_ok = system("ruby -c #{filename}")
     if syntax_ok
       puts "=> Syntax: OK"
@@ -17,7 +21,10 @@ class Exercise
     else
       puts "=> Syntax: Revise!"
     end
-    puts "\nDone: #{@done}"
+
+    if syntax_ok and exec_ok
+      puts "\n=> Delete 'I AM NOT DONE' to continue!"
+    end
   end
 
   private
@@ -25,7 +32,7 @@ class Exercise
   def is_done?
     filter = /# I AM NOT DONE/
     content = File.read(@filename)
-    @done = true
-    @done = false if content.match(filter).nil?
+    @done = false
+    @done = true if content.match(filter).nil?
   end
 end
