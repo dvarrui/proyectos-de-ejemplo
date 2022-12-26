@@ -3,7 +3,9 @@ class Exercise
 
   def initialize(filename)
     @filename = filename
-    is_done?
+    @content = File.read(@filename)
+    find_done
+    find_todo
   end
 
   def done?
@@ -22,17 +24,29 @@ class Exercise
       puts "=> Syntax: Revise!"
     end
 
-    if syntax_ok and exec_ok
+    unless @todo.size.zero?
+      lines = @content.split("\n")
+      @todo.each do |index|
+        puts "%02d | %s" % [index + 1, lines[index]]
+      end
+    else syntax_ok and exec_ok
       puts "\n=> Delete 'I AM NOT DONE' to continue!"
     end
   end
 
   private
 
-  def is_done?
+  def find_done
     filter = /# I AM NOT DONE/
-    content = File.read(@filename)
     @done = false
-    @done = true if content.match(filter).nil?
+    @done = true if @content.match(filter).nil?
+  end
+
+  def find_todo
+    @todo = []
+    lines = @content.split("\n")
+    lines.each_with_index do |line, index|
+      @todo << index if line.include? "# TODO:"
+    end
   end
 end
