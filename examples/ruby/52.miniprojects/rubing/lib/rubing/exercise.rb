@@ -8,10 +8,15 @@ class Exercise
 
   def call
     puts "=" * 40
-    puts "Exercise: #{filename}"
+    puts "=> Exercise: #{filename}"
     syntax_ok = system("ruby -c #{filename}")
-    puts "\nOutput:"
-    exec_ok = system("ruby #{filename}")
+    if syntax_ok
+      puts "=> Syntax: OK"
+      puts "\n=> Output:"
+      exec_ok = system("ruby #{filename}")
+    else
+      puts "=> Syntax: Revise!"
+    end
     puts "\nDone: #{@done}"
   end
 
