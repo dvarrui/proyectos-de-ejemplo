@@ -24,10 +24,9 @@ Enlace de interés:
 * `./minirake test`, generate and execute the test tools.
 * `./minirake clean`, clean all build files.
 
-## mruby-simple-game-engine
+## Proyectos con mruby
 
-https://github.com/dabroz/mruby-simple-game-engine
-
-This project is based on a talk I gave at Game Industry Conference 2016 in Poznań titled "Why (m)ruby should be your next scripting language?". This project implements a very basic component-based game engine. The backend is written in C++ and uses SFML for rendering. All game logic is in mruby scripts.
-
+* MRuby::CLI (http://mruby-cli.org/): A utility for setting up a CLI with mruby that compiles binaries to Linux, OS X, and Windows.
+* https://github.com/dabroz/mruby-simple-game-engine: This project is based on a talk I gave at Game Industry Conference 2016 in Poznań titled "Why (m)ruby should be your next scripting language?". This project implements a very basic component-based game engine. The backend is written in C++ and uses SFML for rendering. All game logic is in mruby scripts.
+* https://github.com/ruby-rcade/mruby-game-engine-example
 
