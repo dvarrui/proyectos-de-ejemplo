@@ -23,3 +23,11 @@ Enlace de interés:
 * `./minirake`, compile inside of the mruby source root.
 * `./minirake test`, generate and execute the test tools.
 * `./minirake clean`, clean all build files.
+
+## mruby-simple-game-engine
+
+https://github.com/dabroz/mruby-simple-game-engine
+
+This project is based on a talk I gave at Game Industry Conference 2016 in Poznań titled "Why (m)ruby should be your next scripting language?". This project implements a very basic component-based game engine. The backend is written in C++ and uses SFML for rendering. All game logic is in mruby scripts.
+
+
