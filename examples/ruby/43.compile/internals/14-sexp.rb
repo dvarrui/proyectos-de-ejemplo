@@ -3,7 +3,9 @@ require 'ripper'
 require 'pp'
 
 code = <<STR
-puts 2 + 2
+10.times do |n|
+  puts n
+end
 STR
 
 puts code
