@@ -15,3 +15,11 @@ http://ruby.bastardsbook.com/chapters/external-programs/
 ## ronnin gem
 
 Ronin is a free and Open Source Ruby toolkit for security research and development. Ronin contains many different CLI commands and Ruby libraries for a variety of security tasks, such as encoding/decoding data, filter IPs/hosts/URLs, querying ASNs, querying DNS, HTTP, scanning for web vulnerabilities, spidering websites, install 3rd party repositories of exploits and/or payloads, run exploits, write new exploits, managing local databases, fuzzing data, and much more.
+
+# Data frames
+
+* https://github.com/ankane/rover
+* Simple, powerful data frames for Ruby mountain Designed for data exploration 
+* and machine learning, and powered by Numo
+* evergreen_tree Uses Vega for visualization
+
