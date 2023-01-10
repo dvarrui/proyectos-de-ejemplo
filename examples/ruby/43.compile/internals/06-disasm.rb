@@ -4,4 +4,4 @@ require 'pp'
 
 code = File.read("01-script.rb")
 puts code
-pp Ripper.sexp(code)
+puts RubyVM::InstructionSequence.compile(code).disasm
