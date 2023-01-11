@@ -15,4 +15,3 @@ window.set_child(button)
 window.signal_connect("destroy") { |_widget| Gtk.main_quit }
 window.show
 
-Gtk.main
