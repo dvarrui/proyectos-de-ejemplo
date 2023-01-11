@@ -1,10 +1,17 @@
 #!/usr/bin/env ruby
+
 require "gtk4"
 
-app = Gtk::Application.new()
-app.signal_connect("activate") do |i|
-  win = Gtk::ApplicationWindow.new(i)
-  win.present()
+window = Gtk::Window.new()
+window.set_size_request(400, 400)
+# window.set_border_width(10)
+
+button = Gtk::Button.new(:label => "Say hello")
+button.signal_connect "clicked" do |_widget|
+  puts "Hello World!!"
 end
 
-app.run()
+window.set_child(button)
+window.signal_connect("destroy") { |_widget| Gtk.main_quit }
+window.show
+
