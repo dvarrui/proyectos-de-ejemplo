@@ -2,6 +2,4 @@
 
 source "https://rubygems.org"
 
-# gem "Qt"
-gem "gtk"
-gem "gtk3"
+gem "gtk2"
