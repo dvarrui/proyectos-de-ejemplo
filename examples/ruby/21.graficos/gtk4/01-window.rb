@@ -11,7 +11,7 @@ button.signal_connect "clicked" do |_widget|
   puts "Hello World!!"
 end
 
-window.add(button)
+window.set_child(button)
 window.signal_connect("destroy") { |_widget| Gtk.main_quit }
 window.show
 
