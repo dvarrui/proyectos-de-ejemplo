@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 require 'gtk'
 
 window = Gtk::Window::new

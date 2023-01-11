@@ -3,5 +3,5 @@
 source "https://rubygems.org"
 
 # gem "Qt"
-gem "gtk"
+# gem "gtk"
 gem "gtk3"
