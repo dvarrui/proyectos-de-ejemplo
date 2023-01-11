@@ -2,9 +2,6 @@
 require 'ripper'
 require 'pp'
 
-code = <<STR
-puts 2 + n
-STR
-
+code = File.read("01-script.rb")
 puts code
 pp Ripper.lex(code)
