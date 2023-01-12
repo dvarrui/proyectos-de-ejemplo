@@ -7,7 +7,7 @@ html = <<EOF
   <header>Esto es el header</header>
   <body>
     <h1>Este es el body</h1>
-    <div id="obiwan">Obiwan Kenobi</div>
+    <div id="obiwan" class="caballero jedi">Obiwan Kenobi</div>
     <div class="droides">
       <p>R2D2</p>
       <p>C3PO</p>
@@ -21,4 +21,7 @@ doc = Nokogiri::HTML.parse(html)
 
 puts "\n==> Localizar class:droides"
 puts doc.css(".droides")
+
+puts "\n==> Localizar class:caballero jedi"
+puts doc.css(".caballero.jedi")
 
