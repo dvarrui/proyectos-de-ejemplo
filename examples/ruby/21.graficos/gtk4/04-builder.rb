@@ -18,7 +18,7 @@
 
 # example from https://gitlab.gnome.org/GNOME/gtk/blob/main/examples/builder.c
 
-require_relative "04-utils"
+require_relative "lib/utils"
 
 require_gtk4
 
