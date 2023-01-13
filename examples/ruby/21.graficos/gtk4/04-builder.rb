@@ -23,10 +23,11 @@ require_relative "lib/utils"
 require_gtk4
 
 app = Gtk::Application.new("org.gtk.example", :flags_none)
+ui = "ui/04-builder.ui"
 
 app.signal_connect "activate" do
   # Construct a GtkBuilder instance and load our UI description
-  builder = Gtk::Builder.new(file: File.join(__dir__, "04-builder.ui"))
+  builder = Gtk::Builder.new(file: File.join(__dir__, ui))
 
   # Connect signal handlers to the constructed widgets.
   window = builder["window"]
