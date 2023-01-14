@@ -27,18 +27,16 @@ class AskerWindow < FXMainWindow
     contents = FXHorizontalFrame.new(self, LAYOUT_FILL_X|LAYOUT_FILL_Y)
     splitter = FXSplitter.new(contents, (LAYOUT_SIDE_TOP|LAYOUT_FILL_X|
       LAYOUT_FILL_Y|SPLITTER_TRACKING|SPLITTER_HORIZONTAL))
-
     groupbox = FXGroupBox.new(splitter, "Conceptos",
       LAYOUT_FILL_X|LAYOUT_FILL_Y|FRAME_GROOVE)
-
     frame = FXHorizontalFrame.new(groupbox,
       LAYOUT_FILL_X|LAYOUT_FILL_Y|FRAME_SUNKEN|FRAME_THICK)
 
     # Create the empty tree list
-    @treeList = FXTreeList.new(frame, nil, 0,
+    @concept_list = FXTreeList.new(frame, nil, 0,
       (TREELIST_BROWSESELECT|TREELIST_SHOWS_LINES|TREELIST_SHOWS_BOXES|
        TREELIST_ROOT_BOXES|LAYOUT_FILL_X|LAYOUT_FILL_Y))
-    @treeList.connect(SEL_COMMAND) do |sender, sel, item|
+    @concept_list.connect(SEL_COMMAND) do |sender, sel, item|
       getApp().beginWaitCursor do
         s = getInstanceMethods(item.to_s).join("\n")
         @methods_text.text = s
@@ -47,7 +45,7 @@ class AskerWindow < FXMainWindow
       end
     end
 
-    populate_tree(@treeList, nil, ClassTree.new.root)
+    populate_tree(@concept_list, nil, ClassTree.new.root)
 
     # Tabbed notebook on the right
     tabBook = FXTabBook.new(splitter, nil, 0,
@@ -74,17 +72,16 @@ class AskerWindow < FXMainWindow
     @classConstants = {}
   end
 
-
-  def populate_tree(treeList, rootItem, rootNode)
-    rootNode.children.each do |childNode|
-      childItem = treeList.appendItem(rootItem, childNode.className)
-      populate_tree(treeList, childItem, childNode)
+  def populate_tree(tree_list, root_item, root_node)
+    root_node.children.each do |child_node|
+      child_item = tree_list.appendItem(root_item, child_node.name)
+      populate_tree(tree_list, child_item, child_node)
     end
   end
 
   def create
     super
-    @treeList.parent.parent.setWidth(@treeList.font.getTextWidth('MMMMMMMMMMMMMMMM'))
+    @concept_list.parent.parent.setWidth(@concept_list.font.getTextWidth('MMMMMMMMMMMMMMMM'))
     show(PLACEMENT_SCREEN)
   end
 

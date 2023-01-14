@@ -1,25 +1,24 @@
-# Node in the class hierarchy tree
-class ClassTreeNode
+class TreeNode
   def initialize(name, parent_name)
     @name = name
     @parent_name = parent_name
     @children = []
   end
 
-  def addChild(child)
+  def add_child(child)
     @children.push(child)
   end
 
-  def className
+  def name
     @name
   end
 
-  def parentClassName
+  def parent_name
     @parent_name
   end
 
   def <=>(other)
-    className <=> other.className
+    name <=> other.name
   end
 
   def children
@@ -30,18 +29,18 @@ end
 class ClassTree
   def initialize
     classes = {}
-    classes["X"] = ClassTreeNode.new("X", nil)
-    classes["A"] = ClassTreeNode.new("A", "X")
-    classes["B"] = ClassTreeNode.new("B", "X")
-    classes["C"] = ClassTreeNode.new("C", "X")
+    classes["X"] = TreeNode.new("X", nil)
+    classes["A"] = TreeNode.new("A", "X")
+    classes["B"] = TreeNode.new("B", "X")
+    classes["C"] = TreeNode.new("C", "X")
 
     roots = []
     classes.each_value do |value|
-      parentNode = classes[value.parentClassName]
-      if parentNode
-        parentNode.addChild(value)
+      parent = classes[value.parent_name]
+      if parent
+        parent.add_child(value)
       else
-        parentNode = ClassTreeNode.new(value.parentClassName, nil)
+        parent = TreeNode.new(value.parent_name, nil)
       end
     end
 
@@ -49,6 +48,6 @@ class ClassTree
   end
 
   def root
-    return @root
+    @root
   end
 end
