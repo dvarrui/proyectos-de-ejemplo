@@ -15,10 +15,10 @@ class AskerWindow < FXMainWindow
     FXMenuCommand.new(filemenu, "&Quit\tCtl-Q", nil, getApp(), FXApp::ID_QUIT)
     FXMenuTitle.new(menubar, "&File", nil, filemenu)
     helpmenu = FXMenuPane.new(self)
-    FXMenuCommand.new(helpmenu, "&About FOX...").connect(SEL_COMMAND) {
-      FXMessageBox.information(self, MBOX_OK, "About FOX",
-        "FOX is a really, really cool C++ library...\n" +
-        "and FXRuby is an even cooler GUI for Ruby!")
+    FXMenuCommand.new(helpmenu, "&About ASKER...").connect(SEL_COMMAND) {
+      FXMessageBox.information(self, MBOX_OK, "About ASKER",
+        "ASKER generates tons of questions\n" +
+        "from a definitions input file.")
     }
     FXMenuTitle.new(menubar, "&Help", nil, helpmenu, LAYOUT_RIGHT)
   end
@@ -45,7 +45,7 @@ class AskerWindow < FXMainWindow
       end
     end
 
-    populate_tree(@concept_list, nil, ClassTree.new.root)
+    populate_tree(@concept_list, nil, Tree.new.root)
 
     # Tabbed notebook on the right
     tabBook = FXTabBook.new(splitter, nil, 0,

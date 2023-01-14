@@ -1,7 +1,7 @@
 class TreeNode
-  def initialize(name, parent_name)
+  def initialize(name, parent)
     @name = name
-    @parent_name = parent_name
+    @parent = parent
     @children = []
   end
 
@@ -13,8 +13,8 @@ class TreeNode
     @name
   end
 
-  def parent_name
-    @parent_name
+  def parent
+    @parent
   end
 
   def <=>(other)
@@ -26,25 +26,21 @@ class TreeNode
   end
 end
 
-class ClassTree
+class Tree
   def initialize
-    classes = {}
-    classes["X"] = TreeNode.new("X", nil)
-    classes["A"] = TreeNode.new("A", "X")
-    classes["B"] = TreeNode.new("B", "X")
-    classes["C"] = TreeNode.new("C", "X")
+    root = "root"
+    nodes = {}
+    nodes[root] = TreeNode.new(root, nil)
+    nodes["Concept_1"] = TreeNode.new("Concept_1", root)
+    nodes["Concept_2"] = TreeNode.new("Concept_2", root)
+    nodes["Concept_3"] = TreeNode.new("Concept_3", root)
 
-    roots = []
-    classes.each_value do |value|
-      parent = classes[value.parent_name]
-      if parent
-        parent.add_child(value)
-      else
-        parent = TreeNode.new(value.parent_name, nil)
-      end
+    nodes.each_value do |value|
+      parent = nodes[value.parent]
+      parent.add_child(value) if parent
     end
 
-    @root = classes["X"]
+    @root = nodes[root]
   end
 
   def root
