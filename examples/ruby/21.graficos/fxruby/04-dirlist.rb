@@ -1,13 +1,10 @@
 #!/usr/bin/env ruby
 
 require 'fox16'
-
 include Fox
 
 class DirListWindow < FXMainWindow
-
   def initialize(app)
-    # Invoke the base class initialize first
     super(app, "Directory List", :opts => DECOR_ALL, :width => 800, :height => 600)
 
     # Make menu bar
@@ -46,18 +43,7 @@ class DirListWindow < FXMainWindow
   end
 end
 
-def run
-  # Make application
-  application = FXApp.new("DirList", "FoxTest")
-
-  # Make window
-  DirListWindow.new(application)
-
-  # Create app
-  application.create
-
-  # Run
-  application.run
-end
-
-run
+application = FXApp.new("DirList", "FoxTest")
+DirListWindow.new(application)
+application.create
+application.run

@@ -71,21 +71,15 @@ class ClassTree
 end
 
 class BrowserWindow < FXMainWindow
-
   def initialize(app)
-    # Call base class initializer first
     super(app, "Browse", nil, nil, DECOR_ALL, 0, 0, 600, 400)
-
-    # Contents
     contents = FXHorizontalFrame.new(self, LAYOUT_FILL_X|LAYOUT_FILL_Y)
-
-    # Horizontal splitter
     splitter = FXSplitter.new(contents, (LAYOUT_SIDE_TOP|LAYOUT_FILL_X|
       LAYOUT_FILL_Y|SPLITTER_TRACKING|SPLITTER_HORIZONTAL))
 
-    # Create a sunken frame to hold the tree list
     groupbox = FXGroupBox.new(splitter, "Classes",
       LAYOUT_FILL_X|LAYOUT_FILL_Y|FRAME_GROOVE)
+
     frame = FXHorizontalFrame.new(groupbox,
       LAYOUT_FILL_X|LAYOUT_FILL_Y|FRAME_SUNKEN|FRAME_THICK)
 
@@ -102,7 +96,6 @@ class BrowserWindow < FXMainWindow
       end
     end
 
-    # Fill it up based on the tree contents
     populateTree(@treeList, nil, ClassTree.new.root)
 
     # Tabbed notebook on the right
@@ -130,7 +123,6 @@ class BrowserWindow < FXMainWindow
     @classConstants = {}
   end
 
-  # Recursively fill up the tree list
   def populateTree(treeList, rootItem, rootNode)
     rootNode.children.each do |childNode|
       childItem = treeList.appendItem(rootItem, childNode.className)
@@ -138,7 +130,6 @@ class BrowserWindow < FXMainWindow
     end
   end
 
-  # Create and show the main window
   def create
     super
     @treeList.parent.parent.setWidth(@treeList.font.getTextWidth('MMMMMMMMMMMMMMMM'))
@@ -175,17 +166,7 @@ class BrowserWindow < FXMainWindow
   end
 end
 
-if __FILE__ == $0
-  # Create a new application
-  application = FXApp.new("Browser", "FoxTest")
-
-  # Construct the main window
-  BrowserWindow.new(application)
-
-  # Create the windows
-  application.create
-
-  # Start event loop
-  application.run
-end
-
+application = FXApp.new("Browser", "FoxTest")
+BrowserWindow.new(application)
+application.create
+application.run
