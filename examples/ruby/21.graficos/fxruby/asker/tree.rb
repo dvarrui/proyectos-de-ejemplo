@@ -47,3 +47,13 @@ class Tree
     @root
   end
 end
+
+class Data
+  def self.get_methods(name)
+    [ :a, :b, :c, name]
+  end
+
+  def self.get_constants(name)
+    [1, 2, 3, 4, name].shuffle
+  end
+end

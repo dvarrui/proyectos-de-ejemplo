@@ -9,6 +9,14 @@ class AskerWindow < FXMainWindow
     create_body
   end
 
+  def create
+    super
+    @concept_list.parent.parent.setWidth(@concept_list.font.getTextWidth('MMMMMMMMMMMMMMMM'))
+    show(PLACEMENT_SCREEN)
+  end
+
+  private
+
   def create_menu_bar
     menubar = FXMenuBar.new(self, LAYOUT_FILL_X)
     filemenu = FXMenuPane.new(self)
@@ -27,6 +35,11 @@ class AskerWindow < FXMainWindow
     contents = FXHorizontalFrame.new(self, LAYOUT_FILL_X|LAYOUT_FILL_Y)
     splitter = FXSplitter.new(contents, (LAYOUT_SIDE_TOP|LAYOUT_FILL_X|
       LAYOUT_FILL_Y|SPLITTER_TRACKING|SPLITTER_HORIZONTAL))
+    create_concept_list(splitter)
+    create_tabs(splitter)
+  end
+
+  def create_concept_list(splitter)
     groupbox = FXGroupBox.new(splitter, "Conceptos",
       LAYOUT_FILL_X|LAYOUT_FILL_Y|FRAME_GROOVE)
     frame = FXHorizontalFrame.new(groupbox,
@@ -38,18 +51,16 @@ class AskerWindow < FXMainWindow
        TREELIST_ROOT_BOXES|LAYOUT_FILL_X|LAYOUT_FILL_Y))
     @concept_list.connect(SEL_COMMAND) do |sender, sel, item|
       getApp().beginWaitCursor do
-        s = getInstanceMethods(item.to_s).join("\n")
-        @methods_text.text = s
-        s = get_constants(item.to_s).join("\n")
-        @constants_text.text = s
+        @methods_text.text = Data.get_methods(item.to_s).join("\n")
+        @constants_text.text = Data.get_constants(item.to_s).join("\n")
       end
     end
 
     populate_tree(@concept_list, nil, Tree.new.root)
+  end
 
-    # Tabbed notebook on the right
-    tabBook = FXTabBook.new(splitter, nil, 0,
-      LAYOUT_FILL_X|LAYOUT_FILL_Y|LAYOUT_RIGHT)
+  def create_tabs(splitter)
+    tabBook = FXTabBook.new(splitter, nil, 0, LAYOUT_FILL_X|LAYOUT_FILL_Y|LAYOUT_RIGHT)
 
     tab1 = FXTabItem.new(tabBook, "Methods")
     page1 = FXHorizontalFrame.new(tabBook, FRAME_THICK|FRAME_RAISED)
@@ -66,10 +77,6 @@ class AskerWindow < FXMainWindow
     @constants_text = FXText.new(frame2, nil, 0, LAYOUT_FILL_X|LAYOUT_FILL_Y)
     @constants_text.text = "List of constants goes here"
     @constants_text.editable = false
-
-    # Cache of classname -> method and classname -> constants lists
-    @instanceMethods = {}
-    @classConstants = {}
   end
 
   def populate_tree(tree_list, root_item, root_node)
@@ -77,19 +84,5 @@ class AskerWindow < FXMainWindow
       child_item = tree_list.appendItem(root_item, child_node.name)
       populate_tree(tree_list, child_item, child_node)
     end
-  end
-
-  def create
-    super
-    @concept_list.parent.parent.setWidth(@concept_list.font.getTextWidth('MMMMMMMMMMMMMMMM'))
-    show(PLACEMENT_SCREEN)
-  end
-
-  def getInstanceMethods(name)
-    [ :a, :b, :c, name]
-  end
-
-  def get_constants(name)
-    [1, 2, 3, 4, name].shuffle
   end
 end
