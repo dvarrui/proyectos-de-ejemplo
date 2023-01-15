@@ -1,9 +1,8 @@
+#!/usr/bin/env ruby
 require 'fox16'
-
 include Fox
 
 class IconListWindow < FXMainWindow
-
   # Load the named PNG icon from a file
   def loadIcon(filename)
     filename = File.expand_path("../icons/#{filename}", __FILE__)
@@ -12,11 +11,9 @@ class IconListWindow < FXMainWindow
     end
   end
 
-  # Main window constructor
   def initialize(app)
     # Initialize base class first
     super(app, "Icon List Test", :opts => DECOR_ALL, :width => 800, :height => 600)
-
     # Menu bar
     menubar = FXMenuBar.new(self, LAYOUT_SIDE_TOP|LAYOUT_FILL_X)
 
@@ -34,6 +31,7 @@ class IconListWindow < FXMainWindow
 
     # Files
     FXLabel.new(group, "Icon List Widget", nil, LAYOUT_TOP|LAYOUT_FILL_X|FRAME_SUNKEN)
+
     subgroup = FXVerticalFrame.new(group, FRAME_SUNKEN|FRAME_THICK|LAYOUT_FILL_X|LAYOUT_FILL_Y,
       :padLeft => 0, :padRight => 0, :padTop => 0, :padBottom => 0)
 
@@ -69,18 +67,14 @@ class IconListWindow < FXMainWindow
     FXToolTip.new(getApp())
   end
 
-  # Overrides base class version
   def create
     super
     show(PLACEMENT_SCREEN)
   end
 end
 
-if __FILE__ == $0
-  FXApp.new("IconList", "FXRuby") do |theApp|
-    IconListWindow.new(theApp)
-    theApp.create
-    theApp.run
-  end
+FXApp.new("IconList", "FXRuby") do |app|
+  IconListWindow.new(app)
+  app.create
+  app.run
 end
-
