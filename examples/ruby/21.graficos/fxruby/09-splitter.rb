@@ -1,11 +1,8 @@
 #!/usr/bin/env ruby
-
 require 'fox16'
-
 include Fox
 
 class SplitterWindow < FXMainWindow
-
   # Convenience function to load & construct an icon
   def makeIcon(filename)
     filename = File.expand_path("../icons/#{filename}", __FILE__)
@@ -14,12 +11,8 @@ class SplitterWindow < FXMainWindow
     end
   end
 
-
   def initialize(app)
-    # Do base class initialize first
     super(app, "Splitter Test", :opts => DECOR_ALL, :width => 800, :height => 600)
-
-    # Construct some icons we'll use
     folder_open   = makeIcon("minifolderopen.png")
     folder_closed = makeIcon("minifolder.png")
     doc           = makeIcon("minidoc.png")
