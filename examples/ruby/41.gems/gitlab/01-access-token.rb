@@ -1,8 +1,6 @@
 #!/usr/bin/env ruby
-
 require "dotenv"
 require "gitlab"
-require "debug"
 
 Dotenv.load("./.env")
 endpoint = ENV['GITLAB_API_ENDPOINT']

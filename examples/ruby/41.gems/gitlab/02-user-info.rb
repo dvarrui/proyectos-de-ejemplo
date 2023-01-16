@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-
 require_relative "lib/gitlab"
 
 data = gitlab.user.to_h

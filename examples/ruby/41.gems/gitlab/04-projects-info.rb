@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
-
 require_relative "lib/gitlab"
-require "debug"
 
 data = gitlab.group(ENV['GITLAB_GROUP_ID']).to_h
 projects = data['projects']
