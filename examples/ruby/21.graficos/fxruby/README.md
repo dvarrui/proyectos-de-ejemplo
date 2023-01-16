@@ -26,7 +26,7 @@ g++: /usr/bin/g++ /usr/share/man/man1/g++.1.gz
 ## Dependencia fx.h
 
 Se produce el siguiente error: `./include/FXRbCommon.h:72:10: error fatal: fx.h: No existe el fichero o el directorio #include "fx.h"`
-* Creo que hay que instalar el paquete `fox26-devel`.
+* Creo que hay que instalar el paquete `fox16-devel`.
 * Ahora tenemos el fichero `/usr/include/fox-1.6/fx.h`.
 
 Ta tenemos la gema instalada.
