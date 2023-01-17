@@ -1,12 +1,8 @@
 #!/usr/bin/env ruby
-
 require 'fox16'
-
 include Fox
 
 class GroupWindow < FXMainWindow
-
-  # Convenience function to load & construct an icon
   def getIcon(filename)
     filename = File.expand_path("../icons/#{filename}", __FILE__)
     File.open(filename, "rb") do |f|
@@ -15,7 +11,6 @@ class GroupWindow < FXMainWindow
   end
 
   def initialize(app)
-    # Call the base class version of initialize
     super(app, "Group Box Test", :opts => DECOR_ALL)
 
     # Some icons we'll use here and there
@@ -372,17 +367,7 @@ class GroupWindow < FXMainWindow
   end
 end
 
-if __FILE__ == $0
-  # Make application
-  application = FXApp.new("Groupbox", "FoxTest")
-
-  # Make window
-  GroupWindow.new(application)
-
-  # Create app
-  application.create
-
-  # Run
-  application.run
-end
-
+application = FXApp.new("Groupbox", "FoxTest")
+GroupWindow.new(application)
+application.create
+application.run
