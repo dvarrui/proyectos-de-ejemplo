@@ -24,6 +24,12 @@ Comunicación:
 
 Dijkstra
 
+# Ruby 
+
+* Threads
+* Process
+* Ractors
+* Fibers: más ligeros que un thread. Se pueden parar y reanudar.
 # Async 
 https://brunosutic.com/blog/async-ruby
 
