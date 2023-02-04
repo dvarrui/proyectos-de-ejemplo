@@ -22,3 +22,4 @@ Reflexiones sobre Ensamblador, C, Python, Ruby y Rust.
 17. [Scope](17-scope.md)
 18. Desestructuación
 19. [Tabla Hash](19-tabla-hash.md)
+20. [Filtrado de listas](20-filters.md)
