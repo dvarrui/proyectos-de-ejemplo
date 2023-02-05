@@ -66,13 +66,9 @@ puts c.class
 Complex numbers are written with a "i" as the imaginary part:
 
 ```ruby
-a = 3+5j
-b = 5j
-c = -5j
-
-puts a.class
-puts b.class
-puts c.class
+a = 3+5i
+b = 5i
+c = -5i
 ```
 
 ## Class conversion
@@ -84,14 +80,9 @@ a = 1    # Integer
 b = 2.8  # Float
 c = 1i   # Complex
 
-# convert from Integer to Float:
-x = a.to_f
-
-# convert from Float to Integer:
-y = b.to_i
-
-# convert from Integer to Complex:
-z = a.to_c
+x = a.to_f # from Integer to Float:
+y = b.to_i # from Float to Integer:
+z = a.to_c # from Integer to Complex:
 ```
 
 Note: You can convert some Complex numbers into another number type.
