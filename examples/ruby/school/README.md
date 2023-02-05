@@ -11,3 +11,5 @@
 1. [Assign multiple values](08-assign-multiple-values.md)
 1. [Output variables](09-output-variables.md)
 1. [Global variables](10-global-variables.md)
+1. [Data types](11-data-types.md)
+1. [Numbers](12-numbers.md)
