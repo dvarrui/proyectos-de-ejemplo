@@ -75,36 +75,30 @@ puts a.length       # => 13
 
 ## Check String
 
-To check if a certain phrase or character is present in a string, we can use the keyword in.
+To check if a certain phrase or character is present in a string, we can use the keyword `include?`.
 
-Example
-
-Check if "free" is present in the following text:
+```ruby
+# Check if "free" is present in the following text:
 txt = "The best things in life are free!"
-print("free" in txt)
+puts txt.include? "free"
+```
 
-Use it in an if statement:
-Example
-
-Print only if "free" is present:
+```ruby
+# Print only if "free" is present:
 txt = "The best things in life are free!"
-if "free" in txt:
-  print("Yes, 'free' is present.")
+if txt.include? "free"
+  puts "Yes, 'free' is present."
+end
+```
 
-Learn more about If statements in our Python If...Else chapter.
-Check if NOT
+Learn more about If statements in our Ruby If...Else chapter.
 
-To check if a certain phrase or character is NOT present in a string, we can use the keyword not in.
-Example
+## Check if NOT
 
-Check if "expensive" is NOT present in the following text:
+To check if a certain phrase or character is NOT present in a string, we can use the keyword not include?.
+
+```ruby
+# Check if "expensive" is NOT present in the following text:
 txt = "The best things in life are free!"
-print("expensive" not in txt)
-
-Use it in an if statement:
-Example
-
-print only if "expensive" is NOT present:
-txt = "The best things in life are free!"
-if "expensive" not in txt:
-  print("No, 'expensive' is NOT present.")
+puts "Not present" unless txt.include? "expensive"
+```

@@ -13,3 +13,7 @@
 1. [Global variables](10-global-variables.md)
 1. [Data types](11-data-types.md)
 1. [Numbers](12-numbers.md)
+1. [Casting](13-casting.md)
+1. [Strings](14-strings.md)
+1. [Slicing strings](15-slicing-strings.md)
+1. [Modify strings](16-modify-strings.md)
