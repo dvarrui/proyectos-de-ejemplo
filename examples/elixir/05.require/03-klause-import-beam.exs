@@ -3,16 +3,10 @@
 # https://elixir-lang.org/getting-started/alias-require-and-import.html
 #
 
-# Alias the module so it can be called as Bar instead of Foo.Bar
-# alias Foo.Bar, as: Bar
-#
-# Invokes the custom code defined in Foo as an extension point
-# use Foo
-#
 # Import functions from Foo so they can be called without the `Foo.` prefix
 # import Foo
 #
-# IMPORTANTE: elixirc lib/11-clause-lib.exs
+
 import Klause
 
 IO.puts "[ info ] odd? 1, 2"
