@@ -17,3 +17,5 @@
 1. [Strings](14-strings.md)
 1. [Slicing strings](15-slicing-strings.md)
 1. [Modify strings](16-modify-strings.md)
+1. [Concatenate strings](17-concatenate-strings.md)
+1. [Format strings](18-format-strings.md)
