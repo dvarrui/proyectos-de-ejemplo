@@ -1,6 +1,10 @@
 
 def print(*args)
-  puts args
+  if args.is_a? Array
+    puts args.join(" ")
+  else
+    puts(args)
+  end
 end
 
 def type(x)
