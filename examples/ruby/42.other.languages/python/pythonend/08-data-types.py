@@ -22,11 +22,15 @@ print(str(x))
 print(type(x))
 
 # x = b"Hello" 	bytes
-# x = bytearray(5) 	bytearray
-# x = memoryview(bytes(5)) 	memoryview
 # x = None 	NoneType
+x = None
+print(x)
+print(type(x))
 
+# PENDIENTE
 # x = 1j 	complex
 # x = ("apple", "banana", "cherry") 	tuple
 # x = {"apple", "banana", "cherry"} 	set
 # x = frozenset({"apple", "banana", "cherry"}) 	frozenset
+# x = bytearray(5) 	bytearray
+# x = memoryview(bytes(5)) 	memoryview
