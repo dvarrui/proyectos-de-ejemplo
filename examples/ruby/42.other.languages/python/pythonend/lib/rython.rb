@@ -1,6 +1,8 @@
 
 require_relative "booleans"
 require_relative "none"
+require_relative "ranges"
+require_relative "strings"
 require_relative "type"
 
 def print(*args)
@@ -9,8 +11,4 @@ def print(*args)
   else
     puts(args)
   end
-end
-
-def range(value)
-  Range.new(0,value - 1)
 end
