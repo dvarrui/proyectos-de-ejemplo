@@ -1,4 +1,6 @@
 
+require_relative "booleans"
+
 def print(*args)
   if args.is_a? Array
     puts args.join(" ")
@@ -7,12 +9,24 @@ def print(*args)
   end
 end
 
+def range(value)
+  Range.new(0,value - 1)
+end
+
 def type(x)
   key = x.class.to_s.to_sym
-  types = { String: "str", Integer: "int", Float: "float"}
+  types = {
+    FalseClass: "bool",
+    Float: "float",
+    Hash: "dict",
+    Integer: "int",
+    Range: "range",
+    String: "str",
+    TrueClass: "bool"
+  }
   "<type '#{types[key]}'>"
 end
 
-def str(obj) = obj.to_s
-def int(obj) = obj.to_i
 def float(obj) = obj.to_f
+def int(obj) = obj.to_i
+def str(obj) = obj.to_s
