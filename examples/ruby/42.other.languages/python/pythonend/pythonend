@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require_relative "lib/rython"
+
+content = File.read(ARGV.first)
+eval(content)
