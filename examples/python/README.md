@@ -1,7 +1,8 @@
 
 ## Docs
 
-https://www.w3schools.com/python/
+* https://www.w3schools.com/python/
+* [Interactive Python Tutoria](https://t.co/dzooRMSC3R?s=35) learnpython.org is a free interactive Python tutorial.
 
 ## Duda 
 
