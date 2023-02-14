@@ -4,6 +4,7 @@
 ## Docs 
 
 * Introduction - The Elixir programming language: https://elixir-lang.org/getting-started/introduction.html
+* Básico - Elixir School: https://elixirschool.com/es/lessons/basics/basics/
 * Elixir para ciencia de datos: https://book.elixir4datascience.com/1-welcome.html
 
 ## Vídeos:
