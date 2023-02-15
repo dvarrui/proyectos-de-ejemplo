@@ -7,6 +7,8 @@
 * Básico - Elixir School: https://elixirschool.com/es/lessons/basics/basics/
 * Elixir para ciencia de datos: https://book.elixir4datascience.com/1-welcome.html
 
+* https://foroayuda.es/son-las-variables-de-elixir-realmente-inmutables/
+
 ## Vídeos:
 
 * https://www.youtube.com/watch?v=2uvScmCrouk
