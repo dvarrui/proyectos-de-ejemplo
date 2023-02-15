@@ -1,4 +1,5 @@
 task :default do
   system("rm *.o")
   system("rm *.hi")
+  system("rm ??-factorial")
 end
