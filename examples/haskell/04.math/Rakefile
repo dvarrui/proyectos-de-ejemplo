@@ -1,0 +1,4 @@
+task :default do
+  system("rm *.o")
+  system("rm *.hi")
+end
