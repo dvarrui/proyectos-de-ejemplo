@@ -27,6 +27,7 @@ Install tools:
 
 # tools
 
+* Tanakai is a modern web scraping framework written in Ruby. A fork of Kimurai: (https://github.com/glaucocustodio/tanakai). Tanakai is a modern web scraping framework written in Ruby. A fork of Kimurai.
 * Watir: a Selenium powered gem used for automatic testing, as it can imitate user's behavior on a browser.
 * Webdrivers: automatically download thelatest driver for a browser instance.
 * Nokogiri: make web pages analysis easy. It can parse HTML, XML, detects broken HTML documents, and offers access to elements by XPath and CSS3 selectors.
