@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 
 module Observable
  def register(event=nil, &callback)
@@ -6,28 +7,26 @@ module Observable
    @observers[event] << callback
    self
  end
+
  protected
+
  def signal_event(event = nil, *args)
    @observers ||= Hash.new
    @observers[event] ||= []
-   @observers[event].each do | callback |
-     callback.call(self, *args)
-   end
+   @observers[event].each { |callback| callback.call(self, *args) }
  end
 end
 
 class Observed
   include Observable
-  def foo=(a_foo)
-    signal_event(:changed, @foo, a_foo)
-    @foo = a_foo
+  def foo=(value)
+    signal_event(:changed, @foo, value)
+    @foo = value
   end
 end
 
 observed = Observed.new
-observed.register(:changed) do | o, old, new |
-  puts "#{old} -> #{new}"
-end
+observed.register(:changed) { | o, old, new | puts "[#{o}] #{old} --(changed)--> #{new}" }
 
 observed.foo = 'Yukihiro'
 observed.foo = 'Matsumoto'
