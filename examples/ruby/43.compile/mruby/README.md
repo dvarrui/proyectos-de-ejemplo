@@ -30,3 +30,5 @@ Enlace de interés:
 * https://github.com/dabroz/mruby-simple-game-engine: This project is based on a talk I gave at Game Industry Conference 2016 in Poznań titled "Why (m)ruby should be your next scripting language?". This project implements a very basic component-based game engine. The backend is written in C++ and uses SFML for rendering. All game logic is in mruby scripts.
 * https://github.com/ruby-rcade/mruby-game-engine-example
 
+
+* Executing Ruby code with mruby: https://mruby.org/docs/articles/executing-ruby-code-with-mruby.html
