@@ -8,7 +8,14 @@ Pero tiene algunas características que nos permiten "simular" a un lenguaje fun
 * Funciones de primera clase y orden superior.
 * Funciones puras.
 
+# Paradigma funcional en Ruby
+
+Enlaces de interés:
+* [Functional Programming In Ruby (Complete Guide) - RubyGuides](https://www.rubyguides.com/2018/01/functional-programming-ruby/)
+
 ## TO-DO
+
 What the ampersand in front of &block means
 * URL: https://www.codewithjason.com/ampersand-ruby-block/
 * Vídeo: https://youtu.be/iqbOkV0nXCo
+
