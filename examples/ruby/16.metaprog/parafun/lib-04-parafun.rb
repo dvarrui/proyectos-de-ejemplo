@@ -1,4 +1,3 @@
-require 'pry'
 
 class Character
   attr_reader :name, :type

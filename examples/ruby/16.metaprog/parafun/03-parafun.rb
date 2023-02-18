@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative 'parafun-13-lib'
+require_relative "lib-03-parafun"
 
 obiwan = Character.new( name: 'Obiwan', type: 'jedi')
 maul = Character.new(name: 'Maul', type: 'sith')
