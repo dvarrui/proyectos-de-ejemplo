@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-puts "[INFO] lambda greet"
+puts "[INFO] lambda: greet(name)"
 #
 # Function: greet(name) = puts "Hello #{name"
 #
@@ -10,7 +10,7 @@ greet.call("Obiwan")
 greet["Yoda"]
 greet.==="Vader"
 
-puts "\n[INFO] lambda double"
+puts "\n[INFO] lambda: double(number)"
 #
 # Function:   double(x) = number * 2
 #
