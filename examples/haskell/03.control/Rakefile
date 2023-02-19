@@ -1,0 +1,7 @@
+name = "control"
+
+task :default do
+  system("rm *.o")
+  system("rm *.hi")
+  system("rm ??-#{name}")
+end
