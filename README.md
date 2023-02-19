@@ -16,5 +16,5 @@ El contenido se organiza del siguiente modo:
 
 # Otros proyectos relacionados
 
-Django:
-* [MVP - Minimum Viable Product](https://github.com/sdelquin/mvp): proyecto hecho con Django por `sdelquin`.
+* Libro [El programador mediocre](https://victorhck.gitbook.io/el-programador-mediocre/)
+* Django [MVP - Minimum Viable Product](https://github.com/sdelquin/mvp): proyecto hecho con Django por `sdelquin`.
