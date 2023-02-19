@@ -3,7 +3,7 @@
  */
 #include <stdio.h>
 
-#include "hola_mundo6b.c"
+#include "01-lib-saludar.c"
 
 int main() {
 	saludar(6);
