@@ -3,7 +3,9 @@
 # x = "Hello World" 	str
 # x = 20 	int
 # x = 20.5 	float
-# x = ["apple", "banana", "cherry"] 	list
+a = ["apple", "banana", "cherry"]
+print(type(a))
+print(a)
 
 # x = range(6) 	range
 x = range(6)
@@ -15,6 +17,7 @@ end
 # x = {"name" : "John", "age" : 36} 	dict
 x = { "name": "Obiwan", "age": 52 }
 print(type(x))
+print(x)
 
 # x = True 	bool
 x = True

@@ -2,6 +2,7 @@
 def type(x)
   key = x.class.to_s.to_sym
   types = {
+    Array: "list",
     FalseClass: "bool",
     Float: "float",
     Hash: "dict",
@@ -17,3 +18,4 @@ end
 def float(obj) = obj.to_f
 def int(obj) = obj.to_i
 def str(obj) = obj.to_s
+def list(obj) = obj.to_a
