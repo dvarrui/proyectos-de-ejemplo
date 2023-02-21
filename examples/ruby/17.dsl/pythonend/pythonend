@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 
-
 if ARGV.size.zero?
   # Open irb
   puts "Pythonend 0.1.0 (main, Feb 21 2023, 11:27:06) [GCC] on linux"
