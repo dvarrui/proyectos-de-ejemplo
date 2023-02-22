@@ -1,4 +1,4 @@
-#!/usr/bin/ruby
+#!/usr/bin/env crystal
 
 # Comentario
 print "Robot: "
