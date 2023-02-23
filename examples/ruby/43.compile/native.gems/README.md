@@ -2,7 +2,8 @@
 # Native gems
 
 Enlaces de interés:
-* https://notepad.onghu.com/2023/learning-by-reversing-s1-e1-native-gems/
+* Part 1 - This covers the background to the gem we explore: https://notepad.onghu.com/2023/learning-by-reversing-s1-e1-native-gems/
+* Part 2 - This goes into the details of how ruby loads the native gem and extension (and includes a nice sequence diagram of how all the bits happen together): https://notepad.onghu.com/2023/learning-by-reversing-s1-e2-native-gems/
 
 ## Requisitos
 
@@ -178,3 +179,4 @@ Done installing documentation for fast-polylines after 0 seconds
 ❯ gem list |grep fast
 fast-polylines (2.2.2.dev)
 ```
+
