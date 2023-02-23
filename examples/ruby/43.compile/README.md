@@ -1,11 +1,8 @@
 
 # README abou compile ruby
 
-https://t.co/5NPeRR2viY?s=35
-
-AppSignal Blog (https://t.co/5NPeRR2viY?s=35)
-How to Parse Arguments in Your Ruby C Extension | AppSignal Blog
-Let's explore two ways to set up a complex Ruby API written in C.
+* [AppSignal Blog](https://t.co/5NPeRR2viY?s=35) How to Parse Arguments in Your Ruby C Extension | Let's explore two ways to set up a complex Ruby API written in C.
+* [Ruby Inside](https://twitter.com/RubyInside/status/1482093670287425541?t=EM9fbDTKn7tL4Q5__h_dfg&s=09) RubyConf 2021: A History of Compiling Ruby - youtube.com/watch?v=Zg-1_7… #video
 
 ## traveling-ruby
 
