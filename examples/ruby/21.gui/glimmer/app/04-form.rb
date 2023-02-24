@@ -2,7 +2,7 @@
 require 'glimmer-dsl-libui'
 require "debug"
 
-class ConceptWindow
+class Window3
   include Glimmer
   Line = Struct.new(:type, :text)
   attr_accessor :name, :tags
@@ -20,6 +20,7 @@ class ConceptWindow
   end
 
   def init
+    create_menubar
     @window = window('Concept', 600, 600) {
       margined true
 
@@ -77,8 +78,42 @@ class ConceptWindow
     @entry_tags.text = @tags
     @window.show
   end
+
+  def create_menubar
+    menu("File") {
+      menu_item("Open") {
+        on_clicked do
+          @filepath = open_file
+          unless @filepath.nil?
+            puts @filepath
+          end
+        end
+      }
+
+      menu_item("Save") {
+        on_clicked do
+          puts "[DEBUG] savefile"
+        end
+      }
+
+      quit_menu_item {
+        on_clicked do
+          puts "Bye Bye"
+        end
+      }
+    }
+
+    menu("Help") {
+      menu_item("About") {
+        on_clicked do
+          message_box("Thanks you for using!", "https://rubygems.org/gems/")
+        end
+      }
+    }
+  end
+
 end
 
-w = ConceptWindow.new
+w = Window3.new
 w.init
 w.show
