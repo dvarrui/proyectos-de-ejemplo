@@ -61,6 +61,28 @@ Para el código nativo, hay dos partes para configurar:
 * Asegúrese de que el código fuente C esté disponible
 * Tener un `Makefile` que se usará cuando se instale la gema
 
+**Código fuente C**
+
+La gema fast_polylines es sencilla. Solo tiene un archivo de código fuente C. Los archivos fuente nativos se coloquen en el directorio ext del código fuente.
+* `fast_polylines.c`: Contiene todo el código fuente C.
+* `extconf.rb`: Al ejecutarlo se crea el `Makefile`.
+
+**Makefile**
+
+```
+require "mkmf"
+
+if ENV["DEBUG"]
+  warn "DEBUG MODE."
+  $CFLAGS << " " << %w(
+    -Wall
+    -ggdb
+    -DDEBUG
+    -pedantic
+  ) * " "
+end
+create_makefile "fast_polylines/fast_polylines"
+```
 
 ----
 
