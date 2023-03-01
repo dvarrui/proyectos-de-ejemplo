@@ -15,4 +15,4 @@ puts say
 # Error: undefined method '[]=' for String
 
 # Output "I LOVE RUBY"
-puts " #{say.upcase} " * 3
+puts "<#{say.upcase}> " * 3
