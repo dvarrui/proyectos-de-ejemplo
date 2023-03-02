@@ -84,14 +84,35 @@ end
 create_makefile "fast_polylines/fast_polylines"
 ```
 
-----
+## Instrucciones para la instalación
 
-Future posts are planned to go into details like:
-* The interface between Ruby and C
-* The Development Makefile and a Makefile that also works on Windows
-* Running the specs and the performance benchmark
-* Enhancements:
-- Providing an executable
-- A gem that also works on JRuby
-- Making the gem ractor friendly
-- Patching an existing gem rather than a new module
+```ruby
+# frozen_string_literal: true
+
+$LOAD_PATH.push File.expand_path("lib", __dir__)
+require "fast_polylines/version"
+
+Gem::Specification.new do |spec|
+  spec.name        = "fast-polylines"
+  spec.version     = FastPolylines::VERSION
+  spec.platform    = Gem::Platform::RUBY
+  spec.authors     = ["Cyrille Courtière", "Ulysse Buonomo"]
+  spec.email       = ["dev@klaxit.com"]
+  spec.homepage    = "https://github.com/klaxit/fast-polylines"
+  spec.summary     = "Fast & easy Google polylines"
+  spec.license     = "MIT"
+  spec.required_ruby_version = Gem::Requirement.new(">= 2.4.6")
+
+  spec.files = Dir["{lib,ext}/**/*.{rb,c}"] + %w(README.md CHANGELOG.md .yardopts)
+  spec.extensions = ["ext/fast_polylines/extconf.rb"]
+  spec.test_files = Dir["spec/**/*"] + %w(.rspec)
+  spec.require_paths = "lib"
+
+  spec.add_development_dependency("benchmark-ips", "~> 2.7")
+  spec.add_development_dependency("polylines", "~> 0.3")
+  spec.add_development_dependency("rspec", "~> 3.5")
+end
+```
+
+![](https://notepad.onghu.com/images/posts/lbr-gem/05.bits-resized.png)
+
