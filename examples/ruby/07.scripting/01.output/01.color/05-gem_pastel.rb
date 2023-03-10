@@ -1,46 +1,16 @@
 #!/usr/bin/env ruby
 
-require "pastel"
+require 'pastel'
 
 pastel = Pastel.new
 
-puts "=> Some examples:"
-puts pastel.red("Unicorns!")
-puts pastel.white.on_green.bold("Unicorns!")
-puts pastel.red("Unicorns") + " will rule " + pastel.green("the World!")
-puts pastel.red("Unicorns ", pastel.on_green("everywhere!"))
-puts pastel.red("Unicorns " + pastel.green("everywhere") + pastel.on_yellow("!"))
+puts pastel.bold('bold  ') + ' ' + pastel.dim('dim   ') + ' ' + pastel.italic('italic  ') + ' ' + pastel.underline('underline') + '  ' + pastel.inverse('inverse  ') + '  ' + pastel.strikethrough('strikethrough')
 
-puts "\n=> You can also predefine needed styles and reuse them:"
+puts pastel.red('red   ') + ' ' + pastel.green('green   ')  + ' ' + pastel.yellow('yellow   ') + ' ' + pastel.blue('blue   ') + ' ' + pastel.magenta('magenta   ') + ' ' + pastel.cyan('cyan   ') + ' ' + pastel.white('white')
 
-pastel = Pastel.new(eachline: "\n")
-error    = pastel.red.bold.detach
-warning  = pastel.yellow.detach
+puts pastel.bright_red('red   ') + ' ' + pastel.bright_green('green   ')  + ' ' + pastel.bright_yellow('yellow   ') + ' ' + pastel.bright_blue('blue   ') + ' ' + pastel.bright_magenta('magenta   ') + ' ' + pastel.bright_cyan('cyan   ') + ' ' + pastel.bright_white('white')
 
-puts error.("Error!")
-puts warning.("Warning")
 
-puts "\n=> Decorate and undecorate:"
-puts pastel.decorate("Unicorn", :green, :on_blue, :bold)
-puts pastel.undecorate("\e[32mfoo\e[0m \e[31mbar\e[0m")
+puts pastel.on_red('on_red') + ' ' + pastel.on_green('on_green') + ' ' + pastel.on_yellow('on_yellow') + ' ' + pastel.on_blue('on_blue') + ' ' + pastel.on_magenta('on_magenta') + ' ' + pastel.on_cyan('on_cyan') + ' ' + pastel.on_white('on_white')
 
-puts "\n=> Detach"
-notice = pastel.blue.bold.detach
-
-puts notice.call("Unicorns running 1")
-puts notice.("Unicorns running 2")
-puts notice["Unicorns running 3"]
-
-puts "\n=> Strip\nhiden line\n"
-puts pastel.strip("\e[1A\e[1m\e[34mbold blue text\e[0m")
-
-puts "\n=> Styles:"
-puts pastel.styles
-
-puts "\n=> Eachline"
-pastel = Pastel.new(eachline: "\n")
-puts pastel.red("foo\nbar")
-
-puts "\n=> Disable"
-pastel = Pastel.new(enabled: false)
-puts pastel.blue.bold("enable?=#{pastel.enabled?}")
+puts pastel.on_bright_red('on_red') + ' ' + pastel.on_bright_green('on_green') + ' ' + pastel.on_bright_yellow('on_yellow') + ' ' + pastel.on_bright_blue('on_blue') + ' ' + pastel.on_bright_magenta('on_magenta') + ' ' + pastel.on_bright_cyan('on_cyan') + ' ' + pastel.on_bright_white('on_white')
