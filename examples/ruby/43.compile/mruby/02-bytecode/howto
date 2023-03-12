@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+filename = File.basename(ARGV.first).split(".")[0]
+
+cmd = "mrbc -o #{filename}.mrb #{filename}.rb"
+puts "[compile]"
+puts "  #{cmd}"
+
+cmd = "ruby -b #{filename}.mrb"
+puts "[run]"
+puts "  #{cmd}"
