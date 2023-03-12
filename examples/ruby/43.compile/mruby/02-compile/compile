@@ -1,0 +1,6 @@
+# home/quigon/.rbenv/versions/mruby-3.1.0/include/mruby.h
+# gcc -std=c99 -Imruby/include hello.c -o hello /home/quigon/.rbenv/versions/mruby-3.1.0/lib/libmruby.a -lm
+
+INCLUDE=/home/quigon/.rbenv/versions/mruby-3.1.0
+LIB=/home/quigon/.rbenv/versions/mruby-3.1.0/lib/libmruby.a
+gcc -std=c99 -I$INCLUDE/include hello.c -o hello.exe $LIB -lm
