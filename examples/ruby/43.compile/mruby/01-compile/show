@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+find /home/quigon -name libmruby.a
+# /home/quigon/.rbenv/versions/mruby-3.1.0/lib/libmruby.a
+
