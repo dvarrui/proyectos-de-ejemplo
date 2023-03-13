@@ -2,17 +2,20 @@
 # mruby howto
 
 Enlace de interés:
-* [mruby-examples](https://github.com/rmosolgo/mruby-examples/blob/master/readme.md)
-* http://mruby.org/
-* [GitHub de mruby](https://github.com/mruby/mruby)
+* mruby web site: http://mruby.org/
+* mruby docs: https://mruby.org/docs/
 * [Executing Ruby code with mruby](http://mruby.org/docs/articles/executing-ruby-code-with-mruby.html)
+
+Examples:
+* [mruby-examples](https://github.com/rmosolgo/mruby-examples/blob/master/readme.md)
+* [GitHub de mruby](https://github.com/mruby/mruby)
 * [How to compile an mruby example? - Stack Overflow](https://stackoverflow.com/questions/19329146/how-to-compile-an-mruby-example)
 * [RubyConf 2019 - mruby/c](https://youtu.be/1VFPSHs3WvI): Running on Less Than 64KB RAM Microcontroller by HAMUSI Hitoshi I will show you an actual IoT product which uses one-chip-microcontr...
 
 # Ejemplo 1
 
-* `rbenv install mruby-2.1.0`, instalar **mruby** usando **rbenv**.
-* `mrbc demo.rb`, compilar el ejemplo **demo.rb**.
+* `rbenv install mruby-3.1.0`, instalar **mruby** usando **rbenv**.
+* `mrbc demo.rb`, compilar el ejemplo **demo.rb** a bytecode.
 * `ruby -b demo.mrb`, ejecutar **demo.mrb**.
 
 # ANEXO: Instalación directa de mruby
