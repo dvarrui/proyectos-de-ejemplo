@@ -4,6 +4,7 @@
 * EN - [Ruby Monstas](http://rubymonstas.org/), [Ruby For Beginners](http://ruby-for-beginners.rubymonstas.org/)
 * EN - [Poignant Ruby guide](http://poignant.guide/book/chapter-1.html)
 * [Comparing implementations of the Monkey language VIII: The Spectacular Interpreted Special (Ruby, Python and Lua)](https://medium.com/@mario.arias.c/comparing-implementations-of-the-monkey-language-viii-the-spectacular-interpreted-special-ruby-2f9e4ed2e660)
+* [Coursesity](https://t.co/b4defCHf0e?s=35) 50+ Free Ruby Courses for beginners [2023 MAR] Learn Ruby with free online courses and tutorials. Find free Ruby tutorials and courses and start learning Ruby. Ruby courses for all levels from beginners to advanced available for free.
 
 # Carbon
 
