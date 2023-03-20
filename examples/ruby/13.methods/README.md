@@ -14,3 +14,9 @@ Medium (https://medium.com/rubycademy/refine-and-using-methods-in-ruby-part-i-2a
 refine and using Methods in Ruby
 In this article, we’re going to explore the following to
 
+https://twitter.com/RubyLibHunt/status/1593727616388714496?t=qRZg_Muo0C0M2aFAC8yG1Q&s=35
+
+Twitter (https://twitter.com/RubyLibHunt/status/1593727616388714496?t=qRZg_Muo0C0M2aFAC8yG1Q&s=35)
+Ruby LibHunt
+refine and using Methods in Ruby https://t.co/FEPf7cwHJu
+

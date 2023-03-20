@@ -19,3 +19,13 @@ What the ampersand in front of &block means
 * URL: https://www.codewithjason.com/ampersand-ruby-block/
 * Vídeo: https://youtu.be/iqbOkV0nXCo
 
+https://twitter.com/jenny_codes/status/1593820269470253057?t=-jzHZgw-dQSwzvB8AQfI2w&s=35
+
+Twitter (https://twitter.com/jenny_codes/status/1593820269470253057?t=-jzHZgw-dQSwzvB8AQfI2w&s=35)
+Jenny Shih
+Here are my slides for the talk "Functional programming for fun and profit!!" at the wonderfully organized & inspiration overflowed @RubyConfMini. I'm honored to be part of it.
+
+Feel free to read it, travel it, discuss it–whatever produces fun and profits
+
+https://t.co/uiCTwvcar0
+
