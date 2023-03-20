@@ -1,1 +1,0 @@
-/home/quigon/proy/repos/lang.d/proyectos-de-ejemplo/examples/lang.rust/04.use_crate/target/debug/use_crate: /home/quigon/proy/repos/lang.d/proyectos-de-ejemplo/examples/lang.rust/04.use_crate/src/main.rs
