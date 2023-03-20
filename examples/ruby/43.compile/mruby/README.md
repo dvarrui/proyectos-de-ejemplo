@@ -6,6 +6,13 @@ Enlace de interés:
 * mruby docs: https://mruby.org/docs/
 * [Executing Ruby code with mruby](http://mruby.org/docs/articles/executing-ruby-code-with-mruby.html)
 
+https://www.reddit.com/r/ruby/comments/yo1mhs/understanding_the_mruby_programming_language_and/?utm_source=share&utm_medium=android_app&utm_name=androidcss&utm_term=14&utm_content=share_button
+
+reddit (https://www.reddit.com/r/ruby/comments/yo1mhs/understanding_the_mruby_programming_language_and/?utm_source=share&utm_medium=android_app&utm_name=androidcss&utm_term=14&utm_content=share_button)
+Understanding the MRuby programming language and how to integrate...
+I recently learned that Ruby has a lite version. By embedding it in a host, it is hackable. It resembl
+
+
 Examples:
 * [mruby-examples](https://github.com/rmosolgo/mruby-examples/blob/master/readme.md)
 * [GitHub de mruby](https://github.com/mruby/mruby)
