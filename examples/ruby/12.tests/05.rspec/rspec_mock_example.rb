@@ -1,3 +1,6 @@
+# Un mock espera que se llame a los métodos,
+# si no se llaman, la prueba fallará.
+
 require_relative "image_fliper"
 
 RSpec.describe "ImageFlipper" do
