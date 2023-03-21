@@ -1,4 +1,3 @@
-require "rspec"
 require_relative "image_fliper"
 
 RSpec.describe "ImageFlipper" do
