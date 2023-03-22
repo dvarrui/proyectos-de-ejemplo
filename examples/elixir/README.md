@@ -8,6 +8,7 @@
 * Elixir para ciencia de datos: https://book.elixir4datascience.com/1-welcome.html
 
 * https://foroayuda.es/son-las-variables-de-elixir-realmente-inmutables/
+* [Elixir el lenguaje de programación](https://codigofacilito.com/articulos/elixir)
 
 ## Vídeos:
 

@@ -1,5 +1,6 @@
 
-* Language ranking: https://plrank.com/
+* [Language ranking](https://plrank.com/)
+* [Language Comparison Table - Rosetta Code](https://rosettacode.org/wiki/Language_Comparison_Table)
 
 * Seis juegos educativos gratis para aprender a programar (en docenas de lenguajes): https://www.genbeta.com/desarrollo/seis-juegos-educativos-gratis-para-aprender-a-programar-docenas-lenguajes
 
