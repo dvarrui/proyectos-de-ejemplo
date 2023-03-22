@@ -1,6 +1,10 @@
 
 # Elixir
 
+Introduction - The Elixir programming language https://elixir-lang.org/getting-started/introduction.html
+Recursion - The Elixir programming language https://elixir-lang.org/getting-started/recursion.html
+Processes - The Elixir programming language https://elixir-lang.org/getting-started/processes.html
+
 ## Docs 
 
 * Introduction - The Elixir programming language: https://elixir-lang.org/getting-started/introduction.html
@@ -13,6 +17,7 @@
 ## Vídeos:
 
 * https://www.youtube.com/watch?v=2uvScmCrouk
+
 
 ## Enlaces de interés:
 
