@@ -5,6 +5,29 @@
 * Comments can be used to make the code more readable.
 * Comments can be used to prevent execution when testing code.
 
+```
+(Código sostenible - Página 280 - Carlos Blé)
+
+Hoy en día, los comentarios ya no son necesarios para explicar lo que hace el código,
+sino para contar aquellas cosas que el propio código no puede contar por sí mismo.
+
+Tenemos todas las herramientas necesarias para escribir código autoexplicativo, que se
+pueda entender como un manual.
+
+La fuente de la verdad está en el código, no en los comentarios
+(porque no se ejecutan y siempre compilan)
+
+...los comentarios suelen estar obsoletos o ser imprecisos/inútiles, haciéndome
+perder tiempo o confundiéndome más todavía.
+
+Los comentarios se quedan obsoletos muy pronto; con el paso del tiempo, el código
+cambia, pero nadie se toma la molestia de actualizar el comentario.
+
+(Página 282)
+
+Cuando un API es buena, no necesitamos leer su documentación, se cae de maduro el uso.
+```
+
 ## Creating a Comment
 
 Comments starts with a #, and Ruby will ignore them. It is also recommended to leave a space after the `#` symbol.:
