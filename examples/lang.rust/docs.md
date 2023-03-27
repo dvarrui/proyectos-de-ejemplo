@@ -5,6 +5,7 @@
 * Introduction - The Rustonomicon: https://doc.rust-lang.org/nomicon/. The Dark Arts of Advanced and Unsafe Rust Programming
 * Welcome to Comprehensive Rust - Comprehensive Rust: https://google.github.io/comprehensive-rust/
 * Rust for Rustaceans.pdf: https://raw.githubusercontent.com/rustaccato/road-to-being-master-rustacean/main/Rust%20for%20Rustaceans.pdf
+* Curso de programación de aprender Rust: Tutorial interactivo de lenguaje Rust en Replit: https://www.freecodecamp.org/espanol/news/rust-en-replit/#proyecto-1-construir-una-calculadora-de-cli-en-rust
 
 ## Design Patterns in Rust 
 
