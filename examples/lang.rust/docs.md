@@ -4,10 +4,11 @@
 + https://wyhaines.io/peeking-into-rust
 * Introduction - The Rustonomicon: https://doc.rust-lang.org/nomicon/. The Dark Arts of Advanced and Unsafe Rust Programming
 * Welcome to Comprehensive Rust - Comprehensive Rust: https://google.github.io/comprehensive-rust/
+* Rust for Rustaceans.pdf: https://raw.githubusercontent.com/rustaccato/road-to-being-master-rustacean/main/Rust%20for%20Rustaceans.pdf
 
-## Design Patterns in Rust: An 
+## Design Patterns in Rust 
 
-* Introduction to the Builder Pattern (https://blog.ediri.io/design-patterns-in-rust-an-introduction-to-the-builder-pattern) In this blog article, I want to talk about a design pattern implementation in Rust: The Builder Pattern. But before we start, let us take the time to understand what design patterns are and why we should use them in our projects.
+* An Introduction to the Builder Pattern (https://blog.ediri.io/design-patterns-in-rust-an-introduction-to-the-builder-pattern) In this blog article, I want to talk about a design pattern implementation in Rust: The Builder Pattern. But before we start, let us take the time to understand what design patterns are and why we should use them in our projects.
 
 ## Github
 
@@ -15,6 +16,3 @@
 
 Contribute to pwnwriter/saika development by creating an account on GitHub.
 
-## Companies Who Use Erlang
-
-* Whose using Erlang? https://t.co/Ai1EzfB5K8?s=35

@@ -27,3 +27,7 @@ Processes - The Elixir programming language https://elixir-lang.org/getting-star
 * GitHub - h4cc/awesome-elixir: A curated list of amazingly awesome Elixir and Erlang libraries, resources and shiny things. Updates:
 * https://github.com/h4cc/awesome-elixir#natural-language-processing-nlp
 
+## Companies Who Use Erlang
+
+* Whose using Erlang? https://t.co/Ai1EzfB5K8?s=35
+
