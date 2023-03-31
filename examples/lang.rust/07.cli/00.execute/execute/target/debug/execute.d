@@ -1,1 +1,0 @@
-/home/david/proy/repos/lang.d/proyectos-de-ejemplo/examples/lang.rust/07.scripting/00.execute/execute/target/debug/execute: /home/david/proy/repos/lang.d/proyectos-de-ejemplo/examples/lang.rust/07.scripting/00.execute/execute/src/main.rs
