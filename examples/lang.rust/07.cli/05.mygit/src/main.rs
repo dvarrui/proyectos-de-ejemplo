@@ -1,8 +1,51 @@
-use std::env::args;
+use std::env;
+use std::fs::File;
+use std::io::{self, BufReader, Read};
 
-fn main() {
-    println!("[mygit] Running");
+fn main() -> io::Result<()> {
+    let args: Vec<String> = env::args().collect();
+    if args.len() != 2 {
+        println!("Commands:");
+        println!("  mygit init            # Initialize default repo files");
+        println!("  mygit pull            # Pull all repos into current folder");
+        println!("  mygit status          # Show local status");
+        println!("  mygit test            # Test server connection");
+        println!("  mygit version         # Show version");
+        return Ok(());
+    }
+    let file = File::open(&args[1])?;
+    let mut reader = BufReader::new(file);
 
-    let pattern = args().nth(1).expect("no pattern given");
-    let path = args().nth(2).expect("no path given");
+    let mut buffer = [0; 16];
+    let mut offset = 0;
+    while let Ok(bytes_read) = reader.read(&mut buffer) {
+        if bytes_read == 0 {
+            break;
+        }
+        print!("{:08x}  ", offset);
+        for i in 0..bytes_read {
+            print!("{:02x} ", buffer[i]);
+            if i % 8 == 7 {
+                print!(" ");
+            }
+        }
+        for i in bytes_read..16 {
+            print!("   ");
+            if i % 8 == 7 {
+                print!(" ");
+            }
+        }
+        print!(" ");
+        for i in 0..bytes_read {
+            let c = buffer[i] as char;
+            if c.is_ascii_graphic() {
+                print!("{}", c);
+            } else {
+                print!(".");
+            }
+        }
+        println!();
+        offset += bytes_read;
+    }
+    Ok(())
 }
