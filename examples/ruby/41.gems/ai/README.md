@@ -10,7 +10,7 @@ Enlaces de interés:
 
 * Nos creamos una cuenta para poder usar el servicio (https://chat.openai.com/chat)
 * A continuación necesitamos generar un API KEY o TOKEN para poder consumir el servicio desde nuestro programa (https://openai.com/api/)
-* Pulsamos en `Create new secret key` y guardamos el TOKEN en un fichero.
+* Pulsamos en `Create new secret key` y guardamos el TOKEN en un fichero llamado `private.token`.
 * Instalamos la gema de Ruby **ruby-openai** (`gem install ruby-openai`).
 
 

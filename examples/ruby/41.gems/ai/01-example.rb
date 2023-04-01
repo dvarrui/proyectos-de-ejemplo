@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require "ruby/openai"
 
-token = `cat token`.strip
+token = `cat private.token`.strip
 client = OpenAI::Client.new(access_token: token)
 
 prompt = 'What is ruby metaprogramming?'
