@@ -1,16 +1,20 @@
 #!/usr/bin/env ruby
-require "ruby/openai"
-
+require "openai"
 token = `cat private.token`.strip
-client = OpenAI::Client.new(access_token: token)
 
-prompt = 'What is ruby metaprogramming?'
+OpenAI.configure do |config|
+    config.access_token = token
+    # config.organization_id = ENV.fetch("OPENAI_ORGANIZATION_ID") # Optional
+    config.uri_base = "https://oai.hconeai.com/" # Optional
+    config.request_timeout = 240 # Optional
+end
+client = OpenAI::Client.new
 
-response = client.completions(
+response = client.chat(
     parameters: {
-      model: "text-davinci-003",
-      prompt: prompt,
-      max_tokens: 2000
+        model: "gpt-3.5-turbo", # Required.
+        messages: [{ role: "user", content: "Hello!"}], # Required.
+        temperature: 0.7,
     })
-
-puts response['choices'][0]['text']
+puts response.dig("choices", 0, "message", "content")
+# => "Hello! How may I assist you today
