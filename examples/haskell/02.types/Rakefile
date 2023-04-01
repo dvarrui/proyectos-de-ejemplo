@@ -1,6 +1,8 @@
 require "fileutils"
 
 task :default do
-  files = Dir.glob("*") - Dir.glob("*.hs")
-  FileUtils.rm files
+  keep = [ "Rakefile" ] + Dir.glob("*.hs")
+  remove = Dir.glob("*") - keep
+  puts remove
+  FileUtils.rm remove
 end

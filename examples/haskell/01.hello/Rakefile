@@ -1,7 +1,8 @@
-name = "hello"
+require "fileutils"
 
 task :default do
-  system("rm *.o")
-  system("rm *.hi")
-  system("rm ??-#{name}")
+  keep = [ "Rakefile" ] + Dir.glob("*.hs")
+  remove = Dir.glob("*") - keep
+  puts remove
+  FileUtils.rm remove
 end
