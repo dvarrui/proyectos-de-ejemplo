@@ -2,4 +2,4 @@
 
 # Comentario
 print "Robot: "
-puts  "Hola persona!"
+puts  "Hello human!"
