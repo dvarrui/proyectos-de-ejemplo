@@ -1,13 +1,14 @@
 #!/usr/bin/ruby
 
-def greet(*names)
- case names.length
- when 0
-   "How sad, nobody wants to hear my talk."
- when 1
-   "Hello #{names}. At least one wants to hear ab out ruby."
- when 2..5
-   "Hello #{names.join(', ')}. Good that all of you are interested."
+edad = 20
+
+case edad
+ when 0..6
+   puts "Niño"
+ when 12..18
+   puts "Adolescente"
+ when 18..30
+   puts "Joven"
  when 6..12
    "#{names.length} students. Thats perfect. Welcome to ruby!"
  else
