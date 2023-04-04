@@ -16,8 +16,6 @@ ARGV[1..-1].each do |filename|
     diff_hist = (ref_hist - sample_hist) ** 2
     diff = diff_hist.avg * diff_hist.width * diff_hist.height
 
-    if diff > 100
-        puts "#{filename}, #{diff}"
-    end
+    puts "#{filename}\t#{diff}"
 end
 
