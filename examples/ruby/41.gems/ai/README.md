@@ -5,6 +5,7 @@ Enlaces de interés:
 * [How to integrate Ruby with OpenAI GPT-3](https://kanehooper.hashnode.dev/how-to-integrate-ruby-with-openai-gpt-3)
 * [Código fuente GitHub](https://github.com/alexrudall/ruby-openai)
 * Get your API key from https://beta.openai.com/account/api-keys
+* [rafaover/pleasegpt](https://github.com/rafaover/pleasegpt) A Ruby gem that provides a simple wrapper around the OpenAI API. It allows you to generate natural language text based on a given prompt.
 
 ## Preparativos
 
