@@ -5,10 +5,21 @@ user = "vagrant"
 pass = "vagrant"
 host = "192.168.1.16"
 
-puts "==> Open SSH session wiht #{host}"
-
-Net::SSH.start( host.to_s, user.to_s, password: pass.to_s ) do |ssh|
-  puts ssh.exec!("hostname")
+def execute_remote_cmd(cmd, ssh)
+  output = ssh.exec!(cmd)
+  puts "  Execute : #{cmd}"
+  puts "  Output  : #{output}"
+  puts "  Status  : #{output.exitstatus}\n\n"
 end
 
-puts "==> Close session"
+puts "==> SSH open #{host}"
+
+Net::SSH.start( host.to_s, user.to_s, password: pass.to_s ) do |ssh|
+  cmd = "hostname"
+  execute_remote_cmd(cmd, ssh)
+
+  cmd = "sl"
+  execute_remote_cmd(cmd, ssh)
+end
+
+puts "==> SSH close"
