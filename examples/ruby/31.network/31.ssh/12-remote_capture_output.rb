@@ -3,9 +3,9 @@ require "net/ssh"
 
 user = "vagrant"
 pass = "vagrant"
-host = "192.168.1.95"
+host = "192.168.1.16"
 
-def remote_exec(cmd, ssh)
+def remote_exec_cmd(cmd, ssh)
   # capture only stdout matching a particular pattern
   stdout = ""
   stderr = ""
@@ -19,10 +19,13 @@ def remote_exec(cmd, ssh)
   puts
 end
 
-puts "==> SSH #{host} ..."
-Net::SSH.start( host.to_s, user.to_s, :password => pass.to_s ) do |ssh|
-
-  cmds = [ "pwd", "whoami", "kk", "ping -c 1 1.1.1", "ping -c 1 192.168.1.69" ]
-  cmds.each { |cmd| remote_exec(cmd, ssh) }
+def remote_exec_cmds(cmds, host, user, pass)
+  puts "==> Open SSH with #{host}"
+  Net::SSH.start( host.to_s, user.to_s, :password => pass.to_s ) do |ssh|
+    cmds.each { |cmd| remote_exec_cmd(cmd, ssh) }
+  end
+  puts "==> Close session"
 end
-puts "==> Logging out..."
+
+cmds = [ "pwd", "whoami", "kk", "ping -c 1 1.1.1", "ping -c 1 192.168.1.69" ]
+remote_exec_cmds(cmds, host, user, pass)
