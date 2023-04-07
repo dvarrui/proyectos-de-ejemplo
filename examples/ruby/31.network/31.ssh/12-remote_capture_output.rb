@@ -3,19 +3,22 @@ require "net/ssh"
 
 user = "vagrant"
 pass = "vagrant"
-host = "192.168.1.16"
+host = "192.168.1.41"
 
 def remote_exec_cmd(cmd, ssh)
   # capture only stdout matching a particular pattern
   stdout = ""
   stderr = ""
-  ssh.exec!(cmd) do |channel, stream, data|
+  ret = ""
+  ret = ssh.exec!(cmd) do |channel, stream, data|
     stdout << data if stream == :stdout
     stderr << data if stream == :stderr
   end
+  #   puts "  Status  : #{output.exitstatus}\n\n"
   puts "  CMD: #{cmd}"
   puts "  OUT: #{stdout}"
   puts "  ERR: #{stderr}"
+  puts "  RET: #{ret.class}" #exitstatus}"
   puts
 end
 
