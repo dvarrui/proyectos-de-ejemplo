@@ -16,12 +16,15 @@ end
 
 puts "==> SSH open #{host}"
 
-Net::SSH.start( host.to_s, user.to_s, password: pass.to_s ) do |ssh|
-  cmd = "hostname"
-  execute_remote_cmd(cmd, ssh)
+# Net::SSH.start( host.to_s, user.to_s, password: pass.to_s ) do |ssh|
+#   cmd = "id vagrant"
+#   execute_remote_cmd(cmd, ssh)
+#   cmd = "id vader"
+#   execute_remote_cmd(cmd, ssh)
+# end
 
-  cmd = "sl"
-  execute_remote_cmd(cmd, ssh)
-end
+ssh = Net::SSH.start( host.to_s, user.to_s, password: pass.to_s )
+cmds = ["id vader", "id vagrant", "rmdir kk", "kk"]
+cmds.each { |cmd| execute_remote_cmd(cmd, ssh) }
 
 puts "==> SSH close"

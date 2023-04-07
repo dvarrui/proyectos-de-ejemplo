@@ -7,18 +7,18 @@ host = "192.168.1.41"
 
 def remote_exec_cmd(cmd, ssh)
   # capture only stdout matching a particular pattern
-  stdout = ""
-  stderr = ""
+  str_out = ""
+  str_err = ""
   ret = ""
   ret = ssh.exec!(cmd) do |channel, stream, data|
-    stdout << data if stream == :stdout
-    stderr << data if stream == :stderr
+    str_out << data if stream == :stdout
+    str_err << data if stream == :stderr
   end
   #   puts "  Status  : #{output.exitstatus}\n\n"
   puts "  RET: #{ret.class}" #exitstatus}"
   puts "  CMD: #{cmd}"
-  puts "  OUT: #{stdout}"
-  puts "  ERR: #{stderr}"
+  puts "  OUT: #{str_out}"
+  puts "  ERR: #{str_err}"
   puts
 end
 
@@ -30,5 +30,5 @@ def remote_exec_cmds(cmds, host, user, pass)
   puts "==> Close session"
 end
 
-cmds = [ "pwd", "whoami", "kk", "ping -c 1 1.1.1", "ping -c 1 192.168.1.69" ]
+cmds = [ "id vagrant", "id vader", "rmdir kk", "kk", "ping -c 1 1.1.1", "ping -c 1 192.168.1.69" ]
 remote_exec_cmds(cmds, host, user, pass)

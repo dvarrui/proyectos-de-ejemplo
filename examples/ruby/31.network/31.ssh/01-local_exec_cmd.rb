@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-cmds = ["ls" , "sl"]
+cmds = ["id root" , "id vader"]
 
 cmds.each do |cmd|
   puts "==> Executing: #{cmd}"
