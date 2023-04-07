@@ -15,10 +15,10 @@ def remote_exec_cmd(cmd, ssh)
     stderr << data if stream == :stderr
   end
   #   puts "  Status  : #{output.exitstatus}\n\n"
+  puts "  RET: #{ret.class}" #exitstatus}"
   puts "  CMD: #{cmd}"
   puts "  OUT: #{stdout}"
   puts "  ERR: #{stderr}"
-  puts "  RET: #{ret.class}" #exitstatus}"
   puts
 end
 
