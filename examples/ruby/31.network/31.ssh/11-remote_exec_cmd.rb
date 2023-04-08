@@ -4,7 +4,7 @@ require "debug"
 
 user = "vagrant"
 pass = "vagrant"
-host = "192.168.1.41"
+host = "192.168.1.16"
 
 def execute_remote_cmd(cmd, ssh)
   output = ssh.exec!(cmd)

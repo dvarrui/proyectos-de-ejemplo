@@ -3,7 +3,7 @@ require "net/ssh"
 
 user = "vagrant"
 pass = "vagrant"
-host = "192.168.1.41"
+host = "192.168.1.16"
 
 def remote_exec_cmd(cmd, ssh)
   # capture only stdout matching a particular pattern
