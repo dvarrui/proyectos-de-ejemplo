@@ -1,2 +1,2 @@
-game/target
-game/*.lock
+**/target
+**/*.lock
