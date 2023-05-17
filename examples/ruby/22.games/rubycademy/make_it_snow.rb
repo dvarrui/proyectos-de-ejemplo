@@ -1,15 +1,27 @@
 #!/usr/bin/env ruby
 
 def clear_screen = puts "\033[2J"
-def move_cursor(x, y) = print "\033[#{y},#{x}H"
+def move_cursor(x, y) = print "\033[#{y};#{x}H"
 def move_cursor_top_left = move_cursor(0, 0)
 
 trap('SIGINT') { puts "Bye!"; exit! }
 
 total_width = `stty size`.scan(/\d+/)[1].to_i
-snowflakes_position = {}
+snowflake_positions = {}
 
+clear_screen
 loop do
-  sleep 2
+  snowflake_positions[rand(total_width)] = 0
+
+  snowflake_positions.each do |x, y|
+    snowflake_positions[x] += 1
+    move_cursor(x, y)
+    print " "
+    move_cursor(x, y + 1)
+    print "*"
+    
+  end
+  move_cursor_top_left
+  sleep 0.2
 end
 
