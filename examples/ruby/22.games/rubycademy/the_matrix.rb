@@ -10,7 +10,8 @@ trap('SIGINT') { puts "Bye!"; exit! }
 
 total_width = `stty size`.scan(/\d+/)[1].to_i
 snowflake_positions = {}
-colors = %I(red green blue magenta cyan)
+colors = %I(green light_green white)
+chars = (33..126).to_a + Array.new(100, " ")
 
 clear_screen
 loop do
@@ -18,10 +19,9 @@ loop do
 
   snowflake_positions.each do |x, y|
     snowflake_positions[x] += 1
-    move_cursor(x, y)
-    print " "
     move_cursor(x, y + 1)
-    print "*".send(colors.sample)
+    c = chars.sample.chr
+    print c.to_s.send(colors.sample)
   end
   move_cursor_top_left
   sleep 0.1
