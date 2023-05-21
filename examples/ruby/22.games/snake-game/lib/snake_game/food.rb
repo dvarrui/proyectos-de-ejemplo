@@ -1,6 +1,4 @@
 
-require 'pry'
-
 class Food
   attr_accessor :window, :points, :symbol, :x, :y
 
