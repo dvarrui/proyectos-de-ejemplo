@@ -24,4 +24,16 @@ positions = [
 ]
 
 loop do
+  clear_screen
+  head = positions.last
+  positions[0..-2].each do |x, y|
+    move_cursor(x, y)
+    print block
+  end
+
+  move_cursor *head
+  print head_block
+
+  move_cursor_top_left
+  sleep 0.2
 end
