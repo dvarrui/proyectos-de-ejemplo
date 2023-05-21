@@ -24,13 +24,13 @@ positions = [
   [total_width/2 + 3, total_height/2],
 ]
 
-$direction = "d"
+$direction = "C"
 Thread.new do
   STDIN.noecho do |io|
-    while c = io.getch.tap { |char| exit(1) if char == "\e" }
-      if %w(a d).include?($direction) && %w(w s).include?(c.chr)
+    while c = io.getch.tap { |char| exit(1) if char == "\u0003" }
+      if %w(A B).include?($direction) && %w(C D).include?(c.chr)
         $direction = c.chr
-      elsif %w(w s).include?($direction) && %w(a d).include?(c.chr)
+      elsif %w(C D).include?($direction) && %w(A B).include?(c.chr)
         $direction = c.chr
       end
     end
@@ -41,10 +41,10 @@ loop do
   x, y = positions.last
   positions.push(
     case $direction
-    when "w" then y.positive? ? [x, y-1] : [x, total_height]
-    when "s" then y < total_height ? [x, y+1] : [x, 0]
-    when "a" then x.positive? ? [x-1, y] : [total_width, y]
-    when "d" then x < total_width ? [x+1, y] : [0, y]
+    when "A" then y.positive? ? [x, y-1] : [x, total_height]
+    when "B" then y < total_height ? [x, y+1] : [x, 0]
+    when "D" then x.positive? ? [x-1, y] : [total_width, y]
+    when "C" then x < total_width ? [x+1, y] : [0, y]
     end
     )
   positions.shift
