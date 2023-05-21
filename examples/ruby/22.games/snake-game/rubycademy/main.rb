@@ -16,6 +16,9 @@ def total_width = @total_width ||= `stty size`.scan(/\d+/)[1].to_i
 
 block = "#".red.on_light_white
 head_block = "#".light_white.on_red
+food = "*".on_yellow
+food_x, food_y = [ rand(2..total_width-2), rand(2..total_height-2)]
+score = 0
 
 positions = [
   [total_width/2, total_height/2],
@@ -47,10 +50,16 @@ loop do
     when "C" then x < total_width ? [x+1, y] : [0, y]
     end
     )
-  positions.shift
+
+  head = positions.last
+  if head[0] == food_x && head[1] == food_y
+    food_x, food_y = [ rand(2..total_width-2), rand(2..total_height-2)]
+    score += 1
+  else
+    positions.shift
+  end
 
   clear_screen
-  head = positions.last
   positions[0..-2].each do |x, y|
     move_cursor(x, y)
     print block
@@ -60,6 +69,14 @@ loop do
   move_cursor *head
   print head_block
 
-  move_cursor_top_left
+  move_cursor food_x, food_y
+  print food
+
+  move_cursor 0, 0
+  print "Score:#{score}"
+  move_cursor total_width,0
   sleep 0.1
 end
+
+clear_screen
+puts "Game over! Your score: #{score.to_s.red}"
