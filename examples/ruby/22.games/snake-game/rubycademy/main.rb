@@ -28,7 +28,11 @@ $direction = "d"
 Thread.new do
   STDIN.noecho do |io|
     while c = io.getch.tap { |char| exit(1) if char == "\e" }
-      $direction = c.chr
+      if %w(a d).include?($direction) && %w(w s).include?(c.chr)
+        $direction = c.chr
+      elsif %w(w s).include?($direction) && %w(a d).include?(c.chr)
+        $direction = c.chr
+      end
     end
   end
 end
