@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-require 'pry-byebug'
 
 class Game
   attr_accessor :rooms
