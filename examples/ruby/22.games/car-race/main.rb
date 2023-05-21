@@ -16,7 +16,9 @@ colors = %I(red green blue magenta cyan)
 
 clear_screen
 loop do
-  road_positions.push(road_positions.last + 1 - rand(3))
+  new_road_position = road_positions.last + 1 - rand(3)
+  new_road_position = road_positions.last if new_road_position < 10 || new_road_position > total_width - 10
+  road_positions.push(new_road_position)
   road_positions.shift
 
   road_positions.reverse.each_with_index do |x, y|
