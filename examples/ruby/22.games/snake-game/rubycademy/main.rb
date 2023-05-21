@@ -4,6 +4,7 @@
 
 require "io/console"
 require "colorize"
+require "debug"
 
 # micro-framework to manipulate the cursor
 
@@ -23,7 +24,27 @@ positions = [
   [total_width/2 + 3, total_height/2],
 ]
 
+$direction = "d"
+Thread.new do
+  STDIN.noecho do |io|
+    while c = io.getch.tap { |char| exit(1) if char == "\e" }
+      $direction = c.chr
+    end
+  end
+end
+
 loop do
+  x, y = positions.last
+  positions.push(
+    case $direction
+    when "w" then y.positive? ? [x, y-1] : [x, total_height]
+    when "s" then y < total_height ? [x, y+1] : [x, 0]
+    when "a" then x.positive? ? [x-1, y] : [total_width, y]
+    when "d" then x < total_width ? [x+1, y] : [0, y]
+    end
+    )
+  positions.shift
+
   clear_screen
   head = positions.last
   positions[0..-2].each do |x, y|
@@ -31,9 +52,10 @@ loop do
     print block
   end
 
+  # binding.break
   move_cursor *head
   print head_block
 
   move_cursor_top_left
-  sleep 0.2
+  sleep 0.1
 end
