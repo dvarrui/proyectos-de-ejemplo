@@ -52,6 +52,8 @@ loop do
     )
 
   head = positions.last
+  break if positions[0..-2].any? { |x, y| head[0] == x && head[1] == y }
+
   if head[0] == food_x && head[1] == food_y
     food_x, food_y = [ rand(2..total_width-2), rand(2..total_height-2)]
     score += 1
@@ -79,4 +81,5 @@ loop do
 end
 
 clear_screen
+move_cursor_top_left
 puts "Game over! Your score: #{score.to_s.red}"
