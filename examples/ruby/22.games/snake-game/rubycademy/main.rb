@@ -75,7 +75,7 @@ loop do
   move_cursor 0, 0
   print "Score:#{score}"
   move_cursor total_width,0
-  sleep 0.1
+  sleep 0.05
 end
 
 clear_screen
