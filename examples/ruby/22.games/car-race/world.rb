@@ -19,7 +19,8 @@ class World
 
   def render
     @road.reverse.each_with_index do |x, y|
-      @screen.show x, y, "#          #".cyan
+      text = "*".on_green + "             " + "*".on_green
+      @screen.show x, y, text
     end
   end
 end

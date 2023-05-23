@@ -1,18 +1,24 @@
 #!/usr/bin/env ruby
 
-require "colorize"
 require_relative "screen"
-require_relative "world"
+require_relative "level"
 
 trap('SIGINT') { puts "Bye!"; exit! }
 
 screen = Screen.new
-world = World.new(screen)
+level = Level.new(screen)
 
 screen.clear
+timestamp = Time.now
+
 loop do
-  world.update
-  world.render
+  delta = Time.new - timestamp
+  timestamp = Time.new
+
+  level.update(delta)
+  level.render
+
   screen.move_top_left
-  sleep 0.1
+  wait = 0.2
+  sleep(wait - delta) if delta < wait
 end
