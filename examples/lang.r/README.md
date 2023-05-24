@@ -1,0 +1,2 @@
+
+zypper in rstudio-desktop
