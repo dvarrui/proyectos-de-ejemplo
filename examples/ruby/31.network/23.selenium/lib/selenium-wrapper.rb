@@ -9,7 +9,9 @@ class SeleniumWrapper
     @url = url
     # @driver = Selenium::WebDriver.for :firefox
     options = Selenium::WebDriver::Firefox::Options.new
-    options.headless!
+    # options.headless!
+    options.add_argument('-headless')
+
     @driver = Selenium::WebDriver.for(:firefox, capabilities: [options])
     @driver.get @url
     @driver.manage.timeouts.implicit_wait = 30
