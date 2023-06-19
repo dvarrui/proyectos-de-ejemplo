@@ -19,7 +19,7 @@ class Parser
         return
       end
     end
-    @indexes << 999999
+    @indexes << -1
   end
 end
 
