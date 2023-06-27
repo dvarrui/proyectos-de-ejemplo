@@ -8,7 +8,7 @@ urls = %w[
   https://i.ebayimg.com/images/g/rbIAAOSwojpgyQz1/s-l500.jpg
   https://www.nba.com
   private.bin
-  private.jpeg
+  private.png
   private.rb
   private.xml
   private.txt
@@ -18,7 +18,7 @@ urls = %w[
 
 urls.each do |url|
   flag = "?"
-  if url.start_with? "http"
+  if url.start_with? "https://"
     flag = "U"
     result = Net::HTTP.get(URI.parse(url))
   else
