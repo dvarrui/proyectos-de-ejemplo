@@ -8,7 +8,7 @@ urls = %w[
   https://i.ebayimg.com/images/g/rbIAAOSwojpgyQz1/s-l500.jpg
   https://www.nba.com
   private.bin
-  private.png
+  private.jpeg
   private.rb
   private.xml
   private.txt
