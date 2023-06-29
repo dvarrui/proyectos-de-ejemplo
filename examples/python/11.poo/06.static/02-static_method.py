@@ -9,10 +9,10 @@ class Person:
 
     @staticmethod
     def class_method():
-        print('Inside class method ')
+        print('Inside class method: rol=')
 
     def instance_method(self):
-        print('Inside instance method ' + self.name + "," + self.rol)
+        print('Inside instance method: name=' + self.name + ", rol=" + self.rol)
 
 # call static method
 Person.class_method()

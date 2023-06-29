@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 class Person
   @@country = 'Spain'
 
@@ -22,7 +24,6 @@ class Person
 end
 
 Person.imfrom # class method. Not instance method.
-              # Ruby may invoke class methods without instance
 Person.talk   # class method. Not instance method.
 
 # Python call this static method.
