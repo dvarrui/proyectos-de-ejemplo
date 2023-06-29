@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 class Person
   def initialize(name, age)
     @name = name
@@ -13,6 +14,8 @@ class Person
   end
 end
 
-p = Person.new('Tomas', 44)
+p = Person.new('Yoda', 900)
 p.greet
-puts p # Call method to_s to convert object to String
+puts p                      # Call method to_s to convert object to String
+
+Person.new('Obiwan', 53).greet
