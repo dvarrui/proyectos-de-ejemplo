@@ -9,7 +9,7 @@ webs =  %w[
   https://www.nba.com
 ]
 
-urls = webs + Dir.glob("private")
+urls = webs + Dir.glob("private*")
 
 urls.each do |url|
   flag = "?"
