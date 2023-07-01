@@ -4,17 +4,12 @@ require "mimemagic"
 require "uri"
 require "net/http"
 
-urls = %w[
-  https://i.ebayimg.com/images/g/rbIAAOSwojpgyQz1/s-l500.jpg
+webs =  %w[
+  https://4.bp.blogspot.com/_Ql-01uFvGJM/TOLZImYREeI/AAAAAAAACYE/t5h1rwThssU/s1600/cwObiWanKenobi_B_4C.jpg
   https://www.nba.com
-  private.bin
-  private.jpeg
-  private.rb
-  private.xml
-  private.txt
-  private.text
-  private
 ]
+
+urls = webs + Dir.glob("private")
 
 urls.each do |url|
   flag = "?"
