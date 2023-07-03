@@ -4,7 +4,7 @@
 class Person:
     rol = "jedi"
 
-    def __init__(self, name):
+    def __init__(self, name='unkown'):
         self.name = name
 
     @staticmethod
@@ -14,10 +14,11 @@ class Person:
     def instance_method(self):
         print('Inside instance method: name=' + self.name + ", rol=" + self.rol)
 
-# call static method
+print('=== call static method ===')
 Person.class_method()
+Person().instance_method()
 
-# can be called using object
+print('=== can be called using object ===')
 yoda = Person("Yoda")
-yoda.instance_method()
 yoda.class_method()
+yoda.instance_method()
