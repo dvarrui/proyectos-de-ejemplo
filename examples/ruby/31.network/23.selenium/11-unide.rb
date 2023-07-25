@@ -21,7 +21,7 @@ places.each do |div|
   addr = div.find_element(xpath: 'descendant::li[@class="sl-addr"]/span').text
   addrs = addr.split("\n")
   cod_postal = addrs[1].split(",").last.strip
-  puts "#{index} #{cod_postal}"
+  puts "#{format("%3d", index)} #{h.text} (#{cod_postal})"
   next unless cod_postal.start_with?("35", "38") && cod_postal.size == 5
 
   phone = div.find_element(xpath: 'descendant::li[@class="sl-phone"]/a').text
@@ -37,7 +37,6 @@ places.each do |div|
   end
   category = div.find_element(xpath: 'descendant::li[@class="sl-categories"]/ul/li/span').text
 
-  puts format("%3d", index) + " " + h.text
   puts "          addr0: #{addrs[0]}"
   puts "          addr1: #{addrs[1]}"
   puts "     cod_postal: #{cod_postal}"
