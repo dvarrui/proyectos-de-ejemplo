@@ -12,13 +12,15 @@ driver.get url
 
 puts "[Title] #{driver.title}"
 index = 0
-driver.find_elements(:tag_name, "h3").each do |e|
+driver.find_elements(xpath: '//h3').each do |e|
   index += 1
   puts format("%3d", index) + " " + e.text
   # e.find_elements(:tag_name, "a").each do |a|
   #   puts "      #{a.text}"
   # end
 end
+
+# driver.find_elements(:tag_name, "h3").each do |e|
 
 driver.quit
 exit 0
