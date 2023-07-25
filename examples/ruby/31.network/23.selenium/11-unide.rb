@@ -12,10 +12,22 @@ driver.get url
 
 puts "[Title] #{driver.title}"
 index = 0
-driver.find_elements(xpath: '//h3').each do |e|
+
+places = driver.find_elements(xpath: '//div[@class="pol-12"]')
+places.each do |div|
   index += 1
-  puts format("%3d", index) + " " + e.text
-  # e.find_elements(:tag_name, "a").each do |a|
+  h = div.find_element(xpath: 'descendant::h3')
+  puts format("%3d", index) + " " + h.text
+  addr = div.find_element(xpath: 'descendant::li[@class="sl-addr"]/span').text
+  phone = div.find_element(xpath: 'descendant::li[@class="sl-phone"]/a').text
+  email = div.find_element(xpath: 'descendant::li[@class="sl-email"]/a').text
+  days = div.find_element(xpath: 'descendant::span[@class="asl-day-lbl"]').text
+  puts "     addr: #{addr.gsub("\n", " - ")}"
+  puts "    phone: #{phone}"
+  puts "    email: #{email}"
+  puts "     days: #{days}"
+
+  # h.find_elements(xpath: "descendant::a").each do |a|
   #   puts "      #{a.text}"
   # end
 end
