@@ -19,19 +19,19 @@ driver.manage.timeouts.implicit_wait = 30
 driver.get url
 puts "[Title] #{driver.title}"
 
-sleep 10
+sleep 6
+handles = driver.window_handles
+puts handles
+
 driver.find_elements(:tag_name, 'button').each do |button|
   puts button.text.strip.upcase
-  if button.text.strip.upcase == "ACEPTAR"
-    puts "==> click button ACEPTAR"
-    button.click
-  end
-  if button.text.strip.upcase == "SALTAR"
-    puts "==> click button SALTAR"
+  if button.text.strip.upcase == "DAR CONSENTIMIENTO"
+    puts "==> click button DAR CONSENTIMIENTO"
     button.click
   end
 end
 pause
+
 puts "==> send_keys"
 driver.find_element(xpath: '//input').send_keys "Canarias, España", :return
 pause
