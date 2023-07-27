@@ -39,9 +39,21 @@ button = driver.find_element(xpath: '//button[@class="ubsf_store-finder-button"]
 button.click
 
 # Localizar div/zip
-zips = driver.find_elements(xpath: '//div[@class="ubsf_locations-list-item-zip-city"]')
-zips.each_with_index { puts "#{_2} #{_1.text}" }
-pause
+# zips = driver.find_elements(xpath: '//div[@class="ubsf_locations-list-item-zip-city"]')
+# zips.each_with_index { puts "#{_2} #{_1.text}" }
+
+base = driver.find_element(xpath: '//div[@class="ubsf_locations-list"]')
+places = base.find_elements(xpath: 'descendant::div[@class="ubsf_locations-list-item-main-content"]')
+places.each_with_index do |place, index|
+  name = place.find_element(xpath: 'descendant::div[@class="ubsf_locations-list-item-name"]').text
+  street = place.find_element(xpath: 'descendant::div[@class="ubsf_locations-list-item-street"]').text
+  zip = place.find_element(xpath: 'descendant::div[@class="ubsf_locations-list-item-zip-city"]').text
+  # phone = place.find_element(xpath: 'descendant::a[starts-with(@href,"tel:")]').text
+  puts "(#{index})   name: #{name}"
+  puts "    street: #{street}"
+  puts "       zip: #{zip}"
+  # puts "   phone: #{phone}"
+end
 
 driver.quit
 exit 0
