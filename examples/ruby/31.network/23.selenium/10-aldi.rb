@@ -30,7 +30,6 @@ puts "DEBUG Cerrar la ventana de cookies!"
 pause
 binding.break
 
-
 # Localizar el input
 input = driver.find_element(xpath: '//input[@data-testid="autocomplete-input"]')
 input.send_keys "Canarias, España\n", :return
