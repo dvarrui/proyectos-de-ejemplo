@@ -1,8 +1,6 @@
-
 class Progress
-  attr_accessor :screen
-
-  def init
+  def initialize(screen)
+    @screen = screen
     @duration = 0.0
   end
 

@@ -1,8 +1,7 @@
 class Panel
-  attr_accessor :screen
-  attr_accessor :symbol
-
-  def init
+  def initialize(screen, symbol)
+    @screen = screen
+    @symbol = symbol
     @panel = File.read(File.join("lib", "panel.txt")).on_blue
     @state = :init
   end

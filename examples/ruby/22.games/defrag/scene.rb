@@ -16,13 +16,8 @@ class Scene
       bad: "B".light_white.on_blue,
       unmovable: "X".light_white.on_blue,
     }
-    @panel = Panel.new
-    @panel.screen = @screen
-    @panel.symbol = @symbol
-    @panel.init
-    @progress = Progress.new
-    @progress.screen = @screen
-    @progress.init
+    @panel = Panel.new(@screen, @symbol)
+    @progress = Progress.new(@screen)
   end
 
   def update(delta)
