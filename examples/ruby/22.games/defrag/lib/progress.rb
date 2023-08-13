@@ -1,4 +1,6 @@
 class Progress
+  attr_accessor :value
+
   def initialize(screen, symbol)
     @screen = screen
     @symbol = symbol

@@ -25,6 +25,7 @@ class Scene
   def update(delta)
     @panel.update(delta)
     @disk.update(delta)
+    # @progress.value = @disk.progress
     @progress.update(delta)
   end
 
