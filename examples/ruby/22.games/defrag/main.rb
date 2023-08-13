@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
+require "debug"
 require_relative "screen"
 require_relative "scene"
 
