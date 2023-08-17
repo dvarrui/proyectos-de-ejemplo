@@ -32,7 +32,7 @@ print(len(items))
 for item in items:
     t = item.getText()
     print('---')
-    print(t)
+    print(t.split("\n"))
     if t.startswith('Número'):
         print(item.find('strong').text)
 
