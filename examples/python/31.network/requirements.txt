@@ -1,2 +1,6 @@
 beautifulsoup4
 lxml
+
+requests
+selenium
+user_agent
