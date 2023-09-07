@@ -3,7 +3,7 @@ import time
 import user_agent
 from selenium.webdriver import Firefox
 from selenium.webdriver.firefox.options import Options
-
+import pdb
 
 class Network:
     print("Loading Network class...")
@@ -49,7 +49,16 @@ class Network:
 
     @staticmethod
     def read_content(url):
-        time.sleep(8)
+        time1 = 5
+        time2 = 8
+        time.sleep(time1)
+
+        try:
+            content = str(Network.make_request(url).content.decode("utf-8"))
+            return content
+        except Exception as TooManyRedirects:
+            print('Segundo intento...')
+            time.sleep(time2)
 
         try:
             content = str(Network.make_request(url).content.decode("utf-8"))
