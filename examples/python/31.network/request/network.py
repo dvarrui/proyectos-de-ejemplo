@@ -56,7 +56,7 @@ class Network:
         try:
             content = str(Network.make_request(url).content.decode("utf-8"))
             return content
-        except Exception as TooManyRedirects:
+        except requests.exceptions.TooManyRedirects:
             print('Segundo intento...')
             time.sleep(time2)
 
