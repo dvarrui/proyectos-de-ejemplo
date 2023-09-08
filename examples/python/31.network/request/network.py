@@ -49,7 +49,7 @@ class Network:
 
     @staticmethod
     def read_content(url):
-        time1 = 5
+        time1 = 3
         time2 = 8
         time.sleep(time1)
 
