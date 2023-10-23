@@ -5,7 +5,7 @@
 > * [Cómo construir tu primer paquete de Python](https://www.freecodecamp.org/espanol/news/como-construir-tu-primer-paquete-de-python/)
 > * [How to Create a Wheel file for your Python package and import it in another project](https://www.realpythonproject.com/how-to-create-a-wheel-file-for-your-python-package-and-import-it-in-another-project/)
 
-Supongamos que tenemos el siguiente proyecto:
+Supongamos que tenemos el siguiente proyecto `helloworld`:
 
 ```
 proyecto
@@ -17,6 +17,8 @@ proyecto
 │   └── hello.py
 └── setup.py
 ```
+
+> Es importante elegir bien el nombre del paquete para prevenir un error de nombre repetido cuando lo subamos al repositorio PyPi en el paso final.
 
 ## Ficheros __init__.py
 
