@@ -1,6 +1,10 @@
 
 # Crear un paquete Python
 
+> Enlaces de interés:
+> * [Cómo construir tu primer paquete de Python](https://www.freecodecamp.org/espanol/news/como-construir-tu-primer-paquete-de-python/)
+> * [How to Create a Wheel file for your Python package and import it in another project](https://www.realpythonproject.com/how-to-create-a-wheel-file-for-your-python-package-and-import-it-in-another-project/)
+
 Supongamos que tenemos el siguiente proyecto:
 
 ```
@@ -30,16 +34,18 @@ from helloworld.hello import hello
 
 ## Fichero setup.py
 
-En la raíz del proyecto tendremos un fichero `setup.py` con definiciones de nuestro módulo que usaremos para crear el paquete.
+* Crear un fichero [setup.py](setup.py) en la raíz del proyecto, con la configuración de nuestro módulo.
+* Este ejemplo tiene la configuración mínima.
+* `python setup.py --help` para consultar las opciones disponibles.
+* `python setup.py install`, construye el paquete y lo instala en el equipo local.
+* `pip show helloworld` para comprobar que tenemos el paquete instalado.
 
-```python
-from setuptools import setup, find_packages
-...
-```
+## Publicar el paquete
 
-## Crear el paquete
-
-* Ejecutamos `python setup.py sdist bdist_wheel` para crear el paquete.
 * Necesitaremos tener una cuenta en PyPi para poder subir nuestro paquete al repositorio.
+* `python setup.py sdist bdist_wheel --universal`, crear el paquete en formato (Wheel) para distribuir. En el directorio `/dist` tenemos el fichero `.whl`y el `.tar.gz`.
+
+> Podríamos instalar el paquete en local a partor del fichero Wheel con `pip install dist/helloworld-0.0.1-py2.py3-none-any.whl`. Pero ahora lo que queremos es subir el paquete al repositorio PyPi.
+
 * `pip install twine`, instalamos el paquete `twine`.
 * `twine upload dist/*`, para subir el paquete al repositorio.
