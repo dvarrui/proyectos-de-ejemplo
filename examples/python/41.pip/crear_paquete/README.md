@@ -5,14 +5,12 @@ Supongamos que tenemos el siguiente proyecto:
 
 ```
 proyecto
-├── modulo
-│   ├── extra
+├── helloworld
+│   ├── es
 │   │   ├── __init__.py
-│   │   ├── dividir.py
-│   │   └── multiplicar.py
+│   │   └── saludar.py
 │   ├── __init__.py
-│   ├── restar.py
-│   └── sumar.py
+│   └── hello.py
 └── setup.py
 ```
 
@@ -21,15 +19,13 @@ proyecto
 Dentro de cada carpeta del código fuente del módulo, tenemos que tener un fichero `__init__.py`, donde se definen los nombres de los métodos de los archivos del directorio donde esté ubicado.
 
 Por ejemplo:
-* El fichero `modulo/extra/__init__.py` tendrá:
+* El fichero `helloworld/es/__init__.py` tendrá:
 ```python
-from dividir import dir
-from multiplicar import mul
+from helloworld.es.saludar import saludar
 ```
-* El fichero `modulo/__init__.py` tendrá:
+* El fichero `helloworld/__init__.py` tendrá:
 ```python
-from restar import res
-from sumar import sum
+from helloworld.hello import hello
 ```
 
 ## Fichero setup.py
