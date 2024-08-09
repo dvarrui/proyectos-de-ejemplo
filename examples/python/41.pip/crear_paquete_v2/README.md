@@ -4,8 +4,10 @@ Enlace de interés:
 
 
 Instalar la herramienta para crear paquetes de Python
-* python -m pip install build
-* zypper install python311-build
+* Activar entorno virtual
+* pip install build
+
+> Sólo para la máquina real OpenSUSE: zypper install python311-build
 
 Creamos el código de nuestro paquete
 
@@ -22,14 +24,14 @@ Se crean los siguientes ficheros:
 ```
 
 Para instalar nuestro paquete desde local
-* PATH/TO/venv/bin/pip install dist/demo-0.0.1.tar.gz
+* pip install dist/demo-0.0.1.tar.gz
 
 Confirmamos:
-PATH/TO/venv/bin/pip list
+pip list
 
 Para ejecutar el script principal:
 * demo
 
 Para desinstalar el paquete:
-PATH/TO/venv/bin/pip uninstall demo
-PATH/TO/venv/bin/pip list
+pip uninstall demo
+pip list
