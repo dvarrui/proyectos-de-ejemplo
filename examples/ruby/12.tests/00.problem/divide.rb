@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-#divide.rb 
+# File: divide.rb 
 
 100.times do
   numerator = rand(100) 
