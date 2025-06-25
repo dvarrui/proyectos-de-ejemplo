@@ -41,12 +41,12 @@ Con nuestro usuario:
 
 * `rbenv install -l`, list all available versions.
 * `rbenv install 2.5.2`
-* `rbenv global 2.5.2`
+* `rbenv local 2.5.2`
 * `rbenv versions`
-* `sudo gem install bundler`
+* `gem install bundler`
 * `rbenv rehash`
 * `ruby -v`
-* `sudo gem install rails`
+* `gem install rails`
 * `rails -v`
 
 ---
