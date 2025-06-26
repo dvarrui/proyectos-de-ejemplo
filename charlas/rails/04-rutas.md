@@ -78,12 +78,11 @@ messenger>
 * Añadir ruta a `config/routes.rb`. Esto es, añadir la linea
 de ruta `get '/hello', to: 'welcome#greet'`
 
-```
-get     => indica el método HTML.
-/hello  => es la ruta en el URL.
-welcome => es el controlador.
-greet   => es un método del controlador.
-```
+| get     | indica el método HTML |
+| /hello  | es la ruta en el URL  |
+| welcome | es el controlador     |
+| greet   | es un método del controlador |
+
 * Probamos. ¿Te acuerdas? URL `camaleon:3000/hello`
 
 ![](images/04-route-hello.png)
