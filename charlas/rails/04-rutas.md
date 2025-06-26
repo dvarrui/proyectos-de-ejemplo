@@ -78,6 +78,8 @@ messenger>
 * Añadir ruta a `config/routes.rb`. Esto es, añadir la linea
 de ruta `get '/hello', to: 'welcome#greet'`
 
+| Valor   | Descripción           |
+| ------- | --------------------- |
 | get     | indica el método HTML |
 | /hello  | es la ruta en el URL  |
 | welcome | es el controlador     |
