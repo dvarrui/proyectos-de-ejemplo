@@ -16,3 +16,4 @@ GitHub
 
 * El paquete que debemos instalar se llama "ghc" (`zypper install ghc`). "The Glorious Glasgow Haskell Compiler".
 * El compilador es "ghc" y el intérprete interactivo (REPL) es "gchi".
+
