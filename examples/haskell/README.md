@@ -17,3 +17,9 @@ GitHub
 * El paquete que debemos instalar se llama "ghc" (`zypper install ghc`). "The Glorious Glasgow Haskell Compiler".
 * El compilador es "ghc" y el intérprete interactivo (REPL) es "gchi".
 
+# Codigus: Excursión de Haskell
+
+> https://github.com/codigus-excursiones/haskell
+
+1. [Introducción](https://learnyouahaskell.com/introduction): no hay asignaciones, trasparencia referencial, lazy, tipado estático, 
+2. [Starting-out](https://learnyouahaskell.com/starting-out)
