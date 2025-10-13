@@ -1,16 +1,18 @@
 require_relative 'cell'
 
 class Grid
-  @@directions = {
-    n: {row: -1, col: 0},
-    ne: {row: -1, col: 1},
-    e: {row: 0, col: 1},
-    se: {row: 1, col: 1},
-    s: {row: 1, col: 0},
-    sw: {row: 1, col: -1},
-    w: {row: 0, col: -1},
-    nw: {row: -1, col: -1},
-  }
+  def self.directions
+    {
+      n: {row: -1, col: 0},
+      ne: {row: -1, col: 1},
+      e: {row: 0, col: 1},
+      se: {row: 1, col: 1},
+      s: {row: 1, col: 0},
+      sw: {row: 1, col: -1},
+      w: {row: 0, col: -1},
+      nw: {row: -1, col: -1},
+    }
+  end
 
   def initialize(size)
     @size = size
@@ -34,8 +36,8 @@ class Grid
   end
 
   def add(word, row, col, move)
-    row_step = @@directions[move][:row]
-    col_step = @@directions[move][:col]
+    row_step = Grid.directions[move][:row]
+    col_step = Grid.directions[move][:col]
     letters = word.chars
     arow = row
     acol = col
@@ -50,18 +52,5 @@ class Grid
       end
     end
     true
-  end
-
-  def find_available_locations_for(word)
-    locations = []
-    (0..size).each do |row|
-      (0..@size).each |col|
-        @@directions.each do |dir|
-          if fit?(word, row, col)
-            locations << { word: word, row: row, col: col }
-          end
-      end
-    end
-    locations
   end
 end

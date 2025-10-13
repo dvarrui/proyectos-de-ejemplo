@@ -28,4 +28,20 @@ class WordSearch
   def has_a_solution?
     @solution != :no_solution
   end
+
+private
+
+  def find_available_locations_for(word)
+    locations = []
+    (0..size).each do |row|
+      (0..@size).each |col|
+        Grid.directions.each do |dir|
+          if fit?(word, row, col)
+            locations << { word: word, row: row, col: col }
+          end
+      end
+    end
+    locations
+  end
+
 end
