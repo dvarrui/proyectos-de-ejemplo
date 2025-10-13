@@ -45,8 +45,8 @@ class Grid
       return false if acol >= @size || arow >= @size
 
       cell = @matriz[arow][acol]
-      if cell.empty? || cell.letter == c
-        cell.letter = c
+      if cell.empty? || cell.data == c
+        cell.add c
         arow += row_step
         acol += col_step
       end
