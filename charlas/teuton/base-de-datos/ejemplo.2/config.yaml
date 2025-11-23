@@ -1,6 +1,0 @@
----
-global:
-cases:
-- tt_members: Local
-  host1_ip: 'localhost'
-  database_file: 'files/persons.db'

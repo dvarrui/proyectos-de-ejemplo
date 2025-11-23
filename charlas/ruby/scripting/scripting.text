@@ -1,5 +1,0 @@
-
-
-<%= include 'md/ruby1.md' %>
-<%= include 'md/ruby2.md' %>
-<%= include 'md/ruby3.md' %>

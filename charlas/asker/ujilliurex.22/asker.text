@@ -1,4 +1,0 @@
-
-<%= include 'intro1.md' %>
-<%= include 'intro2.md' %>
-<%= include 'intro3.md' %>
