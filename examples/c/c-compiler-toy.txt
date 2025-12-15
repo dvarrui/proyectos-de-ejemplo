@@ -1,0 +1,7 @@
+
+
+https://twitter.com/Love2Code/status/1612176214919200773?t=CK4YH6P5PCqkF6D9YP8JFw&s=35
+
+Twitter (https://twitter.com/Love2Code/status/1612176214919200773?t=CK4YH6P5PCqkF6D9YP8JFw&s=35)
+Maxime Chevalier
+I've been writing a toy C compiler for fun, and the https://t.co/1coOnX6WuO Compiler Explorer tool is a godsend. Thanks @alanwusx for introducing me to this great tool! :)
