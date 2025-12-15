@@ -2,14 +2,14 @@
 
 class Humano
   def identidad
-    print "[Humano] soy una persona.\n"
+    puts "[Humano] soy una persona."
   end
 
   def tarifa_tren(edad)
     if edad < 12
-      print "[Humano] tarifa reducida.\n"
+      puts "[Humano] tarifa reducida."
     else
-      print "[Humano] tarifa normal. \n"
+      puts "[Humano] tarifa normal."
     end
   end
 end
@@ -17,14 +17,14 @@ end
 
 class Estudiante < Humano
   def identidad
-    print "[Estudiante] soy un estudiante.\n"
+    puts "[Estudiante] soy un estudiante."
   end
 end
 
 
-class Profesor<Humano
+class Profesor < Humano
   def identidad
-    print "[Profesor] Soy un profesor y además...."
+    puts "[Profesor] Soy un profesor y además...."
     super
   end
 end
