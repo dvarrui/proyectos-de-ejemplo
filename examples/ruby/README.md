@@ -27,6 +27,7 @@ Carbon is the easiest way to create and share beautiful images of your source co
 * [clean-code-ruby](https://github.com/uohzxela/clean-code-ruby/blob/master/README.md)
 * [How Sinatra works (a mini Sinatra in23 lines of Code)](https://theseus.xyz/how-sinatra-works-or-how-to-create-sinatra-clone-in-23-lines-of-code/)
 * [Ruby::Box - The Game-Changing Isolation Feature in Ruby 4.0](https://rorindia.com/blog/ruby-box-the-game-changing-isolation-feature-in-ruby-4-0): Ruby::Box lets you run multiple gem versions simultaneously without conflicts. Learn how to isolate code, contain monkey patches, and migrate APIs safely in Ruby 4.0.
+* https://charm-ruby.dev/: Ruby bindings and ports of the beloved Charm terminal libraries. Build glamorous TUIs, style terminal output, create beautiful forms, and make your Ruby CLIs sparkle.
 
 # Recursos
 
