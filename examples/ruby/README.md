@@ -26,8 +26,10 @@ Carbon is the easiest way to create and share beautiful images of your source co
 * [Interactive Ruby](https://ruby-doc.org/docs/Tutorial/part_01/first_steps.html)
 * [clean-code-ruby](https://github.com/uohzxela/clean-code-ruby/blob/master/README.md)
 * [How Sinatra works (a mini Sinatra in23 lines of Code)](https://theseus.xyz/how-sinatra-works-or-how-to-create-sinatra-clone-in-23-lines-of-code/)
+* [Ruby::Box - The Game-Changing Isolation Feature in Ruby 4.0](https://rorindia.com/blog/ruby-box-the-game-changing-isolation-feature-in-ruby-4-0): Ruby::Box lets you run multiple gem versions simultaneously without conflicts. Learn how to isolate code, contain monkey patches, and migrate APIs safely in Ruby 4.0.
 
 # Recursos
 
 * [Ruby-Cheatsheet](https://github.com/lifeparticle/Ruby-Cheatsheet)
 * Repositorio GitHub [vhf/free-programming-books] (https://github.com/vhf/free-programming-books/blob/master/free-programming-books-es.md) con recursos en español de programación y sistemas operativos.
+
