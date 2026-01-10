@@ -9,6 +9,7 @@ class TestFirstOrLast < Test::Unit::TestCase
       { text: "HOlA CaracolA!", first: "a", last: "o" },
       { text: "Pienso que sólo sé que no sé nada.", first: "i", last: "a" },
       { text: "PIenso que sólo sé que no sé nAdA.", first: "e", last: "o" },
+      { text: "HOLA MUNDO!", first: "?", last: "?" },
     ]
   end
 

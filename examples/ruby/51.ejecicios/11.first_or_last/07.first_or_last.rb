@@ -11,8 +11,7 @@ def first_or_last(text, first)
   # Devolver el primer o el último caracter (vocal minúscula)
   letters = get_letters(text, first)
 
-  for i in letters
-    letter = text[i]
+  for letter in letters
     return letter if is_lowercase_vowel?(letter)
   end
 
