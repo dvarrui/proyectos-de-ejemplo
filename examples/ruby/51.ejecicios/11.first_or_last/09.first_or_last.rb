@@ -7,7 +7,10 @@ end
 
 def first_or_last(text, first)
   # Devolver el primer o el último caracter (vocal minúscula)
-  letters(text,first).each { return _1 if is_lowercase_vowel? _1 }
-  
+
+  letters(text,first).each do |letter|
+    return letter if is_lowercase_vowel?(letter)
+  end
+
   "?"
 end

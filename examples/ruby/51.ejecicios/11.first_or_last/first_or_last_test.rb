@@ -2,7 +2,7 @@
 require 'test/unit'
 require_relative 'first_or_last'
 
-class TestFactorial < Test::Unit::TestCase
+class TestFirstOrLast < Test::Unit::TestCase
   def setup
     @examples = [
       { text: "Hola Caracola!", first: "o", last: "a" },
@@ -21,6 +21,18 @@ class TestFactorial < Test::Unit::TestCase
   def test_last
     @examples.each do |example|
       assert_equal(example[:last], first_or_last(example[:text], false))
+    end
+  end
+
+  def test_first_notfound
+    @examples.each do |example|
+      assert_equal("?", first_or_last(example[:text].upcase , true))
+    end
+  end
+
+  def test_last_notfound
+    @examples.each do |example|
+      assert_equal("?", first_or_last(example[:text].upcase , false))
     end
   end
 end
