@@ -1,10 +1,12 @@
 # Variables
+APPNAME=calculadora
+
 ASM=nasm
 ASM_FLAGS=-f elf64
 LD=ld
-TARGET=hola.bin
-SRC=hola.asm
-OBJ=hola.o
+TARGET=$(APPNAME).bin
+SRC=$(APPNAME).asm
+OBJ=$(APPNAME).o
 
 all: $(TARGET)
 
