@@ -4,6 +4,7 @@
 * https://www.w3schools.com/python/
 * [Interactive Python Tutoria](https://t.co/dzooRMSC3R?s=35) learnpython.org is a free interactive Python tutorial.
 * [Python Examples](https://www.programiz.com/python-programming/examples) This page contains examples of basic concepts of Python programming like loops, functions, native datatypes and so on.
+* CPython internals: https://github.com/zpoint/CPython-Internals
 
 ---
 
