@@ -28,3 +28,5 @@ Conceptos:
 * Ejemplo con crate ferrysay: https://docs.rs/ferris-says/0.1.1/ferris_says/fn.say.html
 * Dependencias en: https://crates.io/
 * Rust-For-Linux (https://rust-for-linux.com/): Adding support for the Rust language to the Linux kernel
+* Ejemplos de parser combinators en Rust están en el crate nom: https://github.com/rust-bakery/nom
+
