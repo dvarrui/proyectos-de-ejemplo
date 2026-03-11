@@ -1,4 +1,0 @@
-
-# Comparación de objetos
-
-
