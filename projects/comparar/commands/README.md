@@ -1,6 +1,7 @@
 
 # Simular comandos del sistema
 
+* dir, cat, grep, wc, find
 
 ## Ejemplos
 
