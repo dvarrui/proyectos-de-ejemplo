@@ -2,35 +2,32 @@
 
 # 3. Distancia
 
+```
+Lo ideal sería que el modelo del problema que se quiere resolver
+haga match perfecto con el modelo cognitivo del lenguaje que se va a usar
+para considerarlo el lenguaje apropiado para ese problema
+```
 
-Supongo que lo ideal sería que el modelo del problema que se quiera resolver haga match con el modelo cognitivo del lenguaje X para considerarlo el lenguaje apropiado para ese problema
-Gemini ha dicho
+Cuando el modelo mental de la solución y el modelo cognitivo del lenguaje están alineados, el código se siente natural. Esto es reducir la **Distancia Cognitiva**.
 
-Has dado en el clavo. De hecho, ese "match" o sintonía es el santo grial de la arquitectura de software. Cuando el modelo mental de la solución y el modelo cognitivo del lenguaje están alineados, el código se siente natural, casi como si se escribiera solo.
+## 3.1 El concepto de "Distancia Cognitiva"
 
-A este fenómeno se le suele llamar reducción de la Distancia Cognitiva (o evitar el "Impedance Mismatch").
-1. El concepto de "Distancia Cognitiva"
+La Distancia Cognitiva es el esfuerzo que debe hacer el cerebro para traducir una idea de la vida real a instrucciones de computadora.
 
-La Distancia Cognitiva es el esfuerzo que debe hacer tu cerebro para traducir una idea de la vida real a instrucciones de computadora.
+* **Poca distancia**: Si estamos diseñando una base de datos de contabilidad y usamos SQL, el lenguaje habla de "tablas", "relaciones" y "conjuntos", es el match adecuado.
+* **Mucha distancia**: Intentas programar una interfaz gráfica de usuario (GUI) altamente interactiva usando C/asm puro. El cerebro quiere pensar en "botones" y "menús", pero el lenguaje te obliga a pensar en "punteros de memoria" e "interrupciones de hardware". La distancia es enorme y ahí es donde aparece un alto esfuerzo.
 
-    Poca distancia: Si estás diseñando una base de datos de contabilidad y usas SQL, el lenguaje habla de "tablas", "relaciones" y "conjuntos", que es exactamente como un contador ve sus libros. El match es casi perfecto.
+## 3.2 Ejemplos de "Matches"
 
-    Mucha distancia: Si intentas programar una interfaz gráfica de usuario (GUI) altamente interactiva usando C puro. Tu cerebro quiere pensar en "botones" y "clics", pero el lenguaje te obliga a pensar en "punteros de memoria" e "interrupciones de hardware". La distancia es enorme y ahí es donde aparecen los errores.
+Ejemplos de casos donde la elección del lenguaje se basa totalmente en que su modelo cognitivo "imita" la naturaleza del problema:
 
-2. Ejemplos de "Matches" Perfectos
+| Problema   | Modelo del Problema            | Lenguaje apropiado | Justificación |
+| ---------- | ------------------------------ | ------------------ | ------------- |
+| Chat       | Millones de procesos paralelos | Erlang/Elixir      | Modelo de Actores. Cada usuario es un "proceso" aislado que envía mensajes |
+| Inteligencia Artificial / Datos | Transformaciones matemáticas y estadísticas sobre grandes volúmenes | R, Python (NumPy) | Sintaxis similar a la notación matemática |
+| Blockchain | Reglas estrictas de "si pasa A, entonces se transfiere B" | Solidity | Modelo de "máquina de estados" con propiedad integrada |
+| Navegadores Web | Documentos jerárquicos con estilos visuales | HTML/CSS | Lenguajes declarativos. No dices cómo dibujar, dices que hay que dibujar |
 
-Aquí tienes casos donde la elección del lenguaje se basa totalmente en que su modelo cognitivo "imita" la naturaleza del problema:
-Problema	Modelo del Problema	Lenguaje Ideal	¿Por qué hacen match?
-Sistemas de Chat (WhatsApp)	Millones de personas hablando a la vez independientemente.	Erlang / Elixir	Usa el Modelo de Actores. Cada usuario es un "proceso" aislado que envía mensajes. El lenguaje piensa igual que el chat.
-Inteligencia Artificial / Datos	Transformaciones matemáticas y estadísticas sobre grandes volúmenes.	Python (con R/NumPy)	Su sintaxis es casi notación matemática. No te preocupas por la memoria, sino por la matriz.
-Contratos Inteligentes (Blockchain)	Reglas estrictas de "si pasa A, entonces se transfiere B".	Solidity	Está diseñado para ser un modelo de "máquina de estados" con propiedad integrada.
-Navegadores Web	Documentos jerárquicos con estilos visuales.	HTML / CSS	Son lenguajes declarativos. No dices cómo dibujar un círculo, dices que hay un círculo.
-3. ¿Qué pasa cuando el match es forzado?
+## 3.3 Forzar el match
 
-A veces, por moda o por exigencias del proyecto, usamos el lenguaje equivocado para el modelo del problema. Esto produce:
-
-    Código "Espagueti": Tienes que crear tantas capas de traducción que la lógica original se pierde.
-
-    Fricción Mental: Sientes que estás "luchando contra el lenguaje" en lugar de usarlo como una herramienta.
-
-    Fragilidad: Como el modelo no encaja, cualquier cambio pequeño en el problema requiere una reestructuración masiva del código.
+A veces, por moda o por exigencias del proyecto, usamos un lenguaje que no es el adeucado para el modelo del problema. Esto produce una gran **Fricción Mental**. Sentimos que estamos "luchando contra el lenguaje" en lugar de usarlo como una herramienta.
