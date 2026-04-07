@@ -23,3 +23,9 @@ El modelo de Ruby es "Todo es un objeto" y el "Principio de la Menor Sorpresa" (
 
     Monkey Patching (Peligro oculto): El modelo cognitivo de Ruby te permite abrir cualquier clase (incluso las del sistema como String) y cambiar su comportamiento en tiempo de ejecución. Esto es poderoso, pero rompe el Razonamiento Local: no puedes estar seguro de qué hace "hola".upper porque alguna librería externa pudo haber redefinido ese método globalmente.
 
+# Resumen
+
+* Principio Violado: "Mínima sorpresa / Consistencia".
+* Punto débil: Exceso de formas de hacer lo mismo (TIMTOWTDI).
+* Consecuencias: Código difícil de seguir en proyectos grandes (magia oculta).
+
