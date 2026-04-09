@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'rainbow'
-require_relative '03-duck-typing-lib'
+require_relative 'lib/03-duck-typing'
 
 def sum(a,b)
   print "Sum(#{Rainbow(a).green.bright},"

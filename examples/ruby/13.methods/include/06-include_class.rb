@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 
 module AntGame
   class Ant
@@ -15,6 +16,7 @@ module AntGame
     GO = :go
   end
 end
+
 AntGame::Ant.new(4, 5)
 include AntGame
 Ant.new(1, 2)

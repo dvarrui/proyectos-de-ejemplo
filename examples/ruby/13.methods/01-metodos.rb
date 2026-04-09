@@ -1,13 +1,13 @@
 #!/usr/bin/ruby
-# metodos.rb
+# file: metodos.rb
 
 def cuadrado(x)
   return x*x
 end
 
 def triangulos
-  "son diferentes de los cuadrados"
   #se puede omitir la palabra return
+  "son diferentes de los cuadrados"
 end
 
 def metodo(uno, dos, *varios)

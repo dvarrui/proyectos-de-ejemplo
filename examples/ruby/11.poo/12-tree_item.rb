@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 
 class TreeItem
   attr_accessor :left, :right, :item
@@ -8,7 +9,6 @@ class TreeItem
   end
   
   def each(&block)
-    #block.call(self.item)
     left.each(&block) if left
     block.call(self.item)
     right.each(&block) if right

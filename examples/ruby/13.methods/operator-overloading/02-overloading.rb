@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative '02-overloading-lib'
+require_relative 'lib/02-overloading'
 
 obiwan = Person.new("Obiwan")
 yoda = Person.new("Yoda")
