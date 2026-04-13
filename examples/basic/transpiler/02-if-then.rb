@@ -1,4 +1,7 @@
 x = 10
-if x == 10
-  puts "es diez"
+if x >= 5
+  puts "Aprobado"
+else
+  puts "Suspendido"
 end
+

@@ -4,9 +4,24 @@
 BASIC
 ```
 
-# 6. Transpiler
+# ruby2basic
 
-Crear un transpilador de Ruby a BASIC del ZX Spectrum.
+Es un transpilador de código Ruby a código BASIC del ZX Spectrum.
+
+## Instalación
+
+* Instalar Ruby.
+* `gem install ruby2basic`, instalar la gema.
+
+## Funcionalidades
+
+* Estructura secuencial.
+* Permite `puts`.
+
+No se permite:
+
+* Los comentarios no se están pasando al código
+* Embebded Strings.
 
 # 6.1 Expresiones regulares
 
