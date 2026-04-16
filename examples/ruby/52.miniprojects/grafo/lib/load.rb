@@ -1,5 +1,5 @@
 
-class Graph
+module LoadGraph
   def load(filename)
     if filename.nil?
       puts "Usage: ruby main.rb PATH/TO/FILE"
@@ -15,8 +15,6 @@ class Graph
     fill_header(lines)
     fill_arcs(lines)
   end
-
-  private
 
   def fill_header(lines)
     max_nodes = lines.shift.to_i

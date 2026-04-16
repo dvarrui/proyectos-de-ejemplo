@@ -5,4 +5,5 @@ require "debug"
 g = Graph.new
 g.load(ARGV[0])
 
+g.calculate_reaches
 g.show
