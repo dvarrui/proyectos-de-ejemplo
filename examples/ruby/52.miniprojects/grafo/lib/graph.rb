@@ -10,11 +10,18 @@ class Graph
 
   def initialize
     @reaches = []
+    @components = []
   end
 
   def directed?
     @directed
   end
+
+  def calculate
+    calculate_reaches
+  end
+
+  private
 
   def calculate_reaches
     @reaches = []
@@ -22,8 +29,6 @@ class Graph
       @reaches[node] = calculate_reaches_node(node, [], [node])
     end
   end
-
-  private
 
   def calculate_reaches_node(node, acc, visited)
     @arcs.each do |arc|
