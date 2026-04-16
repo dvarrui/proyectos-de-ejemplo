@@ -30,9 +30,9 @@ module ShowGraph
   def show_components
     return if @components.size.zero?
 
-    puts "  > components:"
+    puts "  > components: (#{@components.size} #{(directed?() ? 'cfc)' : 'cc)')}"
     @components.each_with_index do |value, index|
-      puts "    | component #{index} ==> #{value.join(',')}" unless value.nil?
+      puts "    | component #{index + 1} ==> #{value.join(',')}" unless value.nil?
     end
   end
 end
