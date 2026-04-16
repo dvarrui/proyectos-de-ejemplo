@@ -8,14 +8,11 @@ class Graph
   include ShowGraph
 
   attr_reader :filename, :nodes, :arcs
-  attr_reader :reaches
+  attr_reader :cangotos
 
   def initialize
-    @reaches = []
-    @components = []
-  end
-
-  def directed?
-    @directed
+    @cangotos = []
+    @cc = []
+    @cfc = []
   end
 end
