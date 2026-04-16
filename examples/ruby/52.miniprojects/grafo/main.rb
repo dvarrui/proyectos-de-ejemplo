@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
 require_relative "lib/graph"
+require "debug"
 
 g = Graph.new
-g.load("data/grafo1.txt")
+g.load(ARGV[0])
 
 g.show

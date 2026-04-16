@@ -1,6 +1,14 @@
 
 class Graph
   def load(filename)
+    if filename.nil?
+      puts "Usage: ruby main.rb PATH/TO/FILE"
+      exit 1
+    end
+    unless File.exist?(filename)
+      puts "ERROR: File not found! #{filename}"
+      exit 1
+    end
     @filename = filename
     lines = File.read(filename).split("\n")
 
@@ -13,7 +21,7 @@ class Graph
   def fill_header(lines)
     max_nodes = lines.shift.to_i
     @nodes = (1..max_nodes).to_a
-    @directed = (lines.shift.start_with? == "d")
+    @directed = (lines.shift.start_with? "d")
   end
 
   def fill_arcs(lines)
