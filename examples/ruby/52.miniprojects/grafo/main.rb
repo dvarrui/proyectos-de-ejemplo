@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
-require_relative "grafo"
+require_relative "lib/graph"
 
-grafo = Grafo.new
-grafo.load("data.txt")
+g = Graph.new
+g.load("data/grafo1.txt")
 
-grafo.info
+g.show

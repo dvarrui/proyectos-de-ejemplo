@@ -1,4 +1,24 @@
 
+# Grafos
+
+```
+Usando una perspectiva didáctica
+vamos a calcular:
+* componentes conexas de un grafo no dirigido
+* componentes fuertemente conexas de un grafo dirigido
+```
+
+## Definiciones
+
+* Nodo
+* Arco
+* Grafo: dirigido, no dirigido
+* Componente conexa
+* Componente fuertemente conexa
+* Algoritmos conocidos
+
+## Ejemplo de fichero de entrada
+
 Fichero de entrada:
 
 ```
