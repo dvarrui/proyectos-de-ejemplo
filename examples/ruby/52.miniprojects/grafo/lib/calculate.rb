@@ -36,13 +36,13 @@ module CalculateGraph
     frees = @nodes.dup
     @nodes.each do |node|
       next unless frees.include? node
-      component = calculate_cc_node(node, [node], [node])
+      component = [node] + @reaches[node]
       frees -= component
       @components << component
     end
   end
 
-  def calculate_cc_node(node, acc, visited)
+  def skip_calculate_cc_node(node, acc, visited)
     @arcs.each do |arc|
       if arc[0] == node && !visited.include?(arc[1])
         visited << arc[1]
@@ -54,5 +54,18 @@ module CalculateGraph
   end
 
   def calculate_cfc
+    frees = @nodes.dup
+    @nodes.each do |node1|
+      next unless frees.include? node1
+
+      component = [node1]
+      @reaches[node1].each do |node2|
+        if @reaches[node2].include?(node1)
+          component << node2
+          frees -= component
+        end
+      end
+      @components << component
+    end
   end
 end
