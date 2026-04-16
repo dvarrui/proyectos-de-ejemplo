@@ -2,13 +2,14 @@
 # Grafos
 
 ```
-Usando una perspectiva didáctica
-vamos a calcular:
-* componentes conexas de un grafo no dirigido
-* componentes fuertemente conexas de un grafo dirigido
+A partir de un grafo y sus arcos, vamos a calcular:
+* las componentes conexas del grafo si los arcos se consideran no dirigidos
+* las componentes fuertemente conexas de un grafo si los arcos se consideran dirigidos
+
+Vamos a usar perspectiva didáctica, usando el lenguaje de programación Ruby
 ```
 
-## Definiciones
+# 1. Definiciones
 
 * Nodo
 * Arco
@@ -17,92 +18,36 @@ vamos a calcular:
 * Componente fuertemente conexa
 * Algoritmos conocidos
 
-## Ejemplo de fichero de entrada
+# 2. Fichero de entrada
 
-Fichero de entrada:
+* [Ejemplos](./data/) de ficheros de entrada.
 
-```
-6 10 1
-1 2 10
-1 3 15
-2 4 1
-2 5 23
-2 6 1
-3 2 24
-3 6 34
-5 3 2
-5 4 5
-6 5 9
-```
+Los ficheros de entrada, son ficheros de texto plano con el siguiente formato:
 
-Proceso:
-* Cargar fichero
+* En la primera fila, el número de nodos del grafo. Si por ejemplo, tenemos un grafo de 4 nodos, entonces los nodos se identifican como 1, 2, 3, y 4.
+* En las filas restantes (de 0 a un valor no determinado) definiremos los arcos.
+* Cada arco se define en una fila con dos valores numéricos `N1 N2`:
+    - El primer número N1 es el identificador del nodo de donde parte el arco. El origen del arco.
+    - En segundo número N2 es el identifcador del nodo hacia donde se dirige el arco. El destino del arco.
+* Aunque en el fichero de entrada los arcos se definen con dirección. Internamente en la implementación, tendremos en cuenta o no la dirección de los arcos según nos interese en cada momento.
 
-# Menu
+* Contenido del fichero `data/grafo1.txt`:
 
-```
-Optimiza!cion en Grafos, 2025-2026 NOMBRE DEL ESTUDIANTE
-c. [c]argar grafo desde fichero
-i. Mostrar [i]nformacion basica del grafo
-s. Mostrar la lista de [s]ucesores del grafo
-p. Mostrar la lista de [p]redecesores del grafo
-o. Mostrar c[o]mponentes fuertemente conexas del grafo
-q. Finalizar el programa
-Introduce la letra de la accion a ejecutar  >
+```text
+7
+1 2
+2 3
+4 5
+4 6
 ```
 
-# c. Cargar fichero
+* Esquema del grafo:
 
-```
-Introduce el nombre completo del fichero de datos
-grafo1.gr
-Fichero cargado correctamente desde grafo1.gr
-
-```
-
-# i. Mostrar información
-
-```
-Grafo cargado desde grafo1.gr
-Nodos:6 Arcos:10 Tipo:dirigido
-```
-
-# s. Mostrar sucesores
-
-```
-Introduce la letra de la accion a ejecutar  > s
-1210
-1315
-241
-2523
-261
-3224
-3634
-532
-545
-659
-```
-
-# p. Mostrar predecesores
-
-```
-Introduce la letra de la accion a ejecutar  > p
-2110
-2324
-3115
-352
-421
-421
-552
-5223
-621
-621
-```
-
-# o. Mostrar c[o]mponentes fuertemente conexas del grafo
-
-```
-Componente Fuertemente Conexa 1:{1}
-Componente Fuertemente Conexa 2:{2, 3, 5, 6}
-Componente Fuertemente Conexa 3:{4}
+```mermaid
+graph TD
+    1((1)) --> 2((2))
+    2 --> 3((3))
+    4((4)) --> 5((5))
+    4 --> 6((6))
+    7((7))
 ```
