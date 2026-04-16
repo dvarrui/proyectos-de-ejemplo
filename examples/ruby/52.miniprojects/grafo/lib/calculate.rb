@@ -42,17 +42,6 @@ module CalculateGraph
     end
   end
 
-  def skip_calculate_cc_node(node, acc, visited)
-    @arcs.each do |arc|
-      if arc[0] == node && !visited.include?(arc[1])
-        visited << arc[1]
-        acc << arc[1]
-        acc = calculate_cc_node(arc[1], acc, visited)
-      end
-    end
-    acc
-  end
-
   def calculate_cfc
     frees = @nodes.dup
     @nodes.each do |node1|
