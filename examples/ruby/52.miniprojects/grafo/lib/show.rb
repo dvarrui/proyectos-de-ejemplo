@@ -23,7 +23,7 @@ module ShowGraph
 
     puts "  > reaches:"
     @reaches.each_with_index do |value, index|
-      puts "    | node #{index} ==> #{value.join(',')}" unless value.nil?
+      puts "    | node #{index} -> #{value.join(' -> ')}" unless value.nil?
     end
   end
 
