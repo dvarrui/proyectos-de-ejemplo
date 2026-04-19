@@ -1,13 +1,12 @@
 
 # Grafos
 
-```
 A partir de un grafo y sus arcos, vamos a calcular:
-* las componentes conexas del grafo si los arcos se consideran no dirigidos
-* las componentes fuertemente conexas de un grafo si los arcos se consideran dirigidos
+
+* las **componentes conexas** del grafo si los arcos se consideran no dirigidos
+* las **componentes fuertemente conexas** de un grafo si los arcos se consideran dirigidos
 
 Vamos a usar perspectiva didáctica, usando el lenguaje de programación Ruby
-```
 
 # 1. Teoría
 
