@@ -14,13 +14,13 @@
 #
 
 class Stack
-  def top
+  def top()
     "Stack.top()"
   end
 end
 
 class Queue
-  def front
+  def front()
     "Queue.front()"
   end
 end

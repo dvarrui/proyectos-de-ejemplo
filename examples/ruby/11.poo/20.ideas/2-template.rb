@@ -25,8 +25,8 @@ class Queue
   end
 end
 
-# v = Stack.new
-v = Queue.new
+v = Stack.new
+# v = Queue.new
 
 if v.is_a?(Stack)
   m = :top
