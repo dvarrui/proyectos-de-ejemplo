@@ -1,4 +1,10 @@
 class Cell
+  CHARS = {
+     empty: " ",
+     wall: "#",
+     player: "*",
+     end: "X"
+  }
   attr_reader :type
 
   def initialize(type)
@@ -6,6 +12,6 @@ class Cell
   end
 
   def to_s
-    @type
+    CHARS[@type]
   end
 end
