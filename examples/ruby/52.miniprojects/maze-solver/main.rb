@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
-require_relative "loader"
-require_relative "maze"
-require "debug"
+require_relative "lib/loader"
+require_relative "lib/maze"
+# require "debug"
 
 filepath = ARGV.first
 maze = Maze.new(Loader.call(filepath))

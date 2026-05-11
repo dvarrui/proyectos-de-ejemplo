@@ -10,16 +10,16 @@ class Maze
   end
 
   def show
+    puts ""
     print "Maze (#{@max[:rows]}x#{@max[:cols]})"
-    print "| player (#{@player.coord.join(',')})"
-    print "| target (#{@target.coord.join(',')})"
+    print "| player(#{@player.coord.join(',')})"
+    print "| target(#{@target.coord.join(',')})"
     print "| solved? #{@solved}\n"
     puts ""
     @map.each_with_index do |row, rowindex|
       line = row.map(&:to_s).join
       puts "#{rowindex} | #{line}"
     end
-    puts ""
   end
 
   def solve!
@@ -63,6 +63,7 @@ class Maze
     return true if find(cell(current).west)
 
     cell(current).unvisited!
+    false
   end
 
   def inside_map?(coord)
