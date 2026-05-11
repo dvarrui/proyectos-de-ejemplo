@@ -5,7 +5,7 @@ class CellFactory
     "0" => :empty,
     "1" => :wall,
     "8" => :player,
-    "9" => :end
+    "9" => :target
   }
 
   def self.create(code)

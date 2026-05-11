@@ -2,7 +2,10 @@
 
 require_relative "loader"
 require_relative "maze"
+require "debug"
 
-maze = Maze.new
-maze.map = Loader.call("maze.txt")
-puts maze.to_s
+filepath = "maze.txt"
+maze = Maze.new(Loader.call(filepath))
+maze.show
+maze.solve!
+maze.show
