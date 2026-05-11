@@ -4,7 +4,7 @@ require_relative "loader"
 require_relative "maze"
 require "debug"
 
-filepath = "maze.txt"
+filepath = ARGV.first
 maze = Maze.new(Loader.call(filepath))
 maze.show
 maze.solve!

@@ -27,10 +27,12 @@ class Cell
   end
 
   def visited!
+    return if @type == :player
     @type = :visited
   end
 
   def unvisited!
+    return if @type == :player
     @type = :empty
   end
 
