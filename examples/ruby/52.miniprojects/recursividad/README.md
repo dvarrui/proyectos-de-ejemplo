@@ -3,7 +3,7 @@
 
 Implementa una función recursiva:
 
-* Firma `generate(vector, iter, size)`
+* Firma `generate(vector, i, n)`
 * que genere e imprima todos los vectores binarios válidos de longitud n
 * que cumplan la condición de paridad.
 
