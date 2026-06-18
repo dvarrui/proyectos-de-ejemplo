@@ -6,3 +6,7 @@
 
 // No se puede compilar porque falta la función main()
 // error[E0601]: `main` function not found in crate `00_holamundo`
+
+fn main() {
+
+}
