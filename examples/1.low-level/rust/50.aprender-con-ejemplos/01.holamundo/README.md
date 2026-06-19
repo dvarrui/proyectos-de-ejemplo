@@ -61,9 +61,7 @@ $ du -sh 00-holamundo
 280K	00-holamundo
 ```
 
-**[Ejemplo 1](./01-holamundo.rb): print() y puts() para mostrar por pantalla.**
-
-> **NOTA**: En la primera línea del fichero tenemos `#!/usr/bin/env ruby`, esta instrucción sirve para poder ejecutar el script como `./01-holamundo.rb` directamente. La shell ya sabe quién es el responsable de interpretar el contenido de este fichero (El programa `ruby`). Si no ponemos esta línea o estamos en un SO no Unix, entonces para ejecutar el script haremos `ruby 01-holamundo.rb`.
+**[Ejemplo 1](./01-holamundo.rs): print!() y println!() para mostrar por pantalla.**
 
 En este primer ejemplo vamos a mostrar por pantalla directamente el mensaje:
 
@@ -71,26 +69,94 @@ En este primer ejemplo vamos a mostrar por pantalla directamente el mensaje:
 El pesonaje Obiwan, tiene 57 años de edad y mide 1.80 metros.
 ```
 
-Si nos fijamos en el código, vemos que hemos usado `print` y `puts`. Realmente con una línea lo resolvíamos pero se ha puesto así por motivos didácticos, para ver la diferencia entre `print` (Muestra por pantalla sin retorno de carro) y `puts` (Muestra por pantalla con retorno de carro).
+Si nos fijamos en el código, vemos que hemos usado `print!()` y `println!()`. Realmente con una línea lo resolvíamos pero se ha puesto así por motivos didácticos, para ver la diferencia entre ambos. 
+* `print!()`: Muestra por pantalla sin retorno de carro.
+* `println()`: Muestra por pantalla con retorno de carro.
+
+Nos fijamos en otro detalle, las funciones anteriores tienen el sufijo `!`. ¿Por qué? Dependiendo del lenguaje de programación que vengas te parecerá más o menos raro o más o menos normal. Lo lenguajes más "populares" no usar el símbolo de exclamación como parte del nombre, pero otros lenguajes, por ejemplo Ruby si que lo usan. Y no pasa nada.
+
+¿Pero cuál es la razón? _¡Tiene que haber una razón!_. El sufijo `!` en el nombre de la función sirve para indicar que es una "macro" y no una función estándar. Las macros generan un código fuente que se sustituye antes de compilar. Esto es, las marcros no se compilan, se sustituye y luego se compila.
+
+> Voy a usar `cargo` para crear un proyecto pero no lo explicamos ahora.
+
+Veamos un ejemplo donde expandimos las macros:
+
+* Creo un proyecto con `cargo`, y edito el código fuente:
+
+```bash
+$ cargo new holamundo
+$ cd holamundo
+...editar el fichero src/main.rs...
+$ cat src/main.rs 
+fn main() {
+    println!("Hello, world!");
+}
+```
+
+* Usamos `cargo` para instalar la biblioteca que necesitamos y para expandir las macros del proyecto:
+
+```bash
+$ cargo install cargo-expand
+$ cargo expand
+
+    Checking holamundo v0.1.0 (.../holamundo)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.05s
+
+#![feature(prelude_import)]
+extern crate std;
+#[prelude_import]
+use std::prelude::rust_2024::*;
+fn main() {
+    {
+        ::std::io::_print(format_args!("Hello, world!\n"));
+    };
+}
+```
+
+Podemos comprobar cómo se añaden líneas al código fuente antes de compilarse. No las vamos a explicar ahora. De momento, sólo es necesario saber que son las macros y qué hacen.
+
+> Las macros sirven (entre otras cosas) para facilitarnos la escritura de los programas.
+
+**[Ejemplo 2](./02-holamundo.rs): Ahora con variables.**
+
+Ahora vamos a usar variables (`name`, `age` y `height`) para poner cada valor por separado.
+
+Otra observación, es que a la hora de imprimir con `println!()`, le pasamos varios argumentos: Un texto y las variables. Las marcas `{}` se reemplazan por el contenido de cada una de las variables.
+
+**[Ejemplo 3](./03-holamundo.rs): probando cosas raras**
+
+¿Qué pasaría si el número de marcas `{}` no coincide con el número de variables?
+
+* ¿Qué pasa cuando tenemos menos marcas `{}` que variables?
+* ¿Qué pasa cuando tenemos más marcas `{}` que variables?
 
 
-**[Ejemplo 2](./02-holamundo.rb): los paréntesis son opcionales.**
+```bash
+$ rustc 03-holamundo.rs
 
-Ahora vamos a usar variables (`name`, `age` y `height`) para poner cada valore por separado. Una nueva observación es que en Ruby los paréntesis de los métodos son opcionales por ese motivo lo podemos omitir si queremos en el método `puts`. Normalmente se suele "omitir" los paréntesis para evitar "ruido" visual pero se aconseja ponerlos cuando son necesarios para definir mejor o aclarar el contenido.
+error: argument never used
+ --> 03-holamundo.rs:9:82
+  |
+9 |     println!("El personaje {}, tiene {} años de edad y mide metros.", name, age, height);
+  |              -------------------------------------------------------             ^^^^^^ argument never used
+  |              |
+  |              formatting specifier missing
 
-**[Ejemplo 3](./03-holamundo.rb): todo son objetos y/o métodos (que también son objetos) ¡No te asustes! ;-)**
+error: 3 positional arguments in format string, but there are 2 arguments
+  --> 03-holamundo.rs:10:28
+   |
+10 |     println!("El personaje {}, tiene {} años de edad y mide {} metros.", name, age);
+   |                            ^^        ^^                     ^^           ----  ---
 
-¿Por qué decimos que `puts` es un método y no una función como pasa en otros lenguajes de programación?. Aunque "parece" una función, es el método del objeto donde estamos escribiendo el código.
+error: aborting due to 2 previous errors
+```
 
-En el ejemplo estamos mostrando los valores de `self` y `self.class` para que lo veas.
+Pues que el compilador lo detecta y nos muestra el error. El código no compilará hasta que los escribamos de forma correcta.
 
-> En Ruby, siempre estamos escribiendo código dentro de algún objeto.
+**[Ejemplo 4](./04-holamundo.rs): Leer del teclado.**
 
-**[Ejemplo 4](./04-holamundo.rb): gets() para leer del teclado.**
+Ahora los valores de las variables los introduce el usuario mediante `read_line(&mut name)`. Esta función lee la entrada de teclado (incluyendo el salto de línea), de modo que para obtener el valor del nombre sin el retorno de carro usaremos `let name = name.trim();`.
 
-Ahora los valores de las variables los introduce el usuario mediante el método `gets`. Este método lee la entrada de teclado (incluyendo el salto de línea), de modo que para obtener el valor del nombre sin el retorno de carro usaremos `gets.chomp`.
-
-Esta forma de escribir es una concatenación de métodos, esto es, `gets` devuelve un String con lo que el usuario ha escrito por el teclado (junto con el retorno de líne "\n"), a luego ese String se le aplìca el método `.chomp` para eliminar "\n".
 
 Ejemplo:
 
@@ -103,10 +169,49 @@ La variable `age` debe contener un número entero, de modo que al leer la entrad
 
 La variable `height` debe tener un valor Float, entonces siguiendo la misma lógica lo hacemos con `gets.to_f`.
 
-**[Ejemplo 5](./05-holamundo.rb): Poniendo un poco de color a la vida.**
+**[Ejemplo 5](./cargo.d/holamundo-05): Poniendo un poco de color a la vida.**
 
-Para darle color a la salida por pantalla, vamos a usar la gema `pastel` (Librería Ruby). Se ha creado el fichero [Gemfile](./Gemfile) que contiene la gemas a instalar, A continuación con el comando `bundle install` se instala lo especificado en Gemfile. ¡Sencillo! ¿verdad?
+Para poder colorear el texto en el terminal tenemos que instalar una biblioteca llamada `colored`, pero como hacerlo forma "manual" implica hacer varios pasos vamos a  seguir otro camino más fácil. Trabajaremos en proyectos. Es necesario que empecemos a gestionar el código de Rust como si fueran proyectos (usando `cargo`) en lugar de tratarlo como ficheros sueltos.
 
+En el fichero `holamundo-05/Cargo.toml` definimos la biblioteca que necesitamos:
+
+```ini
+[package]
+name = "holamundo-05"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+colored = "2"
+```
+
+En las dependencias sólo tenemos que poner el nombre de la biblioteca y su versión: `colored = "2"`. Si ejecutamos el programa con `cargo run`, Rust se encarga de todo:
+
+* Descargar las dependencias.
+* Compilar y contruir el ejecutable.
+* Ejecutar el programa
+
+```bash
+$ cargo run
+    Updating crates.io index
+     Locking 12 packages to latest Rust 1.96.0 compatible versions
+      Adding colored v2.2.0 (available: v3.1.1)
+  Downloaded lazy_static v1.5.0
+  Downloaded colored v2.2.0
+  Downloaded 2 crates (47.9KiB) in 0.26s
+   Compiling lazy_static v1.5.0
+   Compiling colored v2.2.0
+   Compiling holamundo-05 v0.1.0 (.../cargo.d/holamundo-05)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.10s
+     Running `target/debug/holamundo-05`
+
+Name: Obiwan
+Age: 57
+Height: 1.80
+El personaje OBIWAN, tiene 57 años de edad y mide 1.8 metros.
+```
+
+---
 > **INFO:** Si quieres ver la información de la gema o encontrar más gemas y consultar su información, entonces hay que ir a [RubyGems](https://rubygems.org/)
 
 Ya tenemos la gema instalada, ahora para usar la librería en nuestro prgorama ponemos `require "pastel"` y para hacer uso de sus métodos, creamos un objeto `pastel = Pastel.new`. A partir de ahora, invocamos los métodos del objeto para colorear los textos. Ejemplo: `pastel.yellow.bold("Obiwan")`. En este ejemplo invocamos el método del objeto pastel para dar color al String que pasamos por parámetro.
