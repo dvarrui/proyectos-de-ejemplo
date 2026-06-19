@@ -2,7 +2,7 @@
 
 # Hola Mundo
 
-¡Hola Mundo! Lo típico es empezar por el "Hola Mundo!". Así que vamos, pero vamos a hacer un programa que:
+¡Hola Mundo! Lo típico es empezar por el "Hola Mundo!". Así que vamos, pero vamos a hacer un programa que haga lo siguiente:
 
 - A. Pedir por teclado el nombre, edad y altura en metros, 
 - B. Mostrar por pantalla un mensaje como el siguiente: `El personaje NAME, tiene AGE años de edad y mide HEIGHT metros.`
@@ -11,8 +11,55 @@
 
 Esto realmente, no es un programa porque no hace nada. Simplemente vamos a crear comentarios con los objetivos que queremos desarrollar para que tener un esquema inicial.
 
-> Necesito instalar lo siguiente para poder usar `rustc`.
-> * `sudo zypper install -t pattern devel_C_C++`
+Para construir el ejecutable tengo que compilar el código fuente. Esto se hace con `rustc 00-holamundo.rs`, pero si el fichero sólo contiene comentarios el compilador se va a quejar, entonces tengo que añadir la función principal `fn main() {}`, vacía.
+
+Ahora si compila un ejecutable `00-holamundo`, que no hace nada.
+
+Nos damos cuenta de algo raro.
+
+```bash
+$ du -sh 00-holamundo
+4,2M	00-holamundo
+```
+
+El ejecutable que no hace nada ocupa 4.2 MB. ¡Algo excesivo! 
+
+**¿Por qué?**
+
+El compilador de Rust incluye código "por defecto" para hacer el programa robusto, seguro y portátil. Por ejemplo:
+
+1. Información de Depuración (Debug Symbols): Son metadatos para las herramientas de depuracion.
+2. La Biblioteca Estándar de Rust (std): Manejo de hilos, panics, asignación de memoria, y capacidades de formateo de cadenas. Se incluye para garantizar que, sea cual sea el sistema operativo, las funciones básicas funcionen de forma segura y consistente.
+3. El Runtime de Rust que se encarga de:
+    - Configurar la pila (stack) de los hilos.
+    - Manejar señales del sistema operativo.
+    - Coordinar la ejecución del main.
+
+**¿Cómo reducir el tamaño al compilar con rustc?**
+
+
+| Flag             | Descripción |
+| ---------------- | ------------------------------------ |
+| -C opt-level=z   | Prioriza tamaño sobre la velocidad   |
+| -C lto=fat       | Aplica optimización de enlazado      |
+| -C strip=symbols | Eliminar los metadatos de depuración |
+| -C panic=abort   | No incluir mecanismos de recuperación de errores críticos |
+
+```bash
+$ rustc -C opt-level=z -C lto=fat -C strip=symbols -C panic=abort 00-holamundo.rs
+```
+
+> Por comodidad, me creo un alias `rsc` con todo e "churro" de la compilación optimizada de Rust. _No voy a escribir todas esas opciones manualmente todo el tiempo_
+
+```bash
+$ alias rsc
+rsc='rustc -C opt-level=z -C lto=fat -C strip=symbols -C panic=abort'
+
+$ rsc 00-holamundo.rs
+
+$ du -sh 00-holamundo
+280K	00-holamundo
+```
 
 **[Ejemplo 1](./01-holamundo.rb): print() y puts() para mostrar por pantalla.**
 
