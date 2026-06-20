@@ -228,19 +228,21 @@ Height: 1.80
 El personaje OBIWAN, tiene 57 años de edad y mide 1.8 metros.
 ```
 
-* Si queremos tener mñás información sobre el `crate`(biblioteca de Rust) `colored` tenemos:
-    * Página en **crates.io**: https://crates.io/crates/colored
-    * Documentación oficial: https://docs.rs/colored/latest/colored/
-
----
-> **INFO:** Si quieres ver la información de la gema o encontrar más gemas y consultar su información, entonces hay que ir a [RubyGems](https://rubygems.org/)
-
-Ya tenemos la gema instalada, ahora para usar la librería en nuestro prgorama ponemos `require "pastel"` y para hacer uso de sus métodos, creamos un objeto `pastel = Pastel.new`. A partir de ahora, invocamos los métodos del objeto para colorear los textos. Ejemplo: `pastel.yellow.bold("Obiwan")`. En este ejemplo invocamos el método del objeto pastel para dar color al String que pasamos por parámetro.
-
 Para que el código sea un poco más legible hemos creado nuevas variables coloreadas. Por ejemplo `colored_name` tiene el mismo contenido de `name` pero incluyendo el color.
 
-> **NOTA:** Entiendo que esto puede ser un poco más "complicado" de entender ahora que todavía estamos empezando y todos los nuevos conceptos como librerías, objetos, métodos, etc, nos puede sonar raro. ¡No te preocupes!, esto lo iremos explicando más adelante pero ahora como quería usar la librería para añador color no me ha quedado más remedio que mencionarlo.
+Más información:
 
+* Sobre `colored`:
+    * Página en **crates.io**: https://crates.io/crates/colored
+    * Documentación oficial: https://docs.rs/colored/latest/colored/
+* Sobre `String`: https://doc.rust-lang.org/std/string/struct.String.html
+* Sobre otras bibliotecas (`crates`): https://crates.io/.
+
+También hago lo siguiente:
+* `cargo fmt`: para formatear el código según el estilo Rust.
+* `cargo clippy`: ejecutar este asistente que me hacer sugenrencias para mejorar.
+
+---
 Cuando ponemos el nombre, puede ser que los escribamos `Obiwan` o nos equivoquemos y pongamos `obiwan` por ir un poco rápido. Esto lo podemos mejorar usando el método `capitalize()` del String. Ejemplo: ` "obiwan".capitalize => "Obiwan".
 
 **[Ejemplo 6](./06-holamundo.rb): Mejorando el interfaz de entrada.**
