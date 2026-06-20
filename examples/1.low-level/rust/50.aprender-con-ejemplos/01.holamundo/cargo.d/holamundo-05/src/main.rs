@@ -1,5 +1,6 @@
 use std::io::{self, Write};
-use colored::*;
+//use colored::*;
+use colored::Colorize;
 
 fn main() {
     // A. Entrada de datos

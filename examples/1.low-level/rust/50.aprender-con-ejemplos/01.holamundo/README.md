@@ -171,9 +171,26 @@ La variable `height` debe tener un valor Float, entonces siguiendo la misma lóg
 
 **[Ejemplo 5](./cargo.d/holamundo-05): Poniendo un poco de color a la vida.**
 
-Para poder colorear el texto en el terminal tenemos que instalar una biblioteca llamada `colored`, pero como hacerlo forma "manual" implica hacer varios pasos vamos a  seguir otro camino más fácil. Trabajaremos en proyectos. Es necesario que empecemos a gestionar el código de Rust como si fueran proyectos (usando `cargo`) en lugar de tratarlo como ficheros sueltos.
+Para poder colorear el texto en el terminal hay que instalar una biblioteca llamada `colored`, pero como hacerlo forma "manual" implica hacer muchos pasos vamos a seguir otro camino más fácil y más "rustacean". 
 
-En el fichero `holamundo-05/Cargo.toml` definimos la biblioteca que necesitamos:
+Hast ahora, habíamos trabajado creando ficheros individuales y compilándolos manualmente con `rustc`. Ahora trabajaremos en proyectos. Para gestionar los proyectos de Rust usaremos la herramienta `cargo`.
+
+* Creamos el nuevo proyecto:
+
+```bash
+$ cd cargo.d
+$ cargo new holamundo-05
+```
+
+```
+holamundo-05
+├── Cargo.lock
+├── Cargo.toml
+└── src
+    └── main.rs
+```
+
+El fichero `holamundo-05/Cargo.toml` es el fichero de configuración principal del proyecto.Añadimos la biblioteca que necesitamos en la sección `[dependencies]`:
 
 ```ini
 [package]
@@ -185,9 +202,9 @@ edition = "2024"
 colored = "2"
 ```
 
-En las dependencias sólo tenemos que poner el nombre de la biblioteca y su versión: `colored = "2"`. Si ejecutamos el programa con `cargo run`, Rust se encarga de todo:
+En la sección `[dependencies]` sólo tenemos que poner el nombre de la biblioteca y su versión: `colored = "2"`. A continuación ejecutamos `cargo run`, y Rust se encarga de todo:
 
-* Descargar las dependencias.
+* Descargar e instalar las dependencias.
 * Compilar y contruir el ejecutable.
 * Ejecutar el programa
 
@@ -210,6 +227,10 @@ Age: 57
 Height: 1.80
 El personaje OBIWAN, tiene 57 años de edad y mide 1.8 metros.
 ```
+
+* Si queremos tener mñás información sobre el `crate`(biblioteca de Rust) `colored` tenemos:
+    * Página en **crates.io**: https://crates.io/crates/colored
+    * Documentación oficial: https://docs.rs/colored/latest/colored/
 
 ---
 > **INFO:** Si quieres ver la información de la gema o encontrar más gemas y consultar su información, entonces hay que ir a [RubyGems](https://rubygems.org/)
