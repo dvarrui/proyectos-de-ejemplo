@@ -2,18 +2,45 @@
 
 # Hola Mundo
 
-¡Hola Mundo! Lo típico es empezar por el "Hola Mundo!". Así que vamos, pero vamos a hacer un programa que haga lo siguiente:
+_¡Hola Mundo!_ Lo típico es empezar por el "Hola Mundo!". Pero vamos a hacer un programa que haga lo siguiente:
 
 - A. Pedir por teclado el nombre, edad y altura en metros, 
 - B. Mostrar por pantalla un mensaje como el siguiente: `El personaje NAME, tiene AGE años de edad y mide HEIGHT metros.`
 
 **[Ejemplo 0](./00-holamundo.rs): Escribimos las ideas como comentarios.**
 
-Esto realmente, no es un programa porque no hace nada. Simplemente vamos a crear comentarios con los objetivos que queremos desarrollar para que tener un esquema inicial.
+Empezamos con un fichero llenos de comentarios con los objetivos que queremos implementar para que tener un esquema inicial. Realmente, no es un programa porque no hace nada. Pero vamos a compilarlo con `rustc 00-holamundo.rs`.
 
-Para construir el ejecutable tengo que compilar el código fuente. Esto se hace con `rustc 00-holamundo.rs`, pero si el fichero sólo contiene comentarios el compilador se va a quejar, entonces tengo que añadir la función principal `fn main() {}`, vacía.
+```bash
+$ rustc 00-holamundo.rs 
+error[E0601]: `main` function not found in crate `00_holamundo`
+ --> 00-holamundo.rs:7:2
+  |
+7 |
+  | ^ consider adding a `main` function to `00-holamundo.rs`
 
-Ahora si compila un ejecutable `00-holamundo`, que no hace nada.
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0601`.
+```
+
+Con `rustc --explain E0601` obtenemos más información del error:
+
+```bash
+$ rustc --explain E0601
+
+No main function was found in a binary crate.
+To fix this error, add a main function:
+
+fn main() {
+    // Your program will start here.
+    println!("Hello world!");
+}
+
+If you don't know the basics of Rust, you can look at the Rust Book to get started.
+```
+
+El compilador se queja porque no existe la función principal `main()`. La creamos aunque esté vacía por ahora. Ahora si compila y obtenemos un ejecutable `00-holamundo`, que no hace nada.
 
 Nos damos cuenta de algo raro.
 
@@ -26,10 +53,10 @@ El ejecutable que no hace nada ocupa 4.2 MB. ¡Algo excesivo!
 
 **¿Por qué?**
 
-El compilador de Rust incluye código "por defecto" para hacer el programa robusto, seguro y portátil. Por ejemplo:
+El compilador de Rust incluye código "por defecto":
 
-1. Información de Depuración (Debug Symbols): Son metadatos para las herramientas de depuracion.
-2. La Biblioteca Estándar de Rust (std): Manejo de hilos, panics, asignación de memoria, y capacidades de formateo de cadenas. Se incluye para garantizar que, sea cual sea el sistema operativo, las funciones básicas funcionen de forma segura y consistente.
+1. Información de Depuración (Debug Symbols): Metadatos para las herramientas de depuracion.
+2. La Biblioteca Estándar (`std`): Manejo de hilos, panics, asignación de memoria, y formateo de cadenas, etc. Se incluyen para garantizar que, sea cual sea el sistema operativo, las funciones básicas funcionen de forma segura y consistente.
 3. El Runtime de Rust que se encarga de:
     - Configurar la pila (stack) de los hilos.
     - Manejar señales del sistema operativo.
@@ -37,6 +64,7 @@ El compilador de Rust incluye código "por defecto" para hacer el programa robus
 
 **¿Cómo reducir el tamaño al compilar con rustc?**
 
+El compilador tiene muchos parámetros, por ejemplo:
 
 | Flag             | Descripción |
 | ---------------- | ------------------------------------ |
@@ -45,11 +73,13 @@ El compilador de Rust incluye código "por defecto" para hacer el programa robus
 | -C strip=symbols | Eliminar los metadatos de depuración |
 | -C panic=abort   | No incluir mecanismos de recuperación de errores críticos |
 
+Entonces compilaremos de la siguiente forma:
+
 ```bash
 $ rustc -C opt-level=z -C lto=fat -C strip=symbols -C panic=abort 00-holamundo.rs
 ```
 
-> Por comodidad, me creo un alias `rsc` con todo e "churro" de la compilación optimizada de Rust. _No voy a escribir todas esas opciones manualmente todo el tiempo_
+Pero, por mi comodidad, me voy a crear un alias `rsc` con todo ese "churro" de la compilación optimizada de Rust. _No voy a escribir todas esas opciones manualmente todo el tiempo_
 
 ```bash
 $ alias rsc
@@ -60,6 +90,8 @@ $ rsc 00-holamundo.rs
 $ du -sh 00-holamundo
 280K	00-holamundo
 ```
+
+_Ahora el ejecutable tiene un tamaño más razonable._
 
 **[Ejemplo 1](./01-holamundo.rs): print!() y println!() para mostrar por pantalla.**
 
@@ -113,9 +145,11 @@ fn main() {
 }
 ```
 
-Podemos comprobar cómo se añaden líneas al código fuente antes de compilarse. No las vamos a explicar ahora. De momento, sólo es necesario saber que son las macros y qué hacen.
+Podemos comprobar cómo se añaden líneas al código fuente antes de compilarse. No las vamos a explicar ahora. De momento, sólo es necesario saber que las macros sirven para incluir código y facilitarnos las escritura de los programas.
 
-> Las macros sirven (entre otras cosas) para facilitarnos la escritura de los programas.
+Pero si nos fijamos, ahora aparece en la "expansión" del código otra macro que antes no veíamos (`format_args!`). _¿Pero esta macro no se expande?_
+
+`format_args!` "no se expande" porque no es una macro convencional escrita en código fuente Rust que podamos inspeccionar. Es una macro integrada en el compilador (builtin macro) y tiene un tratamiento especial dentro del propio rustc.
 
 **[Ejemplo 2](./02-holamundo.rs): Ahora con variables.**
 
@@ -169,7 +203,7 @@ La variable `age` debe contener un número entero, de modo que al leer la entrad
 
 La variable `height` debe tener un valor Float, entonces siguiendo la misma lógica lo hacemos con `gets.to_f`.
 
-**[Ejemplo 5](./cargo.d/holamundo-05): Poniendo un poco de color a la vida.**
+**[Ejemplo 5](./holamundo-05): Poniendo un poco de color a la vida.**
 
 Para poder colorear el texto en el terminal hay que instalar una biblioteca llamada `colored`, pero como hacerlo forma "manual" implica hacer muchos pasos vamos a seguir otro camino más fácil y más "rustacean". 
 
@@ -245,7 +279,7 @@ También hago lo siguiente (_como buen "rustacean"_):
 
 > A partir de ahora lo haré con todos los proyectos que vaya haciendo.
 
-**[Ejemplo 6](./cargo.d/holamundo-06): Paso de argumentos de entrada. Es lo habitual en comandos y scripts.**
+**[Ejemplo 6](./holamundo-06): Paso de argumentos de entrada. Es lo habitual en comandos y scripts.**
 
 En esta versión del programa vamos a usar otra forma de introducir los datos al programa. Vamos a usar el paso de argumentos. Ejemplo de ejecución con "cargo":
 
