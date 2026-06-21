@@ -238,39 +238,47 @@ Más información:
 * Sobre `String`: https://doc.rust-lang.org/std/string/struct.String.html
 * Sobre otras bibliotecas (`crates`): https://crates.io/.
 
-También hago lo siguiente:
+También hago lo siguiente (_como buen "rustacean"_):
+
 * `cargo fmt`: para formatear el código según el estilo Rust.
 * `cargo clippy`: ejecutar este asistente que me hacer sugenrencias para mejorar.
 
----
-Cuando ponemos el nombre, puede ser que los escribamos `Obiwan` o nos equivoquemos y pongamos `obiwan` por ir un poco rápido. Esto lo podemos mejorar usando el método `capitalize()` del String. Ejemplo: ` "obiwan".capitalize => "Obiwan".
+> A partir de ahora lo haré con todos los proyectos que vaya haciendo.
 
-**[Ejemplo 6](./06-holamundo.rb): Mejorando el interfaz de entrada.**
+**[Ejemplo 6](./cargo.d/holamundo-06): Paso de argumentos de entrada. Es lo habitual en comandos y scripts.**
 
-Es este ejemplo vamos a usar otra gema (`tty-prompt`). Ya está instalada con el proceso del ejemplo anterior (`bundle install`). Ahora para usarla dentro de nuestro programa ponemos `require "tty-prompt"`.
-
-Se crea un objeto `prompt = TTY::Prompt.new`. Ahora usando el método `ask(MESSAGE, default: VALUE)` del objeto mostramos MESSAGE por pantalla y si pulsamos enter la variable de carga por defecto con el valor VALUE. Esto mejora notablemente la usabilidad del programa.
-
-**[Ejemplo 7](./07-holamundo.rb): Paso de argumentos de entrada. Es lo habitual en comandos y scripts.**
-
-En esta versión del programa vamos a usar otra forma de introducir los datos al programa (script). Vamos a usar el paso de argumentos. En este caso el programa se invoca en el terminal de la siguiente forma: `./07-holamundo.rb NAME AGE HEIGHT`
-
-Ejemplo de uso:
+En esta versión del programa vamos a usar otra forma de introducir los datos al programa. Vamos a usar el paso de argumentos. Ejemplo de ejecución con "cargo":
 
 ```bash
-$ ./07-holamundo.rb obiwan 57 1.80
-El personaje Obiwan, tiene 57 años de edad y mide 1.8 metros.```
+$ cargo run obiwan 57 1.80
+   Compiling holamundo-06 v0.1.0 (./cargo.d/holamundo-06)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.10s
+     Running `target/debug/holamundo-06 obiwan 57 1.80`
+El personaje OBIWAN, tiene 57 años de edad y mide 1.8 metros
 ```
 
-Para leer los argumentos existe el objeto `ARGV`. Realmente es un Array (o lista)
+Otra forma de ejecutar el programa:
 
-> **NOTA:** En Ruby a las listas se les llama Array. Los Array de Ruby no tienen tamaño fijo.
->
-> Esto puede confundir, dependiendo del lenguaje de programación que vengas, ya que en otros lenguajes de programación a este tipo de objetos se les llama List, y se usa Array cuando son listas de tamaño fijo en memoria.
->
-> IMHO: El nombre List hubiera sido un poco más "adecuado".
+```bash
+$ ./target/debug/holamundo-06 Vader 40 1.90
+El personaje VADER, tiene 40 años de edad y mide 1.9 metros.
+```
 
-**[Ejemplo 8](./08-holamundo.rb): Cambiamos la lógica para separ metros de centímetros.**
+Los módulos son contenedores de funciones. En nuestro ejemplo, para leer los argumentos usamos funciones definidas dentro del módulo `std::env`. Este módulo contiene funciones relacionadas en el entorno del proceso. Por ejemplo:
+
+* `env::args()`: Devuelve un iterador con los argumentos de la línea de comandos.
+* `env::var()`: Leer variables de entorno.
+* `env::current_dir()`: Obtener el directorio de trabajo actual.
+
+> Más información del módulo [std::env](https://doc.rust-lang.org/std/env/index.html)
+
+En la línea `let args: Vec<String> = env::args().collect();` estamos definiendo la variable `args` como un vector de String que contiene todos los argumentos que se han pasado por la línea de comandos. A partir de ahí, el código es similar al ejemplo anterior.
+
+> CURIOSIDAD: Hay que resaltar que el código de este ejemplo tiene menos líneas que el ejemplo anterior.
+
+
+---
+**[Ejemplo 8](./08-holamundo.rb): Cambiamos la lógica para separar metros de centímetros.**
 
 Vamos modificar el mensaje de salida del siguiente modo:
 
