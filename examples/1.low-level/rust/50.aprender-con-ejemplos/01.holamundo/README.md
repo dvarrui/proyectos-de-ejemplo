@@ -160,9 +160,17 @@ Ahora vamos a usar variables (`name`, `age` y `height`) para poner cada valor po
 
 _Pero, ¡pensaba que Rust era un lenguaje con tipado estático!. ¡No hay declaración de tipos!_ Rust SI es un lenguaje de tipado estático. SI hay que declarar los tipos de las variables, pero cuando el tipo no está especificado de forma explícita Rust intenta resolverlos con inferencia de tipos.
 
-**[Ejemplo 3](./03-holamundo.rs): probando cosas raras**
+Veamos un ejemplo con declaración explícita de tipos estáticos:
 
-¿Qué pasaría si el número de marcas `{}` no coincide con el número de variables?
+```rust
+let name: &str = "Obiwan";
+let age: i32 = 57;
+let height: f64 = 1.80;
+```
+
+**[Ejemplo 3](./holamundo-03.rs): probando cosas raras**
+
+¿Qué pasaría si el número de marcas `{}` no coincide con el número de las variables?
 
 * ¿Qué pasa cuando tenemos menos marcas `{}` que variables?
 * ¿Qué pasa cuando tenemos más marcas `{}` que variables?
@@ -188,7 +196,7 @@ error: 3 positional arguments in format string, but there are 2 arguments
 error: aborting due to 2 previous errors
 ```
 
-Pues que el compilador lo detecta y nos muestra el error. El código no compilará hasta que los escribamos de forma correcta.
+El compilador lo detecta y nos muestra los errores. El código no compilará hasta que los escribamos de forma correcta.
 
 **[Ejemplo 4](./04-holamundo.rs): Leer del teclado.**
 
