@@ -2,17 +2,17 @@
 
 # Hola Mundo
 
-_¡Hola Mundo!_ Lo típico es empezar por el "Hola Mundo!". Pero vamos a hacer un programa que haga lo siguiente:
+_¡Hola Mundo!_ Lo típico es empezar por el "Hola Mundo!", pero vamos a hacer un programa que haga lo siguiente:
 
 - A. Pedir por teclado el nombre, edad y altura en metros, 
 - B. Mostrar por pantalla un mensaje como el siguiente: `El personaje NAME, tiene AGE años de edad y mide HEIGHT metros.`
 
-**[Ejemplo 0](./00-holamundo.rs): Escribimos las ideas como comentarios.**
+**[Ejemplo 0](./00-holamundo.rs): Escribimos los objetivos como comentarios.**
 
-Empezamos con un fichero llenos de comentarios con los objetivos que queremos implementar para que tener un esquema inicial. Realmente, no es un programa porque no hace nada. Pero vamos a compilarlo con `rustc 00-holamundo.rs`.
+Empezamos con un fichero llenos de comentarios con los objetivos que queremos implementar a modo de esquema inicial. Realmente, no es un programa porque no hace nada. Pero vamos a compilarlo con `rustc holamundo-00.rs`.
 
 ```bash
-$ rustc 00-holamundo.rs 
+$ rustc holamundo-00.rs 
 error[E0601]: `main` function not found in crate `00_holamundo`
  --> 00-holamundo.rs:7:2
   |
@@ -24,7 +24,7 @@ error: aborting due to 1 previous error
 For more information about this error, try `rustc --explain E0601`.
 ```
 
-Con `rustc --explain E0601` obtenemos más información del error:
+Teniendo el código de error, podemos obtener más información:
 
 ```bash
 $ rustc --explain E0601
@@ -40,31 +40,33 @@ fn main() {
 If you don't know the basics of Rust, you can look at the Rust Book to get started.
 ```
 
-El compilador se queja porque no existe la función principal `main()`. La creamos aunque esté vacía por ahora. Ahora si compila y obtenemos un ejecutable `00-holamundo`, que no hace nada.
+El compilador se "queja" porque no existe la función principal `main()`, de modo que la creamos aunque esté vacía por ahora. Ahora si compila y obtenemos un ejecutable `holamundo-00`, que hace "nada".
+
+> **INFO**: Consultar el litado de errores https://doc.rust-lang.org/error_codes/error-index.html.
 
 Nos damos cuenta de algo raro.
 
 ```bash
-$ du -sh 00-holamundo
-4,2M	00-holamundo
+$ du -sh holamundo-00
+4,2M	holamundo-00
 ```
 
-El ejecutable que no hace nada ocupa 4.2 MB. ¡Algo excesivo! 
+El ejecutable que no hace nada ocupa 4.2 MB. _¡Algo excesivo!_
 
 **¿Por qué?**
 
 El compilador de Rust incluye código "por defecto":
 
-1. Información de Depuración (Debug Symbols): Metadatos para las herramientas de depuracion.
+1. Metadatos para las herramientas de depuracion.
 2. La Biblioteca Estándar (`std`): Manejo de hilos, panics, asignación de memoria, y formateo de cadenas, etc. Se incluyen para garantizar que, sea cual sea el sistema operativo, las funciones básicas funcionen de forma segura y consistente.
-3. El Runtime de Rust que se encarga de:
+3. El Runtime de Rust, que se encarga de:
     - Configurar la pila (stack) de los hilos.
     - Manejar señales del sistema operativo.
     - Coordinar la ejecución del main.
 
 **¿Cómo reducir el tamaño al compilar con rustc?**
 
-El compilador tiene muchos parámetros, por ejemplo:
+El compilador tiene muchos parámetros, como por ejemplo:
 
 | Flag             | Descripción |
 | ---------------- | ------------------------------------ |
@@ -85,15 +87,15 @@ Pero, por mi comodidad, me voy a crear un alias `rsc` con todo ese "churro" de l
 $ alias rsc
 rsc='rustc -C opt-level=z -C lto=fat -C strip=symbols -C panic=abort'
 
-$ rsc 00-holamundo.rs
+$ rsc holamundo-00.rs
 
-$ du -sh 00-holamundo
-280K	00-holamundo
+$ du -sh holamundo-00
+280K	holamundo-00
 ```
 
 _Ahora el ejecutable tiene un tamaño más razonable._
 
-**[Ejemplo 1](./01-holamundo.rs): print!() y println!() para mostrar por pantalla.**
+**[Ejemplo 1](./holamundo-01.rs): print!() y println!() para mostrar por pantalla.**
 
 En este primer ejemplo vamos a mostrar por pantalla directamente el mensaje:
 
@@ -101,37 +103,40 @@ En este primer ejemplo vamos a mostrar por pantalla directamente el mensaje:
 El pesonaje Obiwan, tiene 57 años de edad y mide 1.80 metros.
 ```
 
-Si nos fijamos en el código, vemos que hemos usado `print!()` y `println!()`. Realmente con una línea lo resolvíamos pero se ha puesto así por motivos didácticos, para ver la diferencia entre ambos. 
+En el código hemos usado `print!()` y `println!()`. Realmente no hacía falta. Con una línea lo resolvíamos pero se ha puesto así por motivos didácticos, para ver la diferencia entre ambos. 
+
 * `print!()`: Muestra por pantalla sin retorno de carro.
 * `println()`: Muestra por pantalla con retorno de carro.
 
-Nos fijamos en otro detalle, las funciones anteriores tienen el sufijo `!`. ¿Por qué? Dependiendo del lenguaje de programación que vengas te parecerá más o menos raro o más o menos normal. Lo lenguajes más "populares" no usar el símbolo de exclamación como parte del nombre, pero otros lenguajes, por ejemplo Ruby si que lo usan. Y no pasa nada.
+Nos fijamos en otro detalle. Las funciones anteriores tienen el sufijo `!`. ¿Por qué? Dependiendo del lenguaje de programación que vengas te parecerá más o menos raro. Lo lenguajes más "populares" no usan el símbolo de exclamación como parte del nombre de las funcioneso métodos, pero otros lenguajes, por ejemplo Ruby si que lo usan. Y no pasa nada.
 
-¿Pero cuál es la razón? _¡Tiene que haber una razón!_. El sufijo `!` en el nombre de la función sirve para indicar que es una "macro" y no una función estándar. Las macros generan un código fuente que se sustituye antes de compilar. Esto es, las marcros no se compilan, se sustituye y luego se compila.
+¿Pero cuál es la razón? _¡Tiene que haber una razón!_. El sufijo `!` en el nombre de la función sirve para indicar que es una "macro" y no una función estándar. Las macros generan un código fuente que se sustituye en el código antes de compilar.
 
-> Voy a usar `cargo` para crear un proyecto pero no lo explicamos ahora.
+> **NOTA**: Voy a usar `cargo` para crear un proyecto de ejemplo y comprobar cómo se expanden las macros.
 
 Veamos un ejemplo donde expandimos las macros:
 
 * Creo un proyecto con `cargo`, y edito el código fuente:
 
 ```bash
-$ cargo new holamundo
-$ cd holamundo
+$ cargo new holamundo-01
+
+$ cd holamundo-01
 ...editar el fichero src/main.rs...
+
 $ cat src/main.rs 
 fn main() {
     println!("Hello, world!");
 }
 ```
 
-* Usamos `cargo` para instalar la biblioteca que necesitamos y para expandir las macros del proyecto:
+* `cargo install cargo-expand`, para instalar la biblioteca que se necesita.
+* Expandimoslas macros del proyecto:
 
 ```bash
-$ cargo install cargo-expand
 $ cargo expand
 
-    Checking holamundo v0.1.0 (.../holamundo)
+    Checking holamundo-01 v0.1.0 (.../holamundo-01)
     Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.05s
 
 #![feature(prelude_import)]
@@ -145,17 +150,15 @@ fn main() {
 }
 ```
 
-Podemos comprobar cómo se añaden líneas al código fuente antes de compilarse. No las vamos a explicar ahora. De momento, sólo es necesario saber que las macros sirven para incluir código y facilitarnos las escritura de los programas.
+Aparecen líneas nuevas en el código fuente antes de compilarse. No las vamos a explicar ahora. De momento, sólo es necesario saber que las macros sirven para incluir código y facilitar la escritura de los programas. Pero... si nos fijamos, en la "expansión" del código, aparece otra macro que antes no veíamos (`format_args!`). _¿Pero esta macro no se expande?_
 
-Pero si nos fijamos, ahora aparece en la "expansión" del código otra macro que antes no veíamos (`format_args!`). _¿Pero esta macro no se expande?_
+`format_args!` "no se expande" porque no es una macro convencional (escrita en código fuente Rust) que podamos inspeccionar. Es una macro integrada en el compilador (builtin macro) y tiene un tratamiento especial.
 
-`format_args!` "no se expande" porque no es una macro convencional escrita en código fuente Rust que podamos inspeccionar. Es una macro integrada en el compilador (builtin macro) y tiene un tratamiento especial dentro del propio rustc.
+**[Ejemplo 2](./holamundo-02.rs): Ahora con variables.**
 
-**[Ejemplo 2](./02-holamundo.rs): Ahora con variables.**
+Ahora vamos a usar variables (`name`, `age` y `height`) para poner cada valor por separado. A la hora de imprimir con `println!()`, pasamos como argumentos un texto y las variables. Las marcas `{}` indican las posiciones donde se incrustarán los valores de cada variable.
 
-Ahora vamos a usar variables (`name`, `age` y `height`) para poner cada valor por separado.
-
-Otra observación, es que a la hora de imprimir con `println!()`, le pasamos varios argumentos: Un texto y las variables. Las marcas `{}` se reemplazan por el contenido de cada una de las variables.
+_Pero, ¡pensaba que Rust era un lenguaje con tipado estático!. ¡No hay declaración de tipos!_ Rust SI es un lenguaje de tipado estático. SI hay que declarar los tipos de las variables, pero cuando el tipo no está especificado de forma explícita Rust intenta resolverlos con inferencia de tipos.
 
 **[Ejemplo 3](./03-holamundo.rs): probando cosas raras**
 
@@ -347,3 +350,63 @@ Hay distintos paradígmas de programación, pero no vamos a liarnos ahora con es
 ---
 
 _Hasta aquí hemos terminado de "evolucionar" el "hola mundo" ahora puedes seguir con el [siguiente problema](../02.numeros/README.md)._
+
+----
+El Prelude de Rust es un conjunto pequeño de elementos (tipos, traits y funciones) que el lenguaje importa automáticamente en cada módulo de tu programa. Gracias a él, no tienes que escribir use std::... para las cosas que usas el 90% del tiempo.
+
+El objetivo del Prelude es mantener el lenguaje "limpio" y evitar que tengas que importar manualmente los elementos más básicos.
+¿Qué contiene el Prelude exactamente?
+
+El Prelude incluye elementos de la biblioteca estándar (std). Aquí te detallo las categorías más importantes:
+
+    Tipos de datos básicos:
+
+        String (aunque técnicamente es un tipo dinámico, su alias y uso son omnipresentes).
+
+        Vec (el tipo vector).
+
+        Option<T> y sus variantes Some y None.
+
+        Result<T, E> y sus variantes Ok y Err.
+
+        Box<T>, Arc<T>, Rc<T> (tipos para gestión de memoria).
+
+    Traits fundamentales:
+
+        Clone, Copy, Send, Sync (traits que definen cómo se comportan los datos).
+
+        Display, Debug (para formateo de salida).
+
+        Iterator (vital para trabajar con bucles y transformaciones de colecciones).
+
+        Default, Drop, PartialEq, PartialOrd, etc.
+
+    Funciones y macros:
+
+        drop (función para liberar memoria manualmente).
+
+        println!, format!, vec!, panic!, assert! (macros esenciales).
+
+¿Por qué existe el Prelude?
+
+    Ergonomía: Sin el Prelude, tendrías que poner use std::option::Option; o use std::vec::Vec; al inicio de cada archivo. Sería tedioso y redundante.
+
+    Estándar: Define un "lenguaje común". Todos los programadores de Rust saben que Option o Vec están siempre disponibles, lo que facilita compartir código.
+
+    Seguridad y consistencia: Al incluir tipos como Result o Option por defecto, Rust fomenta que escribas código más seguro desde el primer minuto.
+
+Cómo ver el contenido real
+
+Como el Prelude es solo una lista de importaciones, puedes ver su definición exacta en la documentación oficial:
+
+    Documentación oficial: std::prelude
+
+Un detalle técnico importante: "Ediciones"
+
+El contenido del Prelude puede cambiar entre ediciones de Rust (por ejemplo, entre Rust 2015, 2018, 2021 y 2024).
+
+    Si una nueva versión del lenguaje hace que un tipo sea muy popular, es posible que se añada al Prelude para simplificar el código.
+
+    Esto significa que el código que compila en una edición podría tener un conjunto de importaciones predeterminadas ligeramente diferente al de otra.
+
+¿Te gustaría saber cómo podrías desactivar el Prelude si alguna vez necesitaras crear un entorno de código sin ninguna dependencia predeterminada (por ejemplo, para sistemas embebidos o no_std)?
