@@ -379,8 +379,7 @@ El Prelude es el conjunto de elementos (tipos, traits y funciones) que Rust impo
 * Traits fundamentales: Clone, Copy, Send, Sync, Display, Debug, Iterator, Default, Drop, PartialEq, PartialOrd, etc.
 * Funciones y macros: drop, println!, format!, vec!, panic!, assert!.
 
----
-**[Ejemplo 8](./08-holamundo.rb): Cambiamos la lógica para separar metros de centímetros.**
+**[Ejemplo 7](./holamundo-07): Cambiamos la lógica para separar metros de centímetros.**
 
 Vamos modificar el mensaje de salida del siguiente modo:
 
@@ -390,13 +389,9 @@ El usuario NAME, de AGE años de edad y mide MTS metros y CMS centímetros.”
 
 El usuario introduce su altura en la forma `1.80` (variable `height`), y nosotros tenemos que separar la parte entera de la parte decimal de la siguiente forma:
 
-```ruby
-# Nos quedamos con la parte entera de la altura
-mts = height.to_i 
-
-# Nos quedamos con la parte decimal, luego ese valor lo multiplicamos por 100
-# y redondeamos sin dejar decimales en el resultado final.
-cms = ((height % mts) * 100).round(0) 
+```rust
+    let mts = height as i32;
+    let cms = ((height - mts as f64) * 100.0).round() as i32;
 ```
 
 ## Las estructuras básicas (1 de 3)
