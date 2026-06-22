@@ -198,32 +198,83 @@ error: aborting due to 2 previous errors
 
 El compilador lo detecta y nos muestra los errores. El código no compilará hasta que los escribamos de forma correcta.
 
-**[Ejemplo 4](./04-holamundo.rs): Leer del teclado.**
+**[Ejemplo 4](./holamundo-04.rs): Leer del teclado.**
 
-Ahora los valores de las variables los introduce el usuario mediante `read_line(&mut name)`. Esta función lee la entrada de teclado (incluyendo el salto de línea), de modo que para obtener el valor del nombre sin el retorno de carro usaremos `let name = name.trim();`.
+Ahora los valores de las variables los introducirá el usuario por teclado. La función `read_line(&mut name)` lee la entrada de teclado (incluyendo el salto de línea), y lo guarda en la variable `name`. Para quitar el retorno de carro se hace `let name = name.trim();`.
 
+Veamos cómo leemos un entero:
 
-Ejemplo:
-
-```ruby
-film = " star wars \n"
-film.chmop #=> " star wars "
+```rust
+    let mut age_input = String::new();
+    io::stdin()
+        .read_line(&mut age_input)
+        .expect("Error al leer edad");
+    let age: u32 = age_input
+        .trim()
+        .parse()
+        .expect("Por favor, introduce un número");
 ```
 
-La variable `age` debe contener un número entero, de modo que al leer la entrada del teclado, que es un String (`gets` devuelve un String)), sobre la marcha lo convertimos en un integer con `gets.to_i`.
+1. Se crea una variable de tipo String: `let mut age_input = String::new();`.
+2. Se lee el teclado y se guarda en una variable tipo String: `read_line(&mut age_input)`.
+3. Se convierte la entrada String en valor entero (unsigned int de 32 bits): `let age: u32 = age_input.trim.parse()`.
 
-La variable `height` debe tener un valor Float, entonces siguiendo la misma lógica lo hacemos con `gets.to_f`.
+* `std::io`: es un módulo.
+* `stdin()`: es una función que devuelve una refencia al struct Stdin.
+* `read_line(VARNAME)`: es una función que guarda en VARNAME el contenido leído y devuelve un `io::Result<usize>` con el posible código de error.
+
+Control de errores:
+
+* Las funciones que devuelven un tipo `Result`, pueden terminar bien o pueden devolver un error.
+* Rust no usa excepciones para la gestión de errores. Usa tipos `Result`.
+* Es necesario comprobar si el `Result` devuelve un error o no. Supongamos que quitamos `.expect()`.
+
+```bash
+$ rustc holamundo-04.rs
+
+error[E0308]: mismatched types
+  --> holamundo-04.rs:20:20
+   |
+20 |       let age: u32 = age_input
+   |  ______________---___^
+   | |              |
+   | |              expected due to this
+21 | |         .trim()
+22 | |         .parse();
+   | |________________^ expected `u32`, found `Result<_, _>`
+   |
+   = note: expected type `u32`
+              found enum `Result<_, _>`
+help: consider using `Result::expect` to unwrap the `Result<_, _>` value, panicking if the value is a `Result::Err`
+   |
+22 |         .parse().expect("REASON");
+   |                 +++++++++++++++++
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0308`.
+```
+
+* La función `expect("REASON")` comprueba el valor devuelto, si el `Result` contiene un error muestra "REASON" por pantalla. Por dentro, `expect()` hace como un "ìf Result Ok entonces valor else muestra mensaje".
+* Vamos a ver lo mismo que hace `expect()` pero de un forma más explícita y más larga:
+
+```rust
+if let Ok(num) = age_input.trim().parse::<u32>() {
+    let age = num;
+} else {
+    println!("Entrada inválida");
+}
+```
 
 **[Ejemplo 5](./holamundo-05): Poniendo un poco de color a la vida.**
 
-Para poder colorear el texto en el terminal hay que instalar una biblioteca llamada `colored`, pero como hacerlo forma "manual" implica hacer muchos pasos vamos a seguir otro camino más fácil y más "rustacean". 
+Para poder colorear el texto en el terminal tenemos que instalar una biblioteca llamada `colored`, pero como hacerlo forma "manual" son muchos pasos vamos a seguir otro camino más corto y más "rustacean". 
 
-Hast ahora, habíamos trabajado creando ficheros individuales y compilándolos manualmente con `rustc`. Ahora trabajaremos en proyectos. Para gestionar los proyectos de Rust usaremos la herramienta `cargo`.
+Hasta ahora, habíamos creado ficheros individuales y los compilábamos manualmente con `rustc`. Ahora trabajaremos en proyectos. Para gestionar los proyectos de Rust usamos la herramienta `cargo`.
 
-* Creamos el nuevo proyecto:
+* Crear un nuevo proyecto:
 
 ```bash
-$ cd cargo.d
 $ cargo new holamundo-05
 ```
 
@@ -235,7 +286,8 @@ holamundo-05
     └── main.rs
 ```
 
-El fichero `holamundo-05/Cargo.toml` es el fichero de configuración principal del proyecto.Añadimos la biblioteca que necesitamos en la sección `[dependencies]`:
+* El fichero `holamundo-05/Cargo.toml` es el fichero de configuración principal del proyecto.
+* En la sección `[dependencies]` sólo tenemos que poner el nombre de la biblioteca y su versión: `colored = "2"`. 
 
 ```ini
 [package]
@@ -247,11 +299,10 @@ edition = "2024"
 colored = "2"
 ```
 
-En la sección `[dependencies]` sólo tenemos que poner el nombre de la biblioteca y su versión: `colored = "2"`. A continuación ejecutamos `cargo run`, y Rust se encarga de todo:
-
-* Descargar e instalar las dependencias.
-* Compilar y contruir el ejecutable.
-* Ejecutar el programa
+* Ejecutamos `cargo run`, y se encarga de todo:
+    * Descargar e instalar las dependencias.
+    * Compilar y contruir el ejecutable.
+    * Ejecutar el programa
 
 ```bash
 $ cargo run
@@ -263,7 +314,7 @@ $ cargo run
   Downloaded 2 crates (47.9KiB) in 0.26s
    Compiling lazy_static v1.5.0
    Compiling colored v2.2.0
-   Compiling holamundo-05 v0.1.0 (.../cargo.d/holamundo-05)
+   Compiling holamundo-05 v0.1.0 (./holamundo-05)
     Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.10s
      Running `target/debug/holamundo-05`
 
@@ -273,17 +324,15 @@ Height: 1.80
 El personaje OBIWAN, tiene 57 años de edad y mide 1.8 metros.
 ```
 
-Para que el código sea un poco más legible hemos creado nuevas variables coloreadas. Por ejemplo `colored_name` tiene el mismo contenido de `name` pero incluyendo el color.
+* Para que el código sea un poco más legible hemos creado nuevas variables. Por ejemplo `colored_name` que tiene el mismo contenido de `name` pero incluyendo el color.
+* Más información:
+    * Sobre `colored`:
+        * Página en **crates.io**: https://crates.io/crates/colored
+        * Documentación oficial: https://docs.rs/colored/latest/colored/
+    * Sobre `String`: https://doc.rust-lang.org/std/string/struct.String.html
+    * Sobre otras bibliotecas (`crates`): https://crates.io/.
 
-Más información:
-
-* Sobre `colored`:
-    * Página en **crates.io**: https://crates.io/crates/colored
-    * Documentación oficial: https://docs.rs/colored/latest/colored/
-* Sobre `String`: https://doc.rust-lang.org/std/string/struct.String.html
-* Sobre otras bibliotecas (`crates`): https://crates.io/.
-
-También hago lo siguiente (_como buen "rustacean"_):
+También (_como buen "rustacean"_) hago lo siguiente:
 
 * `cargo fmt`: para formatear el código según el estilo Rust.
 * `cargo clippy`: ejecutar este asistente que me hacer sugenrencias para mejorar.
@@ -292,17 +341,18 @@ También hago lo siguiente (_como buen "rustacean"_):
 
 **[Ejemplo 6](./holamundo-06): Paso de argumentos de entrada. Es lo habitual en comandos y scripts.**
 
-En esta versión del programa vamos a usar otra forma de introducir los datos al programa. Vamos a usar el paso de argumentos. Ejemplo de ejecución con "cargo":
+* En esta versión del programa vamos el paso de argumentos por la línea de comandos como forma de introducir los datos.
+* Ejemplo de ejecución con "cargo":
 
 ```bash
 $ cargo run obiwan 57 1.80
-   Compiling holamundo-06 v0.1.0 (./cargo.d/holamundo-06)
+   Compiling holamundo-06 v0.1.0 (./holamundo-06)
     Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.10s
      Running `target/debug/holamundo-06 obiwan 57 1.80`
 El personaje OBIWAN, tiene 57 años de edad y mide 1.8 metros
 ```
 
-Otra forma de ejecutar el programa:
+* Otra forma de ejecutar el programa:
 
 ```bash
 $ ./target/debug/holamundo-06 Vader 40 1.90
@@ -321,6 +371,13 @@ En la línea `let args: Vec<String> = env::args().collect();` estamos definiendo
 
 > CURIOSIDAD: Hay que resaltar que el código de este ejemplo tiene menos líneas que el ejemplo anterior.
 
+Cuando vamos a usar nuevas funciones o structs, a veces debemos indicar con `use` el módulo que vamos a utilizar. Como por ejemplo: `use std::env;`. Pero otras veces no es necesario porque ya están incluidas por defecto. Es lo que se llama el Prelude.
+
+El Prelude es el conjunto de elementos (tipos, traits y funciones) que Rust importa por defecto. Incluye elementos de la biblioteca estándar (std), como por ejemplo:
+
+* Tipos de datos básicos: String, Vec, Option<T>, Result<T, E>, Box<T>, Arc<T>, Rc<T>.
+* Traits fundamentales: Clone, Copy, Send, Sync, Display, Debug, Iterator, Default, Drop, PartialEq, PartialOrd, etc.
+* Funciones y macros: drop, println!, format!, vec!, panic!, assert!.
 
 ---
 **[Ejemplo 8](./08-holamundo.rb): Cambiamos la lógica para separar metros de centímetros.**
@@ -359,62 +416,3 @@ Hay distintos paradígmas de programación, pero no vamos a liarnos ahora con es
 
 _Hasta aquí hemos terminado de "evolucionar" el "hola mundo" ahora puedes seguir con el [siguiente problema](../02.numeros/README.md)._
 
-----
-El Prelude de Rust es un conjunto pequeño de elementos (tipos, traits y funciones) que el lenguaje importa automáticamente en cada módulo de tu programa. Gracias a él, no tienes que escribir use std::... para las cosas que usas el 90% del tiempo.
-
-El objetivo del Prelude es mantener el lenguaje "limpio" y evitar que tengas que importar manualmente los elementos más básicos.
-¿Qué contiene el Prelude exactamente?
-
-El Prelude incluye elementos de la biblioteca estándar (std). Aquí te detallo las categorías más importantes:
-
-    Tipos de datos básicos:
-
-        String (aunque técnicamente es un tipo dinámico, su alias y uso son omnipresentes).
-
-        Vec (el tipo vector).
-
-        Option<T> y sus variantes Some y None.
-
-        Result<T, E> y sus variantes Ok y Err.
-
-        Box<T>, Arc<T>, Rc<T> (tipos para gestión de memoria).
-
-    Traits fundamentales:
-
-        Clone, Copy, Send, Sync (traits que definen cómo se comportan los datos).
-
-        Display, Debug (para formateo de salida).
-
-        Iterator (vital para trabajar con bucles y transformaciones de colecciones).
-
-        Default, Drop, PartialEq, PartialOrd, etc.
-
-    Funciones y macros:
-
-        drop (función para liberar memoria manualmente).
-
-        println!, format!, vec!, panic!, assert! (macros esenciales).
-
-¿Por qué existe el Prelude?
-
-    Ergonomía: Sin el Prelude, tendrías que poner use std::option::Option; o use std::vec::Vec; al inicio de cada archivo. Sería tedioso y redundante.
-
-    Estándar: Define un "lenguaje común". Todos los programadores de Rust saben que Option o Vec están siempre disponibles, lo que facilita compartir código.
-
-    Seguridad y consistencia: Al incluir tipos como Result o Option por defecto, Rust fomenta que escribas código más seguro desde el primer minuto.
-
-Cómo ver el contenido real
-
-Como el Prelude es solo una lista de importaciones, puedes ver su definición exacta en la documentación oficial:
-
-    Documentación oficial: std::prelude
-
-Un detalle técnico importante: "Ediciones"
-
-El contenido del Prelude puede cambiar entre ediciones de Rust (por ejemplo, entre Rust 2015, 2018, 2021 y 2024).
-
-    Si una nueva versión del lenguaje hace que un tipo sea muy popular, es posible que se añada al Prelude para simplificar el código.
-
-    Esto significa que el código que compila en una edición podría tener un conjunto de importaciones predeterminadas ligeramente diferente al de otra.
-
-¿Te gustaría saber cómo podrías desactivar el Prelude si alguna vez necesitaras crear un entorno de código sin ninguna dependencia predeterminada (por ejemplo, para sistemas embebidos o no_std)?
