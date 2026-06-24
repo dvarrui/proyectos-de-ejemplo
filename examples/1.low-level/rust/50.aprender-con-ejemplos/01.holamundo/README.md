@@ -394,6 +394,34 @@ El usuario introduce su altura en la forma `1.80` (variable `height`), y nosotro
     let cms = ((height - mts as f64) * 100.0).round() as i32;
 ```
 
+**[Ejemplo 8](./holamundo-08): Varios ficheros de código.**
+
+Esta versión hace exactamente lo mismo que el ejemplo anterior. La única diferencia es que hemos separado el código de `Capitalize` a su propio fichero.
+
+```
+src
+├── capitalize.rs
+└── main.rs
+```
+
+* En el fichero principal `main.rs` añadimos las líneas:
+
+```rust
+mod capitalize;             // Define un nuevo módulo "capitalize" (espacio de nombres)
+use capitalize::Capitalize; // Importa el elemento "Capitalize" del módulo
+```
+
+* En el fichero `capitalize.rs` incluimos la definición del Trait y su implementación para String.
+* Además añadimos el "keyword" `pub` para que el Trait se accesible desde fuera del fichero.
+
+```rust
+pub trait Capitalize {
+    fn to_capitalize(&self) -> String;
+}
+```
+
+> **Pensamiento**: Me gusta que el lenguaje tenga un sistema de ocultación estricto. Todo oculto por defecto, excepto lo que especifiquemos con `pub`.
+
 ## Las estructuras básicas (1 de 3)
 
 ```
