@@ -1,10 +1,12 @@
 
 # Rust lang
 
-Enlaces de interés:
+## Enlaces de interés:
+
 * https://www.rust-lang.org/es/
-* [Videos - Curso de Rust desde 0](https://www.youtube.com/watch?v=5AdczJB92Os&list=PLAMfQH2NKM_tyKzBV1iJf5L8j7oJl6KHl)
-* Rust Basics for Data Engineer/Scientist: https://levelup.gitconnected.com/rust-basics-for-data-engineer-scientist-93772bf0ddb3
+* [Videos - Curso de Rust desde 0](https://www.youtube.com/watch?v=5AdczJB92Os&list=PLAMfQH2NKM_tyKzBV1iJf5L8j7oJl6KHl
+* [Rust Basics for Data Engineer/Scientist](https://levelup.gitconnected.com/rust-basics-for-data-engineer-scientist-93772bf0ddb3)
+* [Just Programming Language Tutorials for Everyone](https://learning-rust.github.io/)
 
 ## Features
 
