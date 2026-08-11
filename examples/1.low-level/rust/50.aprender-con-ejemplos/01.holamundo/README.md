@@ -4,15 +4,16 @@
 
 _¡Hola Mundo!_ Lo típico es empezar por el "Hola Mundo!", pero vamos a hacer un programa que haga lo siguiente:
 
-- A. Pedir por teclado el nombre, edad y altura en metros, 
+- A. Pedir por teclado el nombre, la edad y la altura en metros, 
 - B. Mostrar por pantalla un mensaje como el siguiente: `El personaje NAME, tiene AGE años de edad y mide HEIGHT metros.`
 
 **[Ejemplo 0](./00-holamundo.rs): Escribimos los objetivos como comentarios.**
 
-Empezamos con un fichero llenos de comentarios con los objetivos que queremos implementar a modo de esquema inicial. Realmente, no es un programa porque no hace nada. Pero vamos a compilarlo con `rustc holamundo-00.rs`.
+Empezamos con un fichero lleno de comentarios con las tareas que queremos implementar a modo de esquema inicial. Realmente, no es un programa porque no hace nada. Pero vamos a compilarlo usando el comando `rustc`:
 
 ```bash
 $ rustc holamundo-00.rs 
+
 error[E0601]: `main` function not found in crate `00_holamundo`
  --> 00-holamundo.rs:7:2
   |
@@ -24,7 +25,7 @@ error: aborting due to 1 previous error
 For more information about this error, try `rustc --explain E0601`.
 ```
 
-Teniendo el código de error, podemos obtener más información:
+El proceso de compilación falla. Podemos consultar al compilador, más información a partir del código de error:
 
 ```bash
 $ rustc --explain E0601
@@ -40,33 +41,33 @@ fn main() {
 If you don't know the basics of Rust, you can look at the Rust Book to get started.
 ```
 
-El compilador se "queja" porque no existe la función principal `main()`, de modo que la creamos aunque esté vacía por ahora. Ahora si compila y obtenemos un ejecutable `holamundo-00`, que hace "nada".
+El compilador se "queja" porque no existe la función principal `main()`, de modo que la creamos aunque esté vacía, por ahora. Ahora si compila y obtenemos un ejecutable `holamundo-00`, que hace "nada".
 
-> **INFO**: Consultar el litado de errores https://doc.rust-lang.org/error_codes/error-index.html.
+> **INFO**: Consultar el listado de errores de Rust en https://doc.rust-lang.org/error_codes/error-index.html.
 
-Nos damos cuenta de algo raro.
+Al compilar se crea el ejecutable `holamundo-00` y nos damos cuenta de algo "raro".
 
 ```bash
 $ du -sh holamundo-00
 4,2M	holamundo-00
 ```
 
-El ejecutable que no hace nada ocupa 4.2 MB. _¡Algo excesivo!_
+El ejecutable que no hace nada pero ocupa 4.2 MB. _¡Algo excesivo!_
 
 **¿Por qué?**
 
-El compilador de Rust incluye código "por defecto":
+Esto es porque el compilador de Rust incluye código "por defecto" en cada compilación. Como por ejemplo:
 
 1. Metadatos para las herramientas de depuracion.
-2. La Biblioteca Estándar (`std`): Manejo de hilos, panics, asignación de memoria, y formateo de cadenas, etc. Se incluyen para garantizar que, sea cual sea el sistema operativo, las funciones básicas funcionen de forma segura y consistente.
+2. La Biblioteca Estándar (`std`) que sirve para: el manejo de hilos, panics, asignación de memoria, y formateo de cadenas, etc. Se incluye para garantizar que, sea cual sea el sistema donde se ejecute, las funciones básicas se ejecutarán de forma segura y consistente.
 3. El Runtime de Rust, que se encarga de:
     - Configurar la pila (stack) de los hilos.
     - Manejar señales del sistema operativo.
     - Coordinar la ejecución del main.
 
-**¿Cómo reducir el tamaño al compilar con rustc?**
+**¿Cómo reducir el tamaño al compilar con `rustc`?**
 
-El compilador tiene muchos parámetros, como por ejemplo:
+El compilador tiene muchos parámetros disponibles, y para reducir el tamaño del ejecutable podemos usar los siguientes:
 
 | Flag             | Descripción |
 | ---------------- | ------------------------------------ |
@@ -75,13 +76,13 @@ El compilador tiene muchos parámetros, como por ejemplo:
 | -C strip=symbols | Eliminar los metadatos de depuración |
 | -C panic=abort   | No incluir mecanismos de recuperación de errores críticos |
 
-Entonces compilaremos de la siguiente forma:
+Mmodo de uso:
 
 ```bash
-$ rustc -C opt-level=z -C lto=fat -C strip=symbols -C panic=abort 00-holamundo.rs
+$ rustc -C opt-level=z -C lto=fat -C strip=symbols -C panic=abort PROGRAM.rs
 ```
 
-Pero, por mi comodidad, me voy a crear un alias `rsc` con todo ese "churro" de la compilación optimizada de Rust. _No voy a escribir todas esas opciones manualmente todo el tiempo_
+> Por mi comodidad, me voy a crear un alias `rsc` con todo ese "churro" de la compilación optimizada de Rust. _No voy a escribir todas esas opciones manualmente todo el tiempo_
 
 ```bash
 $ alias rsc
@@ -97,24 +98,24 @@ _Ahora el ejecutable tiene un tamaño más razonable._
 
 **[Ejemplo 1](./holamundo-01.rs): print!() y println!() para mostrar por pantalla.**
 
-En este primer ejemplo vamos a mostrar por pantalla directamente el mensaje:
+Vamos a empezar mostrando por pantalla el siguiente mensaje:
 
 ```
 El pesonaje Obiwan, tiene 57 años de edad y mide 1.80 metros.
 ```
 
-En el código hemos usado `print!()` y `println!()`. Realmente no hacía falta. Con una línea lo resolvíamos pero se ha puesto así por motivos didácticos, para ver la diferencia entre ambos. 
+En el código hemos usado las funciones `print!()` y `println!()`. Realmente no hacía falta usar las dos, pero se ha puesto así por motivos didácticos, para ver la diferencia entre ambas. 
 
 * `print!()`: Muestra por pantalla sin retorno de carro.
-* `println()`: Muestra por pantalla con retorno de carro.
+* `println!()`: Muestra por pantalla con retorno de carro.
 
-Nos fijamos en otro detalle. Las funciones anteriores tienen el sufijo `!`. ¿Por qué? Dependiendo del lenguaje de programación que vengas te parecerá más o menos raro. Lo lenguajes más "populares" no usan el símbolo de exclamación como parte del nombre de las funcioneso métodos, pero otros lenguajes, por ejemplo Ruby si que lo usan. Y no pasa nada.
+Nos fijamos en otro detalle. Las funciones anteriores tienen el sufijo `!`. Dependiendo del lenguaje de programación que vengas te parecerá más o menos raro. Los lenguajes más "populares" no usan el símbolo de exclamación como parte del nombre de las funciones o métodos, pero otros lenguajes, por ejemplo Ruby si que lo usan. Y no pasa nada.
 
-¿Pero cuál es la razón? _¡Tiene que haber una razón!_. El sufijo `!` en el nombre de la función sirve para indicar que es una "macro" y no una función estándar. Las macros generan un código fuente que se sustituye en el código antes de compilar.
+¿Pero cuál es la razón? _¡Tiene que haber una razón!_. El sufijo `!` en el nombre de la función sirve para indicar que es una "macro" y no una función estándar. Las macros son funciones generan código fuente que se sustituye en el código antes de compilar.
 
 > **NOTA**: Voy a usar `cargo` para crear un proyecto de ejemplo y comprobar cómo se expanden las macros.
 
-Veamos un ejemplo donde expandimos las macros:
+Veamos un ejemplo donde expandimos las macros para ver cómo funcionan:
 
 * Creo un proyecto con `cargo`, y edito el código fuente:
 
@@ -154,21 +155,30 @@ Aparecen líneas nuevas en el código fuente antes de compilarse. No las vamos a
 
 `format_args!` "no se expande" porque no es una macro convencional (escrita en código fuente Rust) que podamos inspeccionar. Es una macro integrada en el compilador (builtin macro) y tiene un tratamiento especial.
 
+**NOTAS sobre Cargo**
+
+Cargo es el sistema de gestión de paquetes y proyectos de Rust.
+
+Yehuda Katz (Rust Core Team y Ruby Core Team) trabajó en la implementación y diseño inicial, replicando la experiencia aprendida con Ruby (Herramienta Bundle).
+
+Cargo funciona de manera muy similar a Bundler y Gemfile que son herramientas de Ruby, para gestionar las dependencias y librerías de forma sencilla. Cargo utiliza un archivo de configuración de texto (`Cargo.toml`, equivalente a un archivo de especificaciones) y genera un archivo de bloqueo (`Cargo.lock`) para asegurar versiones exactas de las dependencias. Además, incluye la gestión automática de pruebas y documentación de forma integrada.
+
 **[Ejemplo 2](./holamundo-02.rs): Ahora con variables.**
 
-Ahora vamos a usar variables (`name`, `age` y `height`) para poner cada valor por separado. A la hora de imprimir con `println!()`, pasamos como argumentos un texto y las variables. Las marcas `{}` indican las posiciones donde se incrustarán los valores de cada variable.
+Ahora vamos a usar variables (`name`, `age` y `height`) para poner cada valor por separado. A la hora de imprimir con `println!()`, pasamos como argumento un texto y las variables. Las marcas `{}` indican las posiciones donde se incrustarán los valores de cada variable.
 
-_Pero, ¡pensaba que Rust era un lenguaje con tipado estático!. ¡No hay declaración de tipos!_ Rust SI es un lenguaje de tipado estático. SI hay que declarar los tipos de las variables, pero cuando el tipo no está especificado de forma explícita Rust intenta resolverlos con inferencia de tipos.
+_Pero, ¡pensaba que Rust era un lenguaje con tipado estático!. ¡No hay declaración de tipos!_ Rust SI es un lenguaje de tipado estático. SI hay que declarar los tipos de las variables, pero cuando el tipo no está especificado de forma explícita Rust intenta resolverlo aplicando inferencia de tipos.
 
 Veamos un ejemplo con declaración explícita de tipos estáticos:
 
 ```rust
+// Declaración explícita de tipos estáticos
 let name: &str = "Obiwan";
 let age: i32 = 57;
 let height: f64 = 1.80;
 ```
 
-**[Ejemplo 3](./holamundo-03.rs): probando cosas raras**
+**[Ejemplo 3](./holamundo-03.rs): probando cosas "raras"**
 
 ¿Qué pasaría si el número de marcas `{}` no coincide con el número de las variables?
 
@@ -177,10 +187,10 @@ let height: f64 = 1.80;
 
 
 ```bash
-$ rustc 03-holamundo.rs
+$ rustc holamundo-03.rs
 
 error: argument never used
- --> 03-holamundo.rs:9:82
+ --> holamundo-03.rs:9:82
   |
 9 |     println!("El personaje {}, tiene {} años de edad y mide metros.", name, age, height);
   |              -------------------------------------------------------             ^^^^^^ argument never used
@@ -188,7 +198,7 @@ error: argument never used
   |              formatting specifier missing
 
 error: 3 positional arguments in format string, but there are 2 arguments
-  --> 03-holamundo.rs:10:28
+  --> holamundo-03.rs:10:28
    |
 10 |     println!("El personaje {}, tiene {} años de edad y mide {} metros.", name, age);
    |                            ^^        ^^                     ^^           ----  ---
@@ -196,7 +206,7 @@ error: 3 positional arguments in format string, but there are 2 arguments
 error: aborting due to 2 previous errors
 ```
 
-El compilador lo detecta y nos muestra los errores. El código no compilará hasta que los escribamos de forma correcta.
+El compilador lo detecta y nos muestra los errores. El código no compilará hasta que lo escribamos de forma correcta.
 
 **[Ejemplo 4](./holamundo-04.rs): Leer del teclado.**
 
@@ -205,10 +215,12 @@ Ahora los valores de las variables los introducirá el usuario por teclado. La f
 Veamos cómo leemos un entero:
 
 ```rust
+    // Leer la entrada del teclado
     let mut age_input = String::new();
     io::stdin()
         .read_line(&mut age_input)
         .expect("Error al leer edad");
+    // Guardar el valor como un entero
     let age: u32 = age_input
         .trim()
         .parse()
