@@ -183,12 +183,8 @@ let height: f64 = 1.80;
 ¿Qué pasaría si el número de marcas `{}` no coincide con el número de las variables?
 
 * ¿Qué pasa cuando tenemos menos marcas `{}` que variables?
-* ¿Qué pasa cuando tenemos más marcas `{}` que variables?
-
 
 ```bash
-$ rustc holamundo-03.rs
-
 error: argument never used
  --> holamundo-03.rs:9:82
   |
@@ -196,7 +192,11 @@ error: argument never used
   |              -------------------------------------------------------             ^^^^^^ argument never used
   |              |
   |              formatting specifier missing
+```
 
+* ¿Qué pasa cuando tenemos más marcas `{}` que variables?
+
+```bash
 error: 3 positional arguments in format string, but there are 2 arguments
   --> holamundo-03.rs:10:28
    |
@@ -206,7 +206,19 @@ error: 3 positional arguments in format string, but there are 2 arguments
 error: aborting due to 2 previous errors
 ```
 
-El compilador lo detecta y nos muestra los errores. El código no compilará hasta que lo escribamos de forma correcta.
+El compilador lo detecta y nos muestra los errores. El código no compilará hasta que lo escribamos de forma correcta. Nos vamos dando cuenta del papel que juega el compilador en el ecosistema de Rust. Al principio, molesta porque sentimos que nos dice que programamos mal, pero con el tiempo lo agradecemos porque nos avisa de los problemas y nos da sugerencias para mejorar.
+
+**Un poco de historia**
+
+Los mensajes de error del compilador de Rust guardan conexión con la filosofía de la comunidad de Ruby, gracias a la influencia de Steve Klabnik y otros que venían del ecosistema Ruby.
+
+Tradicionalmente, en los lenguajes de sistemas (como C o C++) el compilador es una autoridad fría y distante, donde los mensajes de error eran códigos crípticos orientados exclusivamente a la máquina o al propio creador del compilador.
+
+La relación entre los mensajes de Rust y la cultura de Ruby se manifiesta de varias formas:
+
+1. **Empatía**: En la comunidad de Ruby la experiencia humana y la ergonomía están por encima de la pura eficiencia de la máquina. 
+2. **Detalle**: Ruby es famoso por sus detallados stack traces en tiempo de ejecución que explican con claridad dónde se rompió la lógica. Rust trasladó ese nivel de claridad explicativa, pero al tiempo de compilación. 
+3. **Sugerencias**: El punto de mayor contacto con la mentalidad de Ruby es que el compilador de Rust no se limita a regañarte: te dice exactamente cómo solucionarlo. Esta mentalidad de "asistente de programación amigable" rompe con el paradigma histórico de los lenguajes compilados, donde compilar código solía ser una batalla a ciegas contra el sistema.
 
 **[Ejemplo 4](./holamundo-04.rs): Leer del teclado.**
 
@@ -220,6 +232,7 @@ Veamos cómo leemos un entero:
     io::stdin()
         .read_line(&mut age_input)
         .expect("Error al leer edad");
+
     // Guardar el valor como un entero
     let age: u32 = age_input
         .trim()
@@ -227,18 +240,18 @@ Veamos cómo leemos un entero:
         .expect("Por favor, introduce un número");
 ```
 
-1. Se crea una variable de tipo String: `let mut age_input = String::new();`.
-2. Se lee el teclado y se guarda en una variable tipo String: `read_line(&mut age_input)`.
-3. Se convierte la entrada String en valor entero (unsigned int de 32 bits): `let age: u32 = age_input.trim.parse()`.
+1. Se crea una variable de tipo String: `let mut age_input = String::new();`. Usaremos esta variable para almacenar lo que se va a leer por el teclado.
+2. Se lee el teclado y se guarda en la variable tipo String: `read_line(&mut age_input)`.
+3. Se convierte la entrada String en valor entero (u32 = unsigned int de 32 bits): `let age: u32 = age_input.trim.parse()`.
 
 * `std::io`: es un módulo.
-* `stdin()`: es una función que devuelve una refencia al struct Stdin.
-* `read_line(VARNAME)`: es una función que guarda en VARNAME el contenido leído y devuelve un `io::Result<usize>` con el posible código de error.
+* `stdin()`: es una función que devuelve una refencia al struct `Stdin`.
+* `read_line(VARNAME)`: es un método de `Stdin` que guarda en VARNAME el contenido leído y devuelve un `Result`.
 
 Control de errores:
 
 * Las funciones que devuelven un tipo `Result`, pueden terminar bien o pueden devolver un error.
-* Rust no usa excepciones para la gestión de errores. Usa tipos `Result`.
+* Rust no usa excepciones para la gestión de errores. Usa tipos o enum `Result`.
 * Es necesario comprobar si el `Result` devuelve un error o no. Supongamos que quitamos `.expect()`.
 
 ```bash
@@ -267,7 +280,7 @@ error: aborting due to 1 previous error
 For more information about this error, try `rustc --explain E0308`.
 ```
 
-* La función `expect("REASON")` comprueba el valor devuelto, si el `Result` contiene un error muestra "REASON" por pantalla. Por dentro, `expect()` hace como un "ìf Result Ok entonces valor else muestra mensaje".
+* La función `expect("REASON")` comprueba el contenido del `Result` devuelto. Si el `Result` contiene un error muestra "REASON" por pantalla. Por dentro, `expect()` hace como un "ìf Result Ok entonces valor else muestra mensaje".
 * Vamos a ver lo mismo que hace `expect()` pero de un forma más explícita y más larga:
 
 ```rust
@@ -278,17 +291,17 @@ if let Ok(num) = age_input.trim().parse::<u32>() {
 }
 ```
 
-**[Ejemplo 5](./holamundo-05): Poniendo un poco de color a la vida.**
+¿Por qué esta forma de gestionar los errores? La idea es que cada método o función sea susceptible de devolver algún error debe devolver un enum `Result`. Los enum `Result` pueden guardar el valor correcto o el error en caso de fallo. Cada vez que el compilador detecta que hay un método o función que devuelve un `Result` (Y esto se sabe porque es un lenguaje con tipado estático), se asegura que en alguna parte del código se está comprobando el contenido de dicho `Result`. Esto es, se asegura que en algún punto se hace la gestión de los posibles errores.
+
+La idea es buena. Así no queda ningún caso sospechoso sin comprobar.
+
+**[Ejemplo 5](./holamundo-05): Un poco de color a la vida.**
 
 Para poder colorear el texto en el terminal tenemos que instalar una biblioteca llamada `colored`, pero como hacerlo forma "manual" son muchos pasos vamos a seguir otro camino más corto y más "rustacean". 
 
-Hasta ahora, habíamos creado ficheros individuales y los compilábamos manualmente con `rustc`. Ahora trabajaremos en proyectos. Para gestionar los proyectos de Rust usamos la herramienta `cargo`.
+Hasta ahora, habíamos creado un fichero individual para cada programa y lo compilábamos manualmente con `rustc`. Ahora trabajaremos con proyectos. Para gestionar los proyectos de Rust usamos la herramienta `cargo`.
 
-* Crear un nuevo proyecto:
-
-```bash
-$ cargo new holamundo-05
-```
+* Crear un nuevo proyecto: `cargo new holamundo-05`
 
 ```
 holamundo-05
@@ -311,10 +324,11 @@ edition = "2024"
 colored = "2"
 ```
 
-* Ejecutamos `cargo run`, y se encarga de todo:
-    * Descargar e instalar las dependencias.
-    * Compilar y contruir el ejecutable.
-    * Ejecutar el programa
+Ejecutamos `cargo run`, y él se encarga de todo:
+
+* Descargar e instalar las dependencias.
+* Compilar y contruir el ejecutable.
+* Ejecutar el programa
 
 ```bash
 $ cargo run
@@ -337,17 +351,19 @@ El personaje OBIWAN, tiene 57 años de edad y mide 1.8 metros.
 ```
 
 * Para que el código sea un poco más legible hemos creado nuevas variables. Por ejemplo `colored_name` que tiene el mismo contenido de `name` pero incluyendo el color.
-* Más información:
-    * Sobre `colored`:
-        * Página en **crates.io**: https://crates.io/crates/colored
-        * Documentación oficial: https://docs.rs/colored/latest/colored/
-    * Sobre `String`: https://doc.rust-lang.org/std/string/struct.String.html
-    * Sobre otras bibliotecas (`crates`): https://crates.io/.
+
+> Más información:
+>
+> * Sobre `colored`:
+>     * Página en **crates.io**: https://crates.io/crates/colored
+>     * Documentación oficial: https://docs.rs/colored/latest/colored/
+> * Sobre `String`: https://doc.rust-lang.org/std/string/struct.String.html
+> * Sobre otras bibliotecas (`crates`): https://crates.io/.
 
 También (_como buen "rustacean"_) hago lo siguiente:
 
 * `cargo fmt`: para formatear el código según el estilo Rust.
-* `cargo clippy`: ejecutar este asistente que me hacer sugenrencias para mejorar.
+* `cargo clippy`: ejecutar asistente que me hace sugerencias para mejorar el código.
 
 > A partir de ahora lo haré con todos los proyectos que vaya haciendo.
 
@@ -364,14 +380,14 @@ $ cargo run obiwan 57 1.80
 El personaje OBIWAN, tiene 57 años de edad y mide 1.8 metros
 ```
 
-* Otra forma de ejecutar el programa:
+* El ejecutable se ha ido compilando en la carpeta `target` dentro de nuestro proyecto. Entonces ta,bién podemos ejecutar el programa de esta otroa forma:
 
 ```bash
 $ ./target/debug/holamundo-06 Vader 40 1.90
 El personaje VADER, tiene 40 años de edad y mide 1.9 metros.
 ```
 
-Los módulos son contenedores de funciones. En nuestro ejemplo, para leer los argumentos usamos funciones definidas dentro del módulo `std::env`. Este módulo contiene funciones relacionadas en el entorno del proceso. Por ejemplo:
+**Los módulos** en Rust son contenedores de funciones (En esto también se parece a Ruby). En nuestro ejemplo, para leer los argumentos usaremos funciones definidas dentro del módulo `std::env`. Este módulo contiene funciones relacionadas con el entorno del proceso. Por ejemplo:
 
 * `env::args()`: Devuelve un iterador con los argumentos de la línea de comandos.
 * `env::var()`: Leer variables de entorno.
@@ -381,13 +397,11 @@ Los módulos son contenedores de funciones. En nuestro ejemplo, para leer los ar
 
 En la línea `let args: Vec<String> = env::args().collect();` estamos definiendo la variable `args` como un vector de String que contiene todos los argumentos que se han pasado por la línea de comandos. A partir de ahí, el código es similar al ejemplo anterior.
 
-> CURIOSIDAD: Hay que resaltar que el código de este ejemplo tiene menos líneas que el ejemplo anterior.
+> CURIOSIDAD: El código de este ejemplo tiene menos líneas que el ejemplo anterior.
 
-Cuando vamos a usar nuevas funciones o structs, a veces debemos indicar con `use` el módulo que vamos a utilizar. Como por ejemplo: `use std::env;`. Pero otras veces no es necesario porque ya están incluidas por defecto. Es lo que se llama el Prelude.
+Cuando vamos a usar nuevas funciones o structs, a veces debemos indicar con `use` el módulo que vamos a utilizar. Como por ejemplo: `use std::env;`. Pero otras veces no es necesario porque ya están incluidas por defecto, en lo que se llama el "Prelude". El Prelude es el conjunto de elementos (tipos, traits y funciones) que Rust importa por defecto. Incluye elementos de la biblioteca estándar (std), como por ejemplo:
 
-El Prelude es el conjunto de elementos (tipos, traits y funciones) que Rust importa por defecto. Incluye elementos de la biblioteca estándar (std), como por ejemplo:
-
-* Tipos de datos básicos: String, Vec, Option<T>, Result<T, E>, Box<T>, Arc<T>, Rc<T>.
+* Tipos de datos básicos: String, Vec, Option, Result, Box, Arc, Rc.
 * Traits fundamentales: Clone, Copy, Send, Sync, Display, Debug, Iterator, Default, Drop, PartialEq, PartialOrd, etc.
 * Funciones y macros: drop, println!, format!, vec!, panic!, assert!.
 
