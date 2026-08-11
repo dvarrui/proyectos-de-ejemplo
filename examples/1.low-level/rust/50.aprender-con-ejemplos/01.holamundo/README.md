@@ -420,6 +420,41 @@ El usuario introduce su altura en la forma `1.80` (variable `height`), y nosotro
     let cms = ((height - mts as f64) * 100.0).round() as i32;
 ```
 
+A la hora de cargar los valores de los argumentos en sus variables correspondientes, podemos usar el método `unwrap_or(DEFAULT_VALUE)` después de realizar el "parseo" para convertir el String en un valor numérico. Si la conversión falla entonces se estable un valor por defecto.
+
+```rust
+ let name = &args[1];
+    let age: i32 = args[2].parse().unwrap_or(0);
+    let height: f64 = args[3].parse().unwrap_or(0.0);
+```
+
+El Struct String tiene muchos métodos, pero no tiene ninguno para poner la primera letra en mayúsculas y el resto en minúsculas ("Capitalize"). Esto lo podemos resolver con una función que reciba como entrada el String y devuelva el String modificado. Pero vamos a seguir otro camino. Vamos crear un método nuevo para el struct String. Para usarlo de la siguiente forma: `name.to_capitalize()`
+
+En Rust existe algo llamado `trait` y otra cosa diferente `impl`
+
+* `trait`: es como definir un nuevo "interfaz". En este caso, todos los que cumplan el `trait Capitalize` deben tener la función `to_capitalize(&self) -> String`.
+* `impl`: es la implementación concreta de dicho `trait`. 
+
+```rust
+trait Capitalize {
+    fn to_capitalize(&self) -> String;
+}
+
+impl Capitalize for String {
+    fn to_capitalize(&self) -> String {
+        let mut c = self.chars();
+        match c.next() {
+            None => String::new(),
+            Some(f) => f.to_uppercase().collect::<String>() + c.as_str(),
+        }
+    }
+}
+```
+
+* Trait es como una definición de tipos o de un interfaz Java. Esto es necesario para que funcione bien la comprobación de tipos estática.
+* Y la implementación es la forma en que se programa dicho trait para un tipo concreto.
+* Varios tipos de datos diferentes podrían implementar el mismo trait. Ya que en Rust no hay herencia, ni clases, ni objetos, entonces se usan los traits para conseguir polimorfismo, 
+
 **[Ejemplo 8](./holamundo-08): Varios ficheros de código.**
 
 Esta versión hace exactamente lo mismo que el ejemplo anterior. La única diferencia es que hemos separado el código de `Capitalize` a su propio fichero.
