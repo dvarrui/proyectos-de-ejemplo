@@ -65,7 +65,7 @@ Como en el ejemplo anterior se crearon muchas comprobaciones para realizar la ta
 El módulo contiene la función `input::read_valid_number()` que lee los argumentos de entrada del programa y devuelve un número entero válido, o bien termina devolviendo el código de error 1.
 
 * `mod input;`: Para usar el módulo "input" desde "main"
-* `pub fn read_vañid_number() -> i32`: La función debe marcarse "visible" para el exterior.
+* `pub fn read_valid_number() -> i32`: La función se define pública (`pub`) para que sea "visible/accesible" desde el exterior.
 * La ultima línea de la función es `number` (No termina con `;`). Esto quiere decir que no es una sentencia, es una expresión y devuelve un valor. Como es la última línea, el valor de esta expresión es lo que devuelve la función (En Ruby es igual).
 
 **[Ejemplo 3](./numeros-03): Mostrar por pantalla todos los números enteros entre el 1 y el N.**
