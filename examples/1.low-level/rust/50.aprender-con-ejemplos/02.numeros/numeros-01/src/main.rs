@@ -2,6 +2,7 @@ use std::env;
 use std::process;
 
 fn main() {
+    // A. Pedir al usuario un número entero N entre 10 y 20.
     let args: Vec<String> = env::args().collect();
 
     if args.len() < 2 {

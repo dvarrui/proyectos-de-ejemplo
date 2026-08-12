@@ -1,9 +1,8 @@
-use std::env;
 mod input;
 
 fn main() {
-    let args: Vec<String> = env::args().collect();
-    let number = input::read_number(&args);
+    // A. Pedir al usuario un número entero N entre 10 y 20.
+    let number = input::read_valid_number();
     println!("[DEBUG] number={}", number);
 
     // B. Mostrar por pantalla todos los números enteros entre el 1 y el N.

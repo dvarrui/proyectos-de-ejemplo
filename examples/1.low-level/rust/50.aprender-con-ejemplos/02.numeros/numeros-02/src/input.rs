@@ -1,6 +1,9 @@
+use std::env;
 use std::process;
 
-pub fn read_number(args: &[String]) -> i32 {
+pub fn read_valid_number() -> i32 {
+    let args: Vec<String> = env::args().collect();
+
     if args.len() < 2 {
         eprintln!("Usage: {} NUMBER", args[0]);
         eprintln!("  El argumento NUMBER es obligatorio");
