@@ -7,7 +7,7 @@ _¡Hola Mundo!_ Lo típico es empezar por el "Hola Mundo!", pero vamos a hacer u
 - A. Pedir por teclado el nombre, la edad y la altura en metros, 
 - B. Mostrar por pantalla un mensaje como el siguiente: `El personaje NAME, tiene AGE años de edad y mide HEIGHT metros.`
 
-**[Ejemplo 0](./00-holamundo.rs): Escribimos los objetivos como comentarios.**
+**[Ejemplo 0](./holamundo-00.rs): Escribimos los objetivos como comentarios.**
 
 Empezamos con un fichero con los comentarios de las tareas que vamos implementar a modo de esquema inicial. Realmente, no es un programa porque no hace nada. Pero vamos a compilarlo usando el comando `rustc`:
 
@@ -48,9 +48,9 @@ El compilador se "queja" porque no existe una función principal `main()`. De mo
 Al compilarPodemos cse crea el ejecutable, pero nos fijamos en algo "raro". El ejecutable, no hace nada todavía, pero ocupa 4.2 MB. _¡Algo excesivo!_
 
 ```bash
-$ du -sh holamundo-01
-4,2M	holamundo-01
-````
+$ du -sh holamundo-00
+4,2M	holamundo-00
+```
 
 **¿Por qué?**
 
@@ -58,7 +58,7 @@ El compilador de Rust incluye código "por defecto" en cada compilación. Como p
 
 1. MetadatosPodemos cpara las herramientas de depuracion.
 2. La Biblioteca Estándar (`std`) que sirve para: el manejo de hilos, panics, asignación de memoria, y formateo de cadenas, etc. Se incluye para garantizar que, sea cual sea el sistema donde se ejecute, las funciones básicas se ejecutarán de forma segura y consistente.
-3. El Runtime de Rust, que se encarga de
+3. El Runtime se encarga de
     - Configurar la pila (stack) de los hilos.
     - Manejar señales del sistema operativo.
     - Coordinar la ejecución del main.
