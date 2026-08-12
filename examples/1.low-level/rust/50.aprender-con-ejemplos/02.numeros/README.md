@@ -9,9 +9,20 @@ Vamos a hacer un programa que haga lo siguiente:
 
 **[Ejemplo 1](./01-numeros.rb): Pedir un número entre 10 y 20.**
 
-En esta primera versión empezamos leyendo el primer argumento `ARGV[0]`, ese valor lo convertimos a Integer `to_i` y luego nos aseguramos que el valor está entre 10 y 20.
+Empezamos leyendo el valor que se pasa por los argumentos de entrada y a continuación se verifica que cumpla los requisitos:
 
-En caso de incumplir este requisito, mostramos unos mensajes por pantalla dando información de cómo se debe usar el programa y salimos con un código de error `exit 1`.
+* Pasar un argumento.
+* Que sea un número.
+* Que el número esté entre 10 y 20.
+
+En caso contrario el programa termina con un código de salida distinto de cero.
+
+Para finalizar un programa con un determinado código de error:
+
+* `use std::process;`: indicar que vamos a usar el módulo `process`.
+* `process::exit(CODE);`: invocamos la función `exit()` del módulo.
+ 
+**Códigos de salida**
 
 Cuando un programa termina correctamente se devuelve el código de salida 0. Si el código de salida es distinto de cero entonces es que se ha terminado con error.
 
@@ -39,9 +50,25 @@ $  echo $?
 1
 ```
 
-Para poder terminar el programa con determinado código de salida usamos `process::exit(CODE);`
+**Estructura condicional**
 
-**[Ejemplo 2](./numeros-02): Mostrar por pantalla todos los números enteros entre el 1 y el N.**
+En este ejemplo estamos usando la estructura condicional `if COND { ... }` para validar el valor de entrada.
+
+Notar que la expresión COND que devuelve un valor booleano se escribe sin paréntesis (En Ruby también se puede escribir sin paréntesis). Si ponemos los paréntesis el compilador mostrará un _warning_, nos hará la sugerencia de quitarlos, pero el programa compila y se ejecuta.
+
+**[Ejemplo 2](./numeros-02): Refactorizar el código.**
+
+Refactorizar el código significa modificar el contenido pero sin modificar la funcionalidad del programa. Entonces ¿qué sentido tiene hacerlo? Modificamos el contenido para que el programa esté mejor organizado, sea más claro y nos permita ir ampliándolo de forma más cómoda.
+
+Como en el ejemplo anterior se crearon muchas comprobaciones para realizar la tarea A (Pedir al usuario un número entero N entre 10 y 20), hemos decidido mover toda esa parte de lectura del número y su validación a otro fichero (`input.rs`).
+
+El módulo contiene la función `input::read_number(&args)` que recibe los argumentos de entrada del programa y devuelve un número entero `i32` o bien termina mostrando el error detectado.
+
+* `mod input;`: Para usar el módulo "input" desde "main"
+* `pub fn read_number(args: &[String]) -> i32`: La función debe marcarse como visible desde el exterior.
+* La ultima línea de la función `read_number()` es `number`. No termina con `;`. Esto quiere decir que no es una sentencia. Es una expresión y devuelve un valor. Como es la última línea, el valor de esta expresión es lo que devuelve la función (En Ruby es igual).
+
+**[Ejemplo 3](./numeros-03): Mostrar por pantalla todos los números enteros entre el 1 y el N.**
 
 Hay varias formas de hacer un bucle o iteraciones en Ruby. De momento, vamos a hacerlo usando un `for`, también usaremos como variable auxiliar del bucle o del iterador a la `i`. Esta variable auxiliar tomará valores entre 1 y number `1..number`.
 

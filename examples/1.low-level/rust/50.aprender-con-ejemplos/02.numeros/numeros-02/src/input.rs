@@ -1,9 +1,6 @@
-use std::env;
 use std::process;
 
-fn main() {
-    let args: Vec<String> = env::args().collect();
-
+pub fn read_number(args: &[String]) -> i32 {
     if args.len() < 2 {
         eprintln!("Usage: {} NUMBER", args[0]);
         eprintln!("  El argumento NUMBER es obligatorio");
@@ -24,7 +21,5 @@ fn main() {
         eprintln!("  El número NUMBER debe estar entre 10 y 20");
         process::exit(1);
     }
-
-    // B. Mostrar por pantalla todos los números enteros entre el 1 y el N.
-    // C. Mostrar por pantalla todos los números enteros entre el 30 y el N, en orden inverso.
+    number
 }

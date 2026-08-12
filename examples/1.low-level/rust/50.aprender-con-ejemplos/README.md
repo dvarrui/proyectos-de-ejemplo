@@ -1,15 +1,16 @@
 
-# Aprender con ejemplos
+# Aprender Rust con ejemplos
 
-* [Hola mundo](./01.holamundo)
+1. [Hola mundo](./01.holamundo)
+2. [Números](./02.numeros/)
 
 # ANEXO
 
-## A.1 Enlaces de interés
+> Enlaces de interés
+>
+> * [Página web de Rust](https://rust-lang.org/es/)
 
-* [Página web de Rust](https://rust-lang.org/es/)
-
-## A.2 Instalación
+**Instalación**
 
 Instalar Rust en OpenSUSE:
 
