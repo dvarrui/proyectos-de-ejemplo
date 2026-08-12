@@ -9,7 +9,7 @@ _¡Hola Mundo!_ Lo típico es empezar por el "Hola Mundo!", pero vamos a hacer u
 
 **[Ejemplo 0](./00-holamundo.rs): Escribimos los objetivos como comentarios.**
 
-Empezamos con un fichero lleno de comentarios con las tareas que queremos implementar a modo de esquema inicial. Realmente, no es un programa porque no hace nada. Pero vamos a compilarlo usando el comando `rustc`:
+Empezamos con un fichero con los comentarios de las tareas que vamos implementar a modo de esquema inicial. Realmente, no es un programa porque no hace nada. Pero vamos a compilarlo usando el comando `rustc`:
 
 ```bash
 $ rustc holamundo-00.rs 
@@ -25,7 +25,7 @@ error: aborting due to 1 previous error
 For more information about this error, try `rustc --explain E0601`.
 ```
 
-El proceso de compilación falla. Podemos consultar al compilador, más información a partir del código de error:
+¡El proceso de compilación falla!. Podemos pedirle al compilador, más información, usando el código de error:
 
 ```bash
 $ rustc --explain E0601
@@ -41,31 +41,29 @@ fn main() {
 If you don't know the basics of Rust, you can look at the Rust Book to get started.
 ```
 
-El compilador se "queja" porque no existe la función principal `main()`, de modo que la creamos aunque esté vacía, por ahora. Ahora si compila y obtenemos un ejecutable `holamundo-00`, que hace "nada".
+> **INFO**: Podemos consultar el listado de errores de Rust en https://doc.rust-lang.org/error_codes/error-index.html.
 
-> **INFO**: Consultar el listado de errores de Rust en https://doc.rust-lang.org/error_codes/error-index.html.
+El compilador se "queja" porque no existe una función principal `main()`. De modo que la creamos, aunque esté vacía por ahora. Ahora si compila y obtenemos un ejecutable `holamundo-01`, que no resuelve "nada".
 
-Al compilar se crea el ejecutable `holamundo-00` y nos damos cuenta de algo "raro".
+Al compilarPodemos cse crea el ejecutable, pero nos fijamos en algo "raro". El ejecutable, no hace nada todavía, pero ocupa 4.2 MB. _¡Algo excesivo!_
 
 ```bash
-$ du -sh holamundo-00
-4,2M	holamundo-00
-```
-
-El ejecutable que no hace nada pero ocupa 4.2 MB. _¡Algo excesivo!_
+$ du -sh holamundo-01
+4,2M	holamundo-01
+````
 
 **¿Por qué?**
 
-Esto es porque el compilador de Rust incluye código "por defecto" en cada compilación. Como por ejemplo:
+El compilador de Rust incluye código "por defecto" en cada compilación. Como por ejemplo:
 
-1. Metadatos para las herramientas de depuracion.
+1. MetadatosPodemos cpara las herramientas de depuracion.
 2. La Biblioteca Estándar (`std`) que sirve para: el manejo de hilos, panics, asignación de memoria, y formateo de cadenas, etc. Se incluye para garantizar que, sea cual sea el sistema donde se ejecute, las funciones básicas se ejecutarán de forma segura y consistente.
-3. El Runtime de Rust, que se encarga de:
+3. El Runtime de Rust, que se encarga de
     - Configurar la pila (stack) de los hilos.
     - Manejar señales del sistema operativo.
     - Coordinar la ejecución del main.
 
-**¿Cómo reducir el tamaño al compilar con `rustc`?**
+**¿Podemos reducir el tamaño del binario al compilar?**
 
 El compilador tiene muchos parámetros disponibles, y para reducir el tamaño del ejecutable podemos usar los siguientes:
 
@@ -82,7 +80,7 @@ Mmodo de uso:
 $ rustc -C opt-level=z -C lto=fat -C strip=symbols -C panic=abort PROGRAM.rs
 ```
 
-> Por mi comodidad, me voy a crear un alias `rsc` con todo ese "churro" de la compilación optimizada de Rust. _No voy a escribir todas esas opciones manualmente todo el tiempo_
+> Por comodidad, me voy a crear un alias `rsc` con todo ese "churro" de la compilación optimizada de Rust. _No voy a escribir todas esas opciones manualmente todo el tiempo_
 
 ```bash
 $ alias rsc
