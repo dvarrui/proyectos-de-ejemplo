@@ -82,9 +82,7 @@ Hay varias formas de hacer bucles (`for`, `while`, `loop/break`, etc.). En este 
 
 **[Ejemplo 4](./numeros-04): Mostrar por pantalla todos los números enteros entre el 30 y el N, en orden inverso.**
 
-Prácticamente, este paso se resuelve igual que el anterior. Es una tarea repetitiva, donde iteramos sobre los elementos especificados (30 -> N).
-
-La única diferencia es que tenemos un rango diferente. Esto es, números desde 30 hast N de manera decreciente.
+Prácticamente, este paso se resuelve igual que el anterior. Una tarea repetitiva, donde iteramos sobre los elementos especificados. La única diferencia es que tenemos un rango diferente: números desde el 30 hasta el N de manera decreciente.
 
 ```rust
   for i in (number..=30).rev() {
