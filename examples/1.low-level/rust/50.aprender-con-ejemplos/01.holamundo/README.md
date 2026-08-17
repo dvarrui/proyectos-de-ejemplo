@@ -54,7 +54,7 @@ $ du -sh holamundo-00
 
 **¿Por qué?**
 
-El compilador de Rust incluye código "por defecto" en cada compilación. Como por ejemplo:
+El compilador de Rust incluye cierto código "por defecto" en cada compilación. Como por ejemplo:
 
 1. MetadatosPodemos cpara las herramientas de depuracion.
 2. La Biblioteca Estándar (`std`) que sirve para: el manejo de hilos, panics, asignación de memoria, y formateo de cadenas, etc. Se incluye para garantizar que, sea cual sea el sistema donde se ejecute, las funciones básicas se ejecutarán de forma segura y consistente.
@@ -157,7 +157,7 @@ Aparecen líneas nuevas en el código fuente antes de compilarse. No las vamos a
 
 Cargo es el sistema de gestión de paquetes y proyectos de Rust.
 
-Yehuda Katz (Rust Core Team y Ruby Core Team) trabajó en la implementación y diseño inicial, replicando la experiencia aprendida con Ruby (Herramienta Bundle).
+Yehuda Katz (Rust Core Team y Ruby Core Team) trabajó en la implementación y diseño inicial, replicando la experiencia aprendida con Ruby (Bundle, Gemfile, gem).
 
 Cargo funciona de manera muy similar a Bundler y Gemfile que son herramientas de Ruby, para gestionar las dependencias y librerías de forma sencilla. Cargo utiliza un archivo de configuración de texto (`Cargo.toml`, equivalente a un archivo de especificaciones) y genera un archivo de bloqueo (`Cargo.lock`) para asegurar versiones exactas de las dependencias. Además, incluye la gestión automática de pruebas y documentación de forma integrada.
 
@@ -208,9 +208,9 @@ El compilador lo detecta y nos muestra los errores. El código no compilará has
 
 **Un poco de historia**
 
-Los mensajes de error del compilador de Rust guardan conexión con la filosofía de la comunidad de Ruby, gracias a la influencia de Steve Klabnik y otros que venían del ecosistema Ruby.
+Los mensajes de error del compilador de Rust guardan relación con la comunidad Ruby y su filosofía, debido a la influencia de Steve Klabnik y otros que venían del ecosistema Ruby.
 
-Tradicionalmente, en los lenguajes de sistemas (como C o C++) el compilador es una autoridad fría y distante, donde los mensajes de error eran códigos crípticos orientados exclusivamente a la máquina o al propio creador del compilador.
+Tradicionalmente, en los lenguajes de sistemas (como C o C++) los mensajes de error del compilador son códigos crípticos orientados exclusivamente al creador del compilador.
 
 La relación entre los mensajes de Rust y la cultura de Ruby se manifiesta de varias formas:
 
